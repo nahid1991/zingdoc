@@ -1,0 +1,181 @@
+/**
+ * BxSlider v4.0 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2012
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto 20px !important;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+
+
+	
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	display:block;
+}
+
+
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(../images/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	right:55px;
+	background: url(../images/prev-arrow.png) no-repeat 0 0;
+}
+
+.bx-wrapper .bx-next {
+	right: 0px;
+	background: url(../images/next-arrow.png) no-repeat 0 0;
+}
+/*
+.bx-wrapper .bx-prev:hover, .bx-wrapper .bx-next:hover {
+	background-position: 0 -20px;
+}
+*/
+.bx-wrapper .bx-controls-direction a{
+	position: absolute;
+	outline: 0;
+	margin-top:-10px;
+	width: 80px;
+	height: 80px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+.bx-controls-direction {
+	position: relative;;
+	width: 100%;
+	right: 40%;
+	z-index: 9;
+}
+
+/*doctor-profile-caresoul nav*/
+
+.doctor-caresoul .bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	outline: 0;
+	margin-top:-109px;
+	width: 80px;
+	height: 80px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+.doctor-caresoul .bx-wrapper .bx-prev {
+	right:94%;
+	background: url(../images/prev-arrow-clinic.png) no-repeat 2px 0;
+}
+
+.doctor-caresoul .bx-wrapper .bx-next {
+	right: -10%;
+	background: url(../images/next-arrow-clinic.png) no-repeat 0 0;
+}
+
+.doctor-caresoul .bx-controls-direction {
+	position: relative;;
+	width: 100%;
+	right: 0%;
+	}
+
+
+
+
+/*end doctor-profile-caresoul nav*/
+
+/*entity dashboard caresoul nav*/
+
+.edashboard .bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	outline: 0;
+	margin-top:-118px;
+	width: 80px;
+	height: 80px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+.edashboard .bx-wrapper .bx-prev {
+	left:0;
+	background: url(../images/prev-arrow-edashborad.png) no-repeat 2px 0;
+}
+
+.edashboard .bx-wrapper .bx-next {
+	right: -9%;
+	background: url(../images/next-arrow-edashborad.png) no-repeat 0 0;
+}
+
+.edashboard .bx-controls-direction {
+	position: relative;
+	width: 100%;
+	right: 0%;
+	}
+
+
+
+
+/*entity dashboard caresoul  nav*/
+
+	
+/* tabs-slide caresoul nav */
+/*
+.tabs-slide .bx-wrapper .bx-prev {
+	right: 25px;
+	background: url(../images/prev.png) no-repeat 0 0;
+}
+
+.tabs-slide .bx-wrapper .bx-next {
+	right: 0px;
+	background: url(../images/next.png) no-repeat 0 0;
+}
+
+.tabs-slide .bx-wrapper .bx-prev:hover, .bx-wrapper .bx-next:hover {
+	background-position: 0 -20px;
+}
+
+.tabs-slide .bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	outline: 0;
+	width: 20px;
+	height: 20px;
+}
+*/

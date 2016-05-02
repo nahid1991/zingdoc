@@ -1,0 +1,786 @@
+.carousel {
+	display: block;
+	max-width:960px;
+	padding-top: 10px;
+	overflow: visible;
+	margin:0 auto;
+}
+.jcarousel {
+	position: relative;
+	display: block;
+}
+.jcarousel ul {
+	width: 20000em;
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.jcarousel li {
+	display: inline-block;
+}
+.jcarousel > ul > li {
+	margin: 0px 5px;
+}
+/*
+	Slide Caption Styling
+*/
+.lpSnHeroTeaser {
+	position:relative
+}
+.lpSnHeroTeaser div {
+	bottom: 70px;
+	left: 100px;
+	position:absolute;
+	right:10px;
+}
+.lpSnHeroTeaser h3, .lpSnHeroTeaser p {
+	background-color:#fff;
+	margin:0 0;
+}
+.lpSnHeroTeaser h3 {
+	display: block;
+	padding: 10px 10px 0px;
+	text-transform: uppercase;
+	font-size: 23px;
+	font-weight: bold;
+	max-width: 280px;
+}
+.lpSnHeroTeaser p {
+	display: inline-block;
+	padding: 5px 10px;
+	max-width: 700px;
+}
+/*
+	Next Previous Arrows Styling
+*/
+.carousel-prev:before, .carousel-next:before {
+	background: rgba(234,234,234,0.4);
+	content: "";
+	height: 450px;
+	width: 660px;
+	position: absolute;
+	top: 10px;
+}
+.carousel-prev:hover:before, .carousel-prev:focus:before, .carousel-next:hover:before, .carousel-next:focus:before {
+	background: rgba(234,234,234,0);
+}
+
+.carousel-prev:before{left:-670px}
+.carousel-prev span {left: -55px;}
+.carousel-prev:hover span{left: -75px}
+.carousel-next:before{right:-670px}
+.carousel-next span {right: -55px;}
+.carousel-next:hover span{right: -75px}
+
+.carousel-prev span, .carousel-next span {
+	background-color:#f7a336;
+	bottom:50%;
+	cursor: pointer;
+	margin-top: 25px;
+	color:#fff;
+	position:absolute;
+	width:50px;
+	height:50px;
+	z-index:2;
+	-webkit-transition:right 0.15s linear, left 0.15s linear;
+	transition:right 0.15s linear, left 0.15s linear
+}
+.carousel-prev span:before, .carousel-prev span:after, .carousel-next span:before, .carousel-next span:after {
+	border-color:transparent;
+	border-width:20px;
+	border-style:solid;
+	content:"";
+	height:0;
+	position:absolute;
+	top:5px;
+	width:0
+}
+.carousel-prev span:before {
+	border-right-color:#fff;
+	right:15px
+}
+.carousel-prev span:after {
+	border-right-color:#f7a336;
+	right:6px
+}
+.carousel-next span:before {
+	border-left-color:#fff;
+	right:-6px
+}
+.carousel-next span:after {
+	border-left-color:#f7a336;
+	right:3px
+}
+/* Control NAv Hidden */
+
+
+.carousel-menu {
+	color:#000;
+	list-style:none;
+	margin:0;
+	padding:10px 55px;
+	bottom:0;
+	left:0;
+	right:0;
+	position:absolute;
+	text-align:center
+}
+.carousel-menu li {
+	background:#fff;
+	cursor:pointer;
+	display:inline-block;
+	height:30px;
+	margin:0 5px;
+	position:relative;
+	text-indent:-2000em;
+	width:30px;
+	border-radius:5px;
+	-webkit-transition:background 0.5s linear;
+	transition:background 0.5s linear
+}
+.carousel-menu li:hover:before {
+	border-color:transparent
+}
+.arrow-experiment .carousel-prev span, .arrow-experiment .carousel-next span {
+	height:77px;
+	width:77px
+}
+.arrow-experiment .carousel-prev span:before, .arrow-experiment .carousel-prev span:after, .arrow-experiment .carousel-next span:before, .arrow-experiment .carousel-next span:after {
+	top:10px
+}
+.arrow-experiment .carousel-prev span b, .arrow-experiment .carousel-next span b {
+	bottom:5px;
+	position:absolute;
+	text-align:center;
+	width:100%;
+	font:11px/1 Museo700, "Myriad Pro", sans-serif;
+	text-transform:uppercase
+}
+.arrow-experiment .carousel-prev span:before {
+	right:29px
+}
+.arrow-experiment .carousel-prev span:after {
+	right:20px
+}
+.arrow-experiment .carousel-next span:before {
+	right:8px
+}
+.arrow-experiment .carousel-next span:after {
+	right:17px
+}
+.arrow-experiment .carousel {
+	padding-bottom:78px
+}
+.arrow-experiment .carousel-menu {
+	padding:24px 82px
+}
+.carousel-menu li:hover .carousel-menu li:focus, .cat-label {
+	background-color:#1ba3dc;
+	color:#fff
+}
+.fs-tint a:hover {
+	background-color:#a90629
+}
+.jcarousel a h3 {
+	color:#1ba3dc;
+	background:#fff
+}
+.intro-block .spotlight h3, .intro-block .spotlight p {
+	color:#fff;
+	background:#1ba3dc
+}
+.intro-block .page-intro h2 {
+	background:#1ba3dc
+}
+.carousel-prev:hover span, .carousel-next:hover span, .carousel-prev:focus span, .carousel-next:focus span {
+	background:#1ba3dc
+}
+.carousel-prev:hover span:after, .carousel-prev:focus span:after {
+	border-right-color:#1ba3dc
+}
+.carousel-next:hover span:after, .carousel-next:focus span:after {
+	border-left-color:#1ba3dc
+}
+.body-placemarker, .carousel-menu .current {
+	background:#1ba3dc
+}
+.carousel-menu li:hover:before, .carousel-menu li:focus:before {
+	border-bottom-color:#1ba3dc
+}
+.fact h4 {
+	border-color:#fa7692
+}
+::-moz-selection {
+background-color:#1ba3dc;
+color:#fff
+}
+::selection {
+background-color:#1ba3dc;
+color:#fff
+}
+a.cc {
+	color:#1ba3dc
+}
+.header .mobile-nav li a:hover .left-arrow:before, .header .mobile-nav li a:focus .left-arrow:before, .header .mobile-nav .language a:hover .left-arrow:before, .header .mobile-nav .language a:focus .left-arrow:before {
+	border-right-color:#1ba3dc
+}
+.header .mobile-nav li a:hover .right-arrow:before, .header .mobile-nav li a:focus .right-arrow:before, .header .mobile-nav .language a:hover .right-arrow:before, .header .mobile-nav .language a:focus .right-arrow:before {
+	border-left-color:#1ba3dc
+}
+.header .mobile-nav li a:hover .left-arrow:after, .header .mobile-nav li a:hover .right-arrow:after, .header .mobile-nav li a:focus .left-arrow:after, .header .mobile-nav li a:focus .right-arrow:after, .header .mobile-nav .language a:hover .left-arrow:after, .header .mobile-nav .language a:hover .right-arrow:after, .header .mobile-nav .language a:focus .left-arrow:after, .header .mobile-nav .language a:focus .right-arrow:after {
+	border-color:#1ba3dc transparent
+}
+.home .cc, .home .primary-category, .home .sidebar .panel h2 {
+	color:#0580cc
+}
+.home .cb, .home .fact a, .home a.tag:hover, .home .rev, .home a.action:link, .home a.action:visited, .home .hb:hover, .home .carousel-menu li:hover .carousel-menu li:focus, .home .cat-label {
+	background-color:#0580cc;
+	color:#fff
+}
+.home .fs-tint a:hover {
+	background-color:#0467a4
+}
+.home .jcarousel a h3 {
+	color:#0580cc;
+	background:#fff
+}
+.home .intro-block .spotlight h3, .home .intro-block .spotlight p {
+	color:#fff;
+	background:#0580cc
+}
+.home .intro-block .page-intro h2 {
+	background:#0580cc
+}
+.home .carousel-prev:hover span, .home .carousel-next:hover span, .home .carousel-prev:focus span, .home .carousel-next:focus span {
+	background:#0580cc
+}
+.home .carousel-prev:hover span:after, .home .carousel-prev:focus span:after {
+	border-right-color:#0580cc
+}
+.home .carousel-next:hover span:after, .home .carousel-next:focus span:after {
+	border-left-color:#0580cc
+}
+.home .body-placemarker, .home .carousel-menu .current {
+	background:#0580cc
+}
+.home .carousel-menu li:hover:before, .home .carousel-menu li:focus:before {
+	border-bottom-color:#0580cc
+}
+.home .fact h4 {
+	border-color:#6fc6fb
+}
+.home ::-moz-selection {
+background-color:#0580cc;
+color:#fff
+}
+.home ::selection {
+background-color:#0580cc;
+color:#fff
+}
+body.home a.cc {
+	color:#0580cc
+}
+.header .mobile-nav .home-tab {
+	border-color:#0580cc
+}
+.header .mobile-nav .home-tab.selected .tl-nav, .header .mobile-nav .home-tab .tl-nav:hover, .header .mobile-nav .home-tab .tl-nav:focus {
+	background:#0580cc
+}
+.header .mobile-nav .home-tab .sub {
+	border-color:#0580cc
+}
+.header .mobile-nav .home-tab .sub a, .header .mobile-nav .home-tab .sub .no-link {
+	color:#0580cc
+}
+.cat-home, .carousel .jcarousel h3.home {
+	background-color:#0580cc;
+	color:#fff
+}
+.discover-london .cc, .discover-london .primary-category, .discover-london .sidebar .panel h2 {
+	color:#008944
+}
+.discover-london .cb, .discover-london .fact a, .discover-london a.tag:hover, .discover-london .rev, .discover-london a.action:link, .discover-london a.action:visited, .discover-london .hb:hover, .discover-london .carousel-menu li:hover .carousel-menu li:focus, .discover-london .cat-label {
+	background-color:#008944;
+	color:#fff
+}
+.discover-london .fs-tint a:hover {
+	background-color:#006030
+}
+.discover-london .jcarousel a h3 {
+	color:#008944;
+	background:#fff
+}
+.discover-london .intro-block .spotlight h3, .discover-london .intro-block .spotlight p {
+	color:#fff;
+	background:#008944
+}
+.discover-london .intro-block .page-intro h2 {
+	background:#008944
+}
+.discover-london .carousel-prev:hover span, .discover-london .carousel-next:hover span, .discover-london .carousel-prev:focus span, .discover-london .carousel-next:focus span {
+	background:#008944
+}
+.discover-london .carousel-prev:hover span:after, .discover-london .carousel-prev:focus span:after {
+	border-right-color:#008944
+}
+.discover-london .carousel-next:hover span:after, .discover-london .carousel-next:focus span:after {
+	border-left-color:#008944
+}
+.discover-london .body-placemarker, .discover-london .carousel-menu .current {
+	background:#008944
+}
+.discover-london .carousel-menu li:hover:before, .discover-london .carousel-menu li:focus:before {
+	border-bottom-color:#008944
+}
+.discover-london .fact h4 {
+	border-color:#23ff90
+}
+.discover-london ::-moz-selection {
+background-color:#008944;
+color:#fff
+}
+.discover-london ::selection {
+background-color:#008944;
+color:#fff
+}
+body.discover-london a.cc {
+	color:#008944
+}
+.header .mobile-nav .discover-london-tab {
+	border-color:#008944
+}
+.header .mobile-nav .discover-london-tab.selected .tl-nav, .header .mobile-nav .discover-london-tab .tl-nav:hover, .header .mobile-nav .discover-london-tab .tl-nav:focus {
+	background:#008944
+}
+.header .mobile-nav .discover-london-tab a:hover, .header .mobile-nav .discover-london-tab a:focus {
+	background-color:#008944
+}
+.header .mobile-nav .discover-london-tab a:hover .left-arrow:before, .header .mobile-nav .discover-london-tab a:focus .left-arrow:before {
+	border-right-color:#008944
+}
+.header .mobile-nav .discover-london-tab a:hover .right-arrow:before, .header .mobile-nav .discover-london-tab a:focus .right-arrow:before {
+	border-left-color:#008944
+}
+.header .mobile-nav .discover-london-tab a:hover .left-arrow:after, .header .mobile-nav .discover-london-tab a:hover .right-arrow:after, .header .mobile-nav .discover-london-tab a:focus .left-arrow:after, .header .mobile-nav .discover-london-tab a:focus .right-arrow:after {
+	border-color:#008944 transparent
+}
+.header .mobile-nav .discover-london-tab .sub {
+	border-color:#008944
+}
+.header .mobile-nav .discover-london-tab .sub a, .header .mobile-nav .discover-london-tab .sub .no-link {
+	color:#008944
+}
+.cat-discover-london {
+	background-color:#008944;
+	color:#fff
+}
+.snippet a h3.discover-london, a.discover-london:link, a.discover-london:visited, .jcarousel .jcarousel-item-fullyvisible a h3.discover-london, .jcarousel .jcarousel-item-first.jcarousel-item-last a h3.discover-london {
+	color:#008944
+}
+.site-map .discover-london h2 {
+	border-top-color:#008944
+}
+.discover-london .page-intro h2, .page-intro h2.discover-london {
+	background-color:#008944
+}
+.things-to-do .cc, .things-to-do .primary-category, .things-to-do .sidebar .panel h2 {
+	color:#de277d
+}
+.things-to-do .cb, .things-to-do .fact a, .things-to-do a.tag:hover, .things-to-do .rev, .things-to-do a.action:link, .things-to-do a.action:visited, .things-to-do .hb:hover, .things-to-do .carousel-menu li:hover .carousel-menu li:focus, .things-to-do .cat-label {
+	background-color:#de277d;
+	color:#fff
+}
+.things-to-do .fs-tint a:hover {
+	background-color:#bf1d69
+}
+.things-to-do .jcarousel a h3 {
+	color:#de277d;
+	background:#fff
+}
+.things-to-do .intro-block .spotlight h3, .things-to-do .intro-block .spotlight p {
+	color:#fff;
+	background:#de277d
+}
+.things-to-do .intro-block .page-intro h2 {
+	background:#de277d
+}
+.things-to-do .carousel-prev:hover span, .things-to-do .carousel-next:hover span, .things-to-do .carousel-prev:focus span, .things-to-do .carousel-next:focus span {
+	background:#de277d
+}
+.things-to-do .carousel-prev:hover span:after, .things-to-do .carousel-prev:focus span:after {
+	border-right-color:#de277d
+}
+.things-to-do .carousel-next:hover span:after, .things-to-do .carousel-next:focus span:after {
+	border-left-color:#de277d
+}
+.things-to-do .body-placemarker, .things-to-do .carousel-menu .current {
+	background:#de277d
+}
+.things-to-do .carousel-menu li:hover:before, .things-to-do .carousel-menu li:focus:before {
+	border-bottom-color:#de277d
+}
+.things-to-do .fact h4 {
+	border-color:#f2accd
+}
+.things-to-do ::-moz-selection {
+background-color:#de277d;
+color:#fff
+}
+.things-to-do ::selection {
+background-color:#de277d;
+color:#fff
+}
+body.things-to-do a.cc {
+	color:#de277d
+}
+.header .mobile-nav .things-to-do-tab {
+	border-color:#de277d
+}
+.header .mobile-nav .things-to-do-tab.selected .tl-nav, .header .mobile-nav .things-to-do-tab .tl-nav:hover, .header .mobile-nav .things-to-do-tab .tl-nav:focus {
+	background:#de277d
+}
+.header .mobile-nav .things-to-do-tab a:hover, .header .mobile-nav .things-to-do-tab a:focus {
+	background-color:#de277d
+}
+.header .mobile-nav .things-to-do-tab a:hover .left-arrow:before, .header .mobile-nav .things-to-do-tab a:focus .left-arrow:before {
+	border-right-color:#de277d
+}
+.header .mobile-nav .things-to-do-tab a:hover .right-arrow:before, .header .mobile-nav .things-to-do-tab a:focus .right-arrow:before {
+	border-left-color:#de277d
+}
+.header .mobile-nav .things-to-do-tab a:hover .left-arrow:after, .header .mobile-nav .things-to-do-tab a:hover .right-arrow:after, .header .mobile-nav .things-to-do-tab a:focus .left-arrow:after, .header .mobile-nav .things-to-do-tab a:focus .right-arrow:after {
+	border-color:#de277d transparent
+}
+.header .mobile-nav .things-to-do-tab .sub {
+	border-color:#de277d
+}
+.header .mobile-nav .things-to-do-tab .sub a, .header .mobile-nav .things-to-do-tab .sub .no-link {
+	color:#de277d
+}
+.cat-things-to-do, .results .cat-things-to-do, .infoWindowContent .cat-things-to-do {
+	background-color:#de277d;
+	color:#fff
+}
+.snippet a h3.things-to-do, a.things-to-do:link, a.things-to-do:visited, .jcarousel .jcarousel-item-fullyvisible a h3.things-to-do, .jcarousel .jcarousel-item-first.jcarousel-item-last a h3.things-to-do {
+	color:#de277d
+}
+.site-map .things-to-do h2 {
+	border-top-color:#de277d
+}
+.things-to-do .page-intro h2, .page-intro h2.things-to-do {
+	background-color:#de277d
+}
+.where-to-stay .cc, .where-to-stay .primary-category, .where-to-stay .sidebar .panel h2 {
+	color:#7638de
+}
+.where-to-stay .cb, .where-to-stay .fact a, .where-to-stay a.tag:hover, .where-to-stay .rev, .where-to-stay a.action:link, .where-to-stay a.action:visited, .where-to-stay .hb:hover, .where-to-stay .carousel-menu li:hover .carousel-menu li:focus, .where-to-stay .cat-label {
+	background-color:#7638de;
+	color:#fff
+}
+.where-to-stay .fs-tint a:hover {
+	background-color:#6122cb
+}
+.where-to-stay .jcarousel a h3 {
+	color:#7638de;
+	background:#fff
+}
+.where-to-stay .intro-block .spotlight h3, .where-to-stay .intro-block .spotlight p {
+	color:#fff;
+	background:#7638de
+}
+.where-to-stay .intro-block .page-intro h2 {
+	background:#7638de
+}
+.where-to-stay .carousel-prev:hover span, .where-to-stay .carousel-next:hover span, .where-to-stay .carousel-prev:focus span, .where-to-stay .carousel-next:focus span {
+	background:#7638de
+}
+.where-to-stay .carousel-prev:hover span:after, .where-to-stay .carousel-prev:focus span:after {
+	border-right-color:#7638de
+}
+.where-to-stay .carousel-next:hover span:after, .where-to-stay .carousel-next:focus span:after {
+	border-left-color:#7638de
+}
+.where-to-stay .body-placemarker, .where-to-stay .carousel-menu .current {
+	background:#7638de
+}
+.where-to-stay .carousel-menu li:hover:before, .where-to-stay .carousel-menu li:focus:before {
+	border-bottom-color:#7638de
+}
+.where-to-stay .fact h4 {
+	border-color:#d0bbf4
+}
+.where-to-stay ::-moz-selection {
+background-color:#7638de;
+color:#fff
+}
+.where-to-stay ::selection {
+background-color:#7638de;
+color:#fff
+}
+body.where-to-stay a.cc {
+	color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab {
+	border-color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab.selected .tl-nav, .header .mobile-nav .where-to-stay-tab .tl-nav:hover, .header .mobile-nav .where-to-stay-tab .tl-nav:focus {
+	background:#7638de
+}
+.header .mobile-nav .where-to-stay-tab a:hover, .header .mobile-nav .where-to-stay-tab a:focus {
+	background-color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab a:hover .left-arrow:before, .header .mobile-nav .where-to-stay-tab a:focus .left-arrow:before {
+	border-right-color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab a:hover .right-arrow:before, .header .mobile-nav .where-to-stay-tab a:focus .right-arrow:before {
+	border-left-color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab a:hover .left-arrow:after, .header .mobile-nav .where-to-stay-tab a:hover .right-arrow:after, .header .mobile-nav .where-to-stay-tab a:focus .left-arrow:after, .header .mobile-nav .where-to-stay-tab a:focus .right-arrow:after {
+	border-color:#7638de transparent
+}
+.header .mobile-nav .where-to-stay-tab a:hover, .header .mobile-nav .where-to-stay-tab a:focus {
+	background-color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab a:hover .left-arrow:before, .header .mobile-nav .where-to-stay-tab a:focus .left-arrow:before {
+	border-right-color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab a:hover .right-arrow:before, .header .mobile-nav .where-to-stay-tab a:focus .right-arrow:before {
+	border-left-color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab a:hover .left-arrow:after, .header .mobile-nav .where-to-stay-tab a:hover .right-arrow:after, .header .mobile-nav .where-to-stay-tab a:focus .left-arrow:after, .header .mobile-nav .where-to-stay-tab a:focus .right-arrow:after {
+	border-color:#7638de transparent
+}
+.header .mobile-nav .where-to-stay-tab .sub {
+	border-color:#7638de
+}
+.header .mobile-nav .where-to-stay-tab .sub a, .header .mobile-nav .where-to-stay-tab .sub .no-link {
+	color:#7638de
+}
+.cat-where-to-stay, .results .cat-where-to-stay, .infoWindowContent .cat-where-to-stay {
+	background-color:#7638de;
+	color:#fff
+}
+.snippet a h3.where-to-stay, a.where-to-stay:link, a.where-to-stay:visited, .jcarousel .jcarousel-item-fullyvisible a h3.where-to-stay, .jcarousel .jcarousel-item-first.jcarousel-item-last a h3.where-to-stay {
+	color:#7638de
+}
+.site-map .where-to-stay h2 {
+	border-top-color:#7638de
+}
+.where-to-stay .page-intro h2, .page-intro h2.where-to-stay {
+	background-color:#7638de
+}
+.traveller-information .cc, .traveller-information .primary-category, .traveller-information .sidebar .panel h2 {
+	color:#008489
+}
+.traveller-information .cb, .traveller-information .fact a, .traveller-information a.tag:hover, .traveller-information .rev, .traveller-information a.action:link, .traveller-information a.action:visited, .traveller-information .hb:hover, .traveller-information .carousel-menu li:hover .carousel-menu li:focus, .traveller-information .cat-label {
+	background-color:#008489;
+	color:#fff
+}
+.traveller-information .fs-tint a:hover {
+	background-color:#005d60
+}
+.traveller-information .jcarousel a h3 {
+	color:#008489;
+	background:#fff
+}
+.traveller-information .intro-block .spotlight h3, .traveller-information .intro-block .spotlight p {
+	color:#fff;
+	background:#008489
+}
+.traveller-information .intro-block .page-intro h2 {
+	background:#008489
+}
+.traveller-information .carousel-prev:hover span, .traveller-information .carousel-next:hover span, .traveller-information .carousel-prev:focus span, .traveller-information .carousel-next:focus span {
+	background:#008489
+}
+.traveller-information .carousel-prev:hover span:after, .traveller-information .carousel-prev:focus span:after {
+	border-right-color:#008489
+}
+.traveller-information .carousel-next:hover span:after, .traveller-information .carousel-next:focus span:after {
+	border-left-color:#008489
+}
+.traveller-information .body-placemarker, .traveller-information .carousel-menu .current {
+	background:#008489
+}
+.traveller-information .carousel-menu li:hover:before, .traveller-information .carousel-menu li:focus:before {
+	border-bottom-color:#008489
+}
+.traveller-information .fact h4 {
+	border-color:#23f7ff
+}
+.traveller-information ::-moz-selection {
+background-color:#008489;
+color:#fff
+}
+.traveller-information ::selection {
+background-color:#008489;
+color:#fff
+}
+body.traveller-information a.cc {
+	color:#008489
+}
+.header .mobile-nav .traveller-information-tab {
+	border-color:#008489
+}
+.header .mobile-nav .traveller-information-tab.selected .tl-nav, .header .mobile-nav .traveller-information-tab .tl-nav:hover, .header .mobile-nav .traveller-information-tab .tl-nav:focus {
+	background:#008489
+}
+.header .mobile-nav .traveller-information-tab a:hover, .header .mobile-nav .traveller-information-tab a:focus {
+	background-color:#008489
+}
+.header .mobile-nav .traveller-information-tab a:hover .left-arrow:before, .header .mobile-nav .traveller-information-tab a:focus .left-arrow:before {
+	border-right-color:#008489
+}
+.header .mobile-nav .traveller-information-tab a:hover .right-arrow:before, .header .mobile-nav .traveller-information-tab a:focus .right-arrow:before {
+	border-left-color:#008489
+}
+.header .mobile-nav .traveller-information-tab a:hover .left-arrow:after, .header .mobile-nav .traveller-information-tab a:hover .right-arrow:after, .header .mobile-nav .traveller-information-tab a:focus .left-arrow:after, .header .mobile-nav .traveller-information-tab a:focus .right-arrow:after {
+	border-color:#008489 transparent
+}
+.header .mobile-nav .traveller-information-tab a:hover, .header .mobile-nav .traveller-information-tab a:focus {
+	background-color:#008489
+}
+.header .mobile-nav .traveller-information-tab a:hover .left-arrow:before, .header .mobile-nav .traveller-information-tab a:focus .left-arrow:before {
+	border-right-color:#008489
+}
+.header .mobile-nav .traveller-information-tab a:hover .right-arrow:before, .header .mobile-nav .traveller-information-tab a:focus .right-arrow:before {
+	border-left-color:#008489
+}
+.header .mobile-nav .traveller-information-tab a:hover .left-arrow:after, .header .mobile-nav .traveller-information-tab a:hover .right-arrow:after, .header .mobile-nav .traveller-information-tab a:focus .left-arrow:after, .header .mobile-nav .traveller-information-tab a:focus .right-arrow:after {
+	border-color:#008489 transparent
+}
+.header .mobile-nav .traveller-information-tab .sub {
+	border-color:#008489
+}
+.header .mobile-nav .traveller-information-tab .sub a, .header .mobile-nav .traveller-information-tab .sub .no-link {
+	color:#008489
+}
+.cat-traveller-information, .results .cat-traveller-information, .infoWindowContent .cat-traveller-information {
+	background-color:#008489;
+	color:#fff
+}
+.snippet a h3.traveller-information, a.traveller-information:link, a.traveller-information:visited {
+	color:#008489
+}
+.site-map .traveller-information h2 {
+	border-top-color:#008489
+}
+.traveller-information .page-intro h2, .page-intro h2.traveller-information {
+	background-color:#008489
+}
+.offers-and-competitions .cc, .offers-and-competitions .primary-category, .offers-and-competitions .sidebar .panel h2 {
+	color:#cb4d01
+}
+.offers-and-competitions .cb, .offers-and-competitions .fact a, .offers-and-competitions a.tag:hover, .offers-and-competitions .rev, .offers-and-competitions a.action:link, .offers-and-competitions a.action:visited, .offers-and-competitions .hb:hover, .offers-and-competitions .carousel-menu li:hover .carousel-menu li:focus, .offers-and-competitions .cat-label {
+	background-color:#cb4d01;
+	color:#fff
+}
+.offers-and-competitions .fs-tint a:hover {
+	background-color:#a23e01
+}
+.offers-and-competitions .jcarousel a h3 {
+	color:#cb4d01;
+	background:#fff
+}
+.offers-and-competitions .intro-block .spotlight h3, .offers-and-competitions .intro-block .spotlight p {
+	color:#fff;
+	background:#cb4d01
+}
+.offers-and-competitions .intro-block .page-intro h2 {
+	background:#cb4d01
+}
+.offers-and-competitions .carousel-prev:hover span, .offers-and-competitions .carousel-next:hover span, .offers-and-competitions .carousel-prev:focus span, .offers-and-competitions .carousel-next:focus span {
+	background:#cb4d01
+}
+.offers-and-competitions .carousel-prev:hover span:after, .offers-and-competitions .carousel-prev:focus span:after {
+	border-right-color:#cb4d01
+}
+.offers-and-competitions .carousel-next:hover span:after, .offers-and-competitions .carousel-next:focus span:after {
+	border-left-color:#cb4d01
+}
+.offers-and-competitions .body-placemarker, .offers-and-competitions .carousel-menu .current {
+	background:#cb4d01
+}
+.offers-and-competitions .carousel-menu li:hover:before, .offers-and-competitions .carousel-menu li:focus:before {
+	border-bottom-color:#cb4d01
+}
+.offers-and-competitions .fact h4 {
+	border-color:#fea067
+}
+.offers-and-competitions ::-moz-selection {
+background-color:#cb4d01;
+color:#fff
+}
+.offers-and-competitions ::selection {
+background-color:#cb4d01;
+color:#fff
+}
+body.offers-and-competitions a.cc {
+	color:#cb4d01
+}
+.header .mobile-nav .offers-and-competitions-tab {
+	border-color:#cb4d01
+}
+.carousel-menu {
+	padding:11px 0 6px;
+	position:relative;
+	line-height:1
+}
+.carousel .carousel-menu li {
+	background:transparent none;
+	border-left:1px solid #ececec;
+	height:auto;
+	margin:0;
+	padding:5px 9px 5px 8px;
+	text-indent:0;
+	width:auto;
+	border-radius:0;
+	float:none;
+	display:inline;
+	white-space:nowrap
+}
+.carousel .carousel-menu li:before {
+	border-style:solid;
+	border-width:0 9px 9px;
+	content:"";
+	height:0;
+	width:0;
+	position:absolute;
+	opacity:0;
+	top:-9px;
+	left:50%;
+	margin-left:-9px;
+	text-indent:0;
+	border-color:transparent;
+	-webkit-transition:all 0.5s linear;
+	transition:all 0.5s linear
+}
+.carousel .carousel-menu li.current {
+	border:0;
+	background-color:#04324c;
+	color:#ebe2aa
+}
+.carousel .carousel-menu li.current:before {
+	opacity:1;
+	border-color:transparent transparent #04324c transparent
+}
+.carousel .carousel-menu li.current+li {
+	border:0;
+	padding:5px 9px
+}
+.carousel .carousel-menu {
+	padding:16px 0 11px
+}
+.carousel .carousel-menu li {
+	padding:10px 15px 10px 14px
+}
+.carousel .carousel-menu li.current+li {
+	padding:10px 15px
+}
+.carousel .carousel-menu {
+	padding:16px 0px 11px
+}
+.carousel .carousel-menu li {
+	padding:10px 15px 10px 14px
+}
