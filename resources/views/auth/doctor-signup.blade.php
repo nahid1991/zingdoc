@@ -15,7 +15,7 @@
 								<h5>Doctor Sign Up</h5>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat laoreet dolore magna aliquam erat volutpat.</p>
 							</div>
-							{!!Form::open(['url'=>'/auth/register', 'id'=>'contact-form'])!!}
+							{!!Form::open(['url'=>'/doctor/register', 'id'=>'contact-form'])!!}
 							 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 							<!-- <form name="" id="contact-form" action="search.html" method="get"> -->
 								<div class="doctorsignup-holder">
@@ -67,24 +67,9 @@
 								</div>
 
 
-								<div class="doctorsignup-holder captcha-code">
-										<img src="includes/captcha_code_file.php?rand=<?php echo rand(); ?>" id='captchaimg'>
-								</div>
-								<div class="doctorsignup-holder captcha-code-box">
-									 <input name="country" required type="text" class="form-control" placeholder="ENTER THE ABOVE CHARACTERS HERE"/>
-								</div>
-								<div class="doctorsignup-holder refresh-captcha">
-									<p>Can't read the image? click <a href='javascript:refreshCaptcha();'><span>here</span></a> to refresh.</p>
-								</div>
-								<script language='JavaScript' type='text/javascript'>
-									function refreshCaptcha()
-									{
-										var img = document.images['captchaimg'];
-										img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
-									}
-								</script>
+								
 								<div class="doctorsignup-holder checkbox-condition">
-									<input type="checkbox" name="agree" value="1"><p>I agree <a href="#">term &amp; condition</a> of the site</p><br/>
+									<input type="checkbox" name="agreed" value="1"><p>I agree <a href="#">term &amp; condition</a> of the site</p><br/>
 								</div>
 							
 								<div class="doctorsignup-button">

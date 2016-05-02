@@ -11,6 +11,7 @@
 |
 */
 
+Route::post('/doctor/register', 'TestController@test');
 
 
 Route::get('/', function () {
@@ -22,20 +23,19 @@ Route::get('/', function () {
 // Route::auth();
 
 
-
 Route::get('/sign_up_doctor', 'Auth\AuthController@doc_sign');
 
 Route::get('/sign_up_patient', 'Auth\AuthController@pat_sign');
 
-Route::get('/test', function () {
-    return view('sign_up_test');
-});
+// Route::get('/test', function () {
+//     return view('sign_up_test');
+// });
 
-Route::get('/test2', function(){
-	echo('test');
-});
+// Route::get('/test2', function(){
+// 	echo('test');
+// });
 
- Route::post('/auth/register', 'TestController@test');
+
 
 // Route::post('auth/register', function () {
 //     return redirect('/test');

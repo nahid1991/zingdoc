@@ -11,6 +11,15 @@ use App\Http\Requests\Auth\RegisterRequest;
 class TestController extends Controller
 {
     public function test(RegisterRequest $request){
-    	echo('test');
+    	$pass1 = $request->input('password');
+    	$pass2 = $request->input('password_confirmation');
+
+    	if(strcmp($pass1, $pass2) == 0){
+    		return view('doctor/main');
+    	}
+
+    	else{
+    		echo($pass1.' ' .$pass2. 'Sorry!!! :(');
+    	}
     }
 }
