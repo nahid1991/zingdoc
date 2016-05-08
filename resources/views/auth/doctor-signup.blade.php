@@ -1,4 +1,4 @@
-@extends('layouts/header')
+@extends('layouts.header')
 	@section('drop')
 		<div id="banner-holder">
 			<div class="page-heading signup-page">

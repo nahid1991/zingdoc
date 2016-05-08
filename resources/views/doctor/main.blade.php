@@ -1,14 +1,14 @@
-@extends('layouts/header')
+@extends('layouts.header')
 	@section('drop')
 		<div id="full-body">
 			<div class="full-body-conteiner">
 				<div class="container">
 					<div class="row">
-						<?php
-							$side_link3 = 'class="current"';
-							include 'includes/doctor-admin-sidebar.php';
-						?>
-
+						<!--<?php
+							//$side_link3 = 'class="current"';
+							//include 'includes/doctor-admin-sidebar.php';
+						?>-->
+						@yield('content')
 						<div class="col-xs-12 col-sm-8 col-md-9">
 							<div class="pof-content">
 								<div class="pof-header2">

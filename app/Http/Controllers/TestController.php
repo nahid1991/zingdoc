@@ -15,7 +15,7 @@ class TestController extends Controller
     	$pass2 = $request->input('password_confirmation');
 
     	if(strcmp($pass1, $pass2) == 0){
-    		return view('doctor/main');
+    		return view('signin-signup');
     	}
 
     	else{
