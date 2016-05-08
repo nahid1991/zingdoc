@@ -1,19 +1,4 @@
-   @extends('layouts.header')
-	@section('drop')
-		<!-- <div id="banner-holder">
-			<div class="page-heading">
-				login or create an account
-			</div>
-			<img src="/images/banner.jpg"/>
-		</div> --><!-- End #banner-holder -->
-		<div id="full-body">
-			<div class="tabs-content">
-					<!-- <ul class="nav nav-tabs tab-nav" id="myTab">
-					  <li><a href="#home" data-toggle="tab">PATIENTS</a></li>
-					  <li><a href="#profile" data-toggle="tab">DOCTORS</a></li>
-					</ul> -->
-					<div class="tab-content">
-						<ul class="nav nav-tabs tab-nav" id="myTab">
+<ul class="nav nav-tabs tab-nav" id="myTab">
 					  <li class="active"><a href="#home" data-toggle="tab">PATIENTS</a></li>
 					  <li><a href="#profile" data-toggle="tab">DOCTORS</a></li>
 					</ul>
@@ -25,7 +10,7 @@
 											<div class="row">
 													<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">	
 													<div class="patient-login">
-															<h5>Patient's Login</h5>
+															<h5>Doctors Login</h5>
 															<p>If you have an account with us, please log in.</p>
 															{!!Form::open(['url'=>'/auth/login', 'id'=>'contact-form'])!!}
 															<div class="patient-holder doctor-area">
@@ -67,7 +52,7 @@
 									<div class="row">
 										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">	
 														<div class="patient-login">
-															<h5>Doctor's Login</h5>
+															<h5>Patients Login</h5>
 															<p>If you have an account with us, please log in.</p>
 															{!!Form::open(['url'=>'/auth/login', 'id'=>'contact-form'])!!}
 															<div class="patient-holder doctor-area">
@@ -106,4 +91,3 @@
 					
 				</div><!-- End .tab-content -->
 			</div>
-	@stop

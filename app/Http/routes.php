@@ -11,21 +11,46 @@
 |
 */
 
+
+
+
 Route::post('/doctor/register', 'TestController@test');
 
 
 Route::get('/', function () {
-    return view('default');
+	// if(Auth::user()){
+	// 	redirect('/homepage');
+	// }
+ //    else{
+ //    	return view('default');
+ //    }
+	return view('default');
+    
 });
+// Route::get('/', 'HomeController@index');
+
+
+Route::get('/sign_it', 'TestController@sign');
 
 // Route::get('/', 'HomeController@index');
 
 // Route::auth();
 
+Route::post('/auth/login', 'Auth\AuthController@login');
+
 
 Route::get('/sign_up_doctor', 'Auth\AuthController@doc_sign');
 
 Route::get('/sign_up_patient', 'Auth\AuthController@pat_sign');
+
+Route::get('/auth/logout', 'Auth\AuthController@logout');
+
+Route::get('/homepage', 'TestController@home');
+
+
+Route::get('/auth/logout', 'Auth\AuthController@logout');
+
+Route::get('/homepage', 'TestController@home');
 
 // Route::get('/test', function () {
 //     return view('sign_up_test');
@@ -40,3 +65,17 @@ Route::get('/sign_up_patient', 'Auth\AuthController@pat_sign');
 // Route::post('auth/register', function () {
 //     return redirect('/test');
 // });
+
+
+
+
+// Route::group(['middleware' => 'auth', 'after' => 'no-cache'], function () {
+//     Route::get('/auth/logout', 'Auth\AuthController@logout');
+// 	Route::get('/homepage', 'TestController@home');
+// });
+
+Route::group(['middleware' => ['web','auth','revalidate']], function () {
+    Route::get('/homepage', 'TestController@home');
+	Route::get('/auth/logout','Auth\AuthController@logout');
+});
+

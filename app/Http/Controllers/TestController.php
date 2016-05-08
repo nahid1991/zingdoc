@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Http\Requests\Auth\RegisterRequest;
 
+use DB;
+
 class TestController extends Controller
 {
     public function test(RegisterRequest $request){
@@ -15,11 +17,39 @@ class TestController extends Controller
     	$pass2 = $request->input('password_confirmation');
 
     	if(strcmp($pass1, $pass2) == 0){
-    		return view('signin-signup');
-    	}
 
+            DB::table('users')->insert([
+                'email' => $request->input('email'),
+                'username' => $request->input('username'),
+                'password' => bcrypt($request->input('password')),
+                'name' => $request->input('name'),
+                'speciality' => $request->input('speciality'),
+                'practice_name' => $request->input('practice_name'),
+                'phone_number' => $request->input('phone_number'),
+                'location' => $request->input('location'),
+                'agreed' => $request->input('agreed'),
+                'user_type' => $request->input('user_type')
+            ]);
+    		return redirect('/sign_it');
+        }
     	else{
     		echo($pass1.' ' .$pass2. 'Sorry!!! :(');
     	}
+    }
+
+    public function sign(){
+        return view('signin-signup');
+    }
+
+    public function home(){
+        if(\Auth::user()){
+            $user = \Auth::user();
+            if($user->user_type == 1){
+                return view('doctor_main');
+            }
+            if($user->user_type == 2){
+                return view('patient_main');
+            }
+        }
     }
 }

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="Expires" CONTENT="-1">
 		<link rel="shortcut icon" href="{{ asset('/images/ico/favicon.png') }}">
 	    <style>
 		/*body {
@@ -185,16 +187,16 @@
 			<div class="container">
 				<div class="row test">
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">	
-						<a href="{{ url('/') }}"><img src="/images/logo.png" alt=""/></a>						
+						<a href="{{ url('/homepage') }}"><img src="/images/logo.png" alt=""/></a>						
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">	
 						<div class="top-nav">
 							<ul>
-								<li><a href="{{ url('/sign_it') }}">Sign In</a></li>
-								<li>|</li>
-								<li>
+								<li><a href="{{ url('/auth/logout') }}">Sign Out</a></li>
+								<!-- <li>|</li> -->
+								<!-- <li> -->
 									<!-- <a href="#" class="box">Sign Up</a> -->
-									<a class="dropdown-toggle" href="#popup1">Sign Up</a>
+									<!-- <a class="dropdown-toggle" href="#popup1">Sign Up</a> -->
 									<!-- <a href="{{ url('/test') }}" onClick="return popup(this, 'notes')" data-toggle="dropdown">Sign Up</a>
 									<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign Up</a> -->
 									<!-- <ul class="dropdown-menu">
@@ -204,7 +206,7 @@
  -->
 
 
-									<div id="popup1" class="overlay">
+									<!-- <div id="popup1" class="overlay">
   										<div class="popup">
 		    							
 		      								
@@ -215,7 +217,7 @@
 									  	<a href="{{ url('/sign_up_doctor') }}" class="something">Doctor Sign Up</a>
 		    						
 		  							</div>
-									</div>	
+									</div>	 -->
 
    								    <!-- <div class="dropdown">
 									  <button class="dropbtn">Sign up</button>
@@ -224,8 +226,8 @@
 									    <a href="{{ url('/sign_up_patient') }}">Patient Sign Up</a>
 									  < /div-->
 									  
-									</div>
-								</li>
+									<!-- </div> -->
+								<!-- </li> -->
 							</ul>
 						</div>
 					</div>
@@ -234,7 +236,6 @@
 		</div><!-- End #header -->
 
 		@yield('drop')
-
 		
 			<div class="footer">
 				<div class="container">

@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use Illuminate\Contracts\Auth\Guard;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Auth\LoginRequest;
 
 class AuthController extends Controller
 {
@@ -82,6 +84,25 @@ class AuthController extends Controller
 
     public function some(RegisterRequest $request){
         return redirect('/test2');
+    }
+
+    public function login(LoginRequest $request){
+        //if($this->auth->attempt($request->only('email', 'password')))
+        if(\Auth::attempt($request->only('email', 'password')))
+        {
+            //echo('Its working');
+            return redirect('/homepage');
+        }
+        else{
+            return redirect('/sign_up_doctor')->withErrors([
+                'email' => 'The credentials you entered did not match our records. Try again?',
+            ]);
+        }
+    }
+
+    public function getLogout(){
+        \Auth::logout();
+        return redirect('/');
     }
 
 }
