@@ -49,12 +49,13 @@
 											<div class="clearfix"></div>
 											<div class="addbtn_cont">
 												<a href="#" id="toggle-btn" class="addbtn">+ Add Day &amp; Hour</a>
+												{!!Form::open(['url'=>'/schedule-make'])!!}
 												<div id="toggle-content" class="add_form_container">
 													<div class="arrow"></div>
 													<div class="add_form">
 														<div class="form-cont">
-															<label>From</label> <input class="time-auto" type="text" value="">
-															<label>To</label> <input class="time-auto" type="text" value="">														
+															<label>From</label> <input class="time-auto" type="text" name="starting_time" value="" placeholder="Start (0:00 AM/PM)">
+															<label>To</label> <input class="time-auto" type="text" name="ending_time" value="" placeholder="End (0:00 AM/PM)">														
 	
 															<script type="text/javascript">
 																$('#time-auto')
@@ -96,20 +97,20 @@
 															</script>
 															<div class="clearfix"></div>
 															<div class="btn-group" data-toggle="buttons">
-																<label class="btn btn-primary"><input type="checkbox" name="options" id="option1">Mon</label>
-																<label class="btn btn-primary"><input type="checkbox" name="options" id="option2">Tue</label>
-																<label class="btn btn-primary"><input type="checkbox" name="options" id="option3">Wed</label>
-																<label class="btn btn-primary"><input type="checkbox" name="options" id="option4">Thu</label>
-																<label class="btn btn-primary"><input type="checkbox" name="options" id="option5">Fri</label>
-																<label class="btn btn-primary"><input type="checkbox" name="options" id="option6">Sat</label>
-																<label class="btn btn-primary"><input type="checkbox" name="options" id="option7">Sun</label>
+																<label class="btn btn-primary"><input type="checkbox" name="days" value="Mon" id="option1">Mon</label>
+																<label class="btn btn-primary"><input type="checkbox" name="days" value="Tue" id="option2">Tue</label>
+																<label class="btn btn-primary"><input type="checkbox" name="days" value="Wed" id="option3">Wed</label>
+																<label class="btn btn-primary"><input type="checkbox" name="days" value="Thu" id="option4">Thu</label>
+																<label class="btn btn-primary"><input type="checkbox" name="days" value="Fri" id="option5">Fri</label>
+																<label class="btn btn-primary"><input type="checkbox" name="days" value="Sat" id="option6">Sat</label>
+																<label class="btn btn-primary"><input type="checkbox" name="days" value="Sun" id="option7">Sun</label>
 															</div>															
 														</div>
 
 														<div class="ft">															
 															<div class="row">
 																<div class="col-xs-6 col-sm-6 col-md-6">
-																	<input type="checkbox" name="" value=""> Apply to all
+																	<input type="checkbox" name="all" value="1"> Apply to all</input>
 																</div>
 																<div class="col-xs-6 col-sm-6 col-md-6">
 																	<input type="submit" value="Add"/>
@@ -117,7 +118,8 @@
 															</div>
 														</div>
 													</div>
-												</div>		
+												</div>
+												{!!Form::close()!!}		
 												<div class="clearfix"></div>										
 												<script type="text/javascript">
 												    $('#toggle-btn').click(function() {
