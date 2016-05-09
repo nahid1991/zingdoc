@@ -18,11 +18,11 @@
 									</div>									
 								</div>
 								<ul><li><a href="{{ url('/homepage') }}">Entity Dashboard</a></li><li>
-										<a href="entity-admin-appointments-view.php">Appointment</a></li><li>
-										<a href="entity-admin-view-profile.php">Profile</a></li><li>
-										<a href="entity-admin-edit-profile.php">Edit Profile</a></li><li>
-										<a href="entity-admin-account-settings.php">Account Settings</a></li><li>
-										<a href="#">Logout</a></li></ul>
+										<a href="{{ url('/entity-appointments') }}">Appointment</a></li><li>
+										<a href="{{ url('/entity-profile') }}">Profile</a></li><li>
+										<a href="{{ url('/entity-profile-edit') }}">Edit Profile</a></li><li>
+										<a href="{{ url('/entity-account-settings') }}">Account Settings</a></li><li>
+										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
 							</div>
 						</div><!-- End .col -->
 

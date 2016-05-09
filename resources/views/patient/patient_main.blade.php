@@ -11,12 +11,12 @@
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
 								<div class="pof-img">
-									<img src="images/patient-profile.jpg">
+									<img src="images/patient-profile.jpg" height="150px" width="150px">
 								</div>
 								<ul><li>
-										<a <href="patient-admin-dashboard.php">Appointments</a></li><li>
-										<a href="patient-admin-comments.php">Comments</a></li><li>
-										<a href="patient-admin-profile.php">Profile</a></li><li>
+										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
+										<a href="{{ url('/patient-comments') }}">Comments</a></li><li>
+										<a href="{{ url('/patient-profile') }}">Profile</a></li><li>
 										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
 							</div>
 						</div><!-- End .col -->

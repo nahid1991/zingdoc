@@ -88,5 +88,12 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/doc-blog', 'DoctorController@blog');
 	Route::get('/doc-account-settings', 'DoctorController@settings');
 	Route::get('/doc-comments', 'DoctorController@comments');
+	Route::get('/patient-comments', 'PatientController@comments');
+	Route::get('/patient-profile', 'PatientController@profile');
+	Route::get('/entity-appointments', 'EntityController@appointments');
+	Route::get('/entity-profile', 'EntityController@profile');
+	Route::get('/entity-profile-edit', 'EntityController@profileEdit');
+	Route::get('/entity-account-settings', 'EntityController@settings');
+	
 });
 
