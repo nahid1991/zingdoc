@@ -14,14 +14,14 @@
 								<div class="pof-img">
 									<img src="images/doctor-profile.jpg">
 								</div>
-								<ul><li><a href="entity-admin-dashboard.php">Entity Dashboard</a></li><li><li>
-										<a href="doctor-admin-appointments-day-view.php">Appointments</a></li><li>
-										<a href="doctor-admin-set-appointment.php">Set Appointment</a></li><li>
-										<a href="doctor-admin-view-profile.php">Profile</a></li><li>
-										<a href="doctor-admin-edit-profile.php">Edit Profile</a></li><li>
-										<a href="doctor-admin-blog.php">Blog</a></li><li>
-										<a href="doctor-admin-comments.php">Comments</a></li><li>
-										<a href="doctor-admin-account-settings.php">Account Settings</a></li><li>
+								<ul><li>
+										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
+										<a href="{{ url('/set-appointment') }}">Set Appointment</a></li><li>
+										<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
+										<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
+										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
+										<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
+										<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
 										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
 							</div>
 						</div>

@@ -43,14 +43,18 @@ Route::get('/sign_up_doctor', 'Auth\AuthController@doc_sign');
 
 Route::get('/sign_up_patient', 'Auth\AuthController@pat_sign');
 
+Route::get('/sign_up_entity', 'Auth\AuthController@entity_sign');
+
+Route::get('/auth/logout', 'Auth\AuthController@logout');
+
+Route::get('/homepage', 'TestController@home');
+
+
 Route::get('/auth/logout', 'Auth\AuthController@logout');
 
 Route::get('/homepage', 'TestController@home');
 
 
-Route::get('/auth/logout', 'Auth\AuthController@logout');
-
-Route::get('/homepage', 'TestController@home');
 
 // Route::get('/test', function () {
 //     return view('sign_up_test');
@@ -77,5 +81,12 @@ Route::get('/homepage', 'TestController@home');
 Route::group(['middleware' => ['web','auth','revalidate']], function () {
     Route::get('/homepage', 'TestController@home');
 	Route::get('/auth/logout','Auth\AuthController@logout');
+	Route::get('/set-appointment', 'DoctorController@setAppoint');
+	Route::get('/entity-dashboard', 'EntityController@dashboard');
+	Route::get('/doc-profile', 'DoctorController@profile');
+	Route::get('/doc-profile-edit', 'DoctorController@profileEdit');
+	Route::get('/doc-blog', 'DoctorController@blog');
+	Route::get('/doc-account-settings', 'DoctorController@settings');
+	Route::get('/doc-comments', 'DoctorController@comments');
 });
 

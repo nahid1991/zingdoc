@@ -67,7 +67,7 @@
 			  width: 30%;
 			  position: relative;
 			  transition: all 5s ease-in-out;
-			  height: 50%;
+			  height: 70%;
 			}
 
 			.popup .something {
@@ -213,6 +213,8 @@
 		    							<a href="{{ url('/sign_up_patient') }}" class="something">Patient Sign Up</a>
 		      								<h2>or</h2>
 									  	<a href="{{ url('/sign_up_doctor') }}" class="something">Doctor Sign Up</a>
+									  		<h2>or</h2>
+									  	<a href="{{ url('/sign_up_entity') }}" class="something">Entity Sign Up</a>
 		    						
 		  							</div>
 									</div>	

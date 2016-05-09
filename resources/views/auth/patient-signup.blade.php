@@ -60,7 +60,7 @@
 						</div>
 						<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
 							<div class="doctor-login-right">
-									<h5>Patient Login</h5>
+									<h5>Login</h5>
 									<p>If You have an account with us, please log in.</p>
 								{!!Form::open(['url'=>'/auth/login', 'id'=>'contact-form'])!!}
 								<!-- <form name="" id="contact-form" action="search.html" method="get"> -->

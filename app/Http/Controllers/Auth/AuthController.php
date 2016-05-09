@@ -82,6 +82,10 @@ class AuthController extends Controller
         return view('Auth/patient-signup');
     }
 
+    public function entity_sign(){
+        return view('Auth/entity-signup');
+    }
+
     public function some(RegisterRequest $request){
         return redirect('/test2');
     }

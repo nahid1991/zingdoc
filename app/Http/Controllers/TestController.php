@@ -38,17 +38,28 @@ class TestController extends Controller
     }
 
     public function sign(){
-        return view('signin-signup');
+        
+        if(\Auth::check()){
+            return redirect('/homepage');
+        }
+
+        else{
+            return view('signin-signup');
+        }
+        
     }
 
     public function home(){
         if(\Auth::user()){
             $user = \Auth::user();
             if($user->user_type == 1){
-                return view('doctor_main');
+                return view('doctor.doctor_main');
             }
             if($user->user_type == 2){
-                return view('patient_main');
+                return view('patient.patient_main');
+            }
+            if($user->user_type == 3){
+                return view('entity.entity-admin-dashboard');
             }
         }
     }
