@@ -6,6 +6,9 @@
 			</div>
 			<img src="/images/banner.jpg"/>
 		</div> --><!-- End #banner-holder -->
+		@foreach($errors->all() as $error)
+        	<p class="alert alert-danger">{!!$error!!}</p>
+        @endforeach
 		<div id="full-body">
 			<div class="tabs-content">
 					<!-- <ul class="nav nav-tabs tab-nav" id="myTab">

@@ -98,7 +98,7 @@ class AuthController extends Controller
             return redirect('/homepage');
         }
         else{
-            return redirect('/sign_up_doctor')->withErrors([
+            return redirect('/sign_it')->withErrors([
                 'email' => 'The credentials you entered did not match our records. Try again?',
             ]);
         }

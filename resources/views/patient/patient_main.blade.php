@@ -24,7 +24,7 @@
 						<div class="col-xs-12 col-sm-8 col-md-9">
 							<div class="pof-content">
 								<div class="pof-header2">
-									<div class="title"><h2>P. R. Nichol Mendel</h2></div>
+									<div class="title"><h2>{{ $user->name }}</h2></div>
 									<div class="clearfix"></div>
 								</div>
 								<div class="pof-desc padding">									

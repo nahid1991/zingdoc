@@ -53,13 +53,27 @@ class TestController extends Controller
         if(\Auth::user()){
             $user = \Auth::user();
             if($user->user_type == 1){
-                return view('doctor.doctor_main');
+                $user_info = DB::table('users')
+                    ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
+                    ->where('users.username', $user->username)
+                    ->get();
+                return view('doctor.doctor_main', compact('user', 'user_info'));
             }
             if($user->user_type == 2){
-                return view('patient.patient_main');
+                $user_info = DB::table('users')
+                    ->join('appointment_user', 'users.username', '=', 'appointment_user.patient_user')
+                    ->where('users.username', $user->username)
+                    ->first();
+                // echo($user_info->username[0]);
+                return view('patient.patient_main', compact('user', 'user_info'));
             }
             if($user->user_type == 3){
-                return view('entity.entity-admin-dashboard');
+                $user_info = DB::table('users')
+                    ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
+                    ->where('users.username', $user->username)
+                    ->get();
+                // return view('doctor.doctor_main', compact('user', 'user_info'));
+                return view('entity.entity-admin-dashboard', compact('user', 'user_info'));
             }
         }
     }

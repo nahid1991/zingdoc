@@ -42,7 +42,7 @@
 									 <!-- <input name="country" required type="password" class="form-control"   placeholder="CONFIRM PASSWORD"/> -->
 								</div>
 								<div class="doctorsignup-holder">
-									{!! Form::text('phone_number',Input::old('location'),['class'=>'form-control', 'placeholder'=>'LOCATION']) !!}
+									{!! Form::text('location',Input::old('location'),['class'=>'form-control', 'placeholder'=>'LOCATION']) !!}
 									 <!-- <input name="country" required type="text" class="form-control"   placeholder="PHONE NUMBER"/> -->
 								</div>
 								

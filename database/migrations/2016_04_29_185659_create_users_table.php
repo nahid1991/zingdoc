@@ -20,12 +20,10 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique();
             $table->string('password', 60);
             $table->integer('user_type');
-            $table->integer('phone_number');
-            $table->string('speciality');
-            $table->string('practice_name');
-            $table->integer('provider');
-            $table->integer('manager');
-            $table->string('location');
+            $table->integer('phone_number')->nullable();
+            $table->string('speciality')->nullable();
+            $table->string('practice_name')->nullable();
+            $table->string('location')->nullable();
             $table->integer('agreed');
             $table->rememberToken();
             $table->timestamps();

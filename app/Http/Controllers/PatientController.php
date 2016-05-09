@@ -14,6 +14,7 @@ class PatientController extends Controller
     }
 
     public function profile(){
-    	return view('patient.patient-admin-profile');
+    	$user = \Auth::user();
+    	return view('patient.patient-admin-profile', compact('user'));
     }
 }
