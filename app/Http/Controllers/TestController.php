@@ -10,6 +10,8 @@ use App\Http\Requests\Auth\RegisterRequest;
 
 use DB;
 
+use Carbon\Carbon;
+
 class TestController extends Controller
 {
     public function test(RegisterRequest $request){
@@ -77,4 +79,11 @@ class TestController extends Controller
             }
         }
     }
+
+
+    public function run(){
+        
+    }
+
+
 }

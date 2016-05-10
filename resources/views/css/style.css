@@ -1634,11 +1634,11 @@ ul.social-nav {
 
 
 /* Doctor Slot Book and Appoinment Section */
-#doctor-appoinment{ position: relative; display: block; background-color: #f0f0f0; padding: 20px 20px;}
-#doctor-appoinment.search-page{ padding-bottom: 0px; margin-bottom: 10px;}
+.doctor-appoinment{ position: relative; display: block; background-color: #f0f0f0; padding: 20px 20px;}
+.doctor-appoinment.search-page{ padding-bottom: 0px; margin-bottom: 10px;}
 
-#doctor-appoinment > h4{font-size: 21px; color: #055154; margin-top: 0; margin-bottom: 5px; padding: 0;}
-#doctor-appoinment > p.ds{font-size: 16px; color: #2c2c2c; margin-bottom: 10px;}
+.doctor-appoinment > h4{font-size: 21px; color: #055154; margin-top: 0; margin-bottom: 5px; padding: 0;}
+.doctor-appoinment > p.ds{font-size: 16px; color: #2c2c2c; margin-bottom: 10px;}
 
 #doctor-appoinment .bx-wrapper { max-width: 100% !important; background-color: #eee;}
 #doctor-appoinment .bx-wrapper .bx-viewport{ position: relative; z-index: 9999999; display: block; width: 85% !important; margin: 0 auto;}

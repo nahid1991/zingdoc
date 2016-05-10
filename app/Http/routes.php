@@ -54,6 +54,8 @@ Route::get('/auth/logout', 'Auth\AuthController@logout');
 
 Route::get('/homepage', 'TestController@home');
 
+Route::get('/test', 'TestController@run');
+
 
 
 // Route::get('/test', function () {

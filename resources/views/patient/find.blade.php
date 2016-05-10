@@ -57,6 +57,7 @@
 					<div class="col-xs-12 col-sm-6 col-md-10 col-lg-10 ">
 						<div class="doctor-holder">
 							<div class="page-title"><span>Dentists in New York</sapn></div>
+							
 							<ul class="doctor-details">
 								@foreach($doctors as $doctor)
 								<li>
@@ -328,35 +329,11 @@
 											</div>	
 											<div class="clearfix"></div>		
 										</div><!-- End #doctor-appoinment Appoinment Section -->
+									</li>
+								@endforeach
+										
 
-										<script type="text/javascript">
-											$(document).ready(function(){
-											  	$('#doctor-appoinment').slideUp();
-											  $('#doctor-appoinment-slides').bxSlider({
-											    mode: 'horizontal',
-											    slideWidth: 105,
-											    infiniteLoop: false,
-											    pager: false,
-											    minSlides: 5,
-											    maxSlides: 5,
-											    moveSlides: 1,
-											    slideMargin: 8
-											  });
-
-											});
-
-											    $('#get-an-appoinment').click(function() {
-											    	if ($(this).hasClass("active")) {
-														$(this).removeClass("active");
-											    	}
-											    	else {$(this).addClass("active");}
-											    	
-											    	$('#doctor-appoinment').slideToggle(500);
-											    });
-										</script>
-										<div class="clearfix"></div>
-								</li>
-								@endforeach	
+									
 								<!--<li>
 									<div class="doctor-img"><img src="images/doctor.jpg" alt=""/></div>
 										<div class="doctor-name">
@@ -517,6 +494,36 @@
 								</li>-->
 													
 							</ul>
+
+
+							<script type="text/javascript">
+											$(document).ready(function(){
+											  	$('#doctor-appoinment').slideUp();
+											  $('#doctor-appoinment-slides').bxSlider({
+											    mode: 'horizontal',
+											    slideWidth: 105,
+											    infiniteLoop: false,
+											    pager: false,
+											    minSlides: 5,
+											    maxSlides: 5,
+											    moveSlides: 1,
+											    slideMargin: 8
+											  });
+
+											});
+
+											    $('#get-an-appoinment').click(function() {
+											    	if ($(this).hasClass("active")) {
+														$(this).removeClass("active");
+											    	}
+											    	else {$(this).addClass("active");}
+											    	
+											    	$('#doctor-appoinment').slideToggle(500);
+											    });
+										</script>
+										<div class="clearfix"></div>
+
+
 							<div class="search-pagination">
 								<div id="paginate"></div>
 								<script src="js/jquery.paginate.js" type="text/javascript"></script>
@@ -539,6 +546,7 @@
 								});
 								</script>
 							</div>
+
 						</div>
 					</div>
 				</div>
