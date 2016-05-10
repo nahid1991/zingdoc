@@ -18,9 +18,9 @@ class CreateDoctorEntityTable extends Migration
             $table->foreign('entity_user')->references('username')->on('users')->onDelete('cascade');
             $table->string('doctor_user')->index();
             $table->foreign('doctor_user')->references('username')->on('users')->onDelete('cascade');
-            $table->string('issues')->nullable();
+            $table->string('workhour')->nullable();
             $table->timestamp('created_at');
-            $table->datetime('appointed_at');
+            $table->string('appointed_at');
         });
     }
 

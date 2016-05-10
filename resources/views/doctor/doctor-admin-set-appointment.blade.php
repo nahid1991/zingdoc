@@ -37,14 +37,16 @@
 										</div><!-- End .col -->
 										<div class="col-xs-12 col-sm-7 col-md-7">
 											<table class="schedule">
+												@foreach($doctor_schedule as $doc_info)
 												<tr>
-													<td>Mon - Thu</td>
-													<td> <p>10:00 am - 6:00 pm</p>  <a class="close" href="#">X</a></td>
+													<td>{{ $doc_info->days }}</td>
+													<td> <p>{{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}</p>  <a class="close" href="#">X</a></td>
 												</tr>
-												<tr>
+												@endforeach
+												<!-- <tr>
 													<td>Sat</td>
 													<td> <p>10:00 am - 5:00 pm</p>  <a class="close" href="#">X</a></td>
-												</tr>
+												</tr> -->
 											</table>
 											<div class="clearfix"></div>
 											<div class="addbtn_cont">
@@ -96,14 +98,16 @@
 																	;
 															</script>
 															<div class="clearfix"></div>
+
 															<div class="btn-group" data-toggle="buttons">
-																<label class="btn btn-primary"><input type="checkbox" name="days" value="Mon" id="option1">Mon</label>
-																<label class="btn btn-primary"><input type="checkbox" name="days" value="Tue" id="option2">Tue</label>
-																<label class="btn btn-primary"><input type="checkbox" name="days" value="Wed" id="option3">Wed</label>
-																<label class="btn btn-primary"><input type="checkbox" name="days" value="Thu" id="option4">Thu</label>
-																<label class="btn btn-primary"><input type="checkbox" name="days" value="Fri" id="option5">Fri</label>
-																<label class="btn btn-primary"><input type="checkbox" name="days" value="Sat" id="option6">Sat</label>
-																<label class="btn btn-primary"><input type="checkbox" name="days" value="Sun" id="option7">Sun</label>
+																<!--<p>Please choose one day at a time</p>-->
+																<label class="btn btn-primary"><input type="checkbox" name="day1" value="Mon" id="option1">Mon</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day2" value="Tue" id="option2">Tue</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day3" value="Wed" id="option3">Wed</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day4" value="Thu" id="option4">Thu</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day5" value="Fri" id="option5">Fri</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day6" value="Sat" id="option6">Sat</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day7" value="Sun" id="option7">Sun</label>
 															</div>															
 														</div>
 

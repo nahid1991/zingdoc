@@ -10,6 +10,7 @@
 									<img src="images/patient-profile.jpg">
 								</div>
 								<ul><li>
+										<a href="{{ url('/search') }}">Find Doctor</a></li><li>
 										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
 										<a href="{{ url('/patient-comments') }}">Comments</a></li><li>
 										<a href="{{ url('/patient-profile') }}">Profile</a></li><li>

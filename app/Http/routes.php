@@ -78,6 +78,9 @@ Route::get('/homepage', 'TestController@home');
 // 	Route::get('/homepage', 'TestController@home');
 // });
 
+Route::get('/doc-prof/{id}', 'PatientController@docprof');
+
+
 Route::group(['middleware' => ['web','auth','revalidate']], function () {
     Route::get('/homepage', 'TestController@home');
 	Route::get('/auth/logout','Auth\AuthController@logout');
@@ -94,6 +97,8 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/entity-profile', 'EntityController@profile');
 	Route::get('/entity-profile-edit', 'EntityController@profileEdit');
 	Route::get('/entity-account-settings', 'EntityController@settings');
-	
+	Route::post('/schedule-make', 'ScheduleController@make');
+	Route::get('/search', 'SearchController@search');
+	Route::get('/get-appointment', 'PatientController@appointed');
 });
 

@@ -19,8 +19,11 @@ class CreatePatientAppointmentTable extends Migration
             $table->string('doctor_user')->index();
             $table->foreign('doctor_user')->references('username')->on('users')->onDelete('cascade');
             $table->string('issues')->nullable();
+            $table->integer('approved')->nullable();
+            $table->string('email');
+            $table->integer('phone_number');
             $table->timestamp('created_at');
-            $table->datetime('appointed_at');
+            $table->string('appointed_at');
         });
     }
 
