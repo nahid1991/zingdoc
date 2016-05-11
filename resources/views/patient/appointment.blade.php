@@ -17,15 +17,18 @@
 				                <div class="clearfix"></div>
 				            </div>
 							<div class="doctor-short-profile">
-								<div class="img-holder"><img src="images/doctor-profile.jpg"/></div>
+								@foreach($user as $users)
+								@foreach($doctor_info as $doc)
+								<div class="img-holder"><img src="/images/doctor-profile.jpg"/></div>
 								<div class="desc">									
-									<h5>Dr. Alla Dorfman</h5>
-									<p>DDS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Dentist</p>
+									<h5>{{ $doc->name }}</h5>
+									<p>DDS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ $doc->speciality }}</p>
 									<p class="adr">
-										<b>Tribeca Dental Care</b><br/>
+										<b>{{ $doc->entity_name }}</b><br/>
 										#A-102, Marve Link Apartment, Marve Road Forest Ave Ridgewood<br> NY 11385
 									</p>
 								</div>
+								
 							</div>
 						</div>
 						<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
@@ -33,25 +36,37 @@
 								<h5>Get An Appointment</h5>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat laoreet dolore magna aliquam erat volutpat.</p>
 							</div>
-							<form name="" id="contact-form" action="search.html" method="get">
+							<!-- <form name="" id="contact-form" action="search.html" method="get"> -->
+							{!!Form::open(['url'=>'/appointing', 'id'=>'contact-form'])!!}
+								<input type="hidden" name="user_username" value="{{ $user->username }}">
+								<input type="hidden" name="entity_user" value="{{ $doc->entity_user }}">
+								<input type="hidden" name="doctor_user" value="{{ $doc->doctor_user }}">
 								<div class="doctorsignup-holder">
-									 <input name="country" required type="text" class="form-control"  placeholder="Patient / Visitor Name"/>
+									{!! Form::text('name',Input::old('name'),['class'=>'form-control', 'placeholder'=>'Patient / Visitor Name']) !!}
+									 <!-- <input name="country" required type="text" class="form-control"  placeholder="Patient / Visitor Name"/> -->
 								</div>
 								<div class="doctorsignup-holder">
-									 <input name="country" required type="text" class="form-control"   placeholder="Appointment Reason"/>
+									{!! Form::text('issues',Input::old('issues'),['class'=>'form-control', 'placeholder'=>'Appointment Reason']) !!}
+									 <!-- <input name="country" required type="text" class="form-control"   placeholder="Appointment Reason"/> -->
 								</div>
 								<div class="doctorsignup-holder">
-									 <input name="country" required type="text" class="form-control"   placeholder="Email"/>
+									 {!! Form::text('email',Input::old('email'),['class'=>'form-control', 'placeholder'=>'Email']) !!}
+									 <!-- <input name="country" required type="text" class="form-control"   placeholder="Email"/> -->
 								</div>
 								<div class="doctorsignup-holder">
-									 <input name="country" required type="text" class="form-control"   placeholder="Mobile"/>
+									 {!! Form::text('phone_number',Input::old('phone_number'),['class'=>'form-control', 'placeholder'=>'Mobile']) !!}
+									 <!-- <input name="country" required type="text" class="form-control"   placeholder="Mobile"/> -->
 									 <div class="info-text">You will receive an SMS with a verification code on this number.</div>
 								</div>
 								<div class="doctorsignup-button">
-										<a href="#">SUBMIT</a>
+									{!!Form::submit('SUBMIT')!!}
+									<!-- <a href="doctor-admin-appointments-day-view.php">LOGIN</a> -->
 								</div>
-							</form>
+							{!!Form::close()!!}
+							<!-- </form> -->
 						</div>
+						@endforeach
+						@endforeach
 					</div>
 				</div>
 			</div><!-- End #doctor-signup -->

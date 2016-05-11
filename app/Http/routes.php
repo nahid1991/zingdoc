@@ -101,6 +101,8 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/entity-account-settings', 'EntityController@settings');
 	Route::post('/schedule-make', 'ScheduleController@make');
 	Route::get('/search', 'SearchController@search');
+	Route::get('/appointment-form/{id}', 'ScheduleController@form_patient');
 	Route::get('/get-appointment', 'PatientController@appointed');
+	Route::post('/appointing', 'ScheduleController@submission');
 });
 

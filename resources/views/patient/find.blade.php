@@ -56,48 +56,51 @@
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-10 col-lg-10 ">
 						<div class="doctor-holder">
-							<div class="page-title"><span>Dentists in New York</sapn></div>
+							<div class="page-title"><span>Doctors in New York</sapn></div>
 							
 							<ul class="doctor-details">
 								@foreach($doctors as $doctor)
 								<li>
-										<div class="doctor-img"><img src="images/patient.jpg" alt=""/></div>
+										<div class="doctor-img"><img src="/images/doctor.jpg" alt="supposed to be a pic here"/></div>
 										<div class="doctor-name">
 											<a href="{{ action('PatientController@docprof', [$doctor->id]) }}"><h2>{{ $doctor->name }}</h2></a>										
-											<div class="specialist">BDS, MDS - Periodontics, Dip Skin Aesthetics</div>
+											<div class="specialist">{{ $doctor->practice_name }}</div>
 											<div class="city">217 centre.<br/>New York,NY 10013</div>
 										</div>
 										<div class="right-area">
 											<div class="ratings">
-												<h2>Dentist</h2>
-												<ul>
+												<h2>{{ $doctor->speciality }}</h2>
+												<!-- <ul>
 													<li><img src="images/ratings.png" alt=""/></li>
 													<li><img src="images/ratings.png" alt=""/></li>
 													<li><img src="images/ratings.png" alt=""/></li>
 													<li><img src="images/ratings.png" alt=""/></li>
 													<li><img src="images/ratings.png" alt=""/></li>
-												</ul>
+												</ul> -->
+												<!-- <marquee><p><b>5.0</b></p></marquee> -->
+												<h5><strong><b><i>Rating: 5.0</b></i></strong></h5>
 											</div>
-											<div class="booking"><a id="get-an-appoinment" href="#">Get An Appointment</a></div>
+											<div class="booking"><a id="doctor_{{ $doctor->id }}" href="#">Get An Appointment</a></div>
 										</div>
 
 										<div class="clearfix"></div>										
 
-										<div id="doctor-appoinment" class="search-page">
+										<div id="{{ $doctor->username }}" class="search-page">
 											<h4>Book an Appointment</h4>
 											<p class="ds">Click a time below to book an appointment.</p>					
 													
-											<div id="doctor-appoinment-slides">
+											<div id="{{ $doctor->username }}-slides">
 											  <div class="slide">
 											  	<div class="appoinment-day">
 											  		<table>
 											  			<tr>
 											  				<th>
 												                <div class="header-tile-date-name">Sun</div>
-												                <div class="header-tile-date-value">09 FEB</div>
+												                <div class="header-tile-date-value">{{ $sun }}</div>
 											  				</th>
 											  			</tr>
-											  			<tr><td><a href="{{ url('/get-appointment') }}">10:30 am</a></td></tr>
+											  			<!-- <tr><td><a href="{{ url('/get-appointment') }}">10:30 am</a></td></tr> -->
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doctor->username]) }}">10:30 am</a></td></tr>
 											  			<tr><td><a href="get-an-appoinment.php">11:30 am</a></td></tr>
 											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
 											  			<tr><td><a href="get-an-appoinment.php">1:30 pm</a></td></tr>
@@ -115,7 +118,7 @@
 											  			<tr>
 											  				<th>
 												                <div class="header-tile-date-name">Mon</div>
-												                <div class="header-tile-date-value">10 FEB</div>
+												                <div class="header-tile-date-value">{{ $mon }}</div>
 											  				</th>
 											  			</tr>
 											  			<tr><td><a href="get-an-appoinment.php">12 am</a></td></tr>
@@ -133,7 +136,7 @@
 											  			<tr>
 											  				<th>
 												                <div class="header-tile-date-name">Tue</div>
-												                <div class="header-tile-date-value">11 FEB</div>
+												                <div class="header-tile-date-value">{{ $tue }}</div>
 											  				</th>
 											  			</tr>
 											  			<tr><td><a href="get-an-appoinment.php">10:30 am</a></td></tr>
@@ -151,7 +154,7 @@
 											  			<tr>
 											  				<th>
 												                <div class="header-tile-date-name">Wed</div>
-												                <div class="header-tile-date-value">12 FEB</div>
+												                <div class="header-tile-date-value">{{ $wed }}</div>
 											  				</th>
 											  			</tr>
 											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
@@ -169,7 +172,7 @@
 											  			<tr>
 											  				<th>
 												                <div class="header-tile-date-name">Thu</div>
-												                <div class="header-tile-date-value">13 FEB</div>
+												                <div class="header-tile-date-value">{{ $thu }}</div>
 											  				</th>
 											  			</tr>
 											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
@@ -185,7 +188,7 @@
 											  			<tr>
 											  				<th>
 												                <div class="header-tile-date-name">Fri</div>
-												                <div class="header-tile-date-value">14 FEB</div>
+												                <div class="header-tile-date-value">{{ $fri }}</div>
 											  				</th>
 											  			</tr>
 											  		</table>
@@ -198,7 +201,7 @@
 											  			<tr>
 											  				<th>
 												                <div class="header-tile-date-name">Sat</div>
-												                <div class="header-tile-date-value">15 FEB</div>
+												                <div class="header-tile-date-value">{{ $sat }}</div>
 											  				</th>
 											  			</tr>
 											  			<tr><td><a href="get-an-appoinment.php">3 pm</a></td></tr>
@@ -207,7 +210,7 @@
 											  	</div>
 											  </div><!-- End Slide Item -->
 
-											  <div class="slide">
+											  <!--<div class="slide">
 											  	<div class="appoinment-day">
 											  		<table>
 											  			<tr>
@@ -226,9 +229,9 @@
 											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
 											  		</table>
 											  	</div>
-											  </div><!-- End Slide Item -->
+											  </div>--><!-- End Slide Item -->
 											  
-											  <div class="slide">
+											  <!-- <div class="slide">
 											  	<div class="appoinment-day">
 											  		<table>
 											  			<tr>
@@ -244,9 +247,9 @@
 											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
 											  		</table>
 											  	</div>
-											  </div><!-- End Slide Item -->
+											  </div> --><!-- End Slide Item -->
 											  
-											  <div class="slide">
+											  <!-- <div class="slide">
 											  	<div class="appoinment-day">
 											  		<table>
 											  			<tr>
@@ -264,7 +267,7 @@
 											  	</div>
 											  </div><!-- End Slide Item -->
 											  
-											  <div class="slide">
+											  <!-- <div class="slide">
 											  	<div class="appoinment-day">
 											  		<table>
 											  			<tr>
@@ -280,9 +283,9 @@
 											  			<tr><td><a href="get-an-appoinment.php">4:30 pm</a></td></tr>
 											  		</table>
 											  	</div>
-											  </div><!-- End Slide Item -->
+											  </div> --><!-- End Slide Item -->
 											  
-											  <div class="slide">
+											  <!-- <div class="slide">
 											  	<div class="appoinment-day">
 											  		<table>
 											  			<tr>
@@ -296,9 +299,9 @@
 											  			<tr><td><a href="get-an-appoinment.php">4:15 pm</a></td></tr>
 											  		</table>
 											  	</div>
-											  </div><!-- End Slide Item -->
+											  </div> --><!-- End Slide Item -->
 											  
-											  <div class="slide">
+											  <!-- <div class="slide">
 											  	<div class="appoinment-day">
 											  		<table>
 											  			<tr>
@@ -309,9 +312,9 @@
 											  			</tr>
 											  		</table>
 											  	</div>
-											  </div><!-- End Slide Item -->
+											  </div> --><!-- End Slide Item -->
 											  
-											  <div class="slide">
+											 <!--  <div class="slide">
 											  	<div class="appoinment-day">
 											  		<table>
 											  			<tr>
@@ -324,12 +327,45 @@
 											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
 											  		</table>
 											  	</div>
-											  </div><!-- End Slide Item -->
+											  </div> --><!-- End Slide Item -->
 
 											</div>	
 											<div class="clearfix"></div>		
 										</div><!-- End #doctor-appoinment Appoinment Section -->
-									</li>
+									
+
+
+
+									<script type="text/javascript">
+											$(document).ready(function(){
+											  	$('#{{ $doctor->username }}').slideUp();
+											  $('#{{ $doctor->username }}-slides').bxSlider({
+											    mode: 'horizontal',
+											    slideWidth: 100,
+											    infiniteLoop: false,
+											    pager: false,
+											    minSlides: 7,
+											    maxSlides: 7,
+											    moveSlides: 1,
+											    slideMargin: 8
+											  });
+
+											});
+
+											    $('#doctor_{{ $doctor->id }}').click(function() {
+											    	if ($(this).hasClass("active")) {
+														$(this).removeClass("active");
+											    	}
+											    	else {$(this).addClass("active");}
+											    	
+											    	$('#{{ $doctor->username }}').slideToggle(500);
+											    });
+										</script>
+										<div class="clearfix"></div>
+
+										</li>
+
+
 								@endforeach
 										
 
@@ -496,32 +532,7 @@
 							</ul>
 
 
-							<script type="text/javascript">
-											$(document).ready(function(){
-											  	$('#doctor-appoinment').slideUp();
-											  $('#doctor-appoinment-slides').bxSlider({
-											    mode: 'horizontal',
-											    slideWidth: 105,
-											    infiniteLoop: false,
-											    pager: false,
-											    minSlides: 5,
-											    maxSlides: 5,
-											    moveSlides: 1,
-											    slideMargin: 8
-											  });
-
-											});
-
-											    $('#get-an-appoinment').click(function() {
-											    	if ($(this).hasClass("active")) {
-														$(this).removeClass("active");
-											    	}
-											    	else {$(this).addClass("active");}
-											    	
-											    	$('#doctor-appoinment').slideToggle(500);
-											    });
-										</script>
-										<div class="clearfix"></div>
+							
 
 
 							<div class="search-pagination">

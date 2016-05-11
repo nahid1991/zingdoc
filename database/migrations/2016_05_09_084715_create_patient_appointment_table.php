@@ -18,6 +18,8 @@ class CreatePatientAppointmentTable extends Migration
             $table->foreign('patient_user')->references('username')->on('users')->onDelete('cascade');
             $table->string('doctor_user')->index();
             $table->foreign('doctor_user')->references('username')->on('users')->onDelete('cascade');
+            $table->string('admin_user')->index();
+            $table->foreign('admin_user')->references('username')->on('users')->onDelete('cascade');
             $table->string('issues')->nullable();
             $table->integer('approved')->nullable();
             $table->string('email');
