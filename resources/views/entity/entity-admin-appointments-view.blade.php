@@ -3,6 +3,7 @@
 		<div id="full-body">
 			<div class="full-body-conteiner">
 				<div class="container">
+
 					<div class="row">
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
@@ -20,18 +21,23 @@
 										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
 							</div>
 						</div><!-- End .col -->
-
+						
 						<div class="col-xs-12 col-sm-8 col-md-9">
 							<div class="top-epof-head">
 								<div class="row">
 									<div class="col-xs-12 col-sm-5 col-md-5">
 										<div class="edpof-left">
 											<div class="doctorsignup-holder edit-holder epof-editholder">
+												<h1>{{ $user->name }}</h1>
+												@foreach($doc_info as $doc)
+													<p>{{ $doc->name }}</p>
+												@endforeach
 												<label for="">Select Doctor</label>
 												 <select>	
-													<option value="">Dr. Alla Dorfman</option>											
+													<option value=""></option>											
 												</select>
 											</div>
+
 										</div>
 									</div>
 									<div class="col-xs-12 col-sm-7 col-md-7 edpof-right">
@@ -42,6 +48,7 @@
 														MON - WED<br>
 														9:30 AM - 9:30 PM
 													</div>
+													
 													<div class="shedule">
 														SAT - SUN<br>
 														9:30 AM - 9:30 PM
@@ -52,6 +59,7 @@
 									</div>
 								</div>								
 							</div>
+							
 							<script type="text/javascript">
 							    $(function(){
 							       $('[rel="tooltip"]').tooltip({placement: 'top'});
@@ -75,6 +83,7 @@
 							</div>
 
 
+
 							
 
 							<div class="row">
@@ -85,19 +94,23 @@
 										</div>
 										<div class="pof-desc">
 											<ul class="appoin-list">
+												@foreach($sche_doc_pat as $sdp)
 												<li>
 													<div class="s-left">
-														<h2>Denial Leo</h2>
-														<p>Diabetic Issues</p>
+														<h2>{{ $sdp->patient_name }}</h2>
+														<p>{{ $sdp->issues }}</p>
+														<p>{{ $sdp->doctor_user }}</p>
 													</div><div class="s-right">
-														<div class="time">10 AM  - 10:30 AM</div>
+														<div class="time">{{ $sdp->appointed_at }}</div>
 														<ul class="action">
 															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
 															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li>
 															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
 														</ul>
 													</div>
-												</li><li>
+												</li>
+												@endforeach
+												<!-- <li>
 													<div class="s-left">
 														<h2>Bismith Jonh</h2>
 														<p>Diabetic Issues</p>
@@ -169,7 +182,7 @@
 															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
 														</ul>
 													</div>
-												</li>
+												</li> -->
 											</ul>
 										</div><!-- End .pof-desc -->
 									</div><!-- End .pof-content -->
@@ -199,5 +212,7 @@
 						</div><!-- End .col -->
 					</div><!-- End .row -->
 				</div><!-- End .conteiner -->
+				
 			</div><!-- End full-body-conteiner -->
+			
 @stop

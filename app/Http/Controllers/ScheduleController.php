@@ -217,6 +217,7 @@ class ScheduleController extends Controller
                 'email' => $request->input('email'),
                 'phone_number' => $request->input('phone_number'),
                 'appointed_at' => '10:30 am',
+                'patient_name' => $request->input('name'),
             ]);
 
         return redirect('/search');
