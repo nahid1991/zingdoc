@@ -57,7 +57,8 @@ class TestController extends Controller
             if($user->user_type == 1){
                 $user_info = DB::table('users')
                     ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
-                    ->where('users.username', $user->username)
+                    ->where('users.username', '=', $user->username)
+                    ->where('approved', '=', 1)
                     ->get();
                 return view('doctor.doctor_main', compact('user', 'user_info'));
             }
@@ -82,7 +83,12 @@ class TestController extends Controller
 
 
     public function run(){
-        
+        $date = Carbon::createFromTime(9, 30)->diffInSeconds(Carbon::now());
+        // $compareDate = Carbon::createFromTime(11, 40);
+        // $newFormat = $compareDate->format('g:i A');
+        // $format = $date->format('g:i A');
+        // echo($format->diffInHours($newFormat));
+        echo($date);
     }
 
 

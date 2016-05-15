@@ -105,7 +105,11 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/get-appointment', 'PatientController@appointed');
 	Route::post('/appointing', 'ScheduleController@submission');
 	Route::post('/find-doc', 'EntityController@test');
+	Route::get('/doctor/{username}', 'EntityController@trial');
 	Route::get('/approve/{username}/{patient}', 'EntityController@approve');
 	Route::get('/decline/{username}/{patient}', 'EntityController@cancel');
+	Route::get('/checked/{username}/{patient}', 'EntityController@doc_checked');
+	Route::get('/canceled/{username}/{patient}', 'EntityController@doc_cancel');
+	Route::get('/doctor-calendar', 'CalendarController@show');
 });
 

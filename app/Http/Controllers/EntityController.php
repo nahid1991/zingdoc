@@ -70,13 +70,38 @@ class EntityController extends Controller
     }
 
     public function test(Request $request){
+        // $user = \Auth::user();
+        // $doc_info = DB::table('users')
+        //     ->where('username', '=', $request->input('doctor_user'))
+        //     ->first();
+        // $doc_schedule = DB::table('users')
+        //     ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+        //     ->where('username', '=', $request->input('doctor_user'))
+        //     ->get();
+        // $listed_doc_pat = DB::table('users')
+        //     ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
+        //     // ->join('appointment_user', 'users.username', '=', 'appointment_user.admin_user')
+        //     ->where('users.username', '=', $user->username)
+        //     ->get();
+        // $patient_list = DB::table('users')
+        //     ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
+        //     ->where('username', '=', $request->input('doctor_user'))
+        //     ->get();
+        // return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list'));
+        // return redirect('/find-doc/'.$doc_info->username);
+        return redirect('/doctor/'.$request->input('doctor_user'));
+    }
+    
+
+    public function trial($username){
+        // echo($username);
         $user = \Auth::user();
         $doc_info = DB::table('users')
-            ->where('username', '=', $request->input('doctor_user'))
+            ->where('username', '=', $username)
             ->first();
         $doc_schedule = DB::table('users')
             ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
-            ->where('username', '=', $request->input('doctor_user'))
+            ->where('username', '=', $username)
             ->get();
         $listed_doc_pat = DB::table('users')
             ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
@@ -85,12 +110,17 @@ class EntityController extends Controller
             ->get();
         $patient_list = DB::table('users')
             ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
-            ->where('username', '=', $request->input('doctor_user'))
+            ->where('username', '=', $username)
             ->get();
         return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list'));
         // return redirect('/find-doc/'.$doc_info->username);
     }
-    
+
+
+
+
+
+
 
     public function cancel($username, $p_name){
         DB::table('appointment_user')
@@ -144,7 +174,7 @@ class EntityController extends Controller
         DB::table('appointment_user')
             ->where('doctor_user', '=', $username)
             ->where('patient_name', '=', $p_name)
-            ->where('approved', '=', 0)
+            ->where('approved', '=', NULL)
             ->delete();
 
         $doc_info = DB::table('users')
@@ -166,5 +196,13 @@ class EntityController extends Controller
         return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list'));
     }
 
+
+    public function doc_checked($username, $name){
+        echo($username." ".$name);
+    }
+
+    public function doc_cancel($username, $name){
+        echo($username." ".$name);
+    }
 
 }

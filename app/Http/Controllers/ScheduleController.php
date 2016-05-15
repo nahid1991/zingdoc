@@ -19,14 +19,20 @@ class ScheduleController extends Controller
     public function make(DoctorScheduleRequest $request)
     {
     	$user = \Auth::user();
-    	// echo($request->input('all'));
+        $starting_time = explode(":", $request->input('starting_time'));
+        $starting_format = Carbon::createFromTime($starting_time[0], $starting_time[1]);
+        $starting = $starting_format->format('g:i A');
+
+        $ending_time = explode(":", $request->input('ending_time'));
+        $ending_format = Carbon::createFromTime($ending_time[0], $ending_time[1]);
+        $ending = $ending_format->format('g:i A');
+
+        
+        
         $verify = DB::table('doctor_schedule')
             ->where('doctor_user', '=', $user->username)
             ->get();
-        // echo(sizeof($verify));
-        // foreach($verify as $ver){
-        //     echo ($ver->days);
-        // }
+        
 
         $check = '';
 
@@ -45,8 +51,8 @@ class ScheduleController extends Controller
                 'doctor_user' => $user->username,
                 'days' => $request->input('day1'),
                 'created_at' => date("Y-m-d h:i:sa"),
-                'starting_time' => $request->input('starting_time'),
-                'ending_time' => $request->input('ending_time'),
+                'starting_time' => $starting,
+                'ending_time' => $ending,
              ]);
             }
             
@@ -69,8 +75,8 @@ class ScheduleController extends Controller
                 'doctor_user' => $user->username,
                 'days' => $request->input('day2'),
                 'created_at' => date("Y-m-d h:i:sa"),
-                'starting_time' => $request->input('starting_time'),
-                'ending_time' => $request->input('ending_time'),
+                'starting_time' => $starting,
+                'ending_time' => $ending,
              ]);
             }
     	}
@@ -90,8 +96,8 @@ class ScheduleController extends Controller
                 'doctor_user' => $user->username,
                 'days' => $request->input('day3'),
                 'created_at' => date("Y-m-d h:i:sa"),
-                'starting_time' => $request->input('starting_time'),
-                'ending_time' => $request->input('ending_time'),
+                'starting_time' => $starting,
+                'ending_time' => $ending,
              ]);
             }
     	}
@@ -111,8 +117,8 @@ class ScheduleController extends Controller
                 'doctor_user' => $user->username,
                 'days' => $request->input('day4'),
                 'created_at' => date("Y-m-d h:i:sa"),
-                'starting_time' => $request->input('starting_time'),
-                'ending_time' => $request->input('ending_time'),
+                'starting_time' => $starting,
+                'ending_time' => $ending,
              ]);
             }
     	}
@@ -131,8 +137,8 @@ class ScheduleController extends Controller
                 'doctor_user' => $user->username,
                 'days' => $request->input('day5'),
                 'created_at' => date("Y-m-d h:i:sa"),
-                'starting_time' => $request->input('starting_time'),
-                'ending_time' => $request->input('ending_time'),
+                'starting_time' => $starting,
+                'ending_time' => $ending,
              ]);
             }
     	}
@@ -151,8 +157,8 @@ class ScheduleController extends Controller
                 'doctor_user' => $user->username,
                 'days' => $request->input('day6'),
                 'created_at' => date("Y-m-d h:i:sa"),
-                'starting_time' => $request->input('starting_time'),
-                'ending_time' => $request->input('ending_time'),
+                'starting_time' => $starting,
+                'ending_time' => $ending,
              ]);
             }
     	}
@@ -172,19 +178,18 @@ class ScheduleController extends Controller
                 'doctor_user' => $user->username,
                 'days' => $request->input('day7'),
                 'created_at' => date("Y-m-d h:i:sa"),
-                'starting_time' => $request->input('starting_time'),
-                'ending_time' => $request->input('ending_time'),
+                'starting_time' => $starting,
+                'ending_time' => $ending,
              ]);
             }
     	}
 
+
+
+
     	
 
-    	// echo($request->input('starting_time'));
-    	// echo($request->input('ending_time'));
     	
-    	// echo jddayofweek ( cal_to_jd(CAL_GREGORIAN, date("m"),date("d"), date("Y")) , 2 );
-    	// echo('done');
     	return redirect('/set-appointment');
     }
 

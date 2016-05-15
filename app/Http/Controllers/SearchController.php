@@ -93,6 +93,8 @@ class SearchController extends Controller
         // }
 
 
+
+
         $doctors = DB::table('users')
     		->where('user_type', '=', '1')
     		->get();

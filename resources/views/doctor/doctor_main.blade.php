@@ -16,7 +16,7 @@
 								</div>
 								<ul><li>
 										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
-										<a href="{{ url('/set-appointment') }}">Set Appointment</a></li><li>
+										<a href="{{ url('/set-appointment') }}">Set Timing</a></li><li>
 										<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
 										<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
 										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
@@ -37,9 +37,9 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-6">
 										<ul class="view-type-link">
-											<li><a class="current" href="doctor-admin-appointments-day-view.php" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
-												<a href="doctor-admin-appointments-week-view.php" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li>
-												<a href="doctor-admin-appointments-month-view.php" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>
+											<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
+												<!-- <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
+												<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>
 										</ul>
 									</div>
 								</div>								
@@ -54,91 +54,25 @@
 										</div>
 										<div class="pof-desc">
 											<ul class="appoin-list">
+												@foreach($user_info as $u_i)
+												@if($u_i->approved != 2)
 												<li>
 													<div class="s-left">
-														<h2>Denial Leo</h2>
-														<p>Diabetic Issues</p>
+														<h2>{{ $u_i->patient_name }}</h2>
+														<p>{{ $u_i->issues }}</p>
 													</div><div class="s-right">
-														<div class="time">10 AM  - 10:30 AM</div>
+														<div class="time">{{ $u_i->appointed_at }}</div>
 														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">10:30 AM - 11:00 AM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">11:00 AM  - 12:00 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times current"></i></a></li>
-														</ul>
-													</div>
-												</li><li class="current">
-													<div class="s-left">
-														<h2>Mic A Ting</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">12 PM  - 12:30 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right current"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">2:00 PM  - 2:30 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">2:30 PM  - 3:30 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">3:30 PM - 4:00 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
+															<li><a href="{{  action('EntityController@doc_checked', [$user->username, $u_i->patient_name, $u_i->appointed_at])  }}" 
+																rel="tooltip" title="Checked"><i class="icon icon-arrow-right"></i></a></li>
+															<!-- <li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li> -->
+															<li><a href="{{  action('EntityController@doc_cancel', [$user->username, $u_i->patient_name, $u_i->appointed_at])  }}" 
+																rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
 														</ul>
 													</div>
 												</li>
+												@endif
+												@endforeach
 											</ul>
 										</div><!-- End .pof-desc -->
 									</div><!-- End .pof-content -->

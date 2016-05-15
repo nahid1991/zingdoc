@@ -13,7 +13,7 @@
 								</div>
 								<ul><li>
 										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
-										<a href="{{ url('/set-appointment') }}">Set Appointment</a></li><li>
+										<a href="{{ url('/set-appointment') }}">Set Timing</a></li><li>
 										<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
 										<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
 										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
