@@ -111,5 +111,6 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/checked/{username}/{patient}', 'EntityController@doc_checked');
 	Route::get('/canceled/{username}/{patient}', 'EntityController@doc_cancel');
 	Route::get('/doctor-calendar', 'CalendarController@show');
+	Route::get('/scheduling/{username}/{year}/{month}/{day}', 'CalendarController@make');
 });
 
