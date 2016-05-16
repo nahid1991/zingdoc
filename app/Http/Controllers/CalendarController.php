@@ -22,6 +22,6 @@ class CalendarController extends Controller
 
 
     public function make($username, $year, $month, $day){
-    	echo($username);
+    	echo($day.'-'.$month.'-'.$year);
     }
 }

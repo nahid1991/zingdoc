@@ -1,7 +1,7 @@
 <?php
 
 	/* draws a calendar */
-	function draw_calendar($month,$year){
+	function draw_calendar($username,$month,$year){
 
 		/* draw table */
 		$calendar = '<table cellpadding="0" cellspacing="0" class="calendar">';
@@ -32,8 +32,8 @@
 				/* add in the day number */
 				// $calendar.= '<div class="day-number">'.$list_day.'</div> <a href="#"><div class="noof-apn"><h2>'.rand(5, 15).'</h2><span>Appoinments</span> </div></a> ';
 				$calendar.= '<div class="day-number">'.$list_day.'
-					</div> <a href="{{  action(CalendarController@make, 
-						[$user->username, $year, $month, $list_day])  }}">
+					</div> <a href="'.  action('CalendarController@make', 
+						[$username, $year, $month, $list_day])  .'">
 					<div class="noof-apn"><h2>'.$list_day.'</h2><span></span> </div></a> ';
 				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
 			$calendar.= str_repeat('<p> </p>',2);
@@ -154,7 +154,7 @@
 
 									<div class="monthview-cal-container">
 										<?php 
-											echo draw_calendar( $num_month ,  $num_year );
+											echo draw_calendar( $user->username, $num_month ,  $num_year );
 										?>										
 									</div>
 								</div><!-- End .pof-desc -->
