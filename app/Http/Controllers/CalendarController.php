@@ -88,10 +88,35 @@ class CalendarController extends Controller
         $date = explode('-', $request->input('date'));
 
         $time = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+        $i = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+
+        
+        // $i = $time;
         // $duration = $request->input('duration');
         // $dura = $time->addMinutes($duration);
-        $end_interval = $time->addMinutes($request->input('duration'));
-        $end_interval = $end_interval->hour.':'.$end_interval->minute;
+        $end_interval = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+        $end_interval->addMinutes($request->input('duration'));
+        $end_time = $end_interval->format('g:i A');
+        // echo($end_interval);
+        // $i = $time;
+        // echo($i);
+        // echo($time);
+
+        // echo($time->diffInMinutes($end_interval));
+        while($i->diffInMinutes($end_interval)){
+            $slot = $i->format('g:i A');
+            DB::table('time_slot')
+                ->insert([
+                    'd_user' => $request->input('username'),
+                    'slot' => $slot,
+                    'day_of_week' => $request->input('day'),
+                    'slot_date' => $time
+                ]);
+            $i = $i->addMinutes($request->input('interval'));
+        }
+
+
+        // $end_time = $end_interval->hour.':'.$end_interval->minute;
 
 
 
@@ -102,13 +127,15 @@ class CalendarController extends Controller
             ->insert([
                 'doc_user' => $request->input('username'),
                 'start_interval' => $start_hour,
-                'end_interval' => $end_interval,
+                'end_interval' => $end_time,
                 'day' => $request->input('day'),
                 'reason' => $request->input('reason'),
                 'interval' => $request->input('interval'),
                 'type' => $request->input('type'), 
                 'date' => $time
-            ]);
+        ]);
+
+
         return redirect('/doctor-calendar');
     }
 }

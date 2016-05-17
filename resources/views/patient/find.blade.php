@@ -100,14 +100,11 @@
 											  				</th>
 											  			</tr>
 											  			<!-- <tr><td><a href="{{ url('/get-appointment') }}">10:30 am</a></td></tr> -->
-											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doctor->username]) }}">10:30 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">11:30 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">1:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">3 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
+											  			@foreach($doctor_info as $doc)
+											  			@if($doctor->username == $doc->d_user && $doc->day_of_week == 'Wednesday')
+											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			@endif
+											  			@endforeach
 											  		</table>
 											  	</div>
 											  </div><!-- End Slide Item -->
