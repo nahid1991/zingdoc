@@ -14,9 +14,9 @@ class DoctorController extends Controller
         $user = \Auth::user();
         
         $doctor_schedule = DB::table('users')
-                    ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
-                    ->where('users.username', $user->username)
-                    ->get();
+            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+            ->where('users.username', $user->username)
+            ->get();
         
     	return view('doctor.doctor-admin-set-appointment', compact('user', 'doctor_schedule'));
     }

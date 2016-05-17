@@ -92,36 +92,7 @@
 						</div>
 
 						<div class="col-xs-12 col-sm-8 col-md-9">
-							<div class="top-epof-head">
-								<div class="row">
-									<div class="col-xs-12 col-sm-5 col-md-5">
-										<div class="edpof-left">
-											<div class="doctorsignup-holder edit-holder epof-editholder">
-												<label for="">Select Doctor</label>
-												 <select>	
-													<option value="">Dr. Alla Dorfman</option>											
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-12 col-sm-7 col-md-7 edpof-right">
-											<div  class="edshedule-left">
-												<div class="epof-title"><h5>Dr. Alla Dorfman</h5><p>DDS  &nbsp;  |  &nbsp; Dentist</p></div>
-												<div class="epof-shedule">
-													<div class="shedule edshedule">
-														MON - WED<br>
-														9:30 AM - 9:30 PM
-													</div>
-													<div class="shedule">
-														SAT - SUN<br>
-														9:30 AM - 9:30 PM
-													</div>
-												</div>
-											</div>
-											<div class="edpof-image"><img src="images/entity-doctor-profile.jpg"></div>
-									</div>
-								</div>								
-							</div>
+							
 							<script type="text/javascript">
 							    $(function(){
 							       $('[rel="tooltip"]').tooltip({placement: 'top'});

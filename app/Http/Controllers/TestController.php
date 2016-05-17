@@ -83,11 +83,13 @@ class TestController extends Controller
 
 
     public function run(){
-        $date = Carbon::createFromTime(9, 30)->diffInSeconds(Carbon::now());
+        // $date = Carbon::createFromTime(9, 30)->diffInSeconds(Carbon::now());
         // $compareDate = Carbon::createFromTime(11, 40);
         // $newFormat = $compareDate->format('g:i A');
         // $format = $date->format('g:i A');
         // echo($format->diffInHours($newFormat));
+        $date = Carbon::now();
+        $date = $date->toDayDateTimeString('l');
         echo($date);
     }
 
