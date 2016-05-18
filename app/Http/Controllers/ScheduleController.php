@@ -194,13 +194,13 @@ class ScheduleController extends Controller
     }
 
 
-    public function form_patient($id){
+    public function form_patient($id, $date, $time){
         $user = \Auth::user();
         $doctor_info = DB::table('users')
             ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
             ->where('users.username', '=', $id)
             ->get();
-        return view('patient.appointment', compact('user', 'doctor_info'));
+        return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time'));
         // echo($doctor_info->speciality);
 
         // echo($id);
@@ -221,8 +221,9 @@ class ScheduleController extends Controller
                 'issues' => $request->input('issues'),
                 'email' => $request->input('email'),
                 'phone_number' => $request->input('phone_number'),
-                'appointed_at' => '10:30 am',
+                'appointed_at' => $request->input('time'),
                 'patient_name' => $request->input('name'),
+                'appointment_time' => $request->input('date')
             ]);
 
         return redirect('/search');

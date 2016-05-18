@@ -40,7 +40,8 @@
 																 <!-- <input name="country" required type="text" class="form-control"   placeholder="PASSWORD"/> -->
 															</div>
 															<div class="doctorsignup-button">
-																{!!Form::submit('LOGIN')!!}
+																
+																<input type="submit" value="LOGIN">
 																<!-- <a href="doctor-admin-appointments-day-view.php">LOGIN</a> -->
 															</div>
 															<div class="clearfix"></div>

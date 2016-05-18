@@ -23,7 +23,7 @@ class SearchController extends Controller
         $fri = Carbon::parse('next friday')->format('jS F');
         $sat = Carbon::parse('next saturday')->format('jS F');
         
-        global $doctor_info;
+        
         
         $doctors = DB::table('users')
             ->where('user_type', '=', '1')

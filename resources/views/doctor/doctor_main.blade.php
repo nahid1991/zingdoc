@@ -63,11 +63,10 @@
 													</div><div class="s-right">
 														<div class="time">{{ $u_i->appointed_at }}</div>
 														<ul class="action">
-															<li><a href="{{  action('EntityController@doc_checked', [$user->username, $u_i->patient_name, $u_i->appointed_at])  }}" 
+															<li><a href="{{  action('DoctorController@doc_checked', [$user->username, $u_i->patient_user, $u_i->patient_name, $u_i->appointed_at])  }}" 
 																rel="tooltip" title="Checked"><i class="icon icon-arrow-right"></i></a></li>
 															<!-- <li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li> -->
-															<li><a href="{{  action('EntityController@doc_cancel', [$user->username, $u_i->patient_name, $u_i->appointed_at])  }}" 
-																rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
+															
 														</ul>
 													</div>
 												</li>

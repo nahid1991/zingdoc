@@ -25,8 +25,13 @@ class DoctorController extends Controller
     	return view('doctor.doctor-admin-view-profile');
     }
 
+    public function make_profile(Request $request){
+        echo($request->input('specializations'));
+    }
+
     public function profileEdit(){
-    	return view('doctor.doctor-admin-edit-profile');
+        $user = \Auth::user();
+    	return view('doctor.doctor-admin-edit-profile', compact('user'));
     }
 
     public function blog(){
@@ -39,5 +44,10 @@ class DoctorController extends Controller
 
     public function settings(){
     	return view('doctor.doctor-admin-account-setting');
+    }
+
+    public function doc_checked($user, $p_user, $p_name, $appoint){
+        $user = \Auth::user();
+        return view('doctor.doctor-prescribe', compact('user'));
     }
 }

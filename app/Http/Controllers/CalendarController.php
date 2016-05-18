@@ -36,8 +36,12 @@ class CalendarController extends Controller
             ->where('username', '=', $user->username)
             ->where('day', '=', $name_o_day)
             ->get();
+        $doc_days = DB::table('users')
+            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+            ->where('username', '=', $user->username)
+            ->get();
 
-        if($date>=Carbon::now()){
+        if($date>Carbon::now()){
             
             $doctor_schedule = DB::table('users')
             ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
@@ -56,6 +60,7 @@ class CalendarController extends Controller
                 $hours[] = $i;
                 $hour = Carbon::createFromTime($i);
                 $hour_formatted[] = $hour->format('g');
+                
             }
         }
 
@@ -70,7 +75,7 @@ class CalendarController extends Controller
         // echo($date_human);
 
         return view('doctor.doctor-scheduler', compact('user', 'doctor_schedule', 'name_o_day', 'hours',
-            'hour_formatted', 'date_human', 'doc_timing'));
+            'hour_formatted', 'date_human', 'doc_timing', 'date', 'doc_days'));
         }
 
        
@@ -113,7 +118,7 @@ class CalendarController extends Controller
                     'd_user' => $request->input('username'),
                     'slot' => $slot,
                     'day_of_week' => $request->input('day'),
-                    'slot_date' => $time
+                    'slot_date' => $i
                 ]);
             $i = $i->addMinutes($request->input('interval'));
         }

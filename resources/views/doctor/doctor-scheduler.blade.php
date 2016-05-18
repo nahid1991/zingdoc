@@ -30,7 +30,7 @@
 								<div class="pof-header">
 								@foreach($doctor_schedule as $doc_info)
 								@if($doc_info)
-									<div class="title">{{ $name_o_day }}'s schedule {{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}</div>
+									<div class="title">{{ $date->format('jS F') }} {{ $name_o_day }}'s schedule {{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}</div>
 								@endif
 								@endforeach
 								</div>
@@ -157,6 +157,17 @@
 																<div class="col-xs-6 col-sm-6 col-md-6">
 																	<input type="radio" name="type" value="weekly"> Weekly</input>
 																	<input type="radio" name="type" value="monthly"> Monthly</input>
+																<br>
+																<label>Set this for:</label><br>
+																@foreach($doc_days as $dd)
+																	@if($name_o_day == $dd->days)
+																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}" disabled="disabled" checked="checked">{{ $dd->days }}</input><br>
+																	@else
+																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}">{{ $dd->days }}</input><br>
+																	@endif
+																	
+																@endforeach
+																	
 																</div>
 																<div class="col-xs-6 col-sm-6 col-md-6">
 																	<input type="submit" value="Add"/>

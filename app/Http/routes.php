@@ -74,18 +74,18 @@ Route::get('/test', 'TestController@run');
 
 
 
+Route::get('/doc-prof/{id}', 'PatientController@docprof');
 
 // Route::group(['middleware' => 'auth', 'after' => 'no-cache'], function () {
 //     Route::get('/auth/logout', 'Auth\AuthController@logout');
 // 	Route::get('/homepage', 'TestController@home');
 // });
 
-Route::get('/doc-prof/{id}', 'PatientController@docprof');
 
 
 Route::group(['middleware' => ['web','auth','revalidate']], function () {
     Route::get('/homepage', 'TestController@home');
-	Route::get('/auth/logout','Auth\AuthController@logout');
+	Route::get('/auth/logout', 'Auth\AuthController@logout');
 	Route::get('/set-appointment', 'DoctorController@setAppoint');
 	Route::get('/entity-dashboard', 'EntityController@dashboard');
 	Route::get('/doc-profile', 'DoctorController@profile');
@@ -101,7 +101,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/entity-account-settings', 'EntityController@settings');
 	Route::post('/schedule-make', 'ScheduleController@make');
 	Route::get('/search', 'SearchController@search');
-	Route::get('/appointment-form/{id}', 'ScheduleController@form_patient');
+	Route::get('/appointment-form/{id}/{date}/{time}', 'ScheduleController@form_patient');
 	Route::get('/get-appointment', 'PatientController@appointed');
 	Route::post('/appointing', 'ScheduleController@submission');
 	Route::post('/find-doc', 'EntityController@test');
@@ -113,5 +113,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/doctor-calendar', 'CalendarController@show');
 	Route::get('/scheduling/{username}/{year}/{month}/{day}', 'CalendarController@make');
 	Route::post('/set-timing', 'CalendarController@sche');
+	Route::post('/doc-data', 'DoctorController@make_profile');
+	Route::get('/prescription/{user}/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
 });
 

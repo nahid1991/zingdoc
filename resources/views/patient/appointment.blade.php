@@ -17,7 +17,6 @@
 				                <div class="clearfix"></div>
 				            </div>
 							<div class="doctor-short-profile">
-								@foreach($user as $users)
 								@foreach($doctor_info as $doc)
 								<div class="img-holder"><img src="/images/doctor-profile.jpg"/></div>
 								<div class="desc">									
@@ -28,7 +27,7 @@
 										#A-102, Marve Link Apartment, Marve Road Forest Ave Ridgewood<br> NY 11385
 									</p>
 								</div>
-								
+								@endforeach
 							</div>
 						</div>
 						<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
@@ -41,6 +40,8 @@
 								<input type="hidden" name="user_username" value="{{ $user->username }}">
 								<input type="hidden" name="entity_user" value="{{ $doc->entity_user }}">
 								<input type="hidden" name="doctor_user" value="{{ $doc->doctor_user }}">
+								<input type="hidden" name="date" value="{{ $date }}">
+								<input type="hidden" name="time" value="{{ $time }}">
 								<div class="doctorsignup-holder">
 									{!! Form::text('name',Input::old('name'),['class'=>'form-control', 'placeholder'=>'Patient / Visitor Name']) !!}
 									 <!-- <input name="country" required type="text" class="form-control"  placeholder="Patient / Visitor Name"/> -->
@@ -59,14 +60,13 @@
 									 <div class="info-text">You will receive an SMS with a verification code on this number.</div>
 								</div>
 								<div class="doctorsignup-button">
+									<!-- {!!Form::submit('SUBMIT')!!} -->
 									{!!Form::submit('SUBMIT')!!}
-									<!-- <a href="doctor-admin-appointments-day-view.php">LOGIN</a> -->
 								</div>
 							{!!Form::close()!!}
 							<!-- </form> -->
 						</div>
-						@endforeach
-						@endforeach
+						
 					</div>
 				</div>
 			</div><!-- End #doctor-signup -->

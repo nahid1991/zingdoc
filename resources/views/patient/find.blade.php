@@ -102,7 +102,7 @@
 											  			<!-- <tr><td><a href="{{ url('/get-appointment') }}">10:30 am</a></td></tr> -->
 											  			@foreach($doctor_info_sun as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -120,7 +120,7 @@
 											  			</tr>
 											  			@foreach($doctor_info_mon as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -138,7 +138,7 @@
 											  			</tr>
 											  			@foreach($doctor_info_tue as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -156,7 +156,7 @@
 											  			</tr>
 											  			@foreach($doctor_info_wed as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -174,7 +174,7 @@
 											  			</tr>
 											  			@foreach($doctor_info_thu as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -192,7 +192,7 @@
 											  			</tr>
 											  			@foreach($doctor_info_fri as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -210,7 +210,7 @@
 											  			</tr>
 											  			@foreach($doctor_info_sat as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>

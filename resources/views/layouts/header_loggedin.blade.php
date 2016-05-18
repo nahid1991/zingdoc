@@ -150,11 +150,6 @@
 		<link href="{{ asset('/css/jquery.bxslider.css') }}" rel="stylesheet">
 		<link rel="stylesheet" href="{{ asset('/css/prettyPhoto.css') }}">
 
-		<script src="{{ asset('/js/fullcalendar-2.7.1/lib/jquery.min.js') }}"></script>
-   		<script src="{{ asset('/js/fullcalendar-2.7.1/lib/moment.min.js') }}"></script>
-    	<script src="{{ asset('/js/fullcalendar-2.7.1/moment.min.js') }}"></script>
-    	<link rel="stylesheet" href="{{ asset('/js/fullcalendar-2.7.1/fullcalendar.min.css') }}"/>
-
 
 		<!-- Just for debugging purposes. Don't actually copy this line! -->
 		<!--[if lt IE 9]><script src="./js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -271,12 +266,12 @@
 
 		<!-- Bootstrap core JavaScript
 		================================================== -->
-		<script src="./js/bootstrap.js"></script>		
-	    <script src="./js/jquery.bxslider.js"></script>
-	    <script type="text/javascript" src="js/jquery.mockjax.js"></script>
-	    <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
-	    <script type="text/javascript" src="js/countries.js"></script>
-	    <script type="text/javascript" src="js/autosuggestdemo.js"></script>
-		<script src="js/jquery.prettyPhoto.js"></script>
-	    <script src="./js/scripts.js"></script>
+		<script src="/js/bootstrap.js"></script>		
+	    <script src="/js/jquery.bxslider.js"></script>
+	    <script type="text/javascript" src="/js/jquery.mockjax.js"></script>
+	    <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+	    <script type="text/javascript" src="/js/countries.js"></script>
+	    <script type="text/javascript" src="/js/autosuggestdemo.js"></script>
+		<script src="/js/jquery.prettyPhoto.js"></script>
+	    <script src="/js/scripts.js"></script>
 </html>
