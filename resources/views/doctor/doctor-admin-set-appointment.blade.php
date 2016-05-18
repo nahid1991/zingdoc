@@ -203,13 +203,13 @@
 
 															<div class="btn-group" data-toggle="buttons">
 																<!--<p>Please choose one day at a time</p>-->
-																<label class="btn btn-primary"><input type="radio" name="day1" value="Monday" id="option1">Mon</label>
-																<label class="btn btn-primary"><input type="radio" name="day2" value="Tuesday" id="option2">Tue</label>
-																<label class="btn btn-primary"><input type="radio" name="day3" value="Wednesday" id="option3">Wed</label>
-																<label class="btn btn-primary"><input type="radio" name="day4" value="Thursday" id="option4">Thu</label>
-																<label class="btn btn-primary"><input type="radio" name="day5" value="Friday" id="option5">Fri</label>
-																<label class="btn btn-primary"><input type="radio" name="day6" value="Saturday" id="option6">Sat</label>
-																<label class="btn btn-primary"><input type="radio" name="day7" value="Sunday" id="option7">Sun</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day1" value="Monday" id="option1">Mon</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day2" value="Tuesday" id="option2">Tue</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day3" value="Wednesday" id="option3">Wed</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day4" value="Thursday" id="option4">Thu</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day5" value="Friday" id="option5">Fri</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day6" value="Saturday" id="option6">Sat</label>
+																<label class="btn btn-primary"><input type="checkbox" name="day7" value="Sunday" id="option7">Sun</label>
 															</div>															
 														</div>
 

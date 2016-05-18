@@ -82,10 +82,13 @@ class CalendarController extends Controller
     public function sche(Request $request){
         // echo('<h1>'.$request->input('interval').'</h1>');
         // $time = Carbon::createFromTime($request->input('starting_interval'), $request->input('starting_min'));
-        $start_hour = $request->input('starting_interval').':'.$request->input('starting_min');
+        $date = explode('-', $request->input('date'));
+        $start_hour = Carbon::create($date[0], $date[1], $date[2], 
+            $request->input('starting_interval'), $request->input('starting_min'));
+        $start_hour = $start_hour->format('g:i A');
+        // echo($start_hour);
         $s_h = $request->input('starting_interval');
         $start_min = $request->input('starting_min');
-        $date = explode('-', $request->input('date'));
 
         $time = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
         $i = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);

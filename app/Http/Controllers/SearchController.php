@@ -39,7 +39,33 @@ class SearchController extends Controller
        //  }
         // echo(sizeof($doctor_info));
 
-        $doctor_info = DB::table('time_slot')
+        
+        $doctor_info_sun = DB::table('time_slot')
+            ->where('day_of_week', '=', 'Sunday')
+            ->get();
+
+        $doctor_info_mon = DB::table('time_slot')
+            ->where('day_of_week', '=', 'Monday')
+            ->get();
+
+        $doctor_info_tue = DB::table('time_slot')
+            ->where('day_of_week', '=', 'Tuesday')
+            ->get();
+
+        $doctor_info_wed = DB::table('time_slot')
+            ->where('day_of_week', '=', 'Wednesday')
+            ->get();
+
+        $doctor_info_thu = DB::table('time_slot')
+            ->where('day_of_week', '=', 'Thursday')
+            ->get();
+
+        $doctor_info_fri = DB::table('time_slot')
+            ->where('day_of_week', '=', 'Friday')
+            ->get();
+
+        $doctor_info_sat = DB::table('time_slot')
+            ->where('day_of_week', '=', 'Saturday')
             ->get();
 
 
@@ -48,8 +74,9 @@ class SearchController extends Controller
         //     'thu', 'fri', 'sat'));
 
 
-    	return view('patient.find', compact('user', 'doctors', 'doctor_info', 'sun', 'mon', 'tue', 'wed', 
-            'thu', 'fri', 'sat'));
+    	return view('patient.find', compact('user', 'doctors', 'sun', 'mon', 'tue', 'wed', 
+            'thu', 'fri', 'sat', 'doctor_info_sun', 'doctor_info_mon', 'doctor_info_tue'
+            , 'doctor_info_wed', 'doctor_info_thu', 'doctor_info_fri', 'doctor_info_sat'));
 
         // $date = Carbon::parse('next monday')->toDateString();
         // $date = Carbon::today()->format('l');

@@ -80,7 +80,7 @@
 												<!-- <marquee><p><b>5.0</b></p></marquee> -->
 												<h5><strong><b><i>Rating: 5.0</b></i></strong></h5>
 											</div>
-											<div class="booking"><a id="doctor_{{ $doctor->id }}" href="#">Get An Appointment</a></div>
+											<div class="booking"><a id="doctor_{{ $doctor->id }}" href="#{{ $doctor->id }}">Get An Appointment</a></div>
 										</div>
 
 										<div class="clearfix"></div>										
@@ -100,8 +100,8 @@
 											  				</th>
 											  			</tr>
 											  			<!-- <tr><td><a href="{{ url('/get-appointment') }}">10:30 am</a></td></tr> -->
-											  			@foreach($doctor_info as $doc)
-											  			@if($doctor->username == $doc->d_user && $doc->day_of_week == 'Wednesday')
+											  			@foreach($doctor_info_sun as $doc)
+											  			@if($doctor->username == $doc->d_user)
 											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
 											  			@endif
 											  			@endforeach
@@ -118,11 +118,11 @@
 												                <div class="header-tile-date-value">{{ $mon }}</div>
 											  				</th>
 											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">12 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">1 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">3 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
+											  			@foreach($doctor_info_mon as $doc)
+											  			@if($doctor->username == $doc->d_user)
+											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			@endif
+											  			@endforeach
 											  		</table>
 											  	</div>
 											  </div><!-- End Slide Item -->
@@ -136,11 +136,11 @@
 												                <div class="header-tile-date-value">{{ $tue }}</div>
 											  				</th>
 											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">10:30 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">11 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
+											  			@foreach($doctor_info_tue as $doc)
+											  			@if($doctor->username == $doc->d_user)
+											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			@endif
+											  			@endforeach
 											  		</table>
 											  	</div>
 											  </div><!-- End Slide Item -->
@@ -154,11 +154,11 @@
 												                <div class="header-tile-date-value">{{ $wed }}</div>
 											  				</th>
 											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">1:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">3:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4:30 pm</a></td></tr>
+											  			@foreach($doctor_info_wed as $doc)
+											  			@if($doctor->username == $doc->d_user)
+											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			@endif
+											  			@endforeach
 											  		</table>
 											  	</div>
 											  </div><!-- End Slide Item -->
@@ -172,9 +172,11 @@
 												                <div class="header-tile-date-value">{{ $thu }}</div>
 											  				</th>
 											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4:15 pm</a></td></tr>
+											  			@foreach($doctor_info_thu as $doc)
+											  			@if($doctor->username == $doc->d_user)
+											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			@endif
+											  			@endforeach
 											  		</table>
 											  	</div>
 											  </div><!-- End Slide Item -->
@@ -188,6 +190,11 @@
 												                <div class="header-tile-date-value">{{ $fri }}</div>
 											  				</th>
 											  			</tr>
+											  			@foreach($doctor_info_fri as $doc)
+											  			@if($doctor->username == $doc->d_user)
+											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			@endif
+											  			@endforeach
 											  		</table>
 											  	</div>
 											  </div><!-- End Slide Item -->
@@ -201,8 +208,11 @@
 												                <div class="header-tile-date-value">{{ $sat }}</div>
 											  				</th>
 											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">3 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
+											  			@foreach($doctor_info_sat as $doc)
+											  			@if($doctor->username == $doc->d_user)
+											  			<tr><td><a href="get-an-appoinment.php">{{ $doc->slot }}</a></td></tr>
+											  			@endif
+											  			@endforeach
 											  		</table>
 											  	</div>
 											  </div><!-- End Slide Item -->
