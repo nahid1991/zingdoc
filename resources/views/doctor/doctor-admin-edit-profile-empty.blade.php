@@ -35,7 +35,7 @@
 							<div class="pof-content">
 								<div class="pof-header2">
 									<div class="title"><h2>{{ $user->name }}</h2><p>{{ $user->speciality }}</p></div>
-									<a href="{{ url('/doc-profile') }}" class="link">View Profile</a>
+									<a href="doctor-admin-view-profile.php" class="link">View Profile</a>
 									<div class="clearfix"></div>
 								</div>
 								<div class="pof-desc padding">
@@ -63,7 +63,7 @@
 										<div class="doctorsignup-holder edit-holder">
 											<label>Profile Overview</label>
 											
-											 <textarea class="edit-textarea" name="about">{{ $doc_info->about }}
+											 <textarea class="edit-textarea" name="about">
 											</textarea>
 											
 										</div>
@@ -72,14 +72,14 @@
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Location</label>
-											 <input name="location" type="text" class="form-control" placeholder="Location" value="{{ $doc_info->location }}">
+											 <input name="location" type="text" class="form-control" placeholder="Location">
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 										<label>Clinic</label>
 									</div>
 									<div class="doctorsignup-holder edit-holder">
 										<label>Address</label>
-										 <textarea class="edit-textarea" placeholder="Address" name="address">{{ $doc_info->address }}
+										 <textarea class="edit-textarea" placeholder="Address" name="address">
 										</textarea>
 									</div>
 										<div class="pof-edittitle">
@@ -87,15 +87,15 @@
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Title</label>
-											 <input name="title" type="text" class="form-control" placeholder="title" value="{{ $doc_info->title }}">
+											 <input name="title" type="text" class="form-control" placeholder="title">
 										</div>
 										<div class="doctorsignup-holder edit-holder year">
 											<label>Start</label>
-											 <input name="start"   type="text" class="form-control" value="{{ $doc_info->start }}">
+											 <input name="start"   type="text" class="form-control">
 										</div>
 										<div class="doctorsignup-holder edit-holder year">
 											<label>End</label>
-											 <input name="end"   type="text" class="form-control" value="{{ $doc_info->end }}">
+											 <input name="end"   type="text" class="form-control">
 										</div>
 										<!-- <div class="doctorsignup-holder edit-holder year">
 											<a href="#">Add New</a>
@@ -106,40 +106,40 @@
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Membership</label>
-											 <input name="membership"   type="text" class="form-control"  placeholder="Membership" value="{{ $doc_info->membership }}">
+											 <input name="membership"   type="text" class="form-control"  placeholder="Membership">
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Certifications</label>
-											 <input id="certifications" name="certifications"   type="text" class="form-control"  value="{{ $doc_info->certifications }}">
+											 <input id="certifications" name="certifications"   type="text" class="form-control">
 											 
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Insurrance Acccept</label>
-											 <input id="insurrance" name="insurance"   type="text" class="form-control" value="{{ $doc_info->insurance }}">
+											 <input id="insurrance" name="insurance"   type="text" class="form-control">
 											 
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Specializations</label>
-											 <input id="specilzations" name="specializations"   type="text" class="form-control" value="{{ $doc_info->specializations }}">
+											 <input id="specilzations" name="specializations"   type="text" class="form-control">
 											 
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Education</label>
-											 <input id="education" name="education" type="text" class="form-control" value="{{ $doc_info->education }}">
+											 <input id="education" name="education" type="text" class="form-control">
 											 
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Language</label>
-											 <input id="language" name="language"   type="text" class="form-control" value="{{ $doc_info->language }}">
+											 <input id="language" name="language"   type="text" class="form-control">
 											 
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Awards and Recognations</label>
-											 <textarea name ="award" class="edit-textarea">{{ $doc_info->award }}</textarea>
+											 <textarea name ="award" class="edit-textarea"></textarea>
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Registrations</label>
-											 <input name="registration" type="text" class="form-control"  placeholder="Registration" value="{{ $doc_info->registration }}">
+											 <input name="registration" type="text" class="form-control"  placeholder="Registration">
 										</div>
 										{!!Form::submit('SUBMIT')!!}
 

@@ -34,13 +34,14 @@
 						<div class="col-xs-12 col-sm-8 col-md-9">
 							<div class="pof-content">
 								<div class="pof-header2">
-									<div class="title"><h2>Dr. Alla Dorfman</h2><p>DDS  &nbsp;  |  &nbsp; Dentist</p></div>
-									<a href="doctor-admin-edit-profile.php" class="link">Edit Profile</a>
+									<div class="title"><h2>{{ $user->name }}</h2><p>{{ $user->speciality }}</p></div>
+									<a href="{{ url('/doc-profile-edit') }}" class="link">Edit Profile</a>
 									<div class="clearfix"></div>
 								</div>
+								@foreach($user_info as $u_i)
 								<div class="pof-desc padding">
 									<div class="vprof-htext">
-										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent 
+										{{ $u_i->about }}
 									</div>
 									<div class="vprof-qualification">
 											<div class="row">
@@ -48,8 +49,8 @@
 													<div class="membership">
 														<h2>Membership</h2>
 														<ul class="qualification-list">
-															<li>Americation Chirpoctic Assocation</li>
-															<li>Americation Medical Assocation</li>
+															
+															<li>{{ $u_i->membership }}</li>
 														</ul>
 													</div>
 												</div>
@@ -57,8 +58,7 @@
 													<div class="membership certification">
 														<h2>Certification</h2>
 														<ul class="qualification-list">
-															<li>Dentist</li>
-															<li>Cosmetic Dentist</li>
+															<li>{{ $u_i->certifications }}</li>
 														</ul>
 													</div>
 												</div>
@@ -66,8 +66,7 @@
 													<div class="membership insurance">
 														<h2>Insurance Accept</h2>
 														<ul class="qualification-list">
-															<li>Dentist</li>
-															<li>Cosmetic Dentist</li>
+															<li>{{ $u_i->insurance }}</li>
 														</ul>
 													</div>
 												</div>
@@ -75,8 +74,7 @@
 													<div class="membership experiance">
 														<h2>Experience</h2>
 														<ul class="qualification-list">
-															<li>Americation Chirpoctic Assocation</li>
-															<li>Americation Medical Assocation</li>
+															<li>{{ $u_i->title }} ({{ $u_i->start }} - {{ $u_i->end }})</li>
 														</ul>
 													</div>
 												</div>
@@ -84,8 +82,7 @@
 													<div class="membership specilaztion">
 														<h2>Specializiations</h2>
 														<ul class="qualification-list">
-															<li>Dentist</li>
-															<li>Cosmetic Dentist</li>
+															<li>{{ $u_i->specializations }}</li>
 														</ul>
 													</div>
 												</div>
@@ -93,8 +90,7 @@
 													<div class="membership awards">
 														<h2>Award and Recogonizations</h2>
 														<ul class="qualification-list">
-															<li>Dentist</li>
-															<li>Cosmetic Dentist</li>
+															<li>{{ $u_i->award }}</li>
 														</ul>
 													</div>
 												</div>
@@ -102,7 +98,7 @@
 													<div class="membership education">
 														<h2>Education</h2>
 														<ul class="qualification-list">
-															<li>BDS</li>
+															<li>{{ $u_i->education }}</li>
 														</ul>
 													</div>
 												</div>
@@ -110,8 +106,7 @@
 													<div class="membership registration">
 														<h2>Registrations</h2>
 														<ul class="qualification-list">
-															<li>Dentist</li>
-															<li>Cosmetic Dentist</li>
+															<li>{{ $u_i->registration }}</li>
 														</ul>
 													</div>
 												</div>
@@ -119,13 +114,18 @@
 													<div class="membership language">
 														<h2>Language</h2>
 														<ul class="qualification-list">
-															<li>English</li>
-															<li>French</li>
+															<li>{{ $u_i->language }}</li>
 														</ul>
 													</div>
 												</div>
 										 </div>
 									</div><!-- End .vprof-qualification -->
+									@endforeach
+
+
+
+
+
 									<div class="vprof-bottom">
 										<div class="row">
 											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

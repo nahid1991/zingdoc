@@ -24,16 +24,57 @@ class DoctorController extends Controller
     }
 
     public function profile(){
-    	return view('doctor.doctor-admin-view-profile');
+      $user = \Auth::user();
+      $user_info = DB::table('users')
+        ->join('doctor_profile', 'users.username', '=', 'doctor_profile.doctor_user')
+        ->where('users.username', '=', $user->username)
+        ->get();
+
+    	return view('doctor.doctor-admin-view-profile', compact('user', 'user_info'));
     }
 
     public function make_profile(Request $request){
-        echo($request->input('specializations'));
+        $user = \Auth::user();
+        
+        DB::table('doctor_profile')
+          ->where('doctor_user', '=', $user->username)
+          ->delete();
+
+
+        DB::table('doctor_profile')
+          ->insert([
+              'doctor_user' => $user->username,
+              'about' => $request->input('about'),
+              'location' => $request->input('location'),
+              'address' => $request->input('address'),
+              'title' => $request->input('title'),
+              'start' => $request->input('start'),
+              'end' => $request->input('end'),
+              'membership' => $request->input('membership'),
+              'certifications' => $request->input('certifications'),
+              'insurance' => $request->input('insurance'),
+              'specializations' => $request->input('specializations'),
+              'education' => $request->input('education'),
+              'language' => $request->input('language'),
+              'award' => $request->input('award'),
+              'registration' => $request->input('registration'),
+            ]);
+        return redirect('/doc-profile-edit');
     }
 
     public function profileEdit(){
-        $user = \Auth::user();
-    	return view('doctor.doctor-admin-edit-profile', compact('user'));
+      $user = \Auth::user();
+      $doc_info = DB::table('users')
+        ->join('doctor_profile', 'users.username', '=', 'doctor_profile.doctor_user')
+        ->where('username', '=', $user->username)
+        ->first();
+      if($doc_info)
+    	{
+        return view('doctor.doctor-admin-edit-profile', compact('user', 'doc_info'));
+      }
+      if(!$doc_info){
+        return view('doctor.doctor-admin-edit-profile-empty', compact('user'));
+      }
     }
 
     public function blog(){
