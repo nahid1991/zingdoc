@@ -74,7 +74,7 @@ Route::get('/test', 'TestController@run');
 
 
 
-Route::get('/doc-prof/{id}', 'PatientController@docprof');
+Route::get('/doc-prof/{username}', 'PatientController@docprof');
 
 // Route::group(['middleware' => 'auth', 'after' => 'no-cache'], function () {
 //     Route::get('/auth/logout', 'Auth\AuthController@logout');

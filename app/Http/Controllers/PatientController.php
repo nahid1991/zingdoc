@@ -27,12 +27,15 @@ class PatientController extends Controller
     	return view('patient.appointment', compact('user'));
     }
 
-    public function docprof($id){
+    public function docprof($username){
         $user = \Auth::user();
         $doctor = DB::table('users')
-            ->where('id', '=', $id)
+            ->where('username', '=', $username)
+            ->get();
+        $doctor_info = DB::table('doctor_profile')
+            ->where('doctor_user', '=', $username)
             ->get();
         
-        return view('doctor-profile-public', compact('user', 'doctor'));
+        return view('doctor-profile-public', compact('user', 'doctor', 'doctor_info'));
     }
 }

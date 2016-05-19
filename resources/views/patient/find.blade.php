@@ -63,7 +63,7 @@
 								<li>
 										<div class="doctor-img"><img src="/images/doctor.jpg" alt="supposed to be a pic here"/></div>
 										<div class="doctor-name">
-											<a href="{{ action('PatientController@docprof', [$doctor->id]) }}"><h2>{{ $doctor->name }}</h2></a>										
+											<a href="{{ action('PatientController@docprof', [$doctor->username]) }}"><h2>{{ $doctor->name }}</h2></a>										
 											<div class="specialist">{{ $doctor->practice_name }}</div>
 											<div class="city">217 centre.<br/>New York,NY 10013</div>
 										</div>
