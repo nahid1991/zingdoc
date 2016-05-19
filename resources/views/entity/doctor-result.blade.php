@@ -108,7 +108,7 @@
 													</div><div class="s-right">
 														<div class="time">{{ $p_l->appointed_at }}</div>
 														<ul class="action">
-															<li><a href="{{  action('EntityController@approve', [$doc_info->username, $p_l->patient_name])  }}" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
+															<li><a href="{{  action('EntityController@approve', [$doc_info->username, $p_l->patient_name, $p_l->appointment_time])  }}" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
 															<!-- <li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li> -->
 															<li><a href="{{  action('EntityController@cancel', [$doc_info->username, $p_l->patient_name])  }}" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
 														</ul>

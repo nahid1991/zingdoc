@@ -148,10 +148,11 @@ class EntityController extends Controller
     }
 
 
-    public function approve($username, $p_name){
+    public function approve($username, $p_name, $time){
         $trick = DB::table('appointment_user')
             ->where('doctor_user', '=', $username)
             ->where('patient_name', '=', $p_name)
+            ->where('appointment_time', '=', $time)
             ->first();
         $user = \Auth::user();
         
@@ -169,6 +170,7 @@ class EntityController extends Controller
                 'phone_number' => $trick->phone_number,
                 'appointed_at' => $trick->appointed_at,
                 'patient_name' => $trick->patient_name,
+                'appointment_time' => $time,
             ]);
 
         DB::table('appointment_user')

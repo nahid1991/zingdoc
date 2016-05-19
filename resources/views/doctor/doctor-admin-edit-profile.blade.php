@@ -107,7 +107,7 @@
 										<div class="doctorsignup-holder edit-holder">
 											<label>Certifications</label>
 											 <input id="certifications" name="certifications"   type="text" class="form-control"  value="">
-											 <script type="text/javascript">
+											 <!--<script type="text/javascript">
 											    $('#certifications')
 											        .textext({ plugins : 'tags autocomplete', tagsItems : [  ]})
 											        .bind('getSuggestions', function(e, data)
@@ -119,11 +119,11 @@
 											            $(this).trigger( 'setSuggestions', { result : textext.itemManager().filter(list, query) });
 											        })
 											        ;
-											</script>
+											</script>-->
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Insurrance Acccept</label>
-											 <input id="insurrance" name="insurance"   type="text" class="form-control"  value="">
+											 <input id="insurrance" name="insurance"   type="text" class="form-control">
 											 <!--<script type="text/javascript">
 											    $('#insurrance')
 											        .textext({ plugins : 'tags autocomplete', tagsItems : [ 'Aetna', 'Ameritas', 'Anthem Blue Cross Blue Shield' ]})
@@ -140,7 +140,7 @@
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Specializations</label>
-											 <input id="specilzations" name="specilzations"   type="text" class="form-control"  value="">
+											 <input id="specilzations" name="specilzations"   type="text" class="form-control">
 											 <!--<script type="text/javascript">
 											    $('#specilzations')
 											        .textext({ plugins : 'tags autocomplete', tagsItems : []})
@@ -157,7 +157,7 @@
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Education</label>
-											 <input id="education" name="education" type="text" class="form-control"  value="">
+											 <input id="education" name="education" type="text" class="form-control">
 											 <!--<script type="text/javascript">
 											    $('#education')
 											        .textext({ plugins : 'tags autocomplete', tagsItems : [ 'BDS' ]})

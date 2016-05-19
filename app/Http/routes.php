@@ -106,7 +106,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::post('/appointing', 'ScheduleController@submission');
 	Route::post('/find-doc', 'EntityController@test');
 	Route::get('/doctor/{username}', 'EntityController@trial');
-	Route::get('/approve/{username}/{patient}', 'EntityController@approve');
+	Route::get('/approve/{username}/{patient}/{time}', 'EntityController@approve');
 	Route::get('/decline/{username}/{patient}', 'EntityController@cancel');
 	Route::get('/checked/{username}/{patient}', 'EntityController@doc_checked');
 	Route::get('/canceled/{username}/{patient}', 'EntityController@doc_cancel');
@@ -114,6 +114,8 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/scheduling/{username}/{year}/{month}/{day}', 'CalendarController@make');
 	Route::post('/set-timing', 'CalendarController@sche');
 	Route::post('/doc-data', 'DoctorController@make_profile');
-	Route::get('/prescription/{user}/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
+	Route::get('/prescription/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
+	Route::post('/prescribe', 'DoctorController@prescribe');
+	Route::get('/{username}', 'DoctorController@patient_profile');
 });
 

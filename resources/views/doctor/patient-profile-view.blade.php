@@ -33,15 +33,9 @@
 							<div class="top-pof-head">
 								<div class="row">
 									<div class="col-xs-12 col-sm-6 col-md-6">
-										<div class="title mt-7px">View Appointments</div>
+										<div class="title mt-7px">Patient record</div>
 									</div>
-									<div class="col-xs-12 col-sm-6 col-md-6">
-										<ul class="view-type-link">
-											<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
-												<!-- <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
-												<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>
-										</ul>
-									</div>
+									
 								</div>								
 							</div>
 							
@@ -54,48 +48,31 @@
 										</div>
 										<div class="pof-desc">
 											<ul class="appoin-list">
-												@foreach($user_info as $u_i)
-												@if($u_i->approved != 2)
+												@foreach($patient as $pat)
+												
 												<li>
 													<div class="s-left">
-														<h2><a href="{{ action('DoctorController@patient_profile', [$u_i->patient_user]) }}">{{ $u_i->patient_name }}</a></h2>
-														<p>{{ $u_i->issues }}</p>
+														<h2><label><i>Patient Name: </i></label> {{ $pat->patient_name }}</h2>
+														<p><h5><i>Visited you for: </i><br><b>{{ $pat->issue }}</b></h5></p>
+														<p><h5><i>Prescribed: </i><br><b>{{ $pat->prescription }}</b></h5></p>
+														<p><h5><i>Comment: </i><br><b>{{ $pat->comments }}</b></h5></p>
 													</div><div class="s-right">
-														<div class="time">{{ $u_i->appointed_at }}</div>
+														<div class="time"></div>
 														<ul class="action">
-															<li><a href="{{  action('DoctorController@doc_checked', [$u_i->patient_user, $u_i->patient_name, $u_i->appointment_time])  }}" 
-																rel="tooltip" title="Checked"><i class="icon icon-arrow-right"></i></a></li>
+															<li><h5><b>{{  Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $pat->visit_time)->diffForHumans() }}</b></h5></li>
 															<!-- <li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li> -->
 															
 														</ul>
 													</div>
 												</li>
-												@endif
+												
 												@endforeach
 											</ul>
 										</div><!-- End .pof-desc -->
 									</div><!-- End .pof-content -->
 								</div>
 
-								<div class="col-xs-12 col-sm-6 col-md-6">
-									<div class="patient-details">
-										<div class="single-pof-pic">
-											<img src="/images/patient-pof-pic.jpg" alt=""/>
-										</div>
-										<div class="single-pof-dsc">
-											<h2>Mic A Ting</h2>
-											<h3>Blood Pressure Issues</h3>
-											<p>
-												DOB: 12 -  25 - 1945
-												<br>
-												Age: 68 Years
-												<br>
-												Tel.: 2514- 2541-2516
-											</p>											
-										</div>
-									</div>
-								</div>
-							</div>
+								
 
 						</div><!-- End .col -->
 					</div><!-- End .row -->
