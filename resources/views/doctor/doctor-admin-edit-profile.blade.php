@@ -14,7 +14,7 @@
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
 								<div class="pof-img">
-									<img src="{{ $user->propic }}">
+									<img alt="supposed to be apicture here." src="{{ $user->propic }}">
 								</div>
 								<ul><li>
 										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
@@ -48,7 +48,6 @@
 											{!! Form::open(['url' => '/propic', 'files' => true, 'enctype'=>'multipart/form-data']) !!}
 											<div class="upload-photo">
 												{!! Form::file('image',['class'=>'btn btn-default',]) !!}
-												<!-- <input type="hidden" value="{{ csrf_token() }}"> -->
 												{!! Form::submit('UPLOAD') !!}									
 											</div>
 											{!!Form::close()!!}

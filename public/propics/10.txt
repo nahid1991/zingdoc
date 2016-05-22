@@ -1,0 +1,16 @@
+<div class="doctorsignup-holder captcha-code">
+	<img src="includes/captcha_code_file.php?rand=<?php echo rand(); ?>" id='captchaimg'>
+</div>
+<div class="doctorsignup-holder captcha-code-box">
+	<input name="country" required type="text" class="form-control" placeholder="ENTER THE ABOVE CHARACTERS HERE"/>
+</div>
+<div class="doctorsignup-holder refresh-captcha">
+	<p>Can't read the image? click <a href='javascript:refreshCaptcha();'><span>here</span></a> to refresh.</p>
+</div>
+<script language='JavaScript' type='text/javascript'>
+	function refreshCaptcha()
+	{
+		var img = document.images['captchaimg'];
+		img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
+	}
+</script>

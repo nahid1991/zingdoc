@@ -35,7 +35,7 @@
 							<div class="pof-content">
 								<div class="pof-header2">
 									<div class="title"><h2>{{ $user->name }}</h2><p>{{ $user->speciality }}</p></div>
-									<a href="doctor-admin-view-profile.php" class="link">View Profile</a>
+									<a href="{{ url('/doc-profile') }}" class="link">View Profile</a>
 									<div class="clearfix"></div>
 								</div>
 								<div class="pof-desc padding">
@@ -45,10 +45,12 @@
 										</div>
 										<div class="doctorsignup-holder edit-holder">
 											<label>Profile Picture</label>
+											{!! Form::open(['url' => '/propic', 'files' => true, 'enctype'=>'multipart/form-data']) !!}
 											<div class="upload-photo">
-												<input name="" type="file">
-												<button type="button" class="btn btn-default" data-toggle="button">UPLOAD</button>												
+												{!! Form::file('image',['class'=>'btn btn-default',]) !!}
+												{!! Form::submit('UPLOAD') !!}									
 											</div>
+											{!!Form::close()!!}
 										</div>
 
 										<div class="clearfix"></div>
