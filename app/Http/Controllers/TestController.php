@@ -12,6 +12,10 @@ use DB;
 
 use Carbon\Carbon;
 
+use Illuminate\Support\Facades\Input;
+
+use File;
+
 class TestController extends Controller
 {
     public function test(RegisterRequest $request){
@@ -20,18 +24,20 @@ class TestController extends Controller
 
     	if(strcmp($pass1, $pass2) == 0){
 
-            DB::table('users')->insert([
-                'email' => $request->input('email'),
-                'username' => $request->input('username'),
-                'password' => bcrypt($request->input('password')),
-                'name' => $request->input('name'),
-                'speciality' => $request->input('speciality'),
-                'practice_name' => $request->input('practice_name'),
-                'phone_number' => $request->input('phone_number'),
-                'location' => $request->input('location'),
-                'agreed' => $request->input('agreed'),
-                'user_type' => $request->input('user_type')
+            
+                DB::table('users')->insert([
+                    'email' => $request->input('email'),
+                    'username' => $request->input('username'),
+                    'password' => bcrypt($request->input('password')),
+                    'name' => $request->input('name'),
+                    'speciality' => $request->input('speciality'),
+                    'practice_name' => $request->input('practice_name'),
+                    'phone_number' => $request->input('phone_number'),
+                    'location' => $request->input('location'),
+                    'agreed' => $request->input('agreed'),
+                    'user_type' => $request->input('user_type')
             ]);
+
     		return redirect('/sign_it');
         }
     	else{
@@ -71,12 +77,17 @@ class TestController extends Controller
                 return view('patient.patient_main', compact('user', 'user_info'));
             }
             if($user->user_type == 3){
-                $user_info = DB::table('users')
-                    ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
-                    ->where('users.username', $user->username)
+                $doctors = DB::table('users')
+                    ->where('user_type', '=', 1)
                     ->get();
+                
+
+                // foreach($user_info as $u_i){
+                //     echo($u_i->doctor_user);
+                // }
+
                 // return view('doctor.doctor_main', compact('user', 'user_info'));
-                return view('entity.entity-admin-dashboard', compact('user', 'user_info'));
+                return view('entity.entity-admin-dashboard', compact('user', 'doctors'));
             }
         }
     }
@@ -91,6 +102,43 @@ class TestController extends Controller
         $date = Carbon::now();
         $date = $date->toDayDateTimeString('l');
         echo($date);
+    }
+
+    public function propic(Request $request)
+    {
+       
+        $destination = 'propics/';
+        $file = Input::file('image')->getClientOriginalExtension();
+        // Input::file('image');
+        // $file = Input::file('image');
+        // die(var_dump( $_FILES[Input::file('image')]));
+        // echo($file->getClientOriginalExtension());
+         $user = \Auth::user();
+        // $file = Input::file('image');
+        // if (File::exists($file))
+        // {
+        //     echo "Yup. It exists.";
+        // }
+
+        // $file->move($destination, $file->getClientOriginalName());
+        // echo($file);
+
+        $user = \Auth::user();
+        $imagename = $user->id.".".$file;
+        $path = str_replace("\\", "/", Input::file('image')->move($destination."/", $imagename));
+        DB::table('users')->where('username', $user->username)
+            ->update([
+               'propic' => $path
+            ]);
+        if($user->user_type == 1)
+        {
+            return redirect('/doc-profile-edit');
+        }
+        if($user->user_type == 3)
+        {
+            return redirect('/entity-profile-edit');
+        }
+//        echo($path);
     }
 
 

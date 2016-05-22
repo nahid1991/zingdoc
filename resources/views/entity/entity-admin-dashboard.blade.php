@@ -38,7 +38,7 @@
 								   <div class="edashboard">
 									<div class="entity-dashborad-caresoul">
 										<div class="doctor-caresoul-box">	
-											<a href="doctor-admin-appointments-day-view.php">
+											<!-- <a href="doctor-admin-appointments-day-view.php">
 											<div class="slide doctor_profile_img">
 													<div class="doctor_profile_img">
 													<img src="images/doctor-profile1.jpg"/>
@@ -49,56 +49,27 @@
 													</div>
 												</div>
 											</div>												
-											</a>
-											<a href="doctor-admin-appointments-day-view.php">
-											<div class="doctor-caresoul-box">	
-												<div class="slide doctor_profile_img">
-													<img src="images/doctor-profile2.jpg"/>
-													<div class="doctor-profile-title">
-														<h2>Dr.Alla Dorman</h2>
-														<p>Dentist</p>
-													</div>
-												</div>
-											</div>
-											</a>
-											<a href="doctor-admin-appointments-day-view.php">
-											<div class="cdoctor-caresoul-box">	
-												<div class="slide doctor_profile_img">
-													<img src="images/doctor-profile3.jpg"/>
-													<div class="doctor-profile-title">
-														<h2>Dr.Eugene Khaytsin</h2>
-														<p>Alergist</p>
-													</div>
-												</div>
-											</div>
-											</a>
-											<a href="doctor-admin-appointments-day-view.php">
-											<div class="cdoctor-caresoul-box">	
-												<div class="slide doctor_profile_img">
-													<img src="images/doctor-profile3.jpg"/>
-													<div class="doctor-profile-title">
-														<h2>Dr.Eugene Khaytsin</h2>
-														<p>Alergist</p>
-													</div>
-												</div>
-											</div>
-											</a>
+											</a> -->
+											
 										</div>
 									</div><!-- End edashboard -->
 									<div class="doctorsignup-holder add-doctor">
 											<a href="#" id="toggle-btn" href="#">ADD DOCTOR</a>
 												<div id="toggle-content" class="add_form_container">
 													<div class="arrow"></div>
+													{!! Form::open(['url' => '/add-doctor']) !!}
 													<div class="add_form">
 														<div class="form-cont">
 															<div class="clearfix"></div>
 															
-															<label for="">Select Doctor</label>
-															 <select>											
-																<option value="">Select</option>	
-																<option value="">Dr.Eugene Khaytsin</option>											
-																<option value="">Dr.Alla Dorman</option>											
-																<option value="">Dr.Fedrick Solomon</option>											
+															<label>Select Doctor</label>
+															 <select name="username">											
+																<option value="">Select</option>
+																@foreach($doctors as $doctor)
+																	@if(!$doctor->ad_user)
+																		<option name="" value="{{ $doctor->username }}">{{ $doctor->name }}</option>
+																	@endif	
+																@endforeach							
 															</select>														
 														</div>
 
@@ -107,6 +78,7 @@
 															<div class="clearfix"></div>
 														</div>
 													</div><!-- END .add_form -->
+													{!! Form::close() !!}
 												<div class="clearfix"></div>	
 												</div><!-- END .add_form_container  -->										
 												<script type="text/javascript">

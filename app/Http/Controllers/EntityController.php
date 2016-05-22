@@ -207,4 +207,25 @@ class EntityController extends Controller
         echo($username." ".$name);
     }
 
+    public function add_doctor(Request $request){
+        // echo($request->input('username'));
+        $user = \Auth::user();
+        $temp = DB::table('users')
+            ->where('username', '=', $request->input('username'))
+            ->first();
+        DB::table('doctor_entity')
+            ->insert([
+                'doctor_user' => $request->input('username'),
+                'entity_user' => $user->username,
+                'entity_name' => $user->name,
+                'doctor_name' => $temp->name,
+            ]);
+        DB::table('users')
+            ->where('username', '=', $request->input('username'))
+            ->update([
+                'ad_user' => $user->username,
+            ]);
+        return redirect('/homepage');
+    }
+
 }

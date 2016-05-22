@@ -117,5 +117,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/prescription/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
 	Route::post('/prescribe', 'DoctorController@prescribe');
 	Route::get('/{username}', 'DoctorController@patient_profile');
+	Route::post('/add-doctor', 'EntityController@add_doctor');
+	Route::post('/propic', 'TestController@propic');
 });
 
