@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Http\Requests\Auth\LoginRequest;
+use DB;
 
 class AuthController extends Controller
 {
@@ -92,11 +93,13 @@ class AuthController extends Controller
 
     public function login(LoginRequest $request){
         //if($this->auth->attempt($request->only('email', 'password')))
+                
         if(\Auth::attempt($request->only('email', 'password')))
         {
             //echo('Its working');
             return redirect('/homepage');
         }
+       
         else{
             return redirect('/sign_it')->withErrors([
                 'email' => 'The credentials you entered did not match our records. Try again?',

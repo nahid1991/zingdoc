@@ -7,9 +7,16 @@
 					
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
+								@if($doc_info->propic)
 								<div class="pof-img">
 									<img src="{{ $doc_info->propic }}">
 								</div>
+								@endif
+								@if($doc_info->propic)
+								<div class="pof-img">
+									<img src="images/pro-holder.jpg">
+								</div>
+								@endif
 								<h2>{{ $doc_info->name }}</h2>
 								
 							</div>

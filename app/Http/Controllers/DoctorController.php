@@ -78,15 +78,18 @@ class DoctorController extends Controller
     }
 
     public function blog(){
-    	return view('doctor.doctor-admin-blog');
+      $user = \Auth::user();
+    	return view('doctor.doctor-admin-blog', compact('user'));
     }
 
     public function comments(){
-    	return view('doctor.doctor-admin-comments');
+      $user = \Auth::user();
+    	return view('doctor.doctor-admin-comments', compact('user'));
     }
 
     public function settings(){
-    	return view('doctor.doctor-admin-account-setting');
+      $user = \Auth::user();
+    	return view('doctor.doctor-admin-account-setting', compact('user'));
     }
 
     public function doc_checked($p_user, $p_name, $appoint){

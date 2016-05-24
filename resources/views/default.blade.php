@@ -1,5 +1,8 @@
 @extends('layouts/header')
 	@section('drop')
+	@foreach($errors->all() as $error)
+        <p class="alert alert-danger">{!!$error!!}</p>
+    @endforeach
 		<div id="banner-holder">
 			<div class="find-doctor">
 				<h1>FIND A DOCTOR</h1>

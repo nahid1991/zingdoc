@@ -7,9 +7,16 @@
 					
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
+								@if($user->propic)
 								<div class="pof-img">
-									<img src="images/doctor-profile.jpg">
+									<img src="{{ $user->propic }}">
 								</div>
+								@endif
+								@if(!$user->propic)
+								<div class="pof-img">
+									<img src="images/pro-holder.jpg">
+								</div>
+								@endif
 								<ul><li>
 										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
 										<a href="{{ url('/set-appointment') }}">Set Timing</a></li><li>

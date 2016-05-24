@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Input;
 
 use File;
 
+use Mail;
+
+use Flash;
+
+use Session;
+
+use Illuminate\Support\Facades\Redirect;
+
 class TestController extends Controller
 {
     public function test(RegisterRequest $request){
@@ -23,6 +31,9 @@ class TestController extends Controller
     	$pass2 = $request->input('password_confirmation');
 
     	if(strcmp($pass1, $pass2) == 0){
+
+            $confirmation_code = str_random(30);
+            $conf = array($confirmation_code);
 
             
                 DB::table('users')->insert([
@@ -35,13 +46,33 @@ class TestController extends Controller
                     'phone_number' => $request->input('phone_number'),
                     'location' => $request->input('location'),
                     'agreed' => $request->input('agreed'),
-                    'user_type' => $request->input('user_type')
+                    'user_type' => $request->input('user_type'),
+                    'confirmation_code' => $confirmation_code,
             ]);
 
-    		return redirect('/sign_it');
+
+
+            
+
+            // Mail::send('email.verify', $confirmation_code, function($message) {
+            //     $message->to(Input::get('email'), Input::get('username'))
+            //     ->subject('Verify your email address');
+            // });
+
+
+            Session::flash('message', "Please check your email.");
+
+            Mail::send('email.verify',  ['conf' => $confirmation_code], function($message) {
+                $message->from('nahidshaiket10300@gmail.com', 'Laravel');
+                $message->to(Input::get('email'), Input::get('username'))
+                    ->subject('Verify your email address');
+            });
+            return Redirect::back();
+            
         }
     	else{
-    		echo($pass1.' ' .$pass2. 'Sorry!!! :(');
+    		Session::flash('message', "Password did not match");
+            return Redirect::back();
     	}
     }
 
@@ -60,38 +91,47 @@ class TestController extends Controller
     public function home(){
         if(\Auth::user()){
             $user = \Auth::user();
-            if($user->user_type == 1){
+            if($user->confirmed == 1){
+                if($user->user_type == 1){
                 $user_info = DB::table('users')
                     ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
                     ->where('users.username', '=', $user->username)
                     ->where('approved', '=', 1)
                     ->get();
                 return view('doctor.doctor_main', compact('user', 'user_info'));
-            }
-            if($user->user_type == 2){
-                $user_info = DB::table('users')
-                    ->join('appointment_user', 'users.username', '=', 'appointment_user.patient_user')
-                    ->where('users.username', $user->username)
-                    ->first();
-                // echo($user_info->username[0]);
-                return view('patient.patient_main', compact('user', 'user_info'));
-            }
-            if($user->user_type == 3){
-                $doctors = DB::table('users')
-                    ->where('user_type', '=', 1)
-                    ->get();
-                // $admin_doctor = DB::table('users')
-                //     ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
-                //     ->where('entity_user', '=', $user->username)
-                //     ->get();
-                
+                }
+                if($user->user_type == 2){
+                    $user_info = DB::table('users')
+                        ->join('appointment_user', 'users.username', '=', 'appointment_user.patient_user')
+                        ->where('users.username', $user->username)
+                        ->first();
+                    // echo($user_info->username[0]);
+                    return view('patient.patient_main', compact('user', 'user_info'));
+                }
+                if($user->user_type == 3){
+                    $doctors = DB::table('users')
+                        ->where('user_type', '=', 1)
+                        ->get();
+                    // $admin_doctor = DB::table('users')
+                    //     ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
+                    //     ->where('entity_user', '=', $user->username)
+                    //     ->get();
+                    
 
-                // foreach($user_info as $u_i){
-                //     echo($u_i->doctor_user);
-                // }
+                    // foreach($user_info as $u_i){
+                    //     echo($u_i->doctor_user);
+                    // }
 
-                // return view('doctor.doctor_main', compact('user', 'user_info'));
-                return view('entity.entity-admin-dashboard', compact('user', 'doctors'));
+                    // return view('doctor.doctor_main', compact('user', 'user_info'));
+                    return view('entity.entity-admin-dashboard', compact('user', 'doctors'));
+                }
+            }
+            else{
+               
+                \Auth::logout();
+                return redirect('/sign_it')->withErrors([
+                    'email' => 'Please verify your email.',
+                ]);
             }
         }
     }
@@ -145,5 +185,36 @@ class TestController extends Controller
 //        echo($path);
     }
 
+
+
+
+
+    public function email($confirmation_code)
+    {
+        if( ! $confirmation_code)
+        {
+            throw new InvalidConfirmationCodeException;
+        }
+
+        $user = DB::table('users')
+            ->where('confirmation_code', '=', $confirmation_code)
+            ->first();
+
+        if ( ! $user)
+        {
+            throw new InvalidConfirmationCodeException;
+        }
+
+        // $user->update(['confirmed' => true]);
+        // $user->update(['confirmation_code' => null]);
+        DB::table('users')
+            ->where('confirmation_code', '=', $confirmation_code)
+            ->update(['confirmation_code' => null,
+                    'confirmed' => 1]);
+
+        Flash::message('You have successfully verified your account.');
+
+        return redirect('/sign_it');
+    }
 
 }

@@ -61,7 +61,12 @@
 							<ul class="doctor-details">
 								@foreach($doctors as $doctor)
 								<li>
-										<div class="doctor-img"><img src="/images/doctor.jpg" alt="supposed to be a pic here"/></div>
+										@if($doctor->propic)
+										<div class="doctor-img"><img src="/{{ $doctor->propic }}" alt="supposed to be a pic here"/></div>
+										@endif
+										@if(!$doctor->propic)
+										<div class="doctor-img"><img src="/images/pro-holder.jpg" alt="supposed to be a pic here"/></div>
+										@endif
 										<div class="doctor-name">
 											<a href="{{ action('PatientController@docprof', [$doctor->username]) }}"><h2>{{ $doctor->name }}</h2></a>										
 											<div class="specialist">{{ $doctor->practice_name }}</div>

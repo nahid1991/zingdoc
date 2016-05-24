@@ -56,6 +56,8 @@ Route::get('/homepage', 'TestController@home');
 
 Route::get('/test', 'TestController@run');
 
+Route::get('register/verify/{confirmationCode}', 'TestController@email');
+
 
 
 // Route::get('/test', function () {

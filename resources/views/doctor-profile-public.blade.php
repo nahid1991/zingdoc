@@ -12,10 +12,18 @@
 
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
+								@foreach($doctor as $doc)
+								@if($doc->propic)
 								<div class="pof-img">
-									<img src="/images/doctor-profile.jpg">
+									<img src="/{{ $doc->propic }}">
 								</div>
-								
+								@endif
+								@if(!$doc->propic)
+								<div class="pof-img">
+									<img src="/images/pro-holder.jpg">
+								</div>
+								@endif
+								@endforeach
 							</div>
 						</div>
 

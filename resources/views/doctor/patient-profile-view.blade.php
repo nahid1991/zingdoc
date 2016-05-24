@@ -12,7 +12,7 @@
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
 								<div class="pof-img">
-									<img src="images/doctor-profile.jpg">
+									<img src="images/pro-holder.jpg">
 								</div>
 								<ul><li>
 										<a href="{{ url('/homepage') }}">Appointments</a></li><li>

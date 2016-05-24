@@ -11,9 +11,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-							@foreach($errors->all() as $error)
-            						<p class="alert alert-danger">{!!$error!!}</p>
-        					@endforeach
+							@if (Session::has('message'))
+							   <div class="alert alert-info">{{ Session::get('message') }}</div>
+							@endif
 							<div class="signup-text">
 								<h5>Doctor Sign Up</h5>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat laoreet dolore magna aliquam erat volutpat.</p>

@@ -59,7 +59,12 @@
 													@endforeach
 												</div>
 											</div>
-											<div class="edpof-image"><img src="/images/entity-doctor-profile.jpg"></div>
+											@if($doc_info->propic)
+											<div class="edpof-image"><img src="/{{ $doc_info->propic }}"></div>
+											@endif
+											@if(!$doc_info->propic)
+											<div class="edpof-image"><img src="/images/pro-holder.jpg"></div>
+											@endif
 									</div>
 								</div>								
 							</div>

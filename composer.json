@@ -10,7 +10,8 @@
         "predis/predis": "^1.0",
         "nesbot/carbon": "^1.21",
         "laravelcollective/html": "5.2.*",
-        "maddhatter/laravel-fullcalendar": "^1.2"
+        "maddhatter/laravel-fullcalendar": "^1.2",
+        "laracasts/flash": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
