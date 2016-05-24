@@ -36,22 +36,21 @@
 								</div>
 								<div class="pof-desc">
 								   <div class="edashboard">
-									<div class="entity-dashborad-caresoul">
-										<div class="doctor-caresoul-box">	
-											<!-- <a href="doctor-admin-appointments-day-view.php">
+									<!-- <div class="entity-dashborad-caresoul">
+										<div class="doctor-caresoul-box">
+											<a href="doctor-admin-appointments-day-view.php">
 											<div class="slide doctor_profile_img">
 													<div class="doctor_profile_img">
-													<img src="images/doctor-profile1.jpg"/>
+													<img src=""/>
 													<div class="doctor-profile-title">
-														<h2>Dr.Fedrick Solomon</h2>
-														<p>Dermotologist/Cosmotologist</p>
+														<h2></h2>
 													</div>
 													</div>
 												</div>
 											</div>												
-											</a> -->
+											</a>
 											
-										</div>
+										</div> -->
 									</div><!-- End edashboard -->
 									<div class="doctorsignup-holder add-doctor">
 											<a href="#" id="toggle-btn" href="#">ADD DOCTOR</a>

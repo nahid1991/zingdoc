@@ -80,6 +80,10 @@ class TestController extends Controller
                 $doctors = DB::table('users')
                     ->where('user_type', '=', 1)
                     ->get();
+                // $admin_doctor = DB::table('users')
+                //     ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
+                //     ->where('entity_user', '=', $user->username)
+                //     ->get();
                 
 
                 // foreach($user_info as $u_i){

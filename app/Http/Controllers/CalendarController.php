@@ -87,30 +87,22 @@ class CalendarController extends Controller
     public function sche(Request $request){
         // echo('<h1>'.$request->input('interval').'</h1>');
         // $time = Carbon::createFromTime($request->input('starting_interval'), $request->input('starting_min'));
+        $user = \Auth::user();
         $date = explode('-', $request->input('date'));
         $start_hour = Carbon::create($date[0], $date[1], $date[2], 
             $request->input('starting_interval'), $request->input('starting_min'));
         $start_hour = $start_hour->format('g:i A');
-        // echo($start_hour);
+        
         $s_h = $request->input('starting_interval');
         $start_min = $request->input('starting_min');
 
         $time = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
         $i = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
 
-        
-        // $i = $time;
-        // $duration = $request->input('duration');
-        // $dura = $time->addMinutes($duration);
         $end_interval = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
         $end_interval->addMinutes($request->input('duration'));
         $end_time = $end_interval->format('g:i A');
-        // echo($end_interval);
-        // $i = $time;
-        // echo($i);
-        // echo($time);
-
-        // echo($time->diffInMinutes($end_interval));
+        
         while($i->diffInMinutes($end_interval)){
             $slot = $i->format('g:i A');
             DB::table('time_slot')
@@ -122,14 +114,6 @@ class CalendarController extends Controller
                 ]);
             $i = $i->addMinutes($request->input('interval'));
         }
-
-
-        // $end_time = $end_interval->hour.':'.$end_interval->minute;
-
-
-
-        // echo($end_interval);
-        
 
         DB::table('doctor_timing')
             ->insert([
@@ -143,7 +127,13 @@ class CalendarController extends Controller
                 'date' => $time
         ]);
 
+        if($user->user_type == 2){
+            return redirect('/doctor-calendar');
+        }
 
-        return redirect('/doctor-calendar');
+        if($user->user_type == 3){
+            return redirect('/calendar/'.$request->input('username'));
+        }
+        
     }
 }

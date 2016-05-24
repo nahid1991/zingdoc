@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use DB;
 
+use Carbon\Carbon;
+
 class EntityController extends Controller
 {
     // public function dashboard(){
@@ -219,6 +221,7 @@ class EntityController extends Controller
                 'entity_user' => $user->username,
                 'entity_name' => $user->name,
                 'doctor_name' => $temp->name,
+                'doc_speciality' => $temp->speciality,
             ]);
         DB::table('users')
             ->where('username', '=', $request->input('username'))
@@ -226,6 +229,81 @@ class EntityController extends Controller
                 'ad_user' => $user->username,
             ]);
         return redirect('/homepage');
+    }
+
+    public function calendar($username){
+        $user = \Auth::user();
+        $doc_info = DB::table('users')
+            ->where('username', '=', $username)
+            ->first();
+        $month = Carbon::now();
+        $num_month = $month->month;
+        $num_year = $month->year;
+        // echo($month->month);
+        $month = $month->format('F Y');
+        return view('entity.entity-doctor-calendar', compact('user', 'month', 'num_month', 'num_year', 'doc_info'));
+        // echo($username);
+    }
+
+
+    public function make($username, $year, $month, $day){
+        // echo($username);
+        $user = \Auth::user();
+        $date = Carbon::create($year, $month, $day);
+        $doc_info = DB::table('users')
+            ->where('username', '=', $username)
+            ->first();
+
+        // echo($doc_info->username);
+        $date_human = $date->year.'-'.$date->month.'-'.$date->day;
+        $name_o_day = $date->format('l');
+
+        $doc_timing = DB::table('users')
+            ->join('doctor_timing', 'users.username', '=', 'doctor_timing.doc_user')
+            ->where('username', '=', $username)
+            ->where('day', '=', $name_o_day)
+            ->get();
+        $doc_days = DB::table('users')
+            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+            ->where('username', '=', $username)
+            ->get();
+
+        if($date>Carbon::now()){
+            
+            $doctor_schedule = DB::table('users')
+            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+            ->where('users.username', '=', $username)
+            ->where('days', '=', $name_o_day)
+            ->get();
+        foreach($doctor_schedule as $doc_info){
+            $starting = $doc_info->starting_time;
+            $ending = $doc_info->ending_time;
+            $ending = Carbon::createFromFormat('l g:i A', $name_o_day."  ".$ending);
+            $starting = Carbon::createFromFormat('l g:i A', $name_o_day."  ".$starting);
+            $starting_hour = $starting->hour;
+            $ending_hour = $ending->hour;
+
+            for($i = $starting_hour; $i <= $ending_hour; $i++){
+                $hours[] = $i;
+                $hour = Carbon::createFromTime($i);
+                $hour_formatted[] = $hour->format('g');
+                
+            }
+        }
+
+
+
+
+        
+
+        return view('entity.entity-doctor-schedule', compact('user', 'doctor_schedule', 'name_o_day', 'hours',
+            'hour_formatted', 'date_human', 'doc_timing', 'date', 'doc_days', 'doc_info'));
+        }
+
+       
+        return redirect('/calendar/'.$username);
+        
+        
     }
 
 }

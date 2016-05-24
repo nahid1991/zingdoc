@@ -119,5 +119,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/{username}', 'DoctorController@patient_profile');
 	Route::post('/add-doctor', 'EntityController@add_doctor');
 	Route::post('/propic', 'TestController@propic');
+	Route::get('/calendar/{username}', 'EntityController@calendar');
+	Route::get('/schedule-make/{username}/{year}/{month}/{day}', 'EntityController@make');
 });
 
