@@ -65,13 +65,9 @@ class EntityController extends Controller
         // echo($user->created_at);
     }
 
-    public function profile(){
-    	return view('entity.entity-admin-view-profile');
-    }
+    
 
-    public function profileEdit(){
-    	return view('entity.entity-admin-edit-profile');
-    }
+
 
     public function settings(){
     	return view('entity.entity-admin-account-setting');
@@ -323,6 +319,58 @@ class EntityController extends Controller
         return redirect('/calendar/'.$username);
         
         
+    }
+
+
+
+
+    public function en_make_profile(Request $request){
+        $user = \Auth::user();
+
+        DB::table('entity_profile')
+            ->where('e_user', '=', $user->username)
+            ->delete();
+
+
+        DB::table('entity_profile')
+            ->insert([
+                'e_user' => $user->username,
+                'overview' => $request->input('overview'),
+                'location' => $request->input('location'),
+                'address' => $request->input('address'),
+                'specializations' => $request->input('specializations'),
+                'services' => $request->input('services'),
+                'award' => $request->input('award'),
+            ]);
+        return Redirect::back();
+    }
+
+
+    public function en_profileEdit(){
+        $user = \Auth::user();
+        $en_info = DB::table('users')
+            ->join('entity_profile', 'users.username', '=', 'entity_profile.e_user')
+            ->where('username', '=', $user->username)
+            ->first();
+        if($en_info)
+        {
+            return view('entity.entity-admin-edit-profile-new', compact('user', 'en_info'));
+        }
+        if(!$en_info){
+            return view('entity.entity-admin-edit-profile', compact('user'));
+        }
+    }
+
+
+
+    public function en_profile(){
+        $user = \Auth::user();
+        $en_info = DB::table('users')
+            ->join('entity_profile', 'users.username', '=', 'entity_profile.e_user')
+            ->where('users.username', '=', $user->username)
+            ->get();
+
+        return view('entity.entity-admin-view-profile', compact('user', 'en_info'));
     }
 
 }

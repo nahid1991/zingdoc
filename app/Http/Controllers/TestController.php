@@ -217,4 +217,36 @@ class TestController extends Controller
         return redirect('/sign_it');
     }
 
+
+    public function cover(Request $request)
+    {
+
+        $destination = 'coverpic/';
+        $file = Input::file('image')->getClientOriginalExtension();
+        // Input::file('image');
+        // $file = Input::file('image');
+        // die(var_dump( $_FILES[Input::file('image')]));
+        // echo($file->getClientOriginalExtension());
+        $user = \Auth::user();
+        // $file = Input::file('image');
+        // if (File::exists($file))
+        // {
+        //     echo "Yup. It exists.";
+        // }
+
+        // $file->move($destination, $file->getClientOriginalName());
+        // echo($file);
+
+        $user = \Auth::user();
+        $imagename = $user->id.".".$file;
+        $path = str_replace("\\", "/", Input::file('image')->move($destination."/", $imagename));
+        DB::table('users')->where('username', $user->username)
+            ->update([
+                'cover_pic' => $path
+            ]);
+
+        return Redirect::back();
+//        echo($path);
+    }
+
 }

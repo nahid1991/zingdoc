@@ -98,8 +98,8 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/patient-comments', 'PatientController@comments');
 	Route::get('/patient-profile', 'PatientController@profile');
 	Route::get('/entity-appointments', 'EntityController@appointments');
-	Route::get('/entity-profile', 'EntityController@profile');
-	Route::get('/entity-profile-edit', 'EntityController@profileEdit');
+	Route::get('/entity-profile', 'EntityController@en_profile');
+	Route::get('/entity-profile-edit', 'EntityController@en_profileEdit');
 	Route::get('/entity-account-settings', 'EntityController@settings');
 	Route::post('/schedule-make', 'ScheduleController@make');
 	Route::get('/search', 'SearchController@search');
@@ -123,5 +123,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::post('/propic', 'TestController@propic');
 	Route::get('/calendar/{username}', 'EntityController@calendar');
 	Route::get('/schedule-make/{username}/{year}/{month}/{day}', 'EntityController@make');
+	Route::post('/cover-photo', 'TestController@cover');
+	Route::post('//admin-profile-edit', 'EntityController@en_make_profile');
 });
 

@@ -69,7 +69,7 @@ class DoctorController extends Controller
         ->where('username', '=', $user->username)
         ->first();
       if($doc_info)
-    	{
+      {
         return view('doctor.doctor-admin-edit-profile', compact('user', 'doc_info'));
       }
       if(!$doc_info){
