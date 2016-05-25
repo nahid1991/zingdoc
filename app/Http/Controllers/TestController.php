@@ -143,8 +143,8 @@ class TestController extends Controller
         // $newFormat = $compareDate->format('g:i A');
         // $format = $date->format('g:i A');
         // echo($format->diffInHours($newFormat));
-        $date = Carbon::now();
-        $date = $date->toDayDateTimeString('l');
+        $date = Carbon::now()->addDays(365);
+//        $date = $date->toDayDateTimeString('l');
         echo($date);
     }
 

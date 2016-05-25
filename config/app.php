@@ -150,6 +150,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Aloha\Twilio\Support\Laravel\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -209,6 +210,7 @@ return [
         'Input' => Illuminate\Support\Facades\Input::class,
         'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
         'Flash' => Laracasts\Flash\Flash::class,
+        'Twilio' => Aloha\Twilio\Support\Laravel\Facade::class,
     ],
 
 ];

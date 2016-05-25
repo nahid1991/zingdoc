@@ -12,6 +12,5 @@
             {{ URL::to('/register/verify/' . $conf) }} .<br/>
 
         </div>
-
     </body>
 </html>

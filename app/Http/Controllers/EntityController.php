@@ -10,6 +10,12 @@ use DB;
 
 use Carbon\Carbon;
 
+use Twilio;
+
+use Services_Twilio;
+
+use Redirect;
+
 class EntityController extends Controller
 {
     // public function dashboard(){
@@ -114,7 +120,7 @@ class EntityController extends Controller
             ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
             ->where('username', '=', $username)
             ->get();
-        return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list'));
+        return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list', 'username'));
         // return redirect('/find-doc/'.$doc_info->username);
     }
 
@@ -197,7 +203,20 @@ class EntityController extends Controller
             ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
             ->where('username', '=', $username)
             ->get();
-        return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list'));
+
+        $account_sid = "AC0ea2b450fbf9bcaa2aaa8464536c6f85"; // Your Twilio account sid
+        $auth_token = "3501d13a64fbe6c80a5f30d6d36459ca"; // Your Twilio auth token
+
+        $client = new Services_Twilio($account_sid, $auth_token);
+        $message = $client->account->messages->sendMessage(
+            '+12565302615', // From a Twilio number in your account
+            '+880'.$trick->phone_number, // Text any number
+            "Hello Ibnul monkey!"
+        );
+
+
+        return Redirect::back();
+//        return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list'));
     }
 
 

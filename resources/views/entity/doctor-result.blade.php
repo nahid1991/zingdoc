@@ -83,7 +83,7 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-6">
 										<ul class="view-type-link">
-											<li><a class="current" href="entity-admin-appointments-view.php" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
+											<li><a class="current" href="{{ url('/doctor/{$username}') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
 												<!-- <a href="entity-admin-appointments-week-view.php" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
 												<a href="{{ action('EntityController@calendar', [$doc_info->username]) }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>
 										</ul>
