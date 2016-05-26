@@ -342,6 +342,12 @@ class EntityController extends Controller
                 'services' => $request->input('services'),
                 'award' => $request->input('award'),
             ]);
+        DB::table('users')
+            ->where('username', '=', $user->username)
+            ->update([
+                'location' => $request->input('location'),
+                'address' => $request->input('address'),
+            ]);
         return Redirect::back();
     }
 

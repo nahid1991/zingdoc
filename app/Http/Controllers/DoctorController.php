@@ -59,6 +59,12 @@ class DoctorController extends Controller
               'award' => $request->input('award'),
               'registration' => $request->input('registration'),
             ]);
+        DB::table('users')
+            ->where('username', '=', $user->username)
+            ->update([
+                'location' => $request->input('location'),
+                'address' => $request->input('address')
+            ]);
         return redirect('/doc-profile-edit');
     }
 

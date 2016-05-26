@@ -9,12 +9,12 @@
 							<div class="pof-sidenav">
 								@if($doc_info->propic)
 								<div class="pof-img">
-									<img src="{{ $doc_info->propic }}">
+									<img src="/{{ $doc_info->propic }}">
 								</div>
 								@endif
-								@if($doc_info->propic)
+								@if(!$doc_info->propic)
 								<div class="pof-img">
-									<img src="images/pro-holder.jpg">
+									<img src="/images/pro-holder.jpg">
 								</div>
 								@endif
 								<h2>{{ $doc_info->name }}</h2>
@@ -157,6 +157,7 @@
 																<div class="col-xs-6 col-sm-6 col-md-6">
 																	<input type="radio" name="type" value="weekly"> Weekly</input>
 																	<input type="radio" name="type" value="monthly"> Monthly</input>
+																	<input type="radio" name="type" value="yearly"> Yearly</input>
 																<br>
 																<label>Set this for:</label><br>
 																@foreach($doc_days as $dd)

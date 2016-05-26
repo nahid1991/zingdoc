@@ -78,12 +78,12 @@
 							<div class="pof-sidenav">
 								@if($doc_info->propic)
 								<div class="pof-img">
-									<img src="{{ $doc_info->propic }}">
+									<img src="/{{ $doc_info->propic }}">
 								</div>
 								@endif
-								@if($doc_info->propic)
+								@if(!$doc_info->propic)
 								<div class="pof-img">
-									<img src="images/pro-holder.jpg">
+									<img src="/images/pro-holder.jpg">
 								</div>
 								@endif
 								<h2>{{ $doc_info->name }}</h2>

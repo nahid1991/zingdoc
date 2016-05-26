@@ -124,6 +124,6 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/calendar/{username}', 'EntityController@calendar');
 	Route::get('/schedule-make/{username}/{year}/{month}/{day}', 'EntityController@make');
 	Route::post('/cover-photo', 'TestController@cover');
-	Route::post('//admin-profile-edit', 'EntityController@en_make_profile');
+	Route::post('/admin-profile-edit', 'EntityController@en_make_profile');
 });
 

@@ -194,15 +194,20 @@ class ScheduleController extends Controller
     }
 
 
-    public function form_patient($id, $date, $time){
+    public function form_patient($username, $date, $time){
         $user = \Auth::user();
         $doctor_info = DB::table('users')
             ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
-            ->where('users.username', '=', $id)
+            ->where('users.username', '=', $username)
             ->get();
-        return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time'));
-        // echo($doctor_info->speciality);
 
+        $date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+        $t_f = $date->format('g:i A');
+        $d_f = $date->format('F').' '. $date->day.', '.$date->format('Y');
+//        echo($d_f);
+        return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time', 'd_f', 't_f'));
+        // echo($doctor_info->speciality);
+//        echo($date);
         // echo($id);
     }
 

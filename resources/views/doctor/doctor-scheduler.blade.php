@@ -9,12 +9,12 @@
 							<div class="pof-sidenav">
 								@if($user->propic)
 								<div class="pof-img">
-									<img src="{{ $user->propic }}">
+									<img src="/{{ $user->propic }}">
 								</div>
 								@endif
 								@if(!$user->propic)
 								<div class="pof-img">
-									<img src="images/pro-holder.jpg">
+									<img src="/images/pro-holder.jpg">
 								</div>
 								@endif
 								<ul><li>

@@ -7,24 +7,28 @@
 						<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
 							<div class="appt-time-block">
 			                    <p class="appt-date">
-			                        <i class="icon icon-calendar icon-2x"></i> <span class="strong">Feb 10, 2014</span>
+			                        <i class="icon icon-calendar icon-2x"></i> <span class="strong">{{ $d_f }}</span>
 			                    </p>
 			                    <p class="appt-time">
-			                        <i class="icon icon-time icon-2x"></i> At <span class="strong">10:30 AM</span>
+			                        <i class="icon icon-time icon-2x"></i> At <span class="strong">{{ $t_f }}</span>
 			                    </p>
 				                <div class="clearfix"></div>
-				                <a href="doctor-profile.php">Change Date &amp; Time</a>
 				                <div class="clearfix"></div>
 				            </div>
 							<div class="doctor-short-profile">
 								@foreach($doctor_info as $doc)
-								<div class="img-holder"><img src="/images/doctor-profile.jpg"/></div>
+								@if($doc->propic)
+									<div class="img-holder"><img src="/{{ $doc->propic }}"/></div>
+								@endif
+								@if(!$doc->propic)
+									<div class="img-holder"><img src="/images/pro-holder.jpg"/></div>
+								@endif
 								<div class="desc">									
 									<h5>{{ $doc->name }}</h5>
 									<p>DDS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ $doc->speciality }}</p>
 									<p class="adr">
 										<b>{{ $doc->entity_name }}</b><br/>
-										#A-102, Marve Link Apartment, Marve Road Forest Ave Ridgewood<br> NY 11385
+										{{ $doc->location }}
 									</p>
 								</div>
 								@endforeach

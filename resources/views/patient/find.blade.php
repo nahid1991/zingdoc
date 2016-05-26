@@ -56,7 +56,7 @@
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-10 col-lg-10 ">
 						<div class="doctor-holder">
-							<div class="page-title"><span>Doctors in New York</sapn></div>
+							<div class="page-title"><span>Doctors in New York</span></div>
 							
 							<ul class="doctor-details">
 								@foreach($doctors as $doctor)
@@ -69,8 +69,7 @@
 										@endif
 										<div class="doctor-name">
 											<a href="{{ action('PatientController@docprof', [$doctor->username]) }}"><h2>{{ $doctor->name }}</h2></a>										
-											<div class="specialist">{{ $doctor->practice_name }}</div>
-											<div class="city">217 centre.<br/>New York,NY 10013</div>
+											<div class="specialist">{{ $doctor->practice_name }}<br><p>{{ $doctor->location }}</p></div>
 										</div>
 										<div class="right-area">
 											<div class="ratings">
@@ -83,7 +82,7 @@
 													<li><img src="images/ratings.png" alt=""/></li>
 												</ul> -->
 												<!-- <marquee><p><b>5.0</b></p></marquee> -->
-												<h5><strong><b><i>Rating: 5.0</b></i></strong></h5>
+												<h5><strong><b><i>Rating: 5.0</i></b></strong></h5>
 											</div>
 											<div class="booking"><a id="doctor_{{ $doctor->id }}" href="#{{ $doctor->id }}">Get An Appointment</a></div>
 										</div>

@@ -10,6 +10,8 @@ use Carbon\Carbon;
 
 use DB;
 
+use Redirect;
+
 class CalendarController extends Controller
 {
     public function show(){
@@ -127,8 +129,8 @@ class CalendarController extends Controller
                 'date' => $time
         ]);
 
-        if($user->user_type == 2){
-            return redirect('/doctor-calendar');
+        if($user->user_type == 1){
+            return Redirect::back();
         }
 
         if($user->user_type == 3){
