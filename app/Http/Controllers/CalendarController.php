@@ -91,6 +91,7 @@ class CalendarController extends Controller
         // $time = Carbon::createFromTime($request->input('starting_interval'), $request->input('starting_min'));
         $user = \Auth::user();
         $date = explode('-', $request->input('date'));
+        $created_date = Carbon::create($date[0], $date[1], $date[2], '00','00');
         $start_hour = Carbon::create($date[0], $date[1], $date[2], 
             $request->input('starting_interval'), $request->input('starting_min'));
         $start_hour = $start_hour->format('g:i A');
@@ -100,42 +101,75 @@ class CalendarController extends Controller
 
         $time = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
         $i = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+        $j = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
 
         $end_interval = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
         $end_interval->addMinutes($request->input('duration'));
         $end_time = $end_interval->format('g:i A');
-        
-        while($i->diffInMinutes($end_interval)){
-            $slot = $i->format('g:i A');
-            DB::table('time_slot')
+        $verify = 0;
+
+        while($j->diffInMinutes($end_interval)){
+            $test = DB::table('time_slot')
+                ->where('slot_date', '=', $j)
+                ->where('d_user', '=', $request->input('username'))
+                ->first();
+            if($test)
+            {
+                $verify = 1;
+                break;
+            }
+            $j = $j->addMinutes(15);
+        }
+
+        if($verify == 0){
+            while($i->diffInMinutes($end_interval)){
+                $slot = $i->format('g:i A');
+
+
+                DB::table('time_slot')
+                    ->insert([
+                        'd_user' => $request->input('username'),
+                        'slot' => $slot,
+                        'day_of_week' => $request->input('day'),
+                        'slot_date' => $i,
+                        'created_for' => $created_date
+                    ]);
+                $i = $i->addMinutes($request->input('interval'));
+            }
+
+            DB::table('doctor_timing')
                 ->insert([
-                    'd_user' => $request->input('username'),
-                    'slot' => $slot,
-                    'day_of_week' => $request->input('day'),
-                    'slot_date' => $i
+                    'doc_user' => $request->input('username'),
+                    'start_interval' => $start_hour,
+                    'end_interval' => $end_time,
+                    'day' => $request->input('day'),
+                    'reason' => $request->input('reason'),
+                    'interval' => $request->input('interval'),
+                    'type' => $request->input('type'),
+                    'date' => $time
                 ]);
-            $i = $i->addMinutes($request->input('interval'));
+
+            if($user->user_type == 1){
+                return Redirect::back();
+            }
+
+            if($user->user_type == 3){
+                return Redirect::back();
+            }
         }
 
-        DB::table('doctor_timing')
-            ->insert([
-                'doc_user' => $request->input('username'),
-                'start_interval' => $start_hour,
-                'end_interval' => $end_time,
-                'day' => $request->input('day'),
-                'reason' => $request->input('reason'),
-                'interval' => $request->input('interval'),
-                'type' => $request->input('type'), 
-                'date' => $time
-        ]);
+        else{
+            if($user->user_type == 1){
+                return Redirect::back()->withErrors([
+                    'Your timing clash with each other.',
+                ]);
+            }
 
-        if($user->user_type == 1){
-            return Redirect::back();
+            if($user->user_type == 3){
+                return Redirect::back()->withErrors([
+                    'Your timing clash with each other.',
+                ]);
+            }
         }
-
-        if($user->user_type == 3){
-            return redirect('/calendar/'.$request->input('username'));
-        }
-        
     }
 }

@@ -4,7 +4,9 @@
 			<div class="full-body-conteiner">
 				<div class="container">
 					<div class="row">
-					
+						@foreach($errors->all() as $error)
+							<p class="alert alert-danger">{!!$error!!}</p>
+						@endforeach
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
 								@if($doc_info->propic)

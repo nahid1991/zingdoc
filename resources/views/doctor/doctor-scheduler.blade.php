@@ -4,7 +4,9 @@
 			<div class="full-body-conteiner">
 				<div class="container">
 					<div class="row">
-					
+						@foreach($errors->all() as $error)
+							<p class="alert alert-danger">{!!$error!!}</p>
+						@endforeach
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
 								@if($user->propic)
@@ -19,7 +21,7 @@
 								@endif
 								<ul><li>
 										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
-										<a href="{{ url('/set-appointment') }}">Set Timing</a></li><li>
+										<a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
 										<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
 										<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
 										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
@@ -162,8 +164,8 @@
 														<div class="ft">															
 															<div class="row">
 																<div class="col-xs-6 col-sm-6 col-md-6">
-																	<input type="radio" name="type" value="weekly"> Weekly</input>
-																	<input type="radio" name="type" value="monthly"> Monthly</input>
+																	<input type="radio" name="type" value="monthly"> This month</input>
+																	<input type="radio" name="type" value="yearly"> This year</input>
 																<br>
 																<label>Set this for:</label><br>
 																@foreach($doc_days as $dd)

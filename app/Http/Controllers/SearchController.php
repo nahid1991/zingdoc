@@ -14,6 +14,14 @@ class SearchController extends Controller
 {
     public function search(){
     	$user = \Auth::user();
+
+        $sun_raw = Carbon::parse('next sunday');
+        $mon_raw = Carbon::parse('next monday');
+        $tue_raw = Carbon::parse('next tuesday');
+        $wed_raw = Carbon::parse('next wednesday');
+        $thu_raw = Carbon::parse('next thursday');
+        $fri_raw = Carbon::parse('next friday');
+        $sat_raw = Carbon::parse('next saturday');
     	
         $sun = Carbon::parse('next sunday')->format('jS F');
         $mon = Carbon::parse('next monday')->format('jS F');
@@ -41,31 +49,31 @@ class SearchController extends Controller
 
         
         $doctor_info_sun = DB::table('time_slot')
-            ->where('day_of_week', '=', 'Sunday')
+            ->where('created_for', '=', $sun_raw)
             ->get();
 
         $doctor_info_mon = DB::table('time_slot')
-            ->where('day_of_week', '=', 'Monday')
+            ->where('created_for', '=', $mon_raw)
             ->get();
 
         $doctor_info_tue = DB::table('time_slot')
-            ->where('day_of_week', '=', 'Tuesday')
+            ->where('created_for', '=', $tue_raw)
             ->get();
 
         $doctor_info_wed = DB::table('time_slot')
-            ->where('day_of_week', '=', 'Wednesday')
+            ->where('created_for', '=', $wed_raw)
             ->get();
 
         $doctor_info_thu = DB::table('time_slot')
-            ->where('day_of_week', '=', 'Thursday')
+            ->where('created_for', '=', $thu_raw)
             ->get();
 
         $doctor_info_fri = DB::table('time_slot')
-            ->where('day_of_week', '=', 'Friday')
+            ->where('created_for', '=', $fri_raw)
             ->get();
 
         $doctor_info_sat = DB::table('time_slot')
-            ->where('day_of_week', '=', 'Saturday')
+            ->where('created_for', '=', $sat_raw)
             ->get();
 
 
