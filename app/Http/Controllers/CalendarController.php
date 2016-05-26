@@ -27,16 +27,16 @@ class CalendarController extends Controller
 
     public function make($username, $year, $month, $day){
     	$user = \Auth::user();
-        $date = Carbon::create($year, $month, $day);
+        $date = Carbon::create($year, $month, $day, '00', '00');
 
-        // echo($date->year);
+
         $date_human = $date->year.'-'.$date->month.'-'.$date->day;
         $name_o_day = $date->format('l');
 
         $doc_timing = DB::table('users')
             ->join('doctor_timing', 'users.username', '=', 'doctor_timing.doc_user')
             ->where('username', '=', $user->username)
-            ->where('day', '=', $name_o_day)
+            ->where('schedule_date', '=', $date)
             ->get();
         $doc_days = DB::table('users')
             ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
@@ -44,12 +44,11 @@ class CalendarController extends Controller
             ->get();
 
         if($date>Carbon::now()){
-            
             $doctor_schedule = DB::table('users')
-            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
-            ->where('users.username', '=', $user->username)
-            ->where('days', '=', $name_o_day)
-            ->get();
+                ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+                ->where('users.username', '=', $user->username)
+                ->where('days', '=', $name_o_day)
+                ->get();
         foreach($doctor_schedule as $doc_info){
             $starting = $doc_info->starting_time;
             $ending = $doc_info->ending_time;
@@ -62,25 +61,20 @@ class CalendarController extends Controller
                 $hours[] = $i;
                 $hour = Carbon::createFromTime($i);
                 $hour_formatted[] = $hour->format('g');
-                
+
             }
         }
 
 
 
 
-        // $date = Carbon::create($year, $month, $day);
-        // Carbon::createFromFormat('Y-m-d H', '1975-05-21 22')->toDateTimeString();
-        // $name_o_day = $date->format('l');
-        // $date = Carbon::createFromFormat('Y-m-d', $year."-".$month."-".$day)->toDateTimeString();
 
-        // echo($date_human);
 
         return view('doctor.doctor-scheduler', compact('user', 'doctor_schedule', 'name_o_day', 'hours',
             'hour_formatted', 'date_human', 'doc_timing', 'date', 'doc_days'));
         }
 
-       
+
         return redirect('/doctor-calendar');
         
         
@@ -146,7 +140,8 @@ class CalendarController extends Controller
                     'reason' => $request->input('reason'),
                     'interval' => $request->input('interval'),
                     'type' => $request->input('type'),
-                    'date' => $time
+                    'date' => $time,
+                    'schedule_date' => $created_date
                 ]);
 
             if($user->user_type == 1){
