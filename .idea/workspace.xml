@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6b4b73d-55fd-41a4-bc73-c92eb990e8d0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php" afterPath="$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php" />
     </list>
     <ignored path="zingdoc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,11 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doctor-scheduler.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="doctor-scheduler.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="41" column="177" selection-start-line="41" selection-start-column="177" selection-end-line="41" selection-end-column="177" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,6 +157,7 @@
         <option value="$PROJECT_DIR$/resources/views/entity/entity-doctor-schedule.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
         <option value="$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -323,7 +334,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;schedulecontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;Calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;ScheduleController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;searchcontroller&#9;null&#9;null&#10;calen&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;calenda&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;routes&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;tinyh&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;calendarcontro&#9;null&#9;null&#10;/route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;entit&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;create&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_05_25_090744_create_booked_table.php&#10;enti&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/entity-admin-edit-profile.blade.php&#10;entity_pr&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_05_25_091147_create_entity_profile_table.php&#10;ro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;booked&#9;null&#9;null&#10;tinyhttp&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;config.php&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/bootstrap/cache/config.php&#10;testcontro&#9;null&#9;null&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php" />
+    <property name="SearchEverywhereHistoryKey" value="gitignore&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/.gitignore&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;schedulecontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;Calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;ScheduleController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;searchcontroller&#9;null&#9;null&#10;calen&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;calenda&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;routes&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;tinyh&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;calendarcontro&#9;null&#9;null&#10;/route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;entit&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;create&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_05_25_090744_create_booked_table.php&#10;enti&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/entity-admin-edit-profile.blade.php&#10;entity_pr&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_05_25_091147_create_entity_profile_table.php&#10;ro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;booked&#9;null&#9;null&#10;tinyhttp&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;config.php&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/bootstrap/cache/config.php&#10;testcontro&#9;null&#9;null&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -374,12 +385,12 @@
       <workItem from="1464154459295" duration="2773000" />
       <workItem from="1464158965962" duration="19186000" />
       <workItem from="1464240007322" duration="26532000" />
-      <workItem from="1464497067567" duration="569000" />
+      <workItem from="1464497067567" duration="990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49161000" />
+    <option name="totallyTimeSpent" value="49582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -421,16 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EntityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5610">
-          <caret line="342" column="51" selection-start-line="342" selection-start-column="51" selection-end-line="342" selection-end-column="51" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3349">
@@ -799,6 +800,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="41" column="177" selection-start-line="41" selection-start-column="177" selection-end-line="41" selection-end-column="177" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
