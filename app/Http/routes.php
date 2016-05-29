@@ -125,5 +125,6 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/schedule-make/{username}/{year}/{month}/{day}', 'EntityController@make');
 	Route::post('/cover-photo', 'TestController@cover');
 	Route::post('/admin-profile-edit', 'EntityController@en_make_profile');
+	Route::get('/delete/{date}/{created_date}/{username}', 'CalendarController@sche_del');
 });
 

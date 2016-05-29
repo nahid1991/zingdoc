@@ -2071,6 +2071,11 @@ ul.vprof-image li {
 /* Patient admin Deshboard */
 .patient-admin-app-view{ display: block; margin-bottom: 20px;}
 .patient-admin-app-view .doctor-short-profile{ background-color: #FFF;}
+.pof-content .add_form_container .add_form {
+	position: absolute;
+	width: 370px;
+	z-index: 1;
+}
 
 
 

@@ -159,7 +159,8 @@ class CalendarController extends Controller
                                 'slot' => $slot,
                                 'day_of_week' => $request->input('day'),
                                 'slot_date' => $x,
-                                'created_for' => $c_d
+                                'created_for' => $c_d,
+                                'index_time' => $time
                             ]);
                         $x = $x->addMinutes($request->input('interval'));
                     }
@@ -180,7 +181,7 @@ class CalendarController extends Controller
                             'date' => $time,
                             'schedule_date' => $c_d
                         ]);
-
+                    $time->addDays(7);
                     $c_d = $c_d->addDays(7);
                     $e_i2->addDays(7);
                 }
@@ -203,8 +204,8 @@ class CalendarController extends Controller
 
         /*Yearly function*/
         if($request->input('type') == 'yearly') {
-            $end_date = $k->lastOfYear()->addDay();
-            while($l<=$end_date){
+
+            while($l<=$e_i){
                 while($j->diffInMinutes($e_i)){
                     $test = DB::table('time_slot')
                         ->where('slot_date', '=', $j)
@@ -234,7 +235,8 @@ class CalendarController extends Controller
                                 'slot' => $slot,
                                 'day_of_week' => $request->input('day'),
                                 'slot_date' => $x,
-                                'created_for' => $c_d
+                                'created_for' => $c_d,
+                                'index_time' => $time
                             ]);
                         $x = $x->addMinutes($request->input('interval'));
                     }
@@ -255,7 +257,7 @@ class CalendarController extends Controller
                             'date' => $time,
                             'schedule_date' => $c_d
                         ]);
-
+                    $time->addDays(7);
                     $c_d = $c_d->addDays(7);
                     $e_i2->addDays(7);
                 }
@@ -275,6 +277,70 @@ class CalendarController extends Controller
 
 
 
+        /*Daily function*/
+        if(!$request->input('type')){
+            $end_date = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+            $end_date->addMinutes($request->input('duration'));
+            while($l<=$end_date){
+                $test = DB::table('time_slot')
+                     ->where('slot_date', '=', $l)
+                     ->where('d_user', '=', $request->input('username'))
+                     ->where('created_for', '=', $created_date)
+                     ->first();
+                if($test)
+                {
+                     $verify = 1;
+                     break;
+                }
+                $l->addMinutes(15);
+            }
+
+
+
+            if($verify == 0){
+                DB::table('doctor_timing')
+                    ->insert([
+                        'doc_user' => $request->input('username'),
+                        'start_interval' => $start_hour,
+                        'end_interval' => $end_time,
+                        'day' => $request->input('day'),
+                        'reason' => $request->input('reason'),
+                        'interval' => $request->input('interval'),
+                        'type' => $request->input('type'),
+                        'date' => $time,
+                        'schedule_date' => $created_date
+                    ]);
+
+
+
+                while($time->diffInMinutes($end_interval)){
+                    $slot = $time->format('g:i A');
+                    DB::table('time_slot')
+                        ->insert([
+                            'd_user' => $request->input('username'),
+                            'slot' => $slot,
+                            'day_of_week' => $request->input('day'),
+                            'slot_date' => $x,
+                            'created_for' => $created_date,
+                            'index_time' => $time
+                        ]);
+                    $time = $time->addMinutes($request->input('interval'));
+                }
+            }
+
+
+
+            if($user->user_type == 1){
+                return Redirect::back();
+            }
+
+            if($user->user_type == 3){
+                return Redirect::back();
+            }
+        }
+
+
+
 
 
 
@@ -291,5 +357,19 @@ class CalendarController extends Controller
                 ]);
             }
         }
+    }
+
+
+
+    public function sche_del($date, $index, $username){
+        DB::table('doctor_timing')
+            ->where('date', '=', $date)
+            ->where('doc_user', '=', $username)
+            ->delete();
+        DB::table('time_slot')
+            ->where('d_user', '=', $username)
+            ->where('index_time', '=', $date)
+            ->delete();
+        return Redirect::back();
     }
 }
