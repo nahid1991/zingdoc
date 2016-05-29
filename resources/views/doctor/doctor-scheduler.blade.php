@@ -39,7 +39,8 @@
 								<div class="pof-header">
 								@foreach($doctor_schedule as $doc_info)
 								@if($doc_info)
-									<div class="title">{{ $date->format('jS F') }} {{ $name_o_day }}'s schedule {{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}</div>
+									<div class="title">{{ $date->format('jS F') }} {{ $name_o_day }}'s schedule {{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}<br>
+									</div>
 								@endif
 								@endforeach
 								</div>
