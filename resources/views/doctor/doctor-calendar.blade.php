@@ -32,8 +32,7 @@
 				/* add in the day number */
 				// $calendar.= '<div class="day-number">'.$list_day.'</div> <a href="#"><div class="noof-apn"><h2>'.rand(5, 15).'</h2><span>Appoinments</span> </div></a> ';
 				$calendar.= '<div class="day-number">
-					</div> <a href="'.  action('CalendarController@make',
-						[$username, $year, $month, $list_day])  .'"  id='.$list_day.'>
+					</div> <a href="/scheduling/'.$username.'/'.$year.'/'.$month.'/'.$list_day.'"  id='.$list_day.'>
 					<div style="position:inherit;"><h2>'.$list_day.'</h2>
 					<div class='.$list_day.'>
 					</div></div></a>'
@@ -45,24 +44,30 @@
 			$calendar.= '</td>';
 
 			$calendar.=  "<script type=\"text/javascript\">
-				$(\"#$list_day\").mouseenter(function(){
-//					$(\".$list_day\").css(\"display\", \"block\")});
+				$(\"a#$list_day\").mouseenter(function(){
+				var link = $('a#$list_day').attr('href');
+				console.log(link);
                        $.ajax({
-                       url: '/test',
-               data: {},
-               type:'GET',
-               dataType: 'html',
+                       url: link,
+               			data: {},
+               			type:'GET',
+               			dataType: 'html',
                error: function(){
                    alert(\"Data not found\");
                },
                success:function(data){
                //alert('success');
+//               $(\".$list_day\").css(\"display\", \"block\")});
+				 $(\".$list_day\").empty();
                $(\".$list_day\").append(data);
+               $(\".$list_day\").css(\"display\", \"block\");
+
                		} // End of success function of ajax form
            		}); // End of ajax call
 				});
-				$(\"#$list_day\").mouseleave(function(){
+				$(\"a#$list_day\").mouseleave(function(){
 					$(\".$list_day\").css(\"display\", \"none\");
+					$(\".$list_day\").empty();
 				});
 //				$(\"#$list_day\").mouseover(function(e){
 //					e.preventDefault();

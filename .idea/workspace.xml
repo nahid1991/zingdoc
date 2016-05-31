@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6b4b73d-55fd-41a4-bc73-c92eb990e8d0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php" afterPath="$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php" />
     </list>
     <ignored path="zingdoc.iws" />
@@ -29,85 +29,93 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1328">
-              <caret line="116" column="21" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="21" />
+            <state relative-caret-position="183">
+              <caret line="115" column="86" selection-start-line="115" selection-start-column="63" selection-end-line="115" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doctor-calendar.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalendarController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+                <element signature="e#188#499#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doctor-calendar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-151">
-              <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+            <state relative-caret-position="211">
+              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
               <folding>
-                <marker date="1464695961451" expanded="true" signature="1311:1323" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1421:1499" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1421:1510" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1421:1516" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1421:1529" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1421:1551" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1421:1559" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1439:1440" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1439:1446" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1439:1481" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1458:1475" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1529:1530" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1529:1541" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1529:1547" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1530:1541" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1771:1778" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1771:1859" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1771:2350" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1771:2625" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="1816:1826" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="1816:1827" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="1816:1847" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="1816:1856" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="1816:1859" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="1904:2087" placeholder="{&quot;url&quot;: '&lt;?php echo base_url();?&gt;/test'...}" />
-                <marker date="1464695961451" expanded="true" signature="1904:2103" placeholder="{&quot;url&quot;: '&lt;?php echo base_url();?&gt;/test'...}" />
-                <marker date="1464695961451" expanded="true" signature="1904:2320" placeholder="{&quot;url&quot;: '/test'...}" />
-                <marker date="1464695961451" expanded="true" signature="2060:2087" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2163:2199" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2163:2217" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2163:2265" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2351:2613" placeholder="//..." />
-                <marker date="1464695961451" expanded="true" signature="2394:2403" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2394:2415" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2394:2423" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2394:2446" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2394:2452" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="2455:2613" placeholder="//..." />
-                <marker date="1464695961451" expanded="true" signature="2500:2611" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="3352:3824" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3389:3824" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3417:3824" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3440:3824" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3488:3824" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3521:3824" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3578:3634" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3707:3765" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3793:3824" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3797:3824" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3866:3893" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="3945:3972" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4012:4039" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4089:4116" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4150:4177" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4219:4246" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4304:4331" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4370:4397" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4543:4833" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4624:4765" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="4959:4977" placeholder="{...}" />
-                <marker date="1464695961451" expanded="true" signature="5525:5567" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="5689:5730" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="5955:6366" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="5989:6067" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="6098:6330" placeholder="..." />
-                <marker date="1464695961451" expanded="true" signature="6184:6315" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1311:1323" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1414:1420" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1414:1455" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1414:1473" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1414:1484" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1414:1490" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1414:1503" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1414:1525" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1414:1533" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1432:1449" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1503:1504" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1503:1515" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1503:1521" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1504:1515" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1745:1752" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1745:1793" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1745:2505" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1745:2813" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="1791:1793" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="1892:2081" placeholder="{&quot;url&quot;: '&lt;?php echo base_url();?&gt;/test'...}" />
+                <marker date="1464699591621" expanded="true" signature="1892:2097" placeholder="{&quot;url&quot;: '&lt;?php echo base_url();?&gt;/test'...}" />
+                <marker date="1464699591621" expanded="true" signature="1892:2475" placeholder="{&quot;url&quot;: '/test'...}" />
+                <marker date="1464699591621" expanded="true" signature="2054:2081" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2157:2193" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2157:2309" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2157:2420" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2506:2801" placeholder="//..." />
+                <marker date="1464699591621" expanded="true" signature="2550:2559" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2550:2571" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2550:2579" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2550:2602" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2550:2640" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="2643:2801" placeholder="//..." />
+                <marker date="1464699591621" expanded="true" signature="2688:2799" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="3540:4012" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3577:4012" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3605:4012" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3628:4012" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3676:4012" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3709:4012" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3766:3822" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3895:3953" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3981:4012" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="3985:4012" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4054:4081" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4133:4160" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4200:4227" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4277:4304" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4338:4365" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4407:4434" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4492:4519" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4558:4585" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4731:5021" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="4812:4953" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="5147:5165" placeholder="{...}" />
+                <marker date="1464699591621" expanded="true" signature="5713:5755" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="5877:5918" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="6143:6554" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="6177:6255" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="6286:6518" placeholder="..." />
+                <marker date="1464699591621" expanded="true" signature="6372:6503" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -126,7 +134,7 @@
       <file leaf-file-name="TestController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
+            <state relative-caret-position="1713">
               <caret line="186" column="32" selection-start-line="186" selection-start-column="32" selection-end-line="186" selection-end-column="32" />
               <folding>
                 <marker date="1464693726676" expanded="true" signature="6908:7040" placeholder="..." />
@@ -188,7 +196,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_05_29_093830_create_for_time_column.php" />
         <option value="$PROJECT_DIR$/resources/views/entity/entity-doctor-schedule.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_06_01_064603_create_serial_column.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
         <option value="$PROJECT_DIR$/resources/views/patient/appointment.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_06_01_082422_create_serial_appointment_user_column.php" />
         <option value="$PROJECT_DIR$/resources/views/patient/find.blade.php" />
@@ -203,6 +210,7 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
         <option value="$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php" />
       </list>
     </option>
@@ -352,7 +360,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="TestController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;doctor-scheduler&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;doctor-sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;patien&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/patient-profile-view.blade.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;testcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;entity&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appoin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;create_users&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_04_29_185659_create_users_table.php&#10;schedule&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appointment&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;schedulecontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;schedulecontrolelr&#9;null&#9;null&#10;Entity&#9;null&#9;null&#10;calen&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;gitignore&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/.gitignore&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;Calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;ScheduleController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;searchcontroller&#9;null&#9;null&#10;calenda&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;routes&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;tinyh&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;calendarcontro&#9;null&#9;null&#10;/route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;entit&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;create&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_05_25_090744_create_booked_table.php&#10;enti&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/entity-admin-edit-profile.blade.php&#10;entity_pr&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_05_25_091147_create_entity_profile_table.php&#10;ro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;booked&#9;null&#9;null&#10;tinyhttp&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;config.php&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/bootstrap/cache/config.php&#10;testcontro&#9;null&#9;null&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php" />
+    <property name="SearchEverywhereHistoryKey" value="CalendarController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;TestController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;doctor-scheduler&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;doctor-sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;patien&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/patient-profile-view.blade.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;testcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;entity&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appoin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;create_users&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_04_29_185659_create_users_table.php&#10;schedule&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appointment&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;schedulecontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;schedulecontrolelr&#9;null&#9;null&#10;Entity&#9;null&#9;null&#10;calen&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;gitignore&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/.gitignore&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;Calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;ScheduleController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;searchcontroller&#9;null&#9;null&#10;calenda&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;routes&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;tinyh&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;calendarcontro&#9;null&#9;null&#10;/route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;entit&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;create&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_05_25_090744_create_booked_table.php&#10;enti&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/entity-admin-edit-profile.blade.php&#10;entity_pr&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_05_25_091147_create_entity_profile_table.php&#10;ro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;booked&#9;null&#9;null&#10;tinyhttp&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;config.php&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/bootstrap/cache/config.php&#10;testcontro&#9;null&#9;null&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -407,16 +415,16 @@
       <workItem from="1464579245633" duration="2450000" />
       <workItem from="1464581994022" duration="2691000" />
       <workItem from="1464585361454" duration="24197000" />
-      <workItem from="1464667323907" duration="21098000" />
+      <workItem from="1464667323907" duration="24952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117091000" />
+    <option name="totallyTimeSpent" value="120945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27086383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -774,29 +782,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6222">
-          <caret line="374" column="7" selection-start-line="374" selection-start-column="7" selection-end-line="374" selection-end-column="7" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="false" />
-            <element signature="e#188#499#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="821">
           <caret line="2077" column="1" selection-start-line="2077" selection-start-column="1" selection-end-line="2077" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1328">
-          <caret line="116" column="21" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -814,9 +803,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
+        <state relative-caret-position="1713">
           <caret line="186" column="32" selection-start-line="186" selection-start-column="32" selection-end-line="186" selection-end-column="32" />
           <folding>
             <marker date="1464693726676" expanded="true" signature="6908:7040" placeholder="..." />
@@ -826,85 +823,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+        <state relative-caret-position="183">
+          <caret line="115" column="86" selection-start-line="115" selection-start-column="63" selection-end-line="115" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
-          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+        <state relative-caret-position="211">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
           <folding>
-            <marker date="1464695961451" expanded="true" signature="1311:1323" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1421:1499" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1421:1510" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1421:1516" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1421:1529" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1421:1551" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1421:1559" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1439:1440" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1439:1446" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1439:1481" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1458:1475" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1529:1530" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1529:1541" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1529:1547" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1530:1541" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1771:1778" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1771:1859" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1771:2350" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1771:2625" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="1816:1826" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="1816:1827" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="1816:1847" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="1816:1856" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="1816:1859" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="1904:2087" placeholder="{&quot;url&quot;: '&lt;?php echo base_url();?&gt;/test'...}" />
-            <marker date="1464695961451" expanded="true" signature="1904:2103" placeholder="{&quot;url&quot;: '&lt;?php echo base_url();?&gt;/test'...}" />
-            <marker date="1464695961451" expanded="true" signature="1904:2320" placeholder="{&quot;url&quot;: '/test'...}" />
-            <marker date="1464695961451" expanded="true" signature="2060:2087" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2163:2199" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2163:2217" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2163:2265" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2351:2613" placeholder="//..." />
-            <marker date="1464695961451" expanded="true" signature="2394:2403" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2394:2415" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2394:2423" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2394:2446" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2394:2452" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="2455:2613" placeholder="//..." />
-            <marker date="1464695961451" expanded="true" signature="2500:2611" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="3352:3824" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3389:3824" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3417:3824" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3440:3824" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3488:3824" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3521:3824" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3578:3634" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3707:3765" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3793:3824" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3797:3824" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3866:3893" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="3945:3972" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4012:4039" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4089:4116" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4150:4177" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4219:4246" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4304:4331" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4370:4397" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4543:4833" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4624:4765" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="4959:4977" placeholder="{...}" />
-            <marker date="1464695961451" expanded="true" signature="5525:5567" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="5689:5730" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="5955:6366" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="5989:6067" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="6098:6330" placeholder="..." />
-            <marker date="1464695961451" expanded="true" signature="6184:6315" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1311:1323" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1414:1420" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1414:1455" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1414:1473" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1414:1484" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1414:1490" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1414:1503" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1414:1525" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1414:1533" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1432:1449" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1503:1504" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1503:1515" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1503:1521" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1504:1515" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1745:1752" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1745:1793" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1745:2505" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1745:2813" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="1791:1793" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="1892:2081" placeholder="{&quot;url&quot;: '&lt;?php echo base_url();?&gt;/test'...}" />
+            <marker date="1464699591621" expanded="true" signature="1892:2097" placeholder="{&quot;url&quot;: '&lt;?php echo base_url();?&gt;/test'...}" />
+            <marker date="1464699591621" expanded="true" signature="1892:2475" placeholder="{&quot;url&quot;: '/test'...}" />
+            <marker date="1464699591621" expanded="true" signature="2054:2081" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2157:2193" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2157:2309" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2157:2420" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2506:2801" placeholder="//..." />
+            <marker date="1464699591621" expanded="true" signature="2550:2559" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2550:2571" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2550:2579" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2550:2602" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2550:2640" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="2643:2801" placeholder="//..." />
+            <marker date="1464699591621" expanded="true" signature="2688:2799" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="3540:4012" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3577:4012" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3605:4012" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3628:4012" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3676:4012" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3709:4012" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3766:3822" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3895:3953" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3981:4012" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="3985:4012" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4054:4081" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4133:4160" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4200:4227" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4277:4304" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4338:4365" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4407:4434" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4492:4519" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4558:4585" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4731:5021" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="4812:4953" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="5147:5165" placeholder="{...}" />
+            <marker date="1464699591621" expanded="true" signature="5713:5755" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="5877:5918" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="6143:6554" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="6177:6255" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="6286:6518" placeholder="..." />
+            <marker date="1464699591621" expanded="true" signature="6372:6503" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#188#499#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
