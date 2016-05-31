@@ -177,7 +177,15 @@ class TestController extends Controller
         // echo($format->diffInHours($newFormat));
 //        $date = Carbon::now()->addDays(365);
 //        $date = $date->toDayDateTimeString('l');
-        echo("This works");
+        //echo("This works");
+        echo("<table border=\"1|0\">
+							<tr>
+								<th>Start</th>
+								<td>9:30AM</td>
+								<th>End</th>
+								<td>10:30AM</td>
+							<tr>
+						</table>");
     }
 
     public function propic(Request $request)

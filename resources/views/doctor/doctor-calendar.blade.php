@@ -35,17 +35,7 @@
 					</div> <a href="'.  action('CalendarController@make',
 						[$username, $year, $month, $list_day])  .'"  id='.$list_day.'>
 					<div style="position:inherit;"><h2>'.$list_day.'</h2>
-					<div class='.$list_day.' style="display: none">
-
-						<table border="1|0">
-							<tr>
-								<th>Start</th>
-								<td>9:30AM</td>
-								<th>End</th>
-								<td>10:30AM</td>
-							<tr>
-						</table>
-
+					<div class='.$list_day.'>
 					</div></div></a>'
 					;
 				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
@@ -55,18 +45,31 @@
 			$calendar.= '</td>';
 
 			$calendar.=  "<script type=\"text/javascript\">
-				$(\"#$list_day\").mouseover(function(){
-					$(\".$list_day\").css(\"display\", \"block\");
+				$(\"#$list_day\").mouseenter(function(){
+//					$(\".$list_day\").css(\"display\", \"block\")});
+                       $.ajax({
+                       url: '/test',
+               data: {},
+               type:'GET',
+               dataType: 'html',
+               error: function(){
+                   alert(\"Data not found\");
+               },
+               success:function(data){
+               //alert('success');
+               $(\".$list_day\").append(data);
+               		} // End of success function of ajax form
+           		}); // End of ajax call
 				});
 				$(\"#$list_day\").mouseleave(function(){
 					$(\".$list_day\").css(\"display\", \"none\");
 				});
-				$(\"#$list_day\").mouseover(function(e){
-					e.preventDefault();
-					$.get('/test' function(data){
-						console.log(data);
-					});
-				});
+//				$(\"#$list_day\").mouseover(function(e){
+//					e.preventDefault();
+//					$.get('/test' function(data){
+//						console.log(data);
+//					});
+//				});
 			</script>";
 
 
