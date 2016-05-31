@@ -4,7 +4,7 @@
 	function draw_calendar($username,$month,$year){
 
 		/* draw table */
-		$calendar = '<table cellpadding="0" cellspacing="0" class="calendar">';
+		$calendar = '<table cellpadding="0" cellspacing="10" class="calendar">';
 
 		/* table headings */
 		$headings = array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
@@ -28,17 +28,50 @@
 
 		/* keep going with days.... */
 		for($list_day = 1; $list_day <= $days_in_month; $list_day++):
-			$calendar.= '<td class="calendar-day">';
+			$calendar.= '<td class="calendar-day" align="center">';
 				/* add in the day number */
 				// $calendar.= '<div class="day-number">'.$list_day.'</div> <a href="#"><div class="noof-apn"><h2>'.rand(5, 15).'</h2><span>Appoinments</span> </div></a> ';
-				$calendar.= '<div class="day-number">'.$list_day.'
-					</div> <a href="'.  action('CalendarController@make', 
-						[$username, $year, $month, $list_day])  .'">
-					<div class="noof-apn"><h2>'.$list_day.'</h2><span></span> </div></a> ';
+				$calendar.= '<div class="day-number">
+					</div> <a href="'.  action('CalendarController@make',
+						[$username, $year, $month, $list_day])  .'"  id='.$list_day.'>
+					<div style="position:inherit;"><h2>'.$list_day.'</h2>
+					<div class='.$list_day.' style="display: none">
+
+						<table border="1|0">
+							<tr>
+								<th>Start</th>
+								<td>9:30AM</td>
+								<th>End</th>
+								<td>10:30AM</td>
+							<tr>
+						</table>
+
+					</div></div></a>'
+					;
 				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
 			$calendar.= str_repeat('<p> </p>',2);
-				
+
+
 			$calendar.= '</td>';
+
+			$calendar.=  "<script type=\"text/javascript\">
+				$(\"#$list_day\").mouseover(function(){
+					$(\".$list_day\").css(\"display\", \"block\");
+				});
+				$(\"#$list_day\").mouseleave(function(){
+					$(\".$list_day\").css(\"display\", \"none\");
+				});
+				$(\"#$list_day\").mouseover(function(e){
+					e.preventDefault();
+					$.get('/test' function(data){
+						console.log(data);
+					});
+				});
+			</script>";
+
+
+
+
 			if($running_day == 6):
 				$calendar.= '</tr>';
 				if(($day_counter+1) != $days_in_month):
@@ -62,6 +95,9 @@
 
 		/* end the table */
 		$calendar.= '</table>';
+
+
+
 		
 		/* all done, return result */
 		return $calendar;
@@ -98,6 +134,18 @@
 										<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View">Schedule Calendar</a></li></ul>
 							</div>
 						</div>
+						{{--<div id="container">--}}
+							{{--<h1>jQuery Tutorial - Pop-up div on hover</h1>--}}
+							{{--<p>--}}
+								{{--To show hidden div, simply hover your mouse over--}}
+								{{--<a href="#" id="trigger">this link</a>.--}}
+							{{--</p>--}}
+
+							{{--<!-- HIDDEN / POP-UP DIV -->--}}
+
+
+						{{--</div>--}}
+
 
 						<div class="col-xs-12 col-sm-8 col-md-9">
 							
@@ -111,8 +159,10 @@
 							<div class="top-pof-head">
 								<div class="row">
 									<div class="col-xs-12 col-sm-6 col-md-6">
-										<div class="title mt-7px">View Appointments</div>
+										<div class="title mt-7px" ><a href="#">View Appointments</a></div>
+
 									</div>
+
 									<div class="col-xs-12 col-sm-6 col-md-6">
 										{{--<ul class="view-type-link">--}}
 											{{--<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>--}}
@@ -139,9 +189,15 @@
 								</div><!-- End .pof-desc -->
 							</div><!-- End .pof-content -->
 
+
+
 							</div><!-- End .pof-content -->
 						</div><!-- End .col -->
 					</div><!-- End .row -->
 				</div><!-- End .conteiner -->
 			</div><!-- End full-body-conteiner -->
+
+
+
+
 @stop

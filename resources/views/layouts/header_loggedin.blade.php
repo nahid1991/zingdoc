@@ -126,6 +126,13 @@
 			    width: 70%;
 			  }
 			}
+
+
+
+
+
+
+
 		</style>
 
 
@@ -177,6 +184,8 @@
 		<!-- textext autosuggest Styles and Scripts  -->
 		<link rel="stylesheet" href="{{ asset('/css/textext-autosuggest.css') }}" type="text/css" />		
 		<script src="{{ asset('/js/textext-autosuggest/textext-autosuggest.js') }}" type="text/javascript"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+
 
 		
 	</head>
@@ -264,6 +273,7 @@
 			</div><!-- End .footer -->
 		</div><!-- End #full-body -->
 
+
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<script src="/js/bootstrap.js"></script>		
@@ -274,4 +284,7 @@
 	    <script type="text/javascript" src="/js/autosuggestdemo.js"></script>
 		<script src="/js/jquery.prettyPhoto.js"></script>
 	    <script src="/js/scripts.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+	</body>
+
 </html>
