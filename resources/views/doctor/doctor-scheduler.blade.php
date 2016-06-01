@@ -110,7 +110,7 @@
 																<input type="hidden" name="day" value="{{ $name_o_day }}">
 																<input type="hidden" name="date" value="{{ $date_human }}">
 																<label>From</label>
-																<select name="starting_interval">
+																<select name="starting_interval" required>
 																	<option value="">Hour</option>
 
 																	@foreach($hours as $hour)
@@ -119,22 +119,28 @@
 
 																</select>
 
-																<select name="starting_min">
+																<select name="starting_min" required>
 																	<option value="00">00</option>
 																	<option value="30">30</option>
 																</select>
 
 																<label>For</label>
-																<select name="duration">
+																<select name="duration" required>
 																	<option value="">Duration</option>
 																	<option value="30">30 minutes</option>
 																	<option value="60">1 hour</option>
 																	<option value="90">1 hour 30 minutes</option>
 																	<option value="120">2 hours</option>
+																	<option value="180">3 hours</option>
+																	<option value="240">4 hours</option>
+																	<option value="300">5 hours</option>
+																	<option value="360">6 hours</option>
+																	<option value="420">7 hours</option>
+																	<option value="480">8 hours</option>
 																</select>
 																<br>
 																<label>Interval</label>
-																<select name="interval">
+																<select name="interval" required>
 																	<option value="">Interval</option>
 																	<option value="15">15 mins</option>
 																	<option value="30">30 mins</option>

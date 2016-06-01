@@ -132,8 +132,63 @@
 												{{--</tr>--}}
 												{{--<br>--}}
 												{{--<div class="clearfix"></div>--}}
+											<th><h5>Your Schedule:</h5></th>
 											<tr>
-												
+												@foreach($doc_time_today as $dtt)
+													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
+													<td>{{ $dtt->day }}</td>
+													<td>{{ $dtt->start_interval }}</td>
+													<td>{{ $dtt->end_interval }}</td>
+												@endforeach
+											</tr>
+
+											<tr>
+												@foreach($doc_time_next_day as $dtt)
+													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
+													<td>{{ $dtt->day }}</td>
+													<td>{{ $dtt->start_interval }}</td>
+													<td>{{ $dtt->end_interval }}</td>
+												@endforeach
+											</tr>
+											<tr>
+												@foreach($doc_time_3rd_day as $dtt)
+													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
+													<td>{{ $dtt->day }}</td>
+													<td>{{ $dtt->start_interval }}</td>
+													<td>{{ $dtt->end_interval }}</td>
+												@endforeach
+											</tr>
+											<tr>
+												@foreach($doc_time_4th_day as $dtt)
+													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
+													<td>{{ $dtt->day }}</td>
+													<td>{{ $dtt->start_interval }}</td>
+													<td>{{ $dtt->end_interval }}</td>
+												@endforeach
+											</tr>
+											<tr>
+												@foreach($doc_time_5th_day as $dtt)
+													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
+													<td>{{ $dtt->day }}</td>
+													<td>{{ $dtt->start_interval }}</td>
+													<td>{{ $dtt->end_interval }}</td>
+												@endforeach
+											</tr>
+											<tr>
+												@foreach($doc_time_6th_day as $dtt)
+													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
+													<td>{{ $dtt->day }}</td>
+													<td>{{ $dtt->start_interval }}</td>
+													<td>{{ $dtt->end_interval }}</td>
+												@endforeach
+											</tr>
+											<tr>
+												@foreach($doc_time_7th_day as $dtt)
+													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
+													<td>{{ $dtt->day }}</td>
+													<td>{{ $dtt->start_interval }}</td>
+													<td>{{ $dtt->end_interval }}</td>
+												@endforeach
 											</tr>
 
 
