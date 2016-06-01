@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6b4b73d-55fd-41a4-bc73-c92eb990e8d0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php" afterPath="$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/entity/entity-doctor-schedule.blade.php" afterPath="$PROJECT_DIR$/resources/views/entity/entity-doctor-schedule.blade.php" />
     </list>
     <ignored path="zingdoc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,12 +37,12 @@
       <file leaf-file-name="CalendarController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1860">
-              <caret line="199" column="8" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
+            <state relative-caret-position="58">
+              <caret line="203" column="14" selection-start-line="203" selection-start-column="14" selection-end-line="203" selection-end-column="14" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
                 <element signature="e#188#499#0#PHP" expanded="false" />
-                <marker date="1464789514937" expanded="false" signature="559:2448" placeholder="..." />
+                <marker date="1464790374847" expanded="false" signature="559:2448" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -376,12 +372,12 @@
       <workItem from="1464154339258" duration="101000" />
       <workItem from="1464154459295" duration="2773000" />
       <workItem from="1464158965962" duration="19186000" />
-      <workItem from="1464240007322" duration="25099000" />
+      <workItem from="1464240007322" duration="25953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47159000" />
+    <option name="totallyTimeSpent" value="48013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -830,12 +826,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="199" column="8" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
+        <state relative-caret-position="58">
+          <caret line="203" column="14" selection-start-line="203" selection-start-column="14" selection-end-line="203" selection-end-column="14" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
             <element signature="e#188#499#0#PHP" expanded="false" />
-            <marker date="1464789514937" expanded="false" signature="559:2448" placeholder="..." />
+            <marker date="1464790374847" expanded="false" signature="559:2448" placeholder="..." />
           </folding>
         </state>
       </provider>
