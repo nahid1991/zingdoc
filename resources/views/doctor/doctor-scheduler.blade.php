@@ -170,9 +170,9 @@
 																<label>Set this for:</label><br>
 																@foreach($doc_days as $dd)
 																	@if($name_o_day == $dd->days)
-																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}" disabled="disabled" checked="checked">{{ $dd->days }}</input><br>
+																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}" disabled="disabled" checked="checked">{{ $dd->days }}<br>
 																	@else
-																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}">{{ $dd->days }}</input><br>
+																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}">{{ $dd->days }}<br>
 																	@endif
 																	
 																@endforeach

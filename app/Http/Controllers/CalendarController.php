@@ -43,7 +43,7 @@ class CalendarController extends Controller
             ->where('username', '=', $user->username)
             ->get();
 
-        if($date>Carbon::now()){
+        if($date>=Carbon::today()){
             $doctor_schedule = DB::table('users')
                 ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
                 ->where('users.username', '=', $user->username)
@@ -85,7 +85,9 @@ class CalendarController extends Controller
         // $time = Carbon::createFromTime($request->input('starting_interval'), $request->input('starting_min'));
         $user = \Auth::user();
         $date = explode('-', $request->input('date'));
-        $created_date = Carbon::create($date[0], $date[1], $date[2], '00','00');
+        $created_date = Carbon::create($date[0], $date[1], $date[2], '00','00'); //date when created
+        $month_date = Carbon::create($date[0], $date[1], $date[2], '00','00'); //date for monthly
+        $year_date = Carbon::create($date[0], $date[1], $date[2], '00','00'); //date yearly
         $start_hour = Carbon::create($date[0], $date[1], $date[2], 
             $request->input('starting_interval'), $request->input('starting_min'));
         $start_hour = $start_hour->format('g:i A');
@@ -94,69 +96,115 @@ class CalendarController extends Controller
         $start_min = $request->input('starting_min');
 
         $time = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
-        $i = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+
         $j = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+        $k = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+        $l = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+
+
+
+
+        $w = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+        $x = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+
+
+        $c_d = Carbon::create($date[0], $date[1], $date[2], '00','00');
+
+
+
+
+
+        $e_i = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);//end for loop
+        $e_i->addMinutes($request->input('duration'));//end for loop
+
+        $e_i2 = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);//end for loop
+        $e_i2->addMinutes($request->input('duration'));//end for loop
+
 
         $end_interval = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
         $end_interval->addMinutes($request->input('duration'));
         $end_time = $end_interval->format('g:i A');
         $verify = 0;
 
-        while($j->diffInMinutes($end_interval)){
-            $test = DB::table('time_slot')
-                ->where('slot_date', '=', $j)
-                ->where('d_user', '=', $request->input('username'))
-                ->first();
-            if($test)
-            {
-                $verify = 1;
-                break;
+        if($request->input('type') == 'monthly'){
+            $end_date = $k->lastOfMonth()->addDay();
+            while($l<=$end_date){
+                while($j->diffInMinutes($e_i)){
+                    $test = DB::table('time_slot')
+                        ->where('slot_date', '=', $j)
+                        ->where('d_user', '=', $request->input('username'))
+                        ->where('created_for', '=', $created_date)
+                        ->first();
+                    if($test)
+                    {
+                        $verify = 1;
+                        break;
+                    }
+                    $j = $j->addMinutes(15);
+                }
+                $j = Carbon::create($j->year, $j->month, $j->day, $s_h, $start_min)->addDays(7);
+                $l = $l->addDays(7);
+                $e_i->addDays(7);
+                $created_date = $created_date->addDays(7);
             }
-            $j = $j->addMinutes(15);
+
+            if($verify == 0){
+                while($w<=$end_date){
+                    while($x->diffInMinutes($e_i2)){
+                        $slot = $x->format('g:i A');
+                        DB::table('time_slot')
+                            ->insert([
+                                'd_user' => $request->input('username'),
+                                'slot' => $slot,
+                                'day_of_week' => $request->input('day'),
+                                'slot_date' => $x,
+                                'created_for' => $c_d
+                            ]);
+                        $x = $x->addMinutes($request->input('interval'));
+                    }
+                    $x = Carbon::create($x->year, $x->month, $x->day, $s_h, $start_min)->addDays(7);
+                    $w = $w->addDays(7);
+
+
+
+                    DB::table('doctor_timing')
+                        ->insert([
+                            'doc_user' => $request->input('username'),
+                            'start_interval' => $start_hour,
+                            'end_interval' => $end_time,
+                            'day' => $request->input('day'),
+                            'reason' => $request->input('reason'),
+                            'interval' => $request->input('interval'),
+                            'type' => $request->input('type'),
+                            'date' => $time,
+                            'schedule_date' => $c_d
+                        ]);
+
+                    $c_d = $c_d->addDays(7);
+                    $e_i2->addDays(7);
+                }
+
+
+
+                if($user->user_type == 1){
+                    return Redirect::back();
+                }
+
+                if($user->user_type == 3){
+                    return Redirect::back();
+                }
+            }
         }
 
-        if($verify == 0){
-            while($i->diffInMinutes($end_interval)){
-                $slot = $i->format('g:i A');
+
+        
 
 
-                DB::table('time_slot')
-                    ->insert([
-                        'd_user' => $request->input('username'),
-                        'slot' => $slot,
-                        'day_of_week' => $request->input('day'),
-                        'slot_date' => $i,
-                        'created_for' => $created_date
-                    ]);
-                $i = $i->addMinutes($request->input('interval'));
-            }
-
-            DB::table('doctor_timing')
-                ->insert([
-                    'doc_user' => $request->input('username'),
-                    'start_interval' => $start_hour,
-                    'end_interval' => $end_time,
-                    'day' => $request->input('day'),
-                    'reason' => $request->input('reason'),
-                    'interval' => $request->input('interval'),
-                    'type' => $request->input('type'),
-                    'date' => $time,
-                    'schedule_date' => $created_date
-                ]);
-
-            if($user->user_type == 1){
-                return Redirect::back();
-            }
-
-            if($user->user_type == 3){
-                return Redirect::back();
-            }
-        }
 
         else{
             if($user->user_type == 1){
                 return Redirect::back()->withErrors([
-                    'Your timing clash with each other.',
+                    'schedule_date' =>'Your timing clash with each other.',
                 ]);
             }
 

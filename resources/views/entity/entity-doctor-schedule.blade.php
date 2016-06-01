@@ -157,16 +157,15 @@
 														<div class="ft">															
 															<div class="row">
 																<div class="col-xs-6 col-sm-6 col-md-6">
-																	<input type="radio" name="type" value="weekly"> Weekly</input>
-																	<input type="radio" name="type" value="monthly"> Monthly</input>
-																	<input type="radio" name="type" value="yearly"> Yearly</input>
+																	<input type="radio" name="type" value="monthly"> This month</input>
+																	<input type="radio" name="type" value="yearly"> This year</input>
 																<br>
 																<label>Set this for:</label><br>
 																@foreach($doc_days as $dd)
 																	@if($name_o_day == $dd->days)
-																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}" disabled="disabled" checked="checked">{{ $dd->days }}</input><br>
+																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}" disabled="disabled" checked="checked">{{ $dd->days }}<br>
 																	@else
-																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}">{{ $dd->days }}</input><br>
+																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}">{{ $dd->days }}<br>
 																	@endif
 																	
 																@endforeach

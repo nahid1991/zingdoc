@@ -264,7 +264,7 @@ class EntityController extends Controller
     public function make($username, $year, $month, $day){
         // echo($username);
         $user = \Auth::user();
-        $date = Carbon::create($year, $month, $day);
+        $date = Carbon::create($year, $month, $day, '00', '00');
         $doc_info = DB::table('users')
             ->where('username', '=', $username)
             ->first();
@@ -276,35 +276,35 @@ class EntityController extends Controller
         $doc_timing = DB::table('users')
             ->join('doctor_timing', 'users.username', '=', 'doctor_timing.doc_user')
             ->where('username', '=', $username)
-            ->where('day', '=', $name_o_day)
+            ->where('schedule_date', '=', $date)
             ->get();
         $doc_days = DB::table('users')
             ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
             ->where('username', '=', $username)
             ->get();
 
-        if($date>Carbon::now()){
+        if($date>=Carbon::today()){
             
             $doctor_schedule = DB::table('users')
-            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
-            ->where('users.username', '=', $username)
-            ->where('days', '=', $name_o_day)
-            ->get();
-        foreach($doctor_schedule as $doc_info){
-            $starting = $doc_info->starting_time;
-            $ending = $doc_info->ending_time;
-            $ending = Carbon::createFromFormat('l g:i A', $name_o_day."  ".$ending);
-            $starting = Carbon::createFromFormat('l g:i A', $name_o_day."  ".$starting);
-            $starting_hour = $starting->hour;
-            $ending_hour = $ending->hour;
+                ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+                ->where('users.username', '=', $username)
+                ->where('days', '=', $name_o_day)
+                ->get();
+            foreach($doctor_schedule as $doc_info){
+                $starting = $doc_info->starting_time;
+                $ending = $doc_info->ending_time;
+                $ending = Carbon::createFromFormat('l g:i A', $name_o_day."  ".$ending);
+                $starting = Carbon::createFromFormat('l g:i A', $name_o_day."  ".$starting);
+                $starting_hour = $starting->hour;
+                $ending_hour = $ending->hour;
 
-            for($i = $starting_hour; $i <= $ending_hour; $i++){
-                $hours[] = $i;
-                $hour = Carbon::createFromTime($i);
-                $hour_formatted[] = $hour->format('g');
-                
+                for($i = $starting_hour; $i <= $ending_hour; $i++){
+                    $hours[] = $i;
+                    $hour = Carbon::createFromTime($i);
+                    $hour_formatted[] = $hour->format('g');
+
+                }
             }
-        }
 
 
 

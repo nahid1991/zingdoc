@@ -145,7 +145,7 @@ class TestController extends Controller
         // echo($format->diffInHours($newFormat));
         $date = Carbon::now()->addDays(365);
 //        $date = $date->toDayDateTimeString('l');
-        echo($date);
+        echo(Carbon::now()->lastOfMonth()->addDay());
     }
 
     public function propic(Request $request)
