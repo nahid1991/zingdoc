@@ -42,12 +42,11 @@
                     <div class="col-xs-12 col-sm-8 col-md-9">
                         <div class="top-pof-head">
                             <div class="row">
+
                                 <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="title mt-7px">View Appointments</div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6">
+
                                     <ul class="view-type-link">
-                                        {{--<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>--}}
+                                        <li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><!--<li>-->
                                                 <!-- <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
                                         {{--<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>--}}
                                     </ul>
@@ -64,24 +63,30 @@
                                     </div>
                                     <div class="pof-desc">
                                         <ul class="appoin-list">
-                                            @foreach($user_info as $u_i)
-                                                @if($u_i->approved != 2)
-                                                    <li>
-                                                        <div class="s-left">
-                                                            <h2><a href="{{ action('DoctorController@patient_profile', [$u_i->patient_user]) }}">{{ $u_i->patient_name }}</a></h2>
-                                                            <p>{{ $u_i->issues }}</p>
-                                                        </div><div class="s-right">
-                                                            <div class="time">{{ $u_i->appointed_at }}</div>
-                                                            <ul class="action">
-                                                                <li><a href="{{  action('DoctorController@doc_checked', [$u_i->patient_user, $u_i->patient_name, $u_i->appointment_time])  }}"
-                                                                       rel="tooltip" title="Checked"><i class="icon icon-arrow-right"></i></a></li>
-                                                                <!-- <li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li> -->
+                                            <table border="0" style="width:100%; background: #F1F1F1">
+                                                {{--<tr>--}}
+                                                    {{--<th colspan="2" style="text-align:center"><h1>Today's appointments</h1></th>--}}
+                                                {{--</tr>--}}
 
-                                                            </ul>
-                                                        </div>
-                                                    </li>
+
+
+
+                                            @foreach($user_info as $u_i)
+                                                @if($u_i)
+                                                <tr>
+                                                    <th style="text-align:center"><h5>
+                                                            {{ \Carbon\Carbon::createFromTimeStamp(strtotime($u_i->appointment_time))->format('h:i A') }}
+                                                        </h5></th>
+                                                    <td rowspan="2" style="text-align:center" width="70%"><h5><a href="#">{{ $u_i->patient_name }}</a><a href="#">
+                                                                <t><img src="images/checkmark.png" width="20px" height="20px" style="float:right;"></t></a></h5></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align:center"><h5>
+                                                            {{ \Carbon\Carbon::createFromTimeStamp(strtotime($u_i->appointment_end))->format('h:i A') }}</h5></td>
+                                                </tr>
                                                 @endif
                                             @endforeach
+                                            </table>
                                         </ul>
                                     </div><!-- End .pof-desc -->
                                 </div><!-- End .pof-content -->

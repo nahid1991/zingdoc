@@ -93,10 +93,10 @@ class TestController extends Controller
             $user = \Auth::user();
             if($user->confirmed == 1){
                 if($user->user_type == 1){
-                    $user_info = DB::table('users')
-                        ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
-                        ->where('users.username', '=', $user->username)
+                    $user_info = DB::table('appointment_user')
+                        ->where('doctor_user', '=', $user->username)
                         ->where('approved', '=', 1)
+                        ->orderBy('sl_no', 'asc')
                         ->get();
 
                     $doc_time_today = DB::table('doctor_timing')
@@ -178,14 +178,53 @@ class TestController extends Controller
 //        $date = Carbon::now()->addDays(365);
 //        $date = $date->toDayDateTimeString('l');
         //echo("This works");
-        echo("<table border=\"1|0\">
-							<tr>
-								<th>Start</th>
-								<td>9:30AM</td>
-								<th>End</th>
-								<td>10:30AM</td>
-							<tr>
-						</table>");
+//        echo("<table border=\"1|0\">
+//							<tr>
+//								<th>Start</th>
+//								<td>9:30AM</td>
+//								<th>End</th>
+//								<td>10:30AM</td>
+//							<tr>
+//						</table>");
+        $user = \Auth::user();
+        $user_info = DB::table('appointment_user')
+            ->where('doctor_user', '=', $user->username)
+            ->where('approved', '=', 1)
+            ->orderBy('sl_no', 'asc')
+            ->get();
+
+        $doc_time_today = DB::table('doctor_timing')
+            ->where('doc_user', '=', $user->username)
+            ->where('schedule_date', '=', Carbon::today())
+            ->get();
+
+        $doc_time_next_day = DB::table('doctor_timing')
+            ->where('doc_user', '=', $user->username)
+            ->where('schedule_date', '=', Carbon::today()->addDay())
+            ->get();
+        $doc_time_3rd_day = DB::table('doctor_timing')
+            ->where('doc_user', '=', $user->username)
+            ->where('schedule_date', '=', Carbon::today()->addDays(2))
+            ->get();
+        $doc_time_4th_day = DB::table('doctor_timing')
+            ->where('doc_user', '=', $user->username)
+            ->where('schedule_date', '=', Carbon::today()->addDays(3))
+            ->get();
+        $doc_time_5th_day = DB::table('doctor_timing')
+            ->where('doc_user', '=', $user->username)
+            ->where('schedule_date', '=', Carbon::today()->addDays(4))
+            ->get();
+        $doc_time_6th_day = DB::table('doctor_timing')
+            ->where('doc_user', '=', $user->username)
+            ->where('schedule_date', '=', Carbon::today()->addDays(5))
+            ->get();
+        $doc_time_7th_day = DB::table('doctor_timing')
+            ->where('doc_user', '=', $user->username)
+            ->where('schedule_date', '=', Carbon::today()->addDays(6))
+            ->get();
+        return view('doctor.doctor_main', compact('user', 'user_info', 'doc_time_today', 'doc_time_next_day',
+            'doc_time_3rd_day', 'doc_time_4th_day', 'doc_time_5th_day', 'doc_time_6th_day', 'doc_time_7th_day'));
+
     }
 
     public function propic(Request $request)

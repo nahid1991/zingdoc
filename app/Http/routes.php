@@ -119,7 +119,9 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::post('/schedule-make', 'ScheduleController@make');
 	
 	Route::get('/search', 'SearchController@search');
-	
+
+	Route::get('/appointments', 'TestController@run');
+
 	Route::get('/appointment-form/{id}/{date}/{time}/{serial}/{end_time}', 'ScheduleController@form_patient');
 	
 	Route::get('/get-appointment', 'PatientController@appointed');

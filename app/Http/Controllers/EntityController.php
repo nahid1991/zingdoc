@@ -175,6 +175,7 @@ class EntityController extends Controller
                 'appointed_at' => $trick->appointed_at,
                 'patient_name' => $trick->patient_name,
                 'appointment_time' => $time,
+                'appointment_end' => $trick->appointment_end
             ]);
 
         DB::table('appointment_user')

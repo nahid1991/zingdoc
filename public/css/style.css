@@ -2078,3 +2078,9 @@ ul.vprof-image li {
 	width: 370px;
 	z-index: 1;
 }
+
+.appoin-list th, td {
+	border-bottom: 1px solid #ddd;
+}
+
+.appoin-list tr:hover {background-color: #f2dede}

@@ -15,9 +15,9 @@ class CreateDoctorPatientTable extends Migration
         Schema::create('doctor_patient', function(Blueprint $table){
             $table->increments('id');
             $table->string('doctor_user')->index();
-            $table->foreign('doctor_user')->references('username')->on('users');
+            $table->foreign('doctor_user')->references('username')->on('users')->onDelete('cascade');
             $table->string('patient_user')->index();
-            $table->foreign('patient_user')->references('username')->on('users');
+            $table->foreign('patient_user')->references('username')->on('users')->onDelete('cascade');
         });
     }
 

@@ -96,10 +96,10 @@
 							
 
 							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="col-xs-12 col-sm-12 col-md-12">
 									<div class="pof-content">
 										<div class="pof-header3">
-											<div class="title">Today's Appointment</div>
+											<div class="title">Appointment requests</div>
 										</div>
 										<div class="pof-desc">
 											<ul class="appoin-list">
@@ -121,103 +121,13 @@
 												</li>
 												@endif
 												@endforeach
-												
-												<!-- <li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">10:30 AM - 11:00 AM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left current"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">11:00 AM  - 12:00 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times current"></i></a></li>
-														</ul>
-													</div>
-												</li><li class="current">
-													<div class="s-left">
-														<h2>Mic A Ting</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">12 PM  - 12:30 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right current"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">2:00 PM  - 2:30 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">2:30 PM  - 3:30 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li><li>
-													<div class="s-left">
-														<h2>Bismith Jonh</h2>
-														<p>Diabetic Issues</p>
-													</div><div class="s-right">
-														<div class="time">3:30 PM - 4:00 PM</div>
-														<ul class="action">
-															<li><a href="#" rel="tooltip" title="Check In"><i class="icon icon-arrow-right"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Check Out"><i class="icon icon-arrow-left"></i></a></li>
-															<li><a href="#" rel="tooltip" title="Cancel"><i class="icon icon-times"></i></a></li>
-														</ul>
-													</div>
-												</li> -->
+
 											</ul>
 										</div><!-- End .pof-desc -->
 									</div><!-- End .pof-content -->
 								</div>
 
-								<div class="col-xs-12 col-sm-6 col-md-6">
-									<div class="patient-details">
-										<div class="single-pof-pic">
-											<img src="/images/patient-pof-pic.jpg" alt=""/>
-										</div>
-										<div class="single-pof-dsc">
-											<h2>Mic A Ting</h2>
-											<h3>Blood Pressure Issues</h3>
-											<p>
-												DOB: 12 -  25 - 1945
-												<br>
-												Age: 68 Years
-												<br>
-												Tel.: 2514- 2541-2516
-											</p>											
-										</div>
-									</div>
-								</div>
+
 							</div>
 
 							</div><!-- End .pof-content -->
