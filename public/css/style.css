@@ -1692,7 +1692,9 @@ ul.social-nav {
 .doctor-short-profile .desc p{}
 .doctor-short-profile .desc p.adr{ font-size: 14px;}
 
-
+.appoinment-day table{
+	float: left;
+}
 /* full body conteiner */
 .full-body-conteiner{ padding: 20px 0px;}
 

@@ -34,7 +34,7 @@
 				$calendar.= '<div class="day-number">
 					</div> <a href="/scheduling/'.$username.'/'.$year.'/'.$month.'/'.$list_day.'"  id='.$list_day.'>
 					<div style="position:inherit;"><h2>'.$list_day.'</h2>
-					<div class='.$list_day.'>
+					<div class='.$list_day.' style="position:relative;">
 					</div></div></a>'
 					;
 				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
@@ -61,14 +61,19 @@
 				 $(\".$list_day\").empty();
                $(\".$list_day\").append(data);
                $(\".$list_day\").css(\"display\", \"block\");
+//               $(\".$list_day\").fadeIn(1000);
 
                		} // End of success function of ajax form
            		}); // End of ajax call
 				});
 				$(\"a#$list_day\").mouseleave(function(){
 					$(\".$list_day\").css(\"display\", \"none\");
+//					$(\".$list_day\").fadeOut(1000);
 					$(\".$list_day\").empty();
+
 				});
+
+
 //				$(\"#$list_day\").mouseover(function(e){
 //					e.preventDefault();
 //					$.get('/test' function(data){
@@ -122,7 +127,7 @@
 							<div class="pof-sidenav">
 								@if($user->propic)
 								<div class="pof-img">
-									<img src="{{ $user->propic }}">
+									<img src="/{{ $user->propic }}">
 								</div>
 								@endif
 								@if(!$user->propic)
@@ -130,16 +135,18 @@
 									<img src="images/pro-holder.jpg">
 								</div>
 								@endif
-								<ul><li>
-										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
-										<a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
-										<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
-										<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
-										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
-										<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
-										<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
-										<a href="{{ url('/auth/logout') }}">Logout</a></li><li>
-										<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View">Schedule Calendar</a></li></ul>
+									<ul><li>
+											<a href="{{ url('/homepage') }}">Home</a></li><li>
+											<a href="{{ url('/appointments') }}">Appointments</a></li><li>
+											<a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
+											<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
+											<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
+											<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
+											<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
+											<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
+											<a href="{{ url('/doctor-calendar') }}">Schedule Calendar</a></li><li>
+											<a href="{{ url('/auth/logout') }}">Logout</a>
+										</li></ul>
 							</div>
 						</div>
 						{{--<div id="container">--}}
@@ -157,11 +164,7 @@
 
 						<div class="col-xs-12 col-sm-8 col-md-9">
 							
-							<script type="text/javascript">
-							    $(function(){
-							       $('[rel="tooltip"]').tooltip({placement: 'top'});
-							    });
-							</script>
+
 
 
 							<div class="top-pof-head">
@@ -184,18 +187,25 @@
 
 							<div class="pof-content">
 								<div class="pof-header3">
-									<div class="title">Appointments in {{ $month }}</div>
+									<div class="title">Schedule of {{ $month_format }}
+									<p><a href="{{ action('CalendarController@prev_month', [$month, $year]) }}" style="float:left; padding-left:10px;" rel="tooltip" title="Previous month">Back in time</a>
+										<a href="{{ action('CalendarController@next_month', [$month, $year]) }}" style="float:right; padding-right:10px;" rel="tooltip" title="Next month">To the future</a></p></div>
 								</div>
 								<div class="pof-desc">
 									<div class="clearfix"></div>
 
 									<div class="monthview-cal-container">
 										<?php 
-											echo draw_calendar( $user->username, $num_month ,  $num_year );
+											echo draw_calendar( $user->username, $month ,  $year );
 										?>										
 									</div>
 								</div><!-- End .pof-desc -->
 							</div><!-- End .pof-content -->
+							<script type="text/javascript">
+								$(function(){
+									$('[rel="tooltip"]').tooltip({placement: 'top'});
+								});
+							</script>
 
 
 

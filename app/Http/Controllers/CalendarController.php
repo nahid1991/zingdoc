@@ -21,13 +21,56 @@ class CalendarController extends Controller
     	$num_year = $month->year;
     	// echo($month->month);
     	$month = $month->format('F Y');
-    	return view('doctor.doctor-calendar', compact('user', 'month', 'num_month', 'num_year'));
+    	return redirect('/doctor-calendar/'.$num_month.'/'.$num_year);
+    }
+
+    public function next_month($month, $year){
+        if($month == 12){
+            $month = 1;
+            $year = $year + 1;
+            return redirect('/doctor-calendar/'.$month.'/'.$year);
+        }
+        else{
+            $month = $month+1;
+            return redirect('/doctor-calendar/'.$month.'/'.$year);
+        }
+    }
+
+    public function prev_month($month, $year){
+        if($month == 1){
+            $month = 12;
+            $year = $year - 1;
+            return redirect('/doctor-calendar/'.$month.'/'.$year);
+        }
+        else{
+            $month = $month-1;
+            return redirect('/doctor-calendar/'.$month.'/'.$year);
+        }
+    }
+
+    public function real_calendar_stuff($month, $year){
+        $user = \Auth::user();
+        $month_format = Carbon::create($year, $month, '1', '00', '00')->format('F Y');
+        return view('doctor.doctor-calendar', compact('user', 'month', 'year', 'month_format'));
     }
 
 
     public function make($username, $year, $month, $day){
     	if(\Request::ajax()){
-            echo($username);
+            $date = Carbon::create($year, $month, $day, '00', '00');
+//            echo($username);
+            $info = DB::table('doctor_timing')
+                ->where('doc_user', '=', $username)
+                ->where('schedule_date', '=', $date)
+                ->get();
+            if($info){
+                foreach($info as $inf){
+                    echo("<p>From: ".$inf->start_interval."<br>To: ".$inf->end_interval."</p><p>Reason: ".$inf->reason."</p>");
+                }
+            }
+            elseif(!$info){
+                echo('Nothing to do this day.');
+            }
         }
 
         else{
@@ -112,6 +155,8 @@ class CalendarController extends Controller
 
         $w = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
         $x = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+        $y = Carbon::create($date[0], $date[1], $date[2], $s_h, $start_min);
+
 
 
         $c_d = Carbon::create($date[0], $date[1], $date[2], '00','00');
@@ -161,12 +206,14 @@ class CalendarController extends Controller
                     while($x->diffInMinutes($e_i2)){
 
                         $slot = $x->format('g:i A');
+                        $y = $y->addMinutes($request->input('interval'));
                         DB::table('time_slot')
                             ->insert([
                                 'd_user' => $request->input('username'),
                                 'slot' => $slot,
                                 'day_of_week' => $request->input('day'),
                                 'slot_date' => $x,
+                                'slot_end' => $y,
                                 'created_for' => $c_d,
                                 'index_time' => $time,
                                 'serial' => $serial
@@ -175,6 +222,7 @@ class CalendarController extends Controller
                         $serial = $serial+1;
                     }
                     $x = Carbon::create($x->year, $x->month, $x->day, $s_h, $start_min)->addDays(7);
+                    $y = Carbon::create($y->year, $y->month, $y->day, $s_h, $start_min)->addDays(7);
                     $w = $w->addDays(7);
 
 
@@ -241,12 +289,14 @@ class CalendarController extends Controller
                     while($x->diffInMinutes($e_i2)){
 
                         $slot = $x->format('g:i A');
+                        $y = $y->addMinutes($request->input('interval'));
                         DB::table('time_slot')
                             ->insert([
                                 'd_user' => $request->input('username'),
                                 'slot' => $slot,
                                 'day_of_week' => $request->input('day'),
                                 'slot_date' => $x,
+                                'slot_end' => $y,
                                 'created_for' => $c_d,
                                 'index_time' => $time,
                                 'serial' => $serial
@@ -255,6 +305,7 @@ class CalendarController extends Controller
                         $serial = $serial+1;
                     }
                     $x = Carbon::create($x->year, $x->month, $x->day, $s_h, $start_min)->addDays(7);
+                    $y = Carbon::create($y->year, $y->month, $y->day, $s_h, $start_min)->addDays(7);
                     $w = $w->addDays(7);
 
 
@@ -326,19 +377,25 @@ class CalendarController extends Controller
                     ]);
 
 
-
+                $serial = 1;
                 while($time->diffInMinutes($end_interval)){
+
                     $slot = $time->format('g:i A');
+                    $y = $y->addMinutes($request->input('interval'));
                     DB::table('time_slot')
                         ->insert([
                             'd_user' => $request->input('username'),
                             'slot' => $slot,
                             'day_of_week' => $request->input('day'),
                             'slot_date' => $x,
+                            'slot_end' => $y,
                             'created_for' => $created_date,
-                            'index_time' => $time
+                            'index_time' => $time,
+                            'serial' => $serial
                         ]);
                     $time = $time->addMinutes($request->input('interval'));
+                    $x = $x->addMinutes($request->input('interval'));
+                    $serial = $serial+1;
                 }
             }
 

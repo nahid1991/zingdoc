@@ -22,7 +22,9 @@
 										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
 										<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
 										<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
-										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
+										<a href="{{ url('/doctor-calendar') }}">Schedule Calendar</a></li><li>
+										<a href="{{ url('/auth/logout') }}">Logout</a>
+									</li></ul>
 							</div>
 						</div>
 

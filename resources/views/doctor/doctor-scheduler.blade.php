@@ -19,15 +19,18 @@
 									<img src="/images/pro-holder.jpg">
 								</div>
 							@endif
-							<ul><li>
-									<a href="{{ url('/homepage') }}">Appointments</a></li><li>
-									<a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
-									<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
-									<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
-									<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
-									<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
-									<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
-									<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
+								<ul><li>
+										<a href="{{ url('/homepage') }}">Home</a></li><li>
+										<a href="{{ url('/appointments') }}">Appointments</a></li><li>
+										<a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
+										<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
+										<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
+										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
+										<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
+										<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
+										<a href="{{ url('/doctor-calendar') }}">Schedule Calendar</a></li><li>
+										<a href="{{ url('/auth/logout') }}">Logout</a>
+									</li></ul>
 						</div>
 					</div>
 
@@ -131,12 +134,6 @@
 																	<option value="60">1 hour</option>
 																	<option value="90">1 hour 30 minutes</option>
 																	<option value="120">2 hours</option>
-																	<option value="180">3 hours</option>
-																	<option value="240">4 hours</option>
-																	<option value="300">5 hours</option>
-																	<option value="360">6 hours</option>
-																	<option value="420">7 hours</option>
-																	<option value="480">8 hours</option>
 																</select>
 																<br>
 																<label>Interval</label>

@@ -87,46 +87,93 @@ Route::get('/doc-prof/{username}', 'PatientController@docprof');
 
 Route::group(['middleware' => ['web','auth','revalidate']], function () {
     Route::get('/homepage', 'TestController@home');
+	
 	Route::get('/auth/logout', 'Auth\AuthController@logout');
+	
 	Route::get('/set-appointment', 'DoctorController@setAppoint');
+	
 	Route::get('/entity-dashboard', 'EntityController@dashboard');
+	
 	Route::get('/doc-profile', 'DoctorController@profile');
+	
 	Route::get('/doc-profile-edit', 'DoctorController@profileEdit');
+	
 	Route::get('/doc-blog', 'DoctorController@blog');
+	
 	Route::get('/doc-account-settings', 'DoctorController@settings');
+	
 	Route::get('/doc-comments', 'DoctorController@comments');
+	
 	Route::get('/patient-comments', 'PatientController@comments');
+	
 	Route::get('/patient-profile', 'PatientController@profile');
+	
 	Route::get('/entity-appointments', 'EntityController@appointments');
+	
 	Route::get('/entity-profile', 'EntityController@en_profile');
+	
 	Route::get('/entity-profile-edit', 'EntityController@en_profileEdit');
+	
 	Route::get('/entity-account-settings', 'EntityController@settings');
+	
 	Route::post('/schedule-make', 'ScheduleController@make');
+	
 	Route::get('/search', 'SearchController@search');
-	Route::get('/appointment-form/{id}/{date}/{time}/{serial}', 'ScheduleController@form_patient');
+	
+	Route::get('/appointment-form/{id}/{date}/{time}/{serial}/{end_time}', 'ScheduleController@form_patient');
+	
 	Route::get('/get-appointment', 'PatientController@appointed');
+	
 	Route::post('/appointing', 'ScheduleController@submission');	//posts appointments
+	
 	Route::post('/find-doc', 'EntityController@test');
+	
 	Route::get('/doctor/{username}', 'EntityController@trial');		//shows doctor result
+	
 	Route::get('/approve/{username}/{patient}/{time}/{serial}', 'EntityController@approve');
+	
 	Route::get('/decline/{username}/{patient}', 'EntityController@cancel');
+	
 	Route::get('/checked/{username}/{patient}', 'EntityController@doc_checked');
+	
 	Route::get('/canceled/{username}/{patient}', 'EntityController@doc_cancel');
-	Route::get('/doctor-calendar', 'CalendarController@show');
+	
+	Route::get('/doctor-calendar', 'CalendarController@show'); //Work around of calendar
+	
 	Route::get('/scheduling/{username}/{year}/{month}/{day}', 'CalendarController@make');
+	
 	Route::post('/set-timing', 'CalendarController@sche');		//posts slots
+	
 	Route::post('/doc-data', 'DoctorController@make_profile');
+	
 	Route::get('/prescription/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
+	
 	Route::post('/prescribe', 'DoctorController@prescribe');
+	
 	Route::get('/{username}', 'DoctorController@patient_profile');
+	
 	Route::post('/add-doctor', 'EntityController@add_doctor');
+	
 	Route::post('/propic', 'TestController@propic');
+	
 	Route::get('/calendar/{username}', 'EntityController@calendar');
+	
 	Route::get('/schedule-make/{username}/{year}/{month}/{day}', 'EntityController@make');
+	
 	Route::post('/cover-photo', 'TestController@cover');
+	
 	Route::post('/admin-profile-edit', 'EntityController@en_make_profile');
+	
 	Route::get('/delete/{date}/{created_date}/{username}', 'CalendarController@sche_del');
+	
 	Route::get('/delete-plan/{date}/{username}/{type}', 'CalendarController@sche_del_plan');
+	
 	Route::get('/for-month/{date}/{username}/{type}', 'CalendarController@sche_del_month');
+
+	Route::get('/doctor-calendar/{month}/{year}', 'CalendarController@real_calendar_stuff');
+
+	Route::get('/next-month/{month}/{year}', 'CalendarController@next_month');//Moves to next month
+
+	Route::get('/prev-month/{month}/{year}', 'CalendarController@prev_month');//Moves to the prev month
 });
 

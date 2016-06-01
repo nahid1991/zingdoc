@@ -194,7 +194,7 @@ class ScheduleController extends Controller
     }
 
 
-    public function form_patient($username, $date, $time, $serial){
+    public function form_patient($username, $date, $time, $serial, $end_date){
         $user = \Auth::user();
         $doctor_info = DB::table('users')
             ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
@@ -204,8 +204,9 @@ class ScheduleController extends Controller
         $date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
         $t_f = $date->format('g:i A');
         $d_f = $date->format('F').' '. $date->day.', '.$date->format('Y');
+        $end_date = Carbon::createFromFormat('Y-m-d H:i:s', $end_date);
 //        echo($d_f);
-        return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time', 'd_f', 't_f', 'serial'));
+        return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time', 'd_f', 't_f', 'serial', 'end_date'));
 //        echo($serial);
         // echo($doctor_info->speciality);
 //        echo($date);
@@ -230,7 +231,8 @@ class ScheduleController extends Controller
                 'appointed_at' => $request->input('time'),
                 'patient_name' => $request->input('name'),
                 'appointment_time' => $request->input('date'),
-                'sl_no' => $request->input('serial')
+                'sl_no' => $request->input('serial'),
+                'appointment_end' => $request->input('end_date')
             ]);
 
         return redirect('/search');

@@ -47,6 +47,7 @@
 								<input type="hidden" name="date" value="{{ $date }}">
 								<input type="hidden" name="time" value="{{ $time }}">
 								<input type="hidden" name="serial" value="{{ $serial }}">
+								<input type="hidden" name="end_date" value="{{ $end_date }}">
 								<div class="doctorsignup-holder">
 									{!! Form::text('name',Input::old('name'),['class'=>'form-control', 'placeholder'=>'Patient / Visitor Name']) !!}
 									 <!-- <input name="country" required type="text" class="form-control"  placeholder="Patient / Visitor Name"/> -->

@@ -128,7 +128,7 @@ class TestController extends Controller
                         ->where('doc_user', '=', $user->username)
                         ->where('schedule_date', '=', Carbon::today()->addDays(6))
                         ->get();
-                    return view('doctor.doctor_main', compact('user', 'user_info', 'doc_time_today', 'doc_time_next_day',
+                    return view('doctor.doctor-home', compact('user', 'user_info', 'doc_time_today', 'doc_time_next_day',
                         'doc_time_3rd_day', 'doc_time_4th_day', 'doc_time_5th_day', 'doc_time_6th_day', 'doc_time_7th_day'));
                 }
                 if($user->user_type == 2){

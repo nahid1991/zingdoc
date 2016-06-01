@@ -22,15 +22,17 @@
 								</div>
 								@endif
 								<ul><li>
-										<a href="{{ url('/homepage') }}">Appointments</a></li><li>
+										<a href="{{ url('/homepage') }}">Home</a></li><li>
+										<a href="{{ url('/appointments') }}">Appointments</a></li><li>
 										<a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
 										<a href="{{ url('/doc-profile') }}">Profile</a></li><li>
 										<a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
 										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
 										<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
 										<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
-										<a href="{{ url('/auth/logout') }}">Logout</a></li><li>
-										<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View">Schedule Calendar</a></li></ul>
+										<a href="{{ url('/doctor-calendar') }}">Schedule Calendar</a></li><li>
+										<a href="{{ url('/auth/logout') }}">Logout</a>
+										</li></ul>
 							</div>
 						</div>
 
@@ -55,7 +57,7 @@
 							
 
 							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="col-xs-12 col-sm-12 col-md-12">
 									<div class="pof-content">
 										<div class="pof-header3">
 											<div class="title">Today's Appointment</div>
@@ -85,119 +87,7 @@
 									</div><!-- End .pof-content -->
 								</div>
 
-								<div class="col-xs-12 col-sm-6 col-md-6">
-									{{--<div class="patient-details">--}}
-										{{--<div class="single-pof-pic">--}}
-											{{--<img src="/images/patient-pof-pic.jpg" alt=""/>--}}
-										{{--</div>--}}
-										{{--<div class="single-pof-dsc">--}}
-											{{--<h2>Mic A Ting</h2>--}}
-											{{--<h3>Blood Pressure Issues</h3>--}}
-											{{--<p>--}}
-												{{--DOB: 12 -  25 - 1945--}}
-												{{--<br>--}}
-												{{--Age: 68 Years--}}
-												{{--<br>--}}
-												{{--Tel.: 2514- 2541-2516--}}
-											{{--</p>											--}}
-										{{--</div>--}}
-									{{--</div>--}}
-									<div class="pof-content">
-									<table class="schedule">
-										{{--@foreach($doc_timing as $d_t)--}}
-											{{--@if($d_t)--}}
-												{{--<tr>--}}
-													{{--<td>{{ $d_t->day }}</td>--}}
-													{{--<td> <p>{{ $d_t->start_interval }} - {{ $d_t->end_interval }} - @if($d_t->type == 'monthly')--}}
-																{{--For this month.--}}
 
-															{{--@elseif($d_t->type == 'yearly')--}}
-																{{--For this year.--}}
-
-															{{--@else--}}
-																{{--For this days.--}}
-
-														{{--@endif--}}
-
-														{{--<p><a class="close"--}}
-															  {{--href="{{ action('CalendarController@sche_del', [$d_t->date, $d_t->schedule_date, $d_t->username]) }}">Remove for this day</a>--}}
-															{{--<a class="close"--}}
-															   {{--href="{{ action('CalendarController@sche_del_plan', [$d_t->date, $d_t->username, $d_t->type]) }}">Remove total plan</a>--}}
-															{{--@if($d_t->type == 'yearly')--}}
-																{{--<a class="close"--}}
-																   {{--href="{{ action('CalendarController@sche_del_month', [$d_t->date, $d_t->username, $d_t->type]) }}">Remove only for this month</a>--}}
-															{{--@endif--}}
-														{{--</p><br>--}}
-													{{--</td>--}}
-												{{--</tr>--}}
-												{{--<br>--}}
-												{{--<div class="clearfix"></div>--}}
-											<th><h5>Your Schedule:</h5></th>
-											<tr>
-												@foreach($doc_time_today as $dtt)
-													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
-													<td>{{ $dtt->day }}</td>
-													<td>{{ $dtt->start_interval }}</td>
-													<td>{{ $dtt->end_interval }}</td>
-												@endforeach
-											</tr>
-
-											<tr>
-												@foreach($doc_time_next_day as $dtt)
-													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
-													<td>{{ $dtt->day }}</td>
-													<td>{{ $dtt->start_interval }}</td>
-													<td>{{ $dtt->end_interval }}</td>
-												@endforeach
-											</tr>
-											<tr>
-												@foreach($doc_time_3rd_day as $dtt)
-													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
-													<td>{{ $dtt->day }}</td>
-													<td>{{ $dtt->start_interval }}</td>
-													<td>{{ $dtt->end_interval }}</td>
-												@endforeach
-											</tr>
-											<tr>
-												@foreach($doc_time_4th_day as $dtt)
-													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
-													<td>{{ $dtt->day }}</td>
-													<td>{{ $dtt->start_interval }}</td>
-													<td>{{ $dtt->end_interval }}</td>
-												@endforeach
-											</tr>
-											<tr>
-												@foreach($doc_time_5th_day as $dtt)
-													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
-													<td>{{ $dtt->day }}</td>
-													<td>{{ $dtt->start_interval }}</td>
-													<td>{{ $dtt->end_interval }}</td>
-												@endforeach
-											</tr>
-											<tr>
-												@foreach($doc_time_6th_day as $dtt)
-													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
-													<td>{{ $dtt->day }}</td>
-													<td>{{ $dtt->start_interval }}</td>
-													<td>{{ $dtt->end_interval }}</td>
-												@endforeach
-											</tr>
-											<tr>
-												@foreach($doc_time_7th_day as $dtt)
-													<td>{{ \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $dtt->schedule_date)->format('jS F') }}</td>
-													<td>{{ $dtt->day }}</td>
-													<td>{{ $dtt->start_interval }}</td>
-													<td>{{ $dtt->end_interval }}</td>
-												@endforeach
-											</tr>
-
-
-											{{--@endif--}}
-										{{--@endforeach--}}
-
-									</table>
-									</div>
-								</div>
 							</div>
 
 						</div><!-- End .col -->
