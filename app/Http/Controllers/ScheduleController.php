@@ -194,7 +194,7 @@ class ScheduleController extends Controller
     }
 
 
-    public function form_patient($username, $date, $time){
+    public function form_patient($username, $date, $time, $serial){
         $user = \Auth::user();
         $doctor_info = DB::table('users')
             ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
@@ -205,7 +205,8 @@ class ScheduleController extends Controller
         $t_f = $date->format('g:i A');
         $d_f = $date->format('F').' '. $date->day.', '.$date->format('Y');
 //        echo($d_f);
-        return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time', 'd_f', 't_f'));
+        return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time', 'd_f', 't_f', 'serial'));
+//        echo($serial);
         // echo($doctor_info->speciality);
 //        echo($date);
         // echo($id);
@@ -228,9 +229,11 @@ class ScheduleController extends Controller
                 'phone_number' => $request->input('phone_number'),
                 'appointed_at' => $request->input('time'),
                 'patient_name' => $request->input('name'),
-                'appointment_time' => $request->input('date')
+                'appointment_time' => $request->input('date'),
+                'sl_no' => $request->input('serial')
             ]);
 
         return redirect('/search');
+//        echo($request->input('serial'));
     }
 }

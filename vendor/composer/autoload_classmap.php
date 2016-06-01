@@ -35,6 +35,8 @@ return array(
     'CreatePatientRecordTable' => $baseDir . '/database/migrations/2016_05_18_123953_create_patient_record_table.php',
     'CreatePropicColumn' => $baseDir . '/database/migrations/2016_05_09_084235_create_propic_column.php',
     'CreateScheduleDateColumn' => $baseDir . '/database/migrations/2016_05_26_083447_create_schedule_date_column.php',
+    'CreateSerialAppointmentUserColumn' => $baseDir . '/database/migrations/2016_06_01_082422_create_serial_appointment_user_column.php',
+    'CreateSerialColumn' => $baseDir . '/database/migrations/2016_06_01_064603_create_serial_column.php',
     'CreateSlotTable' => $baseDir . '/database/migrations/2016_05_17_101703_create_slot_table.php',
     'CreateTypeColumn' => $baseDir . '/database/migrations/2016_05_17_064340_create_type_column.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2016_04_29_185659_create_users_table.php',

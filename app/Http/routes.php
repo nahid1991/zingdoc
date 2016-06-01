@@ -103,12 +103,12 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/entity-account-settings', 'EntityController@settings');
 	Route::post('/schedule-make', 'ScheduleController@make');
 	Route::get('/search', 'SearchController@search');
-	Route::get('/appointment-form/{id}/{date}/{time}', 'ScheduleController@form_patient');
+	Route::get('/appointment-form/{id}/{date}/{time}/{serial}', 'ScheduleController@form_patient');
 	Route::get('/get-appointment', 'PatientController@appointed');
 	Route::post('/appointing', 'ScheduleController@submission');	//posts appointments
 	Route::post('/find-doc', 'EntityController@test');
 	Route::get('/doctor/{username}', 'EntityController@trial');		//shows doctor result
-	Route::get('/approve/{username}/{patient}/{time}', 'EntityController@approve');
+	Route::get('/approve/{username}/{patient}/{time}/{serial}', 'EntityController@approve');
 	Route::get('/decline/{username}/{patient}', 'EntityController@cancel');
 	Route::get('/checked/{username}/{patient}', 'EntityController@doc_checked');
 	Route::get('/canceled/{username}/{patient}', 'EntityController@doc_cancel');
@@ -126,5 +126,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::post('/cover-photo', 'TestController@cover');
 	Route::post('/admin-profile-edit', 'EntityController@en_make_profile');
 	Route::get('/delete/{date}/{created_date}/{username}', 'CalendarController@sche_del');
+	Route::get('/delete-plan/{date}/{username}/{type}', 'CalendarController@sche_del_plan');
+	Route::get('/for-month/{date}/{username}/{type}', 'CalendarController@sche_del_month');
 });
 

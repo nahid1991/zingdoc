@@ -1867,7 +1867,7 @@ ul.social-nav {
 .pof-content .addbtn_cont a.addbtn:hover, .pof-content .addbtn_cont a.addbtn.current{ background: #FFF; border: 1px solid #cdcdcd; color: #717171;}
 
 
-.pof-content .add_form_container{ position: absolute; display: none; top: 48px; left: 0; width: 400px; max-width: 96%;}
+.pof-content .add_form_container{ position: absolute; display: none; top: 48px; left: 0; width: 400px; max-width: 96%; height: 400px;}
 .pof-content .add_form_container .arrow{ display: block; margin-left: 55px; height: 11px; width: 19px; background: url(../images/add-form-arrow-up.png) center center no-repeat; }
 .pof-content .add_form_container .add_form{ display: block; background-color: #FFF; border: 1px solid #d5d5d5;}
 .pof-content .add_form_container .add_form .form-cont{ display: block; padding: 20px 20px;}

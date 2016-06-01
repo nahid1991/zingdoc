@@ -94,7 +94,8 @@
 										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
 										<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
 										<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
-										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
+										<a href="{{ url('/auth/logout') }}">Logout</a></li><li>
+										<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View">Schedule Calendar</a></li></ul>
 							</div>
 						</div>
 
@@ -113,10 +114,10 @@
 										<div class="title mt-7px">View Appointments</div>
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-6">
-										<ul class="view-type-link">
-											<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
-												<!-- <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
-												<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li></ul>
+										{{--<ul class="view-type-link">--}}
+											{{--<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>--}}
+												{{--<!-- <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->--}}
+												{{--<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li></ul>--}}
 									</div>
 								</div>								
 							</div>

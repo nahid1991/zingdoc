@@ -29,7 +29,8 @@
 										<a href="{{ url('/doc-blog') }}">Blog</a></li><li>
 										<a href="{{ url('/doc-comments') }}">Comments</a></li><li>
 										<a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
-										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
+										<a href="{{ url('/auth/logout') }}">Logout</a></li><li>
+										<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View">Schedule Calendar</a></li></ul>
 							</div>
 						</div>
 
@@ -44,9 +45,9 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-6">
 										<ul class="view-type-link">
-											<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
+											{{--<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>--}}
 												<!-- <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
-												<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>
+												{{--<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>--}}
 										</ul>
 									</div>
 								</div>								
@@ -85,21 +86,61 @@
 								</div>
 
 								<div class="col-xs-12 col-sm-6 col-md-6">
-									<div class="patient-details">
-										<div class="single-pof-pic">
-											<img src="/images/patient-pof-pic.jpg" alt=""/>
-										</div>
-										<div class="single-pof-dsc">
-											<h2>Mic A Ting</h2>
-											<h3>Blood Pressure Issues</h3>
-											<p>
-												DOB: 12 -  25 - 1945
-												<br>
-												Age: 68 Years
-												<br>
-												Tel.: 2514- 2541-2516
-											</p>											
-										</div>
+									{{--<div class="patient-details">--}}
+										{{--<div class="single-pof-pic">--}}
+											{{--<img src="/images/patient-pof-pic.jpg" alt=""/>--}}
+										{{--</div>--}}
+										{{--<div class="single-pof-dsc">--}}
+											{{--<h2>Mic A Ting</h2>--}}
+											{{--<h3>Blood Pressure Issues</h3>--}}
+											{{--<p>--}}
+												{{--DOB: 12 -  25 - 1945--}}
+												{{--<br>--}}
+												{{--Age: 68 Years--}}
+												{{--<br>--}}
+												{{--Tel.: 2514- 2541-2516--}}
+											{{--</p>											--}}
+										{{--</div>--}}
+									{{--</div>--}}
+									<div class="pof-content">
+									<table class="schedule">
+										{{--@foreach($doc_timing as $d_t)--}}
+											{{--@if($d_t)--}}
+												{{--<tr>--}}
+													{{--<td>{{ $d_t->day }}</td>--}}
+													{{--<td> <p>{{ $d_t->start_interval }} - {{ $d_t->end_interval }} - @if($d_t->type == 'monthly')--}}
+																{{--For this month.--}}
+
+															{{--@elseif($d_t->type == 'yearly')--}}
+																{{--For this year.--}}
+
+															{{--@else--}}
+																{{--For this days.--}}
+
+														{{--@endif--}}
+
+														{{--<p><a class="close"--}}
+															  {{--href="{{ action('CalendarController@sche_del', [$d_t->date, $d_t->schedule_date, $d_t->username]) }}">Remove for this day</a>--}}
+															{{--<a class="close"--}}
+															   {{--href="{{ action('CalendarController@sche_del_plan', [$d_t->date, $d_t->username, $d_t->type]) }}">Remove total plan</a>--}}
+															{{--@if($d_t->type == 'yearly')--}}
+																{{--<a class="close"--}}
+																   {{--href="{{ action('CalendarController@sche_del_month', [$d_t->date, $d_t->username, $d_t->type]) }}">Remove only for this month</a>--}}
+															{{--@endif--}}
+														{{--</p><br>--}}
+													{{--</td>--}}
+												{{--</tr>--}}
+												{{--<br>--}}
+												{{--<div class="clearfix"></div>--}}
+											<tr>
+												
+											</tr>
+
+
+											{{--@endif--}}
+										{{--@endforeach--}}
+
+									</table>
 									</div>
 								</div>
 							</div>

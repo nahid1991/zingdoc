@@ -45,7 +45,7 @@
 												@if($doc_info)
 													<div class="lebel">{{ $name_o_day }}'s schedule:</div>
 												@else
-													<div class="lebel"><p>{{ $name_o_day }}'s schedule: Today you have nothing.<p></div>
+													<div class="lebel"><p>{{ $name_o_day }}'s schedule: Nothing for today.<p></div>
 												@endif
 												@endforeach
 											
@@ -73,8 +73,26 @@
 												@if($d_t)
 												<tr>
 													<td>{{ $d_t->day }}</td>
-													<td> <p>{{ $d_t->start_interval }} - {{ $d_t->end_interval }}</p> 
-													 <a class="close" href="#">X</a></td>
+													 <td><p>{{ $d_t->start_interval }} - {{ $d_t->end_interval }}@if($d_t->type == 'monthly')
+																For this month.
+
+															@elseif($d_t->type == 'yearly')
+																For this year.
+
+															@else
+																For this days.
+
+														@endif
+
+														<a class="close"
+															  href="{{ action('CalendarController@sche_del', [$d_t->date, $d_t->schedule_date, $d_t->username]) }}">Remove for this day</a>
+															<a class="close"
+															   href="{{ action('CalendarController@sche_del_plan', [$d_t->date, $d_t->username, $d_t->type]) }}">Remove total plan</a>
+															@if($d_t->type == 'yearly')
+																<a class="close"
+																   href="{{ action('CalendarController@sche_del_month', [$d_t->date, $d_t->username, $d_t->type]) }}">Remove only for this month</a>
+															@endif
+														</p></td>
 												</tr>
 												@endif
 												@endforeach
@@ -160,15 +178,8 @@
 																	<input type="radio" name="type" value="monthly"> This month</input>
 																	<input type="radio" name="type" value="yearly"> This year</input>
 																<br>
-																<label>Set this for:</label><br>
-																@foreach($doc_days as $dd)
-																	@if($name_o_day == $dd->days)
-																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}" disabled="disabled" checked="checked">{{ $dd->days }}<br>
-																	@else
-																		<input type="checkbox" name="{{ $dd->days }}" value="{{ $dd->days }}">{{ $dd->days }}<br>
-																	@endif
-																	
-																@endforeach
+
+
 																	
 																</div>
 																<div class="col-xs-6 col-sm-6 col-md-6">

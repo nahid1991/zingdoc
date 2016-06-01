@@ -16,6 +16,7 @@ use Services_Twilio;
 
 use Redirect;
 
+
 class EntityController extends Controller
 {
     // public function dashboard(){
@@ -152,13 +153,12 @@ class EntityController extends Controller
     }
 
 
-    public function approve($username, $p_name, $time){
+    public function approve($username, $p_name, $time, $serial){
         $trick = DB::table('appointment_user')
             ->where('doctor_user', '=', $username)
             ->where('patient_name', '=', $p_name)
             ->where('appointment_time', '=', $time)
             ->first();
-        $user = \Auth::user();
         
         
         // echo($pu);
@@ -186,28 +186,32 @@ class EntityController extends Controller
         $doc_info = DB::table('users')
             ->where('username', '=', $username)
             ->first();
-        $doc_schedule = DB::table('users')
-            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
-            ->where('username', '=', $username)
-            ->get();
-        $listed_doc_pat = DB::table('users')
-            ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
-            // ->join('appointment_user', 'users.username', '=', 'appointment_user.admin_user')
-            ->where('users.username', '=', $user->username)
-            ->get();
-        $patient_list = DB::table('users')
-            ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
-            ->where('username', '=', $username)
-            ->get();
+//        $doc_schedule = DB::table('users')
+//            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+//            ->where('username', '=', $username)
+//            ->get();
+//        $listed_doc_pat = DB::table('users')
+//            ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
+//            // ->join('appointment_user', 'users.username', '=', 'appointment_user.admin_user')
+//            ->where('users.username', '=', $user->username)
+//            ->get();
+//        $patient_list = DB::table('users')
+//            ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
+//            ->where('username', '=', $username)
+//            ->get();
+        $appointment_time = Carbon::createFromFormat('Y-m-d h:i:s', $time);
+        $hour = $appointment_time->format('h:i A');
+        $date = $appointment_time->format('jS \\of F');
 
         $account_sid = "AC0ea2b450fbf9bcaa2aaa8464536c6f85"; // Your Twilio account sid
         $auth_token = "3501d13a64fbe6c80a5f30d6d36459ca"; // Your Twilio auth token
 
         $client = new Services_Twilio($account_sid, $auth_token);
-        $message = $client->account->messages->sendMessage(
+        $client->account->messages->sendMessage(
             '+12565302615', // From a Twilio number in your account
             '+880'.$trick->phone_number, // Text any number
-            "Hello Ibnul monkey!"
+            'Hello subscriber your appointment request for DR.'.$doc_info->name.' for '.$hour.' '.
+                $date.' SL no.'.$serial.' has been accepted.'
         );
 
 

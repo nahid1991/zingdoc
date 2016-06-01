@@ -106,7 +106,8 @@
 											  			<!-- <tr><td><a href="{{ url('/get-appointment') }}">10:30 am</a></td></tr> -->
 											  			@foreach($doctor_info_sun as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
+											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial]) }}">{{ $doc->slot }}
+																	Serial:{{ $doc->serial }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -124,7 +125,8 @@
 											  			</tr>
 											  			@foreach($doctor_info_mon as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
+														<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial]) }}">{{ $doc->slot }}
+																Serial:{{ $doc->serial }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -142,7 +144,8 @@
 											  			</tr>
 											  			@foreach($doctor_info_tue as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
+														<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial]) }}">{{ $doc->slot }}
+																Serial:{{ $doc->serial }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -160,7 +163,8 @@
 											  			</tr>
 											  			@foreach($doctor_info_wed as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
+														<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial]) }}">{{ $doc->slot }}
+																Serial:{{ $doc->serial }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -178,7 +182,8 @@
 											  			</tr>
 											  			@foreach($doctor_info_thu as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
+														<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial]) }}">{{ $doc->slot }}
+																Serial:{{ $doc->serial }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -196,7 +201,8 @@
 											  			</tr>
 											  			@foreach($doctor_info_fri as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
+														<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial]) }}">{{ $doc->slot }}
+																Serial:{{ $doc->serial }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
@@ -214,131 +220,15 @@
 											  			</tr>
 											  			@foreach($doctor_info_sat as $doc)
 											  			@if($doctor->username == $doc->d_user)
-											  			<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot]) }}">{{ $doc->slot }}</a></td></tr>
+														<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial]) }}">{{ $doc->slot }}
+																Serial:{{ $doc->serial }}</a></td></tr>
 											  			@endif
 											  			@endforeach
 											  		</table>
 											  	</div>
 											  </div><!-- End Slide Item -->
 
-											  <!--<div class="slide">
-											  	<div class="appoinment-day">
-											  		<table>
-											  			<tr>
-											  				<th>
-												                <div class="header-tile-date-name">Sun</div>
-												                <div class="header-tile-date-value">16 FEB</div>
-											  				</th>
-											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">10:30 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">11:30 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">1:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">3 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
-											  		</table>
-											  	</div>
-											  </div>--><!-- End Slide Item -->
-											  
-											  <!-- <div class="slide">
-											  	<div class="appoinment-day">
-											  		<table>
-											  			<tr>
-											  				<th>
-												                <div class="header-tile-date-name">Mon</div>
-												                <div class="header-tile-date-value">17 FEB</div>
-											  				</th>
-											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">12 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">1 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">3 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
-											  		</table>
-											  	</div>
-											  </div> --><!-- End Slide Item -->
-											  
-											  <!-- <div class="slide">
-											  	<div class="appoinment-day">
-											  		<table>
-											  			<tr>
-											  				<th>
-												                <div class="header-tile-date-name">Tue</div>
-												                <div class="header-tile-date-value">18 FEB</div>
-											  				</th>
-											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">10:30 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">11 am</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
-											  		</table>
-											  	</div>
-											  </div><!-- End Slide Item -->
-											  
-											  <!-- <div class="slide">
-											  	<div class="appoinment-day">
-											  		<table>
-											  			<tr>
-											  				<th>
-												                <div class="header-tile-date-name">Wed</div>
-												                <div class="header-tile-date-value">19 FEB</div>
-											  				</th>
-											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">1:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">3:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4:30 pm</a></td></tr>
-											  		</table>
-											  	</div>
-											  </div> --><!-- End Slide Item -->
-											  
-											  <!-- <div class="slide">
-											  	<div class="appoinment-day">
-											  		<table>
-											  			<tr>
-											  				<th>
-												                <div class="header-tile-date-name">Thu</div>
-												                <div class="header-tile-date-value">20 FEB</div>
-											  				</th>
-											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">12:30 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">2 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4:15 pm</a></td></tr>
-											  		</table>
-											  	</div>
-											  </div> --><!-- End Slide Item -->
-											  
-											  <!-- <div class="slide">
-											  	<div class="appoinment-day">
-											  		<table>
-											  			<tr>
-											  				<th>
-												                <div class="header-tile-date-name">Fri</div>
-												                <div class="header-tile-date-value">21 FEB</div>
-											  				</th>
-											  			</tr>
-											  		</table>
-											  	</div>
-											  </div> --><!-- End Slide Item -->
-											  
-											 <!--  <div class="slide">
-											  	<div class="appoinment-day">
-											  		<table>
-											  			<tr>
-											  				<th>
-												                <div class="header-tile-date-name">Sat</div>
-												                <div class="header-tile-date-value">22 FEB</div>
-											  				</th>
-											  			</tr>
-											  			<tr><td><a href="get-an-appoinment.php">3 pm</a></td></tr>
-											  			<tr><td><a href="get-an-appoinment.php">4 pm</a></td></tr>
-											  		</table>
-											  	</div>
-											  </div> --><!-- End Slide Item -->
+
 
 											</div>	
 											<div class="clearfix"></div>		

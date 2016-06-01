@@ -151,7 +151,9 @@ class CalendarController extends Controller
 
             if($verify == 0){
                 while($w<=$end_date){
+                    $serial = 1;
                     while($x->diffInMinutes($e_i2)){
+
                         $slot = $x->format('g:i A');
                         DB::table('time_slot')
                             ->insert([
@@ -160,9 +162,11 @@ class CalendarController extends Controller
                                 'day_of_week' => $request->input('day'),
                                 'slot_date' => $x,
                                 'created_for' => $c_d,
-                                'index_time' => $time
+                                'index_time' => $time,
+                                'serial' => $serial
                             ]);
                         $x = $x->addMinutes($request->input('interval'));
+                        $serial = $serial+1;
                     }
                     $x = Carbon::create($x->year, $x->month, $x->day, $s_h, $start_min)->addDays(7);
                     $w = $w->addDays(7);
@@ -204,8 +208,8 @@ class CalendarController extends Controller
 
         /*Yearly function*/
         if($request->input('type') == 'yearly') {
-
-            while($l<=$e_i){
+            $end_date = $k->lastOfYear()->addDay();
+            while($l<=$end_date){
                 while($j->diffInMinutes($e_i)){
                     $test = DB::table('time_slot')
                         ->where('slot_date', '=', $j)
@@ -227,7 +231,9 @@ class CalendarController extends Controller
 
             if($verify == 0){
                 while($w<=$end_date){
+                    $serial = 1;
                     while($x->diffInMinutes($e_i2)){
+
                         $slot = $x->format('g:i A');
                         DB::table('time_slot')
                             ->insert([
@@ -236,9 +242,11 @@ class CalendarController extends Controller
                                 'day_of_week' => $request->input('day'),
                                 'slot_date' => $x,
                                 'created_for' => $c_d,
-                                'index_time' => $time
+                                'index_time' => $time,
+                                'serial' => $serial
                             ]);
                         $x = $x->addMinutes($request->input('interval'));
+                        $serial = $serial+1;
                     }
                     $x = Carbon::create($x->year, $x->month, $x->day, $s_h, $start_min)->addDays(7);
                     $w = $w->addDays(7);
@@ -360,7 +368,11 @@ class CalendarController extends Controller
     }
 
 
-
+    /*
+     *
+     * Daily schedule delete
+     *
+     */
     public function sche_del($date, $index, $username){
         DB::table('doctor_timing')
             ->where('date', '=', $date)
@@ -371,5 +383,115 @@ class CalendarController extends Controller
             ->where('index_time', '=', $date)
             ->delete();
         return Redirect::back();
+    }
+
+
+
+    /*
+     *
+     * total plan delete
+     *
+     */
+    public function sche_del_plan($date, $username, $type){
+//        echo($date.' '.$index.' '.$username.' '.$type);
+        $user = \Auth::user();
+
+        if($type == 'yearly'){
+            $end_date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+            $end_date->lastOfYear()->addDay();
+            $new_date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+//            $for_loop_start = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+//            echo($end_date.' '.$date);
+            while($new_date<=$end_date){
+
+                DB::table('doctor_timing')
+                    ->where('doc_user', '=', $username)
+                    ->where('type', '=', $type)
+                    ->where('date', '=', $new_date)
+                    ->delete();
+                DB::table('time_slot')
+                    ->where('d_user', '=', $username)
+                    ->where('index_time', '=', $new_date)
+                    ->delete();
+                $new_date->addDays(7);
+            }
+
+
+            if($user->user_type == 1){
+                return Redirect::back();
+            }
+
+            if($user->user_type == 3){
+                return Redirect::back();
+            }
+        }
+
+
+
+        if($type == 'monthly'){
+            $end_date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+            $end_date->lastOfMonth()->addDay();
+            $new_date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+//            echo($end_date.' '.$date);
+            while($new_date<=$end_date){
+                DB::table('doctor_timing')
+                    ->where('doc_user', '=', $username)
+                    ->where('type', '=', $type)
+                    ->where('date', '=', $new_date)
+                    ->delete();
+                DB::table('time_slot')
+                    ->where('d_user', '=', $username)
+                    ->where('index_time', '=', $new_date)
+                    ->delete();
+                $new_date->addDays(7);
+            }
+
+            if($user->user_type == 1){
+                return Redirect::back();
+            }
+
+            if($user->user_type == 3){
+                return Redirect::back();
+            }
+        }
+    }
+
+
+
+    /*
+     *
+     *
+     *
+     * Delete only for month
+     *
+     *
+     */
+
+    public function sche_del_month($date, $username, $type){
+        $user = \Auth::user();
+        $end_date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+        $end_date->lastOfMonth()->addDay();
+        $new_date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+//            echo($end_date.' '.$date);
+        while($new_date<=$end_date){
+            DB::table('doctor_timing')
+                ->where('doc_user', '=', $username)
+                ->where('type', '=', $type)
+                ->where('date', '=', $new_date)
+                ->delete();
+            DB::table('time_slot')
+                ->where('d_user', '=', $username)
+                ->where('index_time', '=', $new_date)
+                ->delete();
+            $new_date->addDays(7);
+        }
+
+        if($user->user_type == 1){
+            return Redirect::back();
+        }
+
+        if($user->user_type == 3){
+            return Redirect::back();
+        }
     }
 }
