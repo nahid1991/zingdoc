@@ -136,9 +136,10 @@ class TestController extends Controller
                         ->join('appointment_user', 'users.username', '=', 'appointment_user.patient_user')
                         ->where('users.username', $user->username)
                         ->first();
+                    $time = Carbon::today();
 
                     // echo($user_info->username[0]);
-                    return view('patient.patient_main', compact('user', 'user_info'));
+                    return view('patient.patient_main', compact('user', 'user_info', 'time'));
                 }
                 if($user->user_type == 3){
                     $doctors = DB::table('users')
@@ -170,22 +171,6 @@ class TestController extends Controller
 
 
     public function run(){
-        // $date = Carbon::createFromTime(9, 30)->diffInSeconds(Carbon::now());
-        // $compareDate = Carbon::createFromTime(11, 40);
-        // $newFormat = $compareDate->format('g:i A');
-        // $format = $date->format('g:i A');
-        // echo($format->diffInHours($newFormat));
-//        $date = Carbon::now()->addDays(365);
-//        $date = $date->toDayDateTimeString('l');
-        //echo("This works");
-//        echo("<table border=\"1|0\">
-//							<tr>
-//								<th>Start</th>
-//								<td>9:30AM</td>
-//								<th>End</th>
-//								<td>10:30AM</td>
-//							<tr>
-//						</table>");
         $user = \Auth::user();
         $user_info = DB::table('appointment_user')
             ->where('doctor_user', '=', $user->username)
@@ -326,6 +311,10 @@ class TestController extends Controller
 
         return Redirect::back();
 //        echo($path);
+    }
+
+    public function testing(){
+        echo("This is working");
     }
 
 }

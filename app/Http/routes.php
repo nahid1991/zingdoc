@@ -56,6 +56,8 @@ Route::get('/homepage', 'TestController@home');
 
 Route::get('/test', 'TestController@run');
 
+Route::get('/testing', 'TestController@testing');
+
 Route::get('register/verify/{confirmationCode}', 'TestController@email');
 
 
@@ -118,7 +120,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	
 	Route::post('/schedule-make', 'ScheduleController@make');
 	
-	Route::get('/search', 'SearchController@search');
+	Route::get('/search/{time}', 'SearchController@search');
 
 	Route::get('/appointments', 'TestController@run');
 
@@ -177,5 +179,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/next-month/{month}/{year}', 'CalendarController@next_month');//Moves to next month
 
 	Route::get('/prev-month/{month}/{year}', 'CalendarController@prev_month');//Moves to the prev month
+
+	Route::get('/slot/{user}/{day}', 'SearchController@slot_finder');
 });
 

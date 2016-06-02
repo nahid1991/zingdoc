@@ -74,14 +74,7 @@
 										<div class="right-area">
 											<div class="ratings">
 												<h2>{{ $doctor->speciality }}</h2>
-												<!-- <ul>
-													<li><img src="images/ratings.png" alt=""/></li>
-													<li><img src="images/ratings.png" alt=""/></li>
-													<li><img src="images/ratings.png" alt=""/></li>
-													<li><img src="images/ratings.png" alt=""/></li>
-													<li><img src="images/ratings.png" alt=""/></li>
-												</ul> -->
-												<!-- <marquee><p><b>5.0</b></p></marquee> -->
+
 												<h5><strong><b><i>Rating: 5.0</i></b></strong></h5>
 											</div>
 											<div class="booking"><a id="doctor_{{ $doctor->id }}" href="#{{ $doctor->id }}">Get An Appointment</a></div>
@@ -90,148 +83,10 @@
 										<div class="clearfix"></div>
 
 										<div id="{{ $doctor->username }}" class="search-page" style="display:none">
-											<h4>Book an Appointment</h4>
-											<p class="ds">Click a time below to book an appointment.</p>
-
-											<div id="{{ $doctor->username }}-slides">
-												<div class="slide">
-													<div class="appoinment-day">
-														<table>
-															<tr>
-																<th>
-																	<div class="header-tile-date-name">Sun</div>
-																	<div class="header-tile-date-value">{{ $sun }}</div>
-																</th>
-															</tr>
-															<!-- <tr><td><a href="{{ url('/get-appointment') }}">10:30 am</a></td></tr> -->
-															@foreach($doctor_info_sun as $doc)
-																@if($doctor->username == $doc->d_user)
-																	<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial, $doc->slot_end]) }}">{{ $doc->slot }}
-																				Serial:{{ $doc->serial }}</a></td></tr>
-																@endif
-															@endforeach
-														</table>
-													</div>
-												</div><!-- End Slide Item -->
-
-												<div class="slide">
-													<div class="appoinment-day">
-														<table>
-															<tr>
-																<th>
-																	<div class="header-tile-date-name">Mon</div>
-																	<div class="header-tile-date-value">{{ $mon }}</div>
-																</th>
-															</tr>
-															@foreach($doctor_info_mon as $doc)
-																@if($doctor->username == $doc->d_user)
-																	<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial, $doc->slot_end]) }}">{{ $doc->slot }}
-																				Serial:{{ $doc->serial }}</a></td></tr>
-																@endif
-															@endforeach
-														</table>
-													</div>
-												</div><!-- End Slide Item -->
-
-												<div class="slide">
-													<div class="appoinment-day">
-														<table>
-															<tr>
-																<th>
-																	<div class="header-tile-date-name">Tue</div>
-																	<div class="header-tile-date-value">{{ $tue }}</div>
-																</th>
-															</tr>
-															@foreach($doctor_info_tue as $doc)
-																@if($doctor->username == $doc->d_user)
-																	<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial, $doc->slot_end]) }}">{{ $doc->slot }}
-																				Serial:{{ $doc->serial }}</a></td></tr>
-																@endif
-															@endforeach
-														</table>
-													</div>
-												</div><!-- End Slide Item -->
-
-												<div class="slide">
-													<div class="appoinment-day">
-														<table>
-															<tr>
-																<th>
-																	<div class="header-tile-date-name">Wed</div>
-																	<div class="header-tile-date-value">{{ $wed }}</div>
-																</th>
-															</tr>
-															@foreach($doctor_info_wed as $doc)
-																@if($doctor->username == $doc->d_user)
-																	<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial, $doc->slot_end]) }}">{{ $doc->slot }}
-																				Serial:{{ $doc->serial }}</a></td></tr>
-																@endif
-															@endforeach
-														</table>
-													</div>
-												</div><!-- End Slide Item -->
-
-												<div class="slide">
-													<div class="appoinment-day">
-														<table>
-															<tr>
-																<th>
-																	<div class="header-tile-date-name">Thu</div>
-																	<div class="header-tile-date-value">{{ $thu }}</div>
-																</th>
-															</tr>
-															@foreach($doctor_info_thu as $doc)
-																@if($doctor->username == $doc->d_user)
-																	<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial, $doc->slot_end]) }}">{{ $doc->slot }}
-																				Serial:{{ $doc->serial }}</a></td></tr>
-																@endif
-															@endforeach
-														</table>
-													</div>
-												</div><!-- End Slide Item -->
-
-												<div class="slide">
-													<div class="appoinment-day">
-														<table>
-															<tr>
-																<th>
-																	<div class="header-tile-date-name">Fri</div>
-																	<div class="header-tile-date-value">{{ $fri }}</div>
-																</th>
-															</tr>
-															@foreach($doctor_info_fri as $doc)
-																@if($doctor->username == $doc->d_user)
-																	<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial, $doc->slot_end]) }}">{{ $doc->slot }}
-																				Serial:{{ $doc->serial }}</a></td></tr>
-																@endif
-															@endforeach
-														</table>
-													</div>
-												</div><!-- End Slide Item -->
-
-												<div class="slide">
-													<div class="appoinment-day">
-														<table>
-															<tr>
-																<th>
-																	<div class="header-tile-date-name">Sat</div>
-																	<div class="header-tile-date-value">{{ $sat }}</div>
-																</th>
-															</tr>
-															@foreach($doctor_info_sat as $doc)
-																@if($doctor->username == $doc->d_user)
-																	<tr><td><a href="{{ action('ScheduleController@form_patient', [$doc->d_user, $doc->slot_date, $doc->slot, $doc->serial, $doc->slot_end]) }}">{{ $doc->slot }}
-																				Serial:{{ $doc->serial }}</a></td></tr>
-																@endif
-															@endforeach
-														</table>
-													</div>
-												</div><!-- End Slide Item -->
 
 
 
-											</div>
-											<div class="clearfix"></div>
+
 										</div><!-- End #doctor-appoinment Appoinment Section -->
 
 
@@ -240,9 +95,33 @@
 
 
 											$('#doctor_{{ $doctor->id }}').click(function() {
-												$('#{{ $doctor->username }}').slideToggle(500);
-											});
-										</script>
+												{{--$('#{{ $doctor->username }}').slideToggle(500);--}}
+//
+												$.ajax({
+													url: '/slot/{{ $doctor->username }}/{{\Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $time)}}',
+													data: {},
+													type:'GET',
+													dataType: 'html',
+													error: function(){
+														alert("Data not found");
+													},
+													success:function(data){
+														$("#{{ $doctor->username }}").empty();
+														$("#{{ $doctor->username }}").append(data);
+														$("#{{ $doctor->username }}").slideToggle(500);
+//
+//
+															} // End of success function of ajax form
+														}); // End of ajax call
+//													});
+//													$("a#$list_day").mouseleave(function(){
+//													$(".$list_day").css("display", "none");
+//
+//													$(".$list_day").empty();
+//
+//													});
+													});
+											</script>
 										<div class="clearfix"></div>
 
 
