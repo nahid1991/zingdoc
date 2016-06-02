@@ -78,11 +78,18 @@
 												<h5><strong><b><i>Rating: 5.0</i></b></strong></h5>
 											</div>
 											<div class="booking"><a id="doctor_{{ $doctor->id }}" href="#{{ $doctor->id }}">Get An Appointment</a></div>
+
 										</div>
 
-										<div class="clearfix"></div>
 
-										<div id="{{ $doctor->username }}" class="search-page" style="display:none">
+										<div class="clearfix">
+											</div>
+
+
+
+
+										<div id="{{ $doctor->username }}" class="search-page"  style="display:none">
+
 
 
 
@@ -109,6 +116,8 @@
 														$("#{{ $doctor->username }}").empty();
 														$("#{{ $doctor->username }}").append(data);
 														$("#{{ $doctor->username }}").slideToggle(500);
+
+
 //
 //
 															} // End of success function of ajax form
@@ -121,6 +130,8 @@
 //
 //													});
 													});
+
+
 											</script>
 										<div class="clearfix"></div>
 
@@ -163,4 +174,5 @@
 			</div>
 		</div>
 	</div>
+
 @stop
