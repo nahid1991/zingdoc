@@ -28,17 +28,63 @@
 
 		/* keep going with days.... */
 		for($list_day = 1; $list_day <= $days_in_month; $list_day++):
-			$calendar.= '<td class="calendar-day">';
+			$calendar.= '<td class="calendar-day" align="center">';
 				/* add in the day number */
 				// $calendar.= '<div class="day-number">'.$list_day.'</div> <a href="#"><div class="noof-apn"><h2>'.rand(5, 15).'</h2><span>Appoinments</span> </div></a> ';
-				$calendar.= '<div class="day-number">'.$list_day.'
-					</div> <a href="'.  action('EntityController@make', 
-						[$username, $year, $month, $list_day])  .'">
-					<div class="noof-apn"><h2>'.$list_day.'</h2><span></span> </div></a> ';
+			$calendar.= '<div class="day-number">
+					</div> <a href="/scheduling/'.$username.'/'.$year.'/'.$month.'/'.$list_day.'"  id='.$list_day.'>
+					<div style="position:inherit;"><h2>'.$list_day.'</h2>
+					<div class='.$list_day.' style="position:relative;">
+					</div></div></a>';
 				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
 			$calendar.= str_repeat('<p> </p>',2);
 				
 			$calendar.= '</td>';
+
+
+
+			$calendar.=  "<script type=\"text/javascript\">
+				$(\"a#$list_day\").mouseenter(function(){
+				var link = $('a#$list_day').attr('href');
+				console.log(link);
+                       $.ajax({
+                       url: link,
+               			data: {},
+               			type:'GET',
+               			dataType: 'html',
+               error: function(){
+                   alert(\"Data not found\");
+               },
+               success:function(data){
+               //alert('success');
+//               $(\".$list_day\").css(\"display\", \"block\")});
+				 $(\".$list_day\").empty();
+               $(\".$list_day\").append(data);
+               $(\".$list_day\").css(\"display\", \"block\");
+//               $(\".$list_day\").fadeIn(1000);
+
+               		} // End of success function of ajax form
+           		}); // End of ajax call
+				});
+				$(\"a#$list_day\").mouseleave(function(){
+					$(\".$list_day\").css(\"display\", \"none\");
+//					$(\".$list_day\").fadeOut(1000);
+					$(\".$list_day\").empty();
+
+				});
+
+
+//				$(\"#$list_day\").mouseover(function(e){
+//					e.preventDefault();
+//					$.get('/test' function(data){
+//						console.log(data);
+//					});
+//				});
+			</script>";
+
+
+
+
 			if($running_day == 6):
 				$calendar.= '</tr>';
 				if(($day_counter+1) != $days_in_month):
@@ -87,6 +133,10 @@
 								</div>
 								@endif
 								<h2>{{ $doc_info->name }}</h2>
+									<ul><li>
+											<a href="{{ url('/doctor/'.$doc_info->username) }}">Back to profile</a></li><li>
+											<a href="{{ url('/calendar/'.$doc_info->username) }}">Schedule calendar</a>
+										</li></ul>
 							</div>
 						</div>
 
@@ -105,11 +155,9 @@
 										<div class="title mt-7px">View Appointments</div>
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-6">
-										<ul class="view-type-link">
-											<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
-												<!-- <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
-												<a href="{{ action('EntityController@calendar', [$doc_info->username]) }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li></ul>
+
 									</div>
+
 								</div>								
 							</div>
 

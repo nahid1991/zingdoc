@@ -9,6 +9,7 @@
 						@endforeach
 						<div class="col-xs-12 col-sm-4 col-md-3">
 							<div class="pof-sidenav">
+								@foreach($doctor_schedule as $doc_info)
 								@if($doc_info->propic)
 								<div class="pof-img">
 									<img src="/{{ $doc_info->propic }}">
@@ -20,14 +21,18 @@
 								</div>
 								@endif
 								<h2>{{ $doc_info->name }}</h2>
-								
+									<ul><li>
+											<a href="{{ url('/doctor/'.$doc_info->username) }}">Back to profile</a></li><li>
+											<a href="{{ url('/calendar/'.$doc_info->username) }}">Schedule calendar</a>
+										</li></ul>
+								@endforeach
 							</div>
 						</div>
-						
 
-						
 
-						<div class="col-xs-12 col-sm-8 col-md-9">							
+
+
+						<div class="col-xs-12 col-sm-8 col-md-9">
 							<div class="pof-content">
 								<div class="pof-header">
 								@foreach($doctor_schedule as $doc_info)
@@ -36,8 +41,8 @@
 								@endif
 								@endforeach
 								</div>
-									
-								
+
+
 								<div class="pof-desc padding">
 									<div class="row">
 										<div class="col-xs-12 col-sm-5 col-md-5">
@@ -48,7 +53,7 @@
 													<div class="lebel"><p>{{ $name_o_day }}'s schedule: Nothing for today.<p></div>
 												@endif
 												@endforeach
-											
+
 										</div><!-- End .col -->
 										<div class="col-xs-12 col-sm-7 col-md-7">
 											<!--<table class="schedule">
@@ -56,12 +61,12 @@
 												@if($doc_info)
 												<tr>
 													<td>{{ $doc_info->days }}</td>
-													<td> <p>{{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}</p> 
+													<td> <p>{{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}</p>
 													 <a class="close" href="#">X</a></td>
 												</tr>
 												@endif
 												@endforeach-->
-												
+
 
 												<!-- <tr>
 													<td>Sat</td>
@@ -96,7 +101,7 @@
 												</tr>
 												@endif
 												@endforeach
-												
+
 
 												<!-- <tr>
 													<td>Sat</td>
@@ -116,16 +121,16 @@
 															<input type="hidden" name="username" value="{{ $doc_info->username }}">
 															<input type="hidden" name="day" value="{{ $name_o_day }}">
 															<input type="hidden" name="date" value="{{ $date_human }}">
-															<label>From</label> 
+															<label>From</label>
 															<select name="starting_interval">
 												 				<option value="">Hour</option>
-												 				
+
 												 				@foreach($hours as $hour)
 												 					<option value="{{ $hour }}">{{ $hour }}</option>
 												 				@endforeach
-												 				
-												 			</select> 
-												 			
+
+												 			</select>
+
 															<select name="starting_min">
 												 				<option value="00">00</option>
 												 				<option value="30">30</option>
@@ -133,8 +138,8 @@
 												 			<!--<select name="am-pm">
 												 				<option value="AM">AM</option>
 												 				<option value="PM">PM</option>
-												 			</select>--> 
-															<label>For</label> 
+												 			</select>-->
+															<label>For</label>
 															<select name="duration">
 												 				<option value="">Duration</option>
 												 				<option value="30">30 minutes</option>
@@ -154,11 +159,11 @@
 												 				<option value="">Reason</option>
 												 				<option value="appointments">Appointment</option>
 												 				<option value="others">Other</option>
-												 			</select>															
-															
-															
+												 			</select>
+
+
 															<div class="clearfix"></div>
-															
+
 
 															<!-- <div class="btn-group" data-toggle="buttons">
 																<!--<p>Please choose one day at a time</p>-->
@@ -169,10 +174,10 @@
 																<label class="btn btn-primary"><input type="radio" name="day5" value="Fri" id="option5">Fri</label>
 																<label class="btn btn-primary"><input type="radio" name="day6" value="Sat" id="option6">Sat</label>
 																<label class="btn btn-primary"><input type="radio" name="day7" value="Sun" id="option7">Sun</label>
-															</div> -->															
+															</div> -->
 														</div>
 
-														<div class="ft">															
+														<div class="ft">
 															<div class="row">
 																<div class="col-xs-6 col-sm-6 col-md-6">
 																	<input type="radio" name="type" value="monthly"> This month</input>
@@ -180,7 +185,7 @@
 																<br>
 
 
-																	
+
 																</div>
 																<div class="col-xs-6 col-sm-6 col-md-6">
 																	<input type="submit" value="Add"/>
@@ -189,19 +194,19 @@
 														</div>
 													</div>
 												</div>
-												{!!Form::close()!!}	
+												{!!Form::close()!!}
 												@elseif(!$doc_info)
 													<h2>No schedule today.</h2>
 												@endif
-												@endforeach	
-												<div class="clearfix"></div>										
+												@endforeach
+												<div class="clearfix"></div>
 												<script type="text/javascript">
 												    $('#toggle-btn').click(function() {
 												    	if ($(this).hasClass("current")) {
 															$(this).removeClass("current");
 												    	}
 												    	else {$(this).addClass("current");}
-												    	
+
 												    	$('#toggle-content').slideToggle(500);
 												    });
 												</script>

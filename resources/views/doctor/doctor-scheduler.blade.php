@@ -19,6 +19,8 @@
 									<img src="/images/pro-holder.jpg">
 								</div>
 							@endif
+
+
 								<ul><li>
 										<a href="{{ url('/homepage') }}">Home</a></li><li>
 										<a href="{{ url('/appointments') }}">Appointments</a></li><li>

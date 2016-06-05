@@ -4,9 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "810391701e08df6fda08861f47c44544",
-    "content-hash": "c0adb2c4d707f00d10d51829c6ce0dd3",
+    "hash": "f78b5e62bbcd7f367f133e1b26a6996a",
+    "content-hash": "37c813549e1656ee60815741d14f12a3",
     "packages": [
+        {
+            "name": "aloha/twilio",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aloha/laravel-twilio.git",
+                "reference": "1cb1fa5740f2f0dba06e2f581d76ca838da37656"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aloha/laravel-twilio/zipball/1cb1fa5740f2f0dba06e2f581d76ca838da37656",
+                "reference": "1cb1fa5740f2f0dba06e2f581d76ca838da37656",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "twilio/sdk": "~3.12||~4.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "^1.9",
+                "illuminate/console": "~4||~5",
+                "illuminate/support": "~4||~5",
+                "phpunit/phpunit": "~4.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aloha\\Twilio\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hannes Van De Vreken",
+                    "email": "vandevreken.hannes@gmail.com"
+                },
+                {
+                    "name": "Travis J Ryan",
+                    "email": "travisjryan@gmail.com"
+                }
+            ],
+            "description": "Twilio API for Laravel",
+            "homepage": "https://github.com/aloha/laravel-twilio",
+            "keywords": [
+                "ivr",
+                "laravel",
+                "sms",
+                "twilio"
+            ],
+            "time": "2016-05-21 06:52:12"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",

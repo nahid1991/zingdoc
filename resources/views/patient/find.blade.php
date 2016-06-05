@@ -102,8 +102,7 @@
 
 
 											$('#doctor_{{ $doctor->id }}').click(function() {
-												{{--$('#{{ $doctor->username }}').slideToggle(500);--}}
-//
+
 												$.ajax({
 													url: '/slot/{{ $doctor->username }}/{{\Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $time)}}',
 													data: {},
@@ -113,23 +112,54 @@
 														alert("Data not found");
 													},
 													success:function(data){
-														$("#{{ $doctor->username }}").empty();
-														$("#{{ $doctor->username }}").append(data);
+														{{--$("#{{ $doctor->username }}").empty();--}}
+														$("#{{ $doctor->username }}").html(data);
 														$("#{{ $doctor->username }}").slideToggle(500);
 
-
-//
-//
-															} // End of success function of ajax form
-														}); // End of ajax call
-//													});
-//													$("a#$list_day").mouseleave(function(){
-//													$(".$list_day").css("display", "none");
-//
-//													$(".$list_day").empty();
-//
-//													});
+															}
+														});
 													});
+											$("#{{ $doctor->username }}").on('click', '#next', function(e){
+												e.preventDefault();
+												$.ajax({
+													url: $(this).attr('href'),
+													data: {},
+													type:'GET',
+													dataType: 'html',
+													error: function(){
+														alert("Data not found");
+													},
+													success:function(data){
+//                                                    $(".s").empty();
+														$("#{{ $doctor->username }}").slideToggle();
+														$("#{{ $doctor->username }}").html(data);
+														$("#{{ $doctor->username }}").css("display", "block");
+														$("#{{ $doctor->username }}").slideToggle();
+
+													} // End of success function of ajax form
+												}); // End of ajax call
+												return false;
+											});
+											$("#{{ $doctor->username }}").on('click', '#prev', function(e){
+												e.preventDefault();
+												$.ajax({
+													url: $(this).attr('href'),
+													data: {},
+													type:'GET',
+													dataType: 'html',
+													error: function(){
+														alert("Data not found");
+													},
+													success:function(data){
+//                                                    $(".s").empty();
+														$("#{{ $doctor->username }}").slideToggle();
+														$("#{{ $doctor->username }}").html(data);
+														$("#{{ $doctor->username }}").css("display", "block");
+														$("#{{ $doctor->username }}").slideToggle();
+													} // End of success function of ajax form
+												}); // End of ajax call
+												return false;
+											});
 
 
 											</script>

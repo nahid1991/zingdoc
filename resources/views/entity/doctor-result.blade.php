@@ -17,6 +17,7 @@
 										<a href="{{ url('/entity-appointments') }}">Appointment</a></li><li>
 										<a href="{{ url('/entity-profile') }}">Profile</a></li><li>
 										<a href="{{ url('/entity-profile-edit') }}">Edit Profile</a></li><li>
+										<a href="{{ url('/calendar/'.$doc_info->username) }}">Doctor's <span style="color: firebrick">Schedule</span> Calendar</a></li><li>
 										<a href="{{ url('/entity-account-settings') }}">Account Settings</a></li><li>
 										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
 							</div>
@@ -83,9 +84,9 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-6">
 										<ul class="view-type-link">
-											<li><a class="current" href="{{ url('/doctor/{$username}') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
+											{{--<li><a class="current" href="{{ url('/doctor/{$username}') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>--}}
 												<!-- <a href="entity-admin-appointments-week-view.php" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
-												<a href="{{ action('EntityController@calendar', [$doc_info->username]) }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>
+{{--												<a href="{{ action('EntityController@calendar', [$doc_info->username]) }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>--}}
 										</ul>
 									</div>
 								</div>								

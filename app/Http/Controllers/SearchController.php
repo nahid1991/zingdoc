@@ -72,15 +72,15 @@ class SearchController extends Controller
 
 
 
-
+///slot/'.$user.'/'.$next.'
 
             $work = '<h4>Book an Appointment</h4>
-					<p class="ds"><a id="prev" href="/slot/'.$user.'/'.$prev.'" style="float:left">
+					<p class="ds"><a id="prev" href="/slot/'.$user.'/'.$prev.'" style="float:left;position:absolute">
 					<img src="/images/back.png" width="20px" height="20px">Previous week</a>
-						<a id="next" href="/slot/'.$user.'/'.$prev.'" style="float:right">Next week
-						<img src="/images/forward.png"width="20px" height="20px"></a></p><br><br>
+						<a id="next" href="/slot/'.$user.'/'.$next.'" style="float:right">Next week
+						<img src="/images/forward.png" width="20px" height="20px"></a></p><br><br>
 
-        <div id="'.$user.'-slides"><div class="slide">
+             <div id="'.$user.'-slides"><div class="slide">
                             <div class="appoinment-day">
                                 <table>
                                     <tr>
@@ -91,7 +91,7 @@ class SearchController extends Controller
             foreach($first_slots as $fr_slots){
                 $work.= '<tr><td><a href="/appointment-form/'.$fr_slots->d_user.'/'.$fr_slots->slot_date.'/'.$fr_slots->slot.
                     '/'.$fr_slots->serial.'/'.$fr_slots->slot_end.'">'.$fr_slots->slot.
-                    'Serial:'.$fr_slots->serial.'</a></td></tr>';
+                    '<p>Serial:'.$fr_slots->serial.'</a></td></tr>';
             };
             $work.= '</table></div></div>';
 
@@ -107,7 +107,7 @@ class SearchController extends Controller
             foreach($second_slots as $sn_slots){
                 $work.= '<tr><td><a href="/appointment-form/'.$sn_slots->d_user.'/'.$sn_slots->slot_date.'/'.$sn_slots->slot.
                     '/'.$sn_slots->serial.'/'.$sn_slots->slot_end.'">'.$sn_slots->slot.
-                    'Serial:'.$sn_slots->serial.'</a></td></tr>';
+                    '<p>Serial:'.$sn_slots->serial.'</p></a></td></tr>';
             };
             $work.= '</table></div></div>';
 
@@ -122,7 +122,7 @@ class SearchController extends Controller
             foreach($third_slots as $tr_slots){
                 $work.= '<tr><td><a href="/appointment-form/'.$tr_slots->d_user.'/'.$tr_slots->slot_date.'/'.$tr_slots->slot.
                     '/'.$tr_slots->serial.'/'.$tr_slots->slot_end.'">'.$tr_slots->slot.
-                    'Serial:'.$tr_slots->serial.'</a></td></tr>';
+                    '<p>Serial:'.$tr_slots->serial.'</p></a></td></tr>';
             };
 
             $work.= '</table></div></div>';
@@ -138,7 +138,7 @@ class SearchController extends Controller
             foreach($fourth_slots as $ft_slots){
                 $work.= '<tr><td><a href="/appointment-form/'.$ft_slots->d_user.'/'.$ft_slots->slot_date.'/'.$ft_slots->slot.
                     '/'.$ft_slots->serial.'/'.$ft_slots->slot_end.'">'.$ft_slots->slot.
-                    'Serial:'.$ft_slots->serial.'</a></td></tr>';
+                    '<p>Serial:'.$ft_slots->serial.'</p></a></td></tr>';
             };
 
             $work.= '</table></div></div></div>';
@@ -154,7 +154,7 @@ class SearchController extends Controller
             foreach($fifth_slots as $ff_slots){
                 $work.= '<tr><td><a href="/appointment-form/'.$ff_slots->d_user.'/'.$ff_slots->slot_date.'/'.$ff_slots->slot.
                     '/'.$ff_slots->serial.'/'.$ff_slots->slot_end.'">'.$ff_slots->slot.
-                    'Serial:'.$ff_slots->serial.'</a></td></tr>';
+                    '<p>Serial:'.$ff_slots->serial.'</a></td></tr>';
             };
 
             $work.= '</table></div></div>';
@@ -171,7 +171,7 @@ class SearchController extends Controller
             foreach($sixth_slots as $sx_slots){
                 $work.= '<tr><td><a href="/appointment-form/'.$sx_slots->d_user.'/'.$sx_slots->slot_date.'/'.$sx_slots->slot.
                     '/'.$sx_slots->serial.'/'.$sx_slots->slot_end.'">'.$sx_slots->slot.
-                    'Serial:'.$sx_slots->serial.'</a></td></tr>';
+                    '<p>Serial:'.$sx_slots->serial.'</a></td></tr>';
             };
 
             $work.= '</table></div></div>';
@@ -187,33 +187,14 @@ class SearchController extends Controller
             foreach($seventh_slots as $sv_slots){
                 $work.= '<tr><td><a href="/appointment-form/'.$sv_slots->d_user.'/'.$sv_slots->slot_date.'/'.$sv_slots->slot.
                     '/'.$sv_slots->serial.'/'.$sv_slots->slot_end.'">'.$sv_slots->slot.
-                    'Serial:'.$sv_slots->serial.'</a></td></tr>';
+                    '<p>Serial:'.$sv_slots->serial.'</a></td></tr>';
             };
 
 
 
-        $work.="<script type=\"text/javascript\">
-				$(\"a#next\").onclick(function(){
-				console.log(link);
-                       $.ajax({
-                       url: '/slot/'$user'/'$first_day,
-               			data: {},
-               			type:'GET',
-               			dataType: 'html',
-               error: function(){
-                   alert(\"Data not found\");
-               },
-               success:function(data){
-               //alert('success');
-			   $(\".appointment-day\").empty();
-               $(\".appointment-day\").append(data);
-               $(\".appointment-day\").css(\"display\", \"block\");
-               		} // End of success function of ajax form
-           		}); // End of ajax call
-				});
-			</script>";
+            
 
-            $work.= '</table></div></div></div>';
+            $work.= '</table></div></div>';
 
             echo($work);
         }
