@@ -96,6 +96,7 @@ class TestController extends Controller
                     $user_info = DB::table('appointment_user')
                         ->where('doctor_user', '=', $user->username)
                         ->where('approved', '=', 1)
+//                        ->where('actual_date', '=', Carbon::today())
                         ->orderBy('sl_no', 'asc')
                         ->get();
 
@@ -175,6 +176,7 @@ class TestController extends Controller
         $user_info = DB::table('appointment_user')
             ->where('doctor_user', '=', $user->username)
             ->where('approved', '=', 1)
+            ->where('actual_date', '=', Carbon::today())
             ->orderBy('sl_no', 'asc')
             ->get();
 

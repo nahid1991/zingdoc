@@ -201,41 +201,7 @@
 						<div class="top-nav">
 							<ul>
 								<li><a href="{{ url('/auth/logout') }}">Sign Out</a></li>
-								<!-- <li>|</li> -->
-								<!-- <li> -->
-									<!-- <a href="#" class="box">Sign Up</a> -->
-									<!-- <a class="dropdown-toggle" href="#popup1">Sign Up</a> -->
-									<!-- <a href="{{ url('/test') }}" onClick="return popup(this, 'notes')" data-toggle="dropdown">Sign Up</a>
-									<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign Up</a> -->
-									<!-- <ul class="dropdown-menu">
-									  <li><a href="{{ url('/sign_up_patient') }}">Patient Sign Up</a></li>
-									  <li><a href="{{ url('/sign_up_doctor') }}">Doctor Sign Up</a></li>
-									</ul>
- -->
 
-
-									<!-- <div id="popup1" class="overlay">
-  										<div class="popup">
-		    							
-		      								
-									    
-		    							<a class="close" href="">&times;</a>
-		    							<a href="{{ url('/sign_up_patient') }}" class="something">Patient Sign Up</a>
-		      								<h2>or</h2>
-									  	<a href="{{ url('/sign_up_doctor') }}" class="something">Doctor Sign Up</a>
-		    						
-		  							</div>
-									</div>	 -->
-
-   								    <!-- <div class="dropdown">
-									  <button class="dropbtn">Sign up</button>
-									  <div class="dropdown-content">
-									  	<a href="{{ url('/sign_up_doctor') }}">Doctor Sign Up</a>
-									    <a href="{{ url('/sign_up_patient') }}">Patient Sign Up</a>
-									  < /div-->
-									  
-									<!-- </div> -->
-								<!-- </li> -->
 							</ul>
 						</div>
 					</div>
@@ -283,7 +249,6 @@
 	    <script type="text/javascript" src="/js/autosuggestdemo.js"></script>
 		<script src="/js/jquery.prettyPhoto.js"></script>
 	    <script src="/js/scripts.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	</body>
 

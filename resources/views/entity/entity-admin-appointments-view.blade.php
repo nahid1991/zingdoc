@@ -39,9 +39,16 @@
 													<option value="{{ $ldp->doctor_user }}">{{ $ldp->doctor_name }}</option>
 												 @endforeach											
 												</select>
-													{!!Form::submit('Go')!!}
-													<!-- <a href="doctor-admin-appointments-day-view.php">LOGIN</a> -->
 												{!!Form::close()!!}
+												<script type = "text/javascript">
+
+													$('select').change(function () {
+														var link = $("select option:selected").val();
+														console.log(link);
+														$('form').submit();
+													});
+
+												</script>
 												
 											</div>
 

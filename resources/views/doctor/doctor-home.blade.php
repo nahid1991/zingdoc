@@ -23,7 +23,7 @@
                             @endif
                                 <ul><li>
                                         <a href="{{ url('/homepage') }}">Home</a></li><li>
-                                        <a href="{{ url('/appointments') }}">Appointments</a></li><li>
+                                        <a href="{{ url('/appointments') }}">Today's appointments</a></li><li>
                                         <a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
                                         <a href="{{ url('/doc-profile') }}">Profile</a></li><li>
                                         <a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
@@ -59,7 +59,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="pof-content">
                                     <div class="pof-header3">
-                                        <div class="title">Today's Appointment</div>
+                                        <div class="title">Appointments</div>
                                     </div>
                                     <div class="pof-desc">
                                         <ul class="appoin-list">

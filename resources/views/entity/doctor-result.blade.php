@@ -30,18 +30,31 @@
 										<div class="edpof-left">
 											<div class="doctorsignup-holder edit-holder epof-editholder">
 												<h1>{{ $user->name }}</h1>
-												
+
 												<label for="">Select Doctor</label>
-												 {!!Form::open(['url'=>'/find-doc/', 'id'=>'contact-form'])!!}
-												 <select name="doctor_user">
+												{!!Form::open(['url'=>'/find-doc', 'id'=>'contact-form'])!!}
+												 <select name="doctor_user" onchange="change()">
 												 	<option value="">Select</option>
 												 @foreach($listed_doc_pat as $ldp)
-													<option value="{{ $ldp->doctor_user }}">{{ $ldp->doctor_name }}</option>
-												 @endforeach											
+													<option id="{{ $ldp->doctor_user }}" value="{{ $ldp->doctor_user }}">{{ $ldp->doctor_name }}</option>
+
+
+												 @endforeach
 												</select>
-													{!!Form::submit('Go')!!}
-													<!-- <a href="doctor-admin-appointments-day-view.php">LOGIN</a> -->
 												{!!Form::close()!!}
+												<script type = "text/javascript">
+
+													$('select').change(function () {
+														var link = $("select option:selected").val();
+														console.log(link);
+														$('form').submit();
+													});
+
+												</script>
+
+
+													<!-- <a href="doctor-admin-appointments-day-view.php">LOGIN</a> -->
+
 												
 											</div>
 
@@ -137,5 +150,6 @@
 				</div><!-- End .conteiner -->
 				
 			</div><!-- End full-body-conteiner -->
+
 			
 @stop

@@ -75,25 +75,6 @@ class EntityController extends Controller
     }
 
     public function test(Request $request){
-        // $user = \Auth::user();
-        // $doc_info = DB::table('users')
-        //     ->where('username', '=', $request->input('doctor_user'))
-        //     ->first();
-        // $doc_schedule = DB::table('users')
-        //     ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
-        //     ->where('username', '=', $request->input('doctor_user'))
-        //     ->get();
-        // $listed_doc_pat = DB::table('users')
-        //     ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
-        //     // ->join('appointment_user', 'users.username', '=', 'appointment_user.admin_user')
-        //     ->where('users.username', '=', $user->username)
-        //     ->get();
-        // $patient_list = DB::table('users')
-        //     ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
-        //     ->where('username', '=', $request->input('doctor_user'))
-        //     ->get();
-        // return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list'));
-        // return redirect('/find-doc/'.$doc_info->username);
         return redirect('/doctor/'.$request->input('doctor_user'));
     }
     
@@ -175,7 +156,8 @@ class EntityController extends Controller
                 'appointed_at' => $trick->appointed_at,
                 'patient_name' => $trick->patient_name,
                 'appointment_time' => $time,
-                'appointment_end' => $trick->appointment_end
+                'appointment_end' => $trick->appointment_end,
+                'actual_date' => $trick->actual_date
             ]);
 
         DB::table('appointment_user')

@@ -3,20 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a6b4b73d-55fd-41a4-bc73-c92eb990e8d0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php" afterPath="$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php" afterPath="$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php" afterPath="$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php" afterPath="$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/entity/entity-doctor-schedule.blade.php" afterPath="$PROJECT_DIR$/resources/views/entity/entity-doctor-schedule.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/entity/entity-admin-appointments-view.blade.php" afterPath="$PROJECT_DIR$/resources/views/entity/entity-admin-appointments-view.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/patient/find.blade.php" afterPath="$PROJECT_DIR$/resources/views/patient/find.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
     </list>
     <ignored path="zingdoc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,87 +33,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header_loggedin.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php">
+      <file leaf-file-name="doctor-admin-blog.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-admin-blog.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="285" column="94" selection-start-line="285" selection-start-column="94" selection-end-line="285" selection-end-column="94" />
+            <state relative-caret-position="408">
+              <caret line="39" column="50" selection-start-line="28" selection-start-column="36" selection-end-line="39" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
+      <file leaf-file-name="doctor-admin-account-setting.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-admin-account-setting.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="194" column="12" selection-start-line="194" selection-start-column="12" selection-end-line="194" selection-end-column="12" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-                <marker date="1465100835637" expanded="true" signature="2547:2863" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2601:2611" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2601:2620" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2601:2629" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2630:2708" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2769:2780" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2781:2859" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2913:3114" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2932:3114" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="2989:3114" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="3029:3114" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="3070:3114" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="3114:3149" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="3771:3850" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="3805:3850" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="3822:3850" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="3834:3850" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="3850:3885" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="4513:4592" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="4547:4592" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="4564:4592" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="4576:4592" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="4592:4627" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="5253:5332" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="5287:5332" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="5304:5332" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="5316:5332" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="5332:5367" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6002:6081" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6036:6081" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6053:6081" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6065:6081" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6081:6116" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6739:6818" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6773:6818" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6790:6818" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6802:6818" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="6818:6853" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="7475:7554" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="7509:7554" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="7526:7554" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="7538:7554" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="7554:7589" placeholder="..." />
-                <marker date="1465100835637" expanded="true" signature="8228:8238" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doctor-result.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="88" column="80" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
+            <state relative-caret-position="374">
+              <caret line="31" column="50" selection-start-line="20" selection-start-column="36" selection-end-line="31" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+      <file leaf-file-name="doctor-home.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="34" column="46" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,8 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2016_05_25_091050_create_cover_pic_column.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_05_25_091147_create_entity_profile_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_05_25_090744_create_booked_table.php" />
         <option value="$PROJECT_DIR$/resources/views/entity/entity-admin-edit-profile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/entity/entity-admin-view-profile.blade.php" />
@@ -165,24 +102,26 @@
         <option value="$PROJECT_DIR$/resources/views/doctor/doctor-admin-view-profile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_05_10_041844_create_doctor_patient_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
         <option value="$PROJECT_DIR$/resources/views/patient/patient_main.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/patient/patient-admin-profile.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/patient/patient-admin-comments.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" />
-        <option value="$PROJECT_DIR$/resources/views/patient/find.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/doctor/doctor-scheduler.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
         <option value="$PROJECT_DIR$/resources/views/entity/entity-doctor-schedule.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/resources/views/patient/find.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/entity/entity-admin-appointments-view.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_06_05_092302_create_actual_date_column.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+        <option value="$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php" />
       </list>
     </option>
   </component>
@@ -303,7 +242,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
+              <option name="myItemId" value="doctor" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,7 +270,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;doctor-resu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;testcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;patient_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/patient_main.blade.php&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;doctor-calendar&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;search&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;approve&#9;null&#9;null&#10;doctor-result&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;appointment&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;Test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;doctor_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor_main.blade.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;jquery.paginate.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/jquery.paginate.js&#10;sear&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;find&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/find.blade.php&#10;form_patient&#9;null&#9;null&#10;sche_del&#9;null&#9;null&#10;doctor-schedu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;serve&#9;null&#9;null&#10;CalendarController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;TestController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doctor-scheduler&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;doc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;doctor-sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;patien&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/patient-profile-view.blade.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;entity&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appoin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;create_users&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_04_29_185659_create_users_table.php&#10;schedule&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;schedulecontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;schedulecontrolelr&#9;null&#9;null&#10;Entity&#9;null&#9;null&#10;calen&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;gitignore&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/.gitignore&#10;Calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;ScheduleController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;searchcontroller&#9;null&#9;null&#10;calenda&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;routes&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;tinyh&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/twilio/sdk/Services/Twilio/TinyHttp.php&#10;calendarcontro&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;testcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;appro&#9;null&#9;null&#10;appointment&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;submiss&#9;null&#9;null&#10;EntityController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;scripts.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doctor-resu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;patient_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/patient_main.blade.php&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;doctor-calendar&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;search&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;approve&#9;null&#9;null&#10;doctor-result&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;Test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;doctor_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor_main.blade.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;jquery.paginate.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/jquery.paginate.js&#10;sear&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;find&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/find.blade.php&#10;form_patient&#9;null&#9;null&#10;sche_del&#9;null&#9;null&#10;doctor-schedu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;serve&#9;null&#9;null&#10;CalendarController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;TestController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doctor-scheduler&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;doctor-sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;patien&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/patient-profile-view.blade.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;entity&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appoin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;create_users&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_04_29_185659_create_users_table.php&#10;schedule&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;schedulecontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;schedulecontrolelr&#9;null&#9;null&#10;Entity&#9;null&#9;null&#10;calen&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;gitignore&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/.gitignore&#10;Calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;ScheduleController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -390,35 +329,35 @@
       <workItem from="1464753957162" duration="27821000" />
       <workItem from="1464840508677" duration="31276000" />
       <workItem from="1465099739797" duration="1604000" />
-      <workItem from="1465101839365" duration="6486000" />
+      <workItem from="1465101839365" duration="14021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188132000" />
+    <option name="totallyTimeSpent" value="195667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22986823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22986823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -445,27 +384,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_29_054654_create_doctor_video_album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_29_054055_create_doctor_entity_album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_29_093830_create_for_time_column.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -544,20 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-admin-blog.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-admin-account-setting.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-admin-comments.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -614,14 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EntityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="177" column="60" selection-start-line="177" selection-start-column="60" selection-end-line="177" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_17_101703_create_slot_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -671,27 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="83" column="85" selection-start-line="83" selection-start-column="85" selection-end-line="83" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="216" column="49" selection-start-line="216" selection-start-column="49" selection-end-line="216" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/patient/appointment.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/patient/patient-admin-comments.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -706,34 +581,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="146" column="32" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
-          <folding>
-            <element signature="e#343#2229#0#PHP" expanded="false" />
-            <element signature="e#2235#2429#0#PHP" expanded="false" />
-            <element signature="e#6438#8323#0#PHP" expanded="false" />
-            <element signature="e#8329#9488#0#PHP" expanded="false" />
-            <element signature="e#9498#10287#0#PHP" expanded="false" />
-            <element signature="e#10294#11272#0#PHP" expanded="false" />
-            <element signature="e#11278#11343#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/patient/patient_main.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
           <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/patient/find.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="158" column="93" selection-start-line="158" selection-start-column="93" selection-end-line="158" selection-end-column="93" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,30 +625,6 @@
             <marker date="1464776299546" expanded="true" signature="2762:2920" placeholder="//..." />
             <marker date="1464776299546" expanded="true" signature="2807:2918" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="146" column="27" selection-start-line="146" selection-start-column="17" selection-end-line="146" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="285" column="94" selection-start-line="285" selection-start-column="94" selection-end-line="285" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,10 +732,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/patient/find.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="108" column="58" selection-start-line="108" selection-start-column="58" selection-end-line="108" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/entity/entity-admin-appointments-view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="88" column="80" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
+        <state relative-caret-position="417">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_05_092302_create_actual_date_column.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="99" column="49" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
+          <folding>
+            <element signature="e#343#2229#0#PHP" expanded="false" />
+            <element signature="e#2235#2429#0#PHP" expanded="false" />
+            <element signature="e#8457#9616#0#PHP" expanded="false" />
+            <element signature="e#9626#10415#0#PHP" expanded="false" />
+            <element signature="e#10422#11400#0#PHP" expanded="false" />
+            <element signature="e#11406#11471#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="240" column="50" selection-start-line="240" selection-start-column="50" selection-end-line="240" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EntityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-546">
+          <caret line="158" column="61" selection-start-line="158" selection-start-column="61" selection-end-line="158" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/patient/appointment.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="124" column="29" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-admin-blog.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="50" selection-start-line="28" selection-start-column="36" selection-end-line="39" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-admin-account-setting.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="50" selection-start-line="20" selection-start-column="36" selection-end-line="31" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>

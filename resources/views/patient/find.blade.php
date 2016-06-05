@@ -101,7 +101,7 @@
 										<script type="text/javascript">
 
 
-											$('#doctor_{{ $doctor->id }}').click(function() {
+											$('#doctor_{{ $doctor->id }}').on('click', function() {
 
 												$.ajax({
 													url: '/slot/{{ $doctor->username }}/{{\Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $time)}}',

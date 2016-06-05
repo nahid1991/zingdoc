@@ -219,6 +219,8 @@ class ScheduleController extends Controller
         $admin = DB::table('users')
             ->where('username', '=', $request->input('entity_user'))
             ->first();
+        $for_date = Carbon::createFromFormat('Y-m-d h:i:s', $request->input('date'));
+        $actual_date = Carbon::create($for_date->year, $for_date->month, $for_date->day, '00', '00');
 
         DB::table('appointment_user')->insert([
                 'patient_user' => $request->input('user_username'),
@@ -232,10 +234,11 @@ class ScheduleController extends Controller
                 'patient_name' => $request->input('name'),
                 'appointment_time' => $request->input('date'),
                 'sl_no' => $request->input('serial'),
-                'appointment_end' => $request->input('end_date')
+                'appointment_end' => $request->input('end_date'),
+                'actual_date' => $actual_date
             ]);
 
-        return redirect('/search');
+        return redirect('/search/'.Carbon::today());
 //        echo($request->input('serial'));
     }
 }
