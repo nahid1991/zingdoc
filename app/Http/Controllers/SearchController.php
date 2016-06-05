@@ -37,36 +37,43 @@ class SearchController extends Controller
             $first_slots = DB::table('time_slot')
                 ->where('d_user', '=', $user)
                 ->where('created_for', '=', $first_day)
+                ->where('booked', '=', 0)
                 ->get();
 
             $second_slots = DB::table('time_slot')
                 ->where('d_user', '=', $user)
                 ->where('created_for', '=', $second_day)
+                ->where('booked', '=', 0)
                 ->get();
 
             $third_slots = DB::table('time_slot')
                 ->where('d_user', '=', $user)
                 ->where('created_for', '=', $third_day)
+                ->where('booked', '=', 0)
                 ->get();
 
             $fourth_slots = DB::table('time_slot')
                 ->where('d_user', '=', $user)
                 ->where('created_for', '=', $fourth_day)
+                ->where('booked', '=', 0)
                 ->get();
 
             $fifth_slots = DB::table('time_slot')
                 ->where('d_user', '=', $user)
                 ->where('created_for', '=', $fifth_day)
+                ->where('booked', '=', 0)
                 ->get();
 
             $sixth_slots = DB::table('time_slot')
                 ->where('d_user', '=', $user)
                 ->where('created_for', '=', $sixth_day)
+                ->where('booked', '=', 0)
                 ->get();
 
             $seventh_slots = DB::table('time_slot')
                 ->where('d_user', '=', $user)
                 ->where('created_for', '=', $seventh_day)
+                ->where('booked', '=', 0)
                 ->get();
 
 
