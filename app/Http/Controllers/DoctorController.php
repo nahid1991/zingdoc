@@ -107,25 +107,66 @@ class DoctorController extends Controller
     public function prescribe(Request $request){
         $user = \Auth::user();
         // echo($request->input('appoint'));
+        $p_holder = $request->input('prescription');
+        $c_holder = $request->input('comment');
 
 
-        DB::table('visit_record')
-            ->insert([
-                'd_username' => $user->username,
-                'p_username' => $request->input('p_user'),
-                'patient_name' => $request->input('p_name'),
-                'issue' => $request->input('issue'),
-                'comments' => $request->input('comment'),
-                'prescription' => $request->input('prescription'),
-                'visit_time' => $request->input('p_appoint')
-            ]);
-       
-        $temp = DB::table('appointment_user')
-            ->where('patient_user', '=', $request->input('p_user'))
-            ->where('doctor_user', '=', $request->input('d_user'))
-            ->where('approved', '=', '1')
-            ->where('appointment_time', '=', $request->input('appoint'))
-            ->get();
+        if(strlen($p_holder)>=10 || strlen($c_holder)>=10){
+            if(strlen($p_holder)>=10 && strlen($c_holder)>=10){
+                DB::table('visit_record')
+                    ->insert([
+                        'd_username' => $user->username,
+                        'p_username' => $request->input('p_user'),
+                        'patient_name' => $request->input('p_name'),
+                        'issue' => $request->input('issue'),
+                        'comments' => $c_holder,
+                        'hidden_comment' => substr($c_holder, 0, 8),
+                        'prescription' => $p_holder,
+                        'hidden_prescription' => substr($p_holder, 0, 8),
+                        'visit_time' => $request->input('p_appoint')
+                    ]);
+            }
+
+            if(strlen($p_holder)>=10 && strlen($c_holder)<10){
+                DB::table('visit_record')
+                    ->insert([
+                        'd_username' => $user->username,
+                        'p_username' => $request->input('p_user'),
+                        'patient_name' => $request->input('p_name'),
+                        'issue' => $request->input('issue'),
+                        'comments' => $c_holder,
+                        'prescription' => $p_holder,
+                        'hidden_prescription' => substr($p_holder, 0, 8),
+                        'visit_time' => $request->input('p_appoint')
+                    ]);
+            }
+            if(strlen($p_holder)<10 && strlen($c_holder)>=10){
+                DB::table('visit_record')
+                    ->insert([
+                        'd_username' => $user->username,
+                        'p_username' => $request->input('p_user'),
+                        'patient_name' => $request->input('p_name'),
+                        'issue' => $request->input('issue'),
+                        'comments' => $c_holder,
+                        'hidden_comment' => substr($c_holder, 0, 8),
+                        'prescription' => $p_holder,
+                        'visit_time' => $request->input('p_appoint')
+                    ]);
+            }
+        }
+
+        else{
+            DB::table('visit_record')
+                ->insert([
+                    'd_username' => $user->username,
+                    'p_username' => $request->input('p_user'),
+                    'patient_name' => $request->input('p_name'),
+                    'issue' => $request->input('issue'),
+                    'comments' => $request->input('comment'),
+                    'prescription' => $request->input('prescription'),
+                    'visit_time' => $request->input('p_appoint')
+                ]);
+        }
 
         
 

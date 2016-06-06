@@ -187,5 +187,9 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/doctor-week', 'DoctorController@week_view');
 
 	Route::get('/doctor-week-view/{user}/{date}', 'DoctorController@schedule_week');
+
+	Route::get('/patient-pres/{id}', 'DoctorControlelr@full_prescription');
+
+	Route::get('/patient-comment/{id}', 'DoctorControlelr@full_comment');
 });
 

@@ -20,7 +20,6 @@
                             @endif
                             <ul><li>
                                     <a href="{{ url('/homepage') }}">Home</a></li><li>
-                                    <a href="{{ url('/appointments') }}">Appointments</a></li><li>
                                     <a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
                                     <a href="{{ url('/doc-profile') }}">Profile</a></li><li>
                                     <a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
@@ -66,9 +65,63 @@
                                                 <td><h5>{{\Carbon\Carbon::createFromFormat
                                                 ('Y-m-d h:i:s', $pt->visit_time)->format('jS F')}}</h5></td>
                                                 <td><h5>{{$pt->issue}}</h5></td>
-                                                <td><h5>{{$pt->prescription}}</h5></td>
-                                                <td><h5>{{$pt->comments}}</h5></td>
+                                                @if($pt->hidden_prescription)
+                                                    <td><h5 id="{{$pt->id}}_pr">{{$pt->hidden_prescription}}...
+                                                            <a id="{{$pt->id}}_pr" href="#{{$pt->id}}"><span style="color: firebrick">
+                                                                    more</span></a></h5>
+                                                        <h5 id="{{$pt->id}}_pres" style="display:none">
+                                                            {{$pt->prescription}} <a id="{{$pt->id}}_pr_hide" href="#{{$pt->id}}">
+                                                            <span style="color: firebrick">
+                                                                    less</span></a>
+                                                        </h5></h5>
+                                                    </td>
+                                                @endif
+                                                @if(!$pt->hidden_prescription)
+                                                    <td><h5>{{$pt->prescription}}</h5></td>
+                                                @endif
+                                                @if($pt->hidden_comment)
+                                                    <td><h5 id="{{$pt->id}}_cm">{{$pt->hidden_comment}}...
+                                                            <a id="{{$pt->id}}_cm" href="#{{$pt->id}}"><span style="color: firebrick">
+                                                                    more</span></a></h5>
+                                                        <h5 id="{{$pt->id}}_comment" style="display:none">
+                                                            {{$pt->comments}} <a id="{{$pt->id}}_cm_hide" href="#{{$pt->id}}">
+                                                            <span style="color: firebrick">
+                                                                    less</span></a>
+                                                        </h5></td>
+                                                @endif
+                                                @if(!$pt->hidden_comment)
+                                                    <td><h5>{{$pt->comments}}</h5></td>
+                                                @endif
                                             </tr>
+                                                <script type="text/javascript">
+
+
+                                                    $('#{{$pt->id}}_pr').on('click', function() {
+                                                        {{--$('#{{$pt->id}}_pres').css("display", "block");--}}
+                                                        $('#{{$pt->id}}_pres').slideToggle();
+                                                        $('#{{$pt->id}}_pr').css("display", "none");
+                                                    });
+
+                                                    $('#{{$pt->id}}_cm').on('click', function() {
+                                                        {{--$('#{{$pt->id}}_comment').css("display", "block");--}}
+                                                        $('#{{$pt->id}}_comment').slideToggle();
+                                                        $('#{{$pt->id}}_cm').css("display", "none");
+                                                    });
+
+                                                    $('#{{$pt->id}}_pr_hide').on('click', function() {
+                                                        $('#{{$pt->id}}_pres').css("display", "none");
+                                                        $('#{{$pt->id}}_pr').css("display", "block");
+                                                    });
+
+                                                    $('#{{$pt->id}}_cm_hide').on('click', function() {
+                                                        $('#{{$pt->id}}_comment').css("display", "none");
+                                                        $('#{{$pt->id}}_cm').css("display", "block");
+                                                    });
+
+
+
+
+                                                </script>
                                         @endforeach
                                         </table>
                                     </div><!-- End .pof-desc -->
