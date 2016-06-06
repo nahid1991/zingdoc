@@ -42,7 +42,9 @@
                     <div class="col-xs-12 col-sm-8 col-md-9">
                         <div class="top-pof-head">
                             <div class="row">
-
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="title mt-7px">View Appointments</div>
+                                </div>
                                 <div class="col-xs-12 col-sm-6 col-md-6">
 
                                     <ul class="view-type-link">

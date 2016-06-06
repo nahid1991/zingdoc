@@ -142,17 +142,235 @@ class DoctorController extends Controller
     }
 
 
-    public function patient_profile($username){
+//    public function patient_profile($username){
+//        $user = \Auth::user();
+//        // echo($username);
+//        $patient = DB::table('visit_record')
+//          ->where('d_username', '=', $user->username)
+//          ->where('p_username', '=', $username)
+//          ->get();
+//        return view('doctor.patient-profile-view', compact('patient'));
+//    }
+
+    public function week_view(){
         $user = \Auth::user();
-        // echo($username);
-        $patient = DB::table('visit_record')
-          ->where('d_username', '=', $user->username)
-          ->where('p_username', '=', $username)
-          ->get();
-        return view('doctor.patient-profile-view', compact('patient'));
+        return view('doctor.doctor-week-view', compact('user'));
     }
 
-    public function week(){
-        return view('doctor.doctor-week-view');
+    public function schedule_week($user, $day){
+        $next = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDays(7);
+        $prev = Carbon::createFromFormat('Y-m-d h:i:s', $day)->subDays(7);
+
+        $first_day = Carbon::createFromFormat('Y-m-d h:i:s', $day);
+        $second_day = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDay();
+        $third_day = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDays(2);
+        $fourth_day = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDays(3);
+        $fifth_day = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDays(4);
+        $sixth_day = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDays(5);
+        $seventh_day = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDays(6);
+
+        $first_slots = DB::table('appointment_user')
+            ->where('doctor_user', '=', $user)
+            ->where('actual_date', '=', $first_day)
+            ->where('approved', '=', 1)
+            ->get();
+
+        $second_slots = DB::table('appointment_user')
+            ->where('doctor_user', '=', $user)
+            ->where('actual_date', '=', $second_day)
+            ->where('approved', '=', 1)
+            ->get();
+
+        $third_slots = DB::table('appointment_user')
+            ->where('doctor_user', '=', $user)
+            ->where('actual_date', '=', $third_day)
+            ->where('approved', '=', 1)
+            ->get();
+
+        $fourth_slots = DB::table('appointment_user')
+            ->where('doctor_user', '=', $user)
+            ->where('actual_date', '=', $fourth_day)
+            ->where('approved', '=', 1)
+            ->get();
+
+        $fifth_slots = DB::table('appointment_user')
+            ->where('doctor_user', '=', $user)
+            ->where('actual_date', '=', $fifth_day)
+            ->where('approved', '=', 1)
+            ->get();
+
+        $sixth_slots = DB::table('appointment_user')
+            ->where('doctor_user', '=', $user)
+            ->where('actual_date', '=', $sixth_day)
+            ->where('approved', '=', 1)
+            ->get();
+
+        $seventh_slots = DB::table('appointment_user')
+            ->where('doctor_user', '=', $user)
+            ->where('actual_date', '=', $seventh_day)
+            ->where('approved', '=', 1)
+            ->get();
+
+        /*
+         * first day
+         */
+        $work = '<p><a class="prev" href="/doctor-week-view/'.$user.'/'.$prev.'" style="float:left;position:absolute">
+					<img src="/images/back.png" width="20px" height="20px">Previous week</a>
+						<a id="next" href="/doctor-week-view/'.$user.'/'.$next.'" style="float:right">Next week
+						<img src="/images/forward.png" width="20px" height="20px"></a></p><br>';
+        $work .= '<div class="slide">';
+        $work .='<div class="dradmin-appoinment">';
+        $work .='<table>
+				<tr>
+					<th>';
+        $work .='<div class="header-tile-date-name">'.$first_day->format('l').'</div>
+				<div class="header-tile-date-value">'.$first_day->format('jS F').'</div>';
+        foreach($first_slots as $fr_s){
+            $work .='<tr><td><a href="#" rel="tooltip" data-placement="right" 
+            title='.$fr_s->patient_name.' '.$fr_s->issues.'>
+            '.$fr_s->patient_name.' '.$fr_s->issues.'<br/><span>'.Carbon::createFromFormat('Y-m-d h:i:s', $fr_s->appointment_time)->format('h:i A')
+                .'</span></a></td></tr>';
+        }
+        $work .='    </th>
+				</tr>';
+        $work .='</table>';
+        $work .='</div>';
+        $work .='</div>';
+
+        /*
+         * second day
+         */
+        $work .= '<div class="slide">';
+        $work .='<div class="dradmin-appoinment">';
+        $work .='<table>
+				<tr>
+					<th>';
+        $work .='<div class="header-tile-date-name">'.$second_day->format('l').'</div>
+				<div class="header-tile-date-value">'.$second_day->format('jS F').'</div>';
+        foreach($second_slots as $fr_s){
+            $work .='<tr><td><a href="#" rel="tooltip" data-placement="right" 
+            title='.$fr_s->patient_name.' '.$fr_s->issues.'>
+            '.$fr_s->patient_name.'<br/><span>'.Carbon::createFromFormat('Y-m-d h:i:s', $fr_s->appointment_time)->format('h:i A')
+                .'</span></a></td></tr>';
+        }
+        $work .='    </th>
+				</tr>';
+        $work .='</table>';
+        $work .='</div>';
+        $work .='</div>';
+
+        /*
+         * third day
+         */
+        $work .= '<div class="slide">';
+        $work .='<div class="dradmin-appoinment">';
+        $work .='<table>
+				<tr>
+					<th>';
+        $work .='<div class="header-tile-date-name">'.$third_day->format('l').'</div>
+				<div class="header-tile-date-value">'.$third_day->format('jS F').'</div>';
+        foreach($third_slots as $fr_s){
+            $work .='<tr><td><a href="#" rel="tooltip" data-placement="right" 
+            title='.$fr_s->patient_name.' '.$fr_s->issues.'>
+            '.$fr_s->patient_name.'<br/><span>'.Carbon::createFromFormat('Y-m-d h:i:s', $fr_s->appointment_time)->format('h:i A')
+                .'</span></a></td></tr>';
+        }
+        $work .='    </th>
+				</tr>';
+        $work .='</table>';
+        $work .='</div>';
+        $work .='</div>';
+
+        /*
+         * fourth day
+         */
+        $work .= '<div class="slide">';
+        $work .='<div class="dradmin-appoinment">';
+        $work .='<table>
+				<tr>
+					<th>';
+        $work .='<div class="header-tile-date-name">'.$fourth_day->format('l').'</div>
+				<div class="header-tile-date-value">'.$fourth_day->format('jS F').'</div>';
+        foreach($fourth_slots as $fr_s){
+            $work .='<tr><td><a href="#" rel="tooltip" data-placement="right" 
+            title='.$fr_s->patient_name.' '.$fr_s->issues.'>
+            '.$fr_s->patient_name.'<br/><span>'.Carbon::createFromFormat('Y-m-d h:i:s', $fr_s->appointment_time)->format('h:i A')
+                .'</span></a></td></tr>';
+        }
+        $work .='    </th>
+				</tr>';
+        $work .='</table>';
+        $work .='</div>';
+        $work .='</div>';
+
+        /*
+         * fifth day
+         */
+        $work .= '<div class="slide">';
+        $work .='<div class="dradmin-appoinment">';
+        $work .='<table>
+				<tr>
+					<th>';
+        $work .='<div class="header-tile-date-name">'.$fifth_day->format('l').'</div>
+				<div class="header-tile-date-value">'.$fifth_day->format('jS F').'</div>';
+        foreach($fifth_slots as $fr_s){
+            $work .='<tr><td><a href="#" rel="tooltip" data-placement="right" 
+            title='.$fr_s->patient_name.' '.$fr_s->issues.'>
+            '.$fr_s->patient_name.'<br/><span>'.Carbon::createFromFormat('Y-m-d h:i:s', $fr_s->appointment_time)->format('h:i A')
+                .'</span></a></td></tr>';
+        }
+        $work .='    </th>
+				</tr>';
+        $work .='</table>';
+        $work .='</div>';
+        $work .='</div>';
+
+
+
+        /*
+         * sixth day
+         */
+        $work .= '<div class="slide">';
+        $work .='<div class="dradmin-appoinment">';
+        $work .='<table>
+				<tr>
+					<th>';
+        $work .='<div class="header-tile-date-name">'.$sixth_day->format('l').'</div>
+				<div class="header-tile-date-value">'.$sixth_day->format('jS F').'</div>';
+        foreach($sixth_slots as $fr_s){
+            $work .='<tr><td><a href="#" rel="tooltip" data-placement="right" 
+            title='.$fr_s->patient_name.' '.$fr_s->issues.'>
+            '.$fr_s->patient_name.'<br/><span>'.Carbon::createFromFormat('Y-m-d h:i:s', $fr_s->appointment_time)->format('h:i A')
+                .'</span></a></td></tr>';
+        }
+        $work .='    </th>
+				</tr>';
+        $work .='</table>';
+        $work .='</div>';
+        $work .='</div>';
+
+        /*
+         * seventh day
+         */
+        $work .= '<div class="slide">';
+        $work .='<div class="dradmin-appoinment">';
+        $work .='<table>
+				<tr>
+					<th>';
+        $work .='<div class="header-tile-date-name">'.$seventh_day->format('l').'</div>
+				<div class="header-tile-date-value">'.$seventh_day->format('jS F').'</div>';
+        foreach($seventh_slots as $fr_s){
+            $work .='<tr><td><a href="#" rel="tooltip" data-placement="right" 
+            title='.$fr_s->patient_name.' '.$fr_s->issues.'>
+            '.$fr_s->patient_name.'<br/><span>'.Carbon::createFromFormat('Y-m-d h:i:s', $fr_s->appointment_time)->format('h:i A')
+                .'</span></a></td></tr>';
+        }
+        $work .='    </th>
+				</tr>';
+        $work .='</table>';
+        $work .='</div>';
+        $work .='</div>';
+
+        echo($work);
     }
 }

@@ -4,18 +4,32 @@
         <div class="full-body-conteiner">
             <div class="container">
                 <div class="row">
-                    <ul><li>
-                            <a href="{{ url('/homepage') }}">Home</a></li><li>
-                            <a href="{{ url('/appointments') }}">Today's appointments</a></li><li>
-                            <a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
-                            <a href="{{ url('/doc-profile') }}">Profile</a></li><li>
-                            <a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
-                            <a href="{{ url('/doc-blog') }}">Blog</a></li><li>
-                            <a href="{{ url('/doc-comments') }}">Comments</a></li><li>
-                            <a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
-                            <a href="{{ url('/doctor-calendar') }}">Schedule Calendar</a></li><li>
-                            <a href="{{ url('/auth/logout') }}">Logout</a>
-                        </li></ul>
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <div class="pof-sidenav">
+                            @if($user->propic)
+                                <div class="pof-img">
+                                    <img src="{{ $user->propic }}">
+                                </div>
+                            @endif
+                            @if(!$user->propic)
+                                <div class="pof-img">
+                                    <img src="images/pro-holder.jpg">
+                                </div>
+                            @endif
+                            <ul><li>
+                                    <a href="{{ url('/homepage') }}">Home</a></li><li>
+                                    <a href="{{ url('/appointments') }}">Today's appointments</a></li><li>
+                                    <a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
+                                    <a href="{{ url('/doc-profile') }}">Profile</a></li><li>
+                                    <a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>
+                                    <a href="{{ url('/doc-blog') }}">Blog</a></li><li>
+                                    <a href="{{ url('/doc-comments') }}">Comments</a></li><li>
+                                    <a href="{{ url('/doc-account-settings') }}">Account Settings</a></li><li>
+                                    <a href="{{ url('/doctor-calendar') }}">Schedule Calendar</a></li><li>
+                                    <a href="{{ url('/auth/logout') }}">Logout</a>
+                                </li></ul>
+                        </div>
+                    </div>
 
                     <div class="col-xs-12 col-sm-8 col-md-9">
                         <div class="top-pof-head">
@@ -50,202 +64,89 @@
                             <div class="pof-desc">
                                 <div id="appoinment-admin">
                                     <div id="appoinment-admin-slides">
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Mon</div>
-                                                            <div class="header-tile-date-value">10 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.K. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
 
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Tue</div>
-                                                            <div class="header-tile-date-value">11 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
 
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Wed</div>
-                                                            <div class="header-tile-date-value">12 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.K. Mic<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
 
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Thu</div>
-                                                            <div class="header-tile-date-value">13 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
-
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Fri</div>
-                                                            <div class="header-tile-date-value">14 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
-
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Sat</div>
-                                                            <div class="header-tile-date-value">15 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
-
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Sun</div>
-                                                            <div class="header-tile-date-value">16 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
-
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Mon</div>
-                                                            <div class="header-tile-date-value">17 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="right" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
-
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Tue</div>
-                                                            <div class="header-tile-date-value">18 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
-
-                                        <div class="slide">
-                                            <div class="dradmin-appoinment">
-                                                <table>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="header-tile-date-name">Wed</div>
-                                                            <div class="header-tile-date-value">19 FEB</div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                    <tr><td><a href="#" rel="tooltip" data-placement="left" title="<h5>A.K. Mill</h5><p>Blood Pressure Issues</p>">A.J. Mill<br/><span>10:30 am</span></a></td></tr>
-                                                </table>
-                                            </div>
-                                        </div><!-- End Slide Item -->
-
-                                    </div>
                                     <div class="clearfix"></div>
                                 </div><!-- End #doctor-appoinment Appoinment Section -->
 
                                 <script type="text/javascript">
-                                    $(document).ready(function(){
-                                        $('#appoinment-admin-slides').bxSlider({
-                                            mode: 'horizontal',
-                                            slideWidth: 100,
-                                            infiniteLoop: false,
-                                            pager: false,
-                                            minSlides: 5,
-                                            maxSlides: 7,
-                                            moveSlides: 7,
-                                            slideMargin: 0
-                                        });
+
+                                    $.ajax({
+                                        url: '/doctor-week-view/{{$user->username}}/{{\Carbon\Carbon::today()}}',
+                                        data: {},
+                                        type:'GET',
+                                        dataType: 'html',
+                                        error: function(){
+                                            alert("Data not found");
+                                        },
+                                        success:function(data){
+//                                                    $(".s").empty();
+
+                                            $('#appoinment-admin-slides').html(data);
+
+                                        }});
+
+//                                    $("a").on('click', '#next',function(e){
+//                                        e.preventDefault();
+//                                        var link = $(this).attr('href');
+//                                        console.log(link);
+//                                        $.ajax({
+//                                            url: $(this).attr('href'),
+//                                            data: {},
+//                                            type:'GET',
+//                                            dataType: 'html',
+//                                            error: function(){
+//                                                alert("Data not found");
+//                                            },
+//                                            success:function(data){
+//                                                $("#appoinment-admin-slides").html(data);
+//
+//                                            } // End of success function of ajax form
+//                                        }); // End of ajax call
+//                                        return false;
+//                                    });
+
+                                    $("#appoinment-admin-slides").on('click', '#next', function(e){
+                                        e.preventDefault();
+                                        $.ajax({
+                                            url: $(this).attr('href'),
+                                            data: {},
+                                            type:'GET',
+                                            dataType: 'html',
+                                            error: function(){
+                                                alert("Data not found");
+                                            },
+                                            success:function(data){
+//                                                    $(".s").empty();
+//                                                $("#appoinment-admin-slides").slideToggle();
+                                                $("#appoinment-admin-slides").html(data);
+//                                                $("#appoinment-admin-slides").css("display", "block");
+//                                                $("#appoinment-admin-slides").slideToggle();
+
+                                            } // End of success function of ajax form
+                                        }); // End of ajax call
+                                        return false;
+                                    });
+                                    $("#appoinment-admin-slides").on('click', '#prev', function(e){
+                                        e.preventDefault();
+                                        $.ajax({
+                                            url: $(this).attr('href'),
+                                            data: {},
+                                            type:'GET',
+                                            dataType: 'html',
+                                            error: function(){
+                                                alert("Data not found");
+                                            },
+                                            success:function(data){
+//                                                    $(".s").empty();
+//                                                $("#appoinment-admin-slides").slideToggle();
+                                                $("#appoinment-admin-slides").html(data);
+//                                                $("#appoinment-admin-slides").css("display", "block");
+//                                                $("#appoinment-admin-slides").slideToggle();
+                                            } // End of success function of ajax form
+                                        }); // End of ajax call
+                                        return false;
                                     });
                                 </script>
                             </div>

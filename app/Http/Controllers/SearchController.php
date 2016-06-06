@@ -98,7 +98,7 @@ class SearchController extends Controller
             foreach($first_slots as $fr_slots){
                 $work.= '<tr><td><a href="/appointment-form/'.$fr_slots->d_user.'/'.$fr_slots->slot_date.'/'.$fr_slots->slot.
                     '/'.$fr_slots->serial.'/'.$fr_slots->slot_end.'">'.$fr_slots->slot.
-                    '<p>Serial:'.$fr_slots->serial.'</a></td></tr>';
+                    '<p>Serial:'.$fr_slots->serial.'</p></a></td></tr>';
             };
             $work.= '</table></div></div>';
 

@@ -96,7 +96,7 @@ class TestController extends Controller
                     $user_info = DB::table('appointment_user')
                         ->where('doctor_user', '=', $user->username)
                         ->where('approved', '=', 1)
-//                        ->where('actual_date', '=', Carbon::today())
+                        ->where('actual_date', '=', Carbon::today())
                         ->orderBy('sl_no', 'asc')
                         ->get();
 
@@ -139,24 +139,13 @@ class TestController extends Controller
                         ->first();
                     $time = Carbon::today();
 
-                    // echo($user_info->username[0]);
                     return view('patient.patient_main', compact('user', 'user_info', 'time'));
                 }
                 if($user->user_type == 3){
                     $doctors = DB::table('users')
                         ->where('user_type', '=', 1)
                         ->get();
-                    // $admin_doctor = DB::table('users')
-                    //     ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
-                    //     ->where('entity_user', '=', $user->username)
-                    //     ->get();
-                    
 
-                    // foreach($user_info as $u_i){
-                    //     echo($u_i->doctor_user);
-                    // }
-
-                    // return view('doctor.doctor_main', compact('user', 'user_info'));
                     return view('entity.entity-admin-dashboard', compact('user', 'doctors'));
                 }
             }

@@ -154,7 +154,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	
 	Route::post('/prescribe', 'DoctorController@prescribe');
 	
-	Route::get('/{username}', 'DoctorController@patient_profile');
+//	Route::get('/{username}', 'DoctorController@patient_profile');
 	
 	Route::post('/add-doctor', 'EntityController@add_doctor');
 	
@@ -182,6 +182,8 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 
 	Route::get('/slot/{user}/{day}', 'SearchController@slot_finder');
 
-	Route::get('/doctor-week', 'DoctorController@week');
+	Route::get('/doctor-week', 'DoctorController@week_view');
+
+	Route::get('/doctor-week-view/{user}/{date}', 'DoctorController@schedule_week');
 });
 
