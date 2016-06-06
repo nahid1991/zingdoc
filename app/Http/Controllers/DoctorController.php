@@ -214,7 +214,7 @@ class DoctorController extends Controller
         /*
          * first day
          */
-        $work = '<p><a class="prev" href="/doctor-week-view/'.$user.'/'.$prev.'" style="float:left;position:absolute">
+        $work = '<p><a id="prev" href="/doctor-week-view/'.$user.'/'.$prev.'" style="float:left;position:absolute">
 					<img src="/images/back.png" width="20px" height="20px">Previous week</a>
 						<a id="next" href="/doctor-week-view/'.$user.'/'.$next.'" style="float:right">Next week
 						<img src="/images/forward.png" width="20px" height="20px"></a></p><br>';

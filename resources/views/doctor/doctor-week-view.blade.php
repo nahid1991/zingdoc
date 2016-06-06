@@ -144,6 +144,7 @@
                                                 $("#appoinment-admin-slides").html(data);
 //                                                $("#appoinment-admin-slides").css("display", "block");
 //                                                $("#appoinment-admin-slides").slideToggle();
+
                                             } // End of success function of ajax form
                                         }); // End of ajax call
                                         return false;

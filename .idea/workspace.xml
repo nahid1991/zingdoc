@@ -2,148 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6b4b73d-55fd-41a4-bc73-c92eb990e8d0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/doctor/patient-profile-view.blade.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DoctorController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DoctorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php" afterPath="$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php" afterPath="$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/auth/login.stub" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/auth/login.stub" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/auth/passwords/email.stub" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/auth/passwords/email.stub" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/auth/passwords/reset.stub" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/auth/passwords/reset.stub" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/auth/register.stub" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/auth/register.stub" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Events/Login.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Events/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Events/Logout.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Events/Logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/GuardHelpers.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/GuardHelpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBrokerManager.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Passwords/PasswordBrokerManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/composer.json" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/FileStore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/RedisTaggedCache.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Cache/RedisTaggedCache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Parser.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Console/Parser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Container/Container.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Collection.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Collection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphTo.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/MorphTo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Relation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/Grammar.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/Grammar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/SqlServerGrammar.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/SqlServerGrammar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Grammars/Grammar.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Grammars/Grammar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemAdapter.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemAdapter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesResources.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesResources.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/ConfigureLogging.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/ConfigureLogging.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/ServeCommand.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/ServeCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Inspiring.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Inspiring.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Providers/FoundationServiceProvider.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Providers/FoundationServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Mail/TransportManager.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Mail/TransportManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Pagination/AbstractPaginator.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Pagination/AbstractPaginator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/DatabaseQueue.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/DatabaseQueue.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/SqsQueue.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/SqsQueue.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Worker.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Queue/Worker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/ResourceRegistrar.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/ResourceRegistrar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Route.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/ValidatesWhenResolvedTrait.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/ValidatesWhenResolvedTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/Validator.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/Validator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/AbstractFtpAdapter.php" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/AbstractFtpAdapter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Ftp.php" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Ftp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Local.php" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Util.php" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Util.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/predis/predis/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/FAQ.md" afterPath="$PROJECT_DIR$/vendor/predis/predis/FAQ.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/LICENSE" afterPath="$PROJECT_DIR$/vendor/predis/predis/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/README.md" afterPath="$PROJECT_DIR$/vendor/predis/predis/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/VERSION" afterPath="$PROJECT_DIR$/vendor/predis/predis/VERSION" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/composer.json" afterPath="$PROJECT_DIR$/vendor/predis/predis/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/debuggable_connection.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/examples/debuggable_connection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/shared.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/examples/shared.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/examples/transaction_using_cas.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/examples/transaction_using_cas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/package.ini" afterPath="$PROJECT_DIR$/vendor/predis/predis/package.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Client.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/ClientContextInterface.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/ClientContextInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/ClientInterface.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/ClientInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Cluster/ClusterStrategy.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Cluster/ClusterStrategy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Collection/Iterator/HashKey.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Collection/Iterator/HashKey.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/HashExists.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/HashExists.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/HashSet.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/HashSet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/HashSetPreserve.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/HashSetPreserve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/HyperLogLogAdd.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/HyperLogLogAdd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyExists.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyExists.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyExpire.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyExpire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyExpireAt.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyExpireAt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyMove.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyMove.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyPersist.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyPersist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyRenamePreserve.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/KeyRenamePreserve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/Processor/KeyPrefixProcessor.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/Processor/KeyPrefixProcessor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/SetIsMember.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/SetIsMember.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/SetMove.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/SetMove.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/StringSetMultiplePreserve.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/StringSetMultiplePreserve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/StringSetPreserve.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/StringSetPreserve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Command/ZSetReverseRangeByLex.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Command/ZSetReverseRangeByLex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Configuration/ConnectionFactoryOption.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Configuration/ConnectionFactoryOption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Configuration/Options.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Configuration/Options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Configuration/ReplicationOption.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Configuration/ReplicationOption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/AbstractConnection.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/AbstractConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/Aggregate/MasterSlaveReplication.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/Aggregate/MasterSlaveReplication.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/Aggregate/RedisCluster.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/Aggregate/RedisCluster.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/Factory.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/Factory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/Parameters.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/Parameters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/PhpiredisSocketConnection.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/PhpiredisSocketConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/PhpiredisStreamConnection.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/PhpiredisStreamConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/StreamConnection.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/StreamConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/WebdisConnection.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Connection/WebdisConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Monitor/Consumer.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Monitor/Consumer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Profile/Factory.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Profile/Factory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Profile/RedisUnstable.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Profile/RedisUnstable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Protocol/Text/Handler/IntegerResponse.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Protocol/Text/Handler/IntegerResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Protocol/Text/ProtocolProcessor.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Protocol/Text/ProtocolProcessor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Protocol/Text/RequestSerializer.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Protocol/Text/RequestSerializer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/PubSub/AbstractConsumer.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/PubSub/AbstractConsumer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/PubSub/DispatcherLoop.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/PubSub/DispatcherLoop.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Replication/ReplicationStrategy.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Replication/ReplicationStrategy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/predis/predis/src/Transaction/MultiExecState.php" afterPath="$PROJECT_DIR$/vendor/predis/predis/src/Transaction/MultiExecState.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Tests/Debug/TraceableEventDispatcherTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Dumper.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Dumper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Inline.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Inline.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Parser.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Parser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/DumperTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/DumperTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/InlineTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/InlineTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/ParserTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Tests/ParserTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Yaml.php" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Yaml.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/yaml/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/composer.json" />
     </list>
     <ignored path="zingdoc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="87" column="98" selection-start-line="87" selection-start-column="98" selection-end-line="87" selection-end-column="98" />
+              <caret line="87" column="73" selection-start-line="87" selection-start-column="73" selection-end-line="87" selection-end-column="73" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
                 <marker date="1465368270687" expanded="true" signature="2841:3157" placeholder="..." />
@@ -221,120 +82,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <file leaf-file-name="doctor-week-view.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="2090" column="18" selection-start-line="2090" selection-start-column="6" selection-end-line="2090" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="595">
+              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <folding>
+                <marker date="1465209594310" expanded="true" signature="5248:6071" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoctorController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DoctorController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DoctorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2113">
-              <caret line="371" column="25" selection-start-line="371" selection-start-column="25" selection-end-line="371" selection-end-column="25" />
+            <state relative-caret-position="181">
+              <caret line="216" column="25" selection-start-line="216" selection-start-column="25" selection-end-line="216" selection-end-column="25" />
               <folding>
-                <marker date="1465208783098" expanded="true" signature="7586:7929" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="7655:7683" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="7684:7762" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="7835:7846" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="7847:7925" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8052:8071" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8061:8071" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8304:8400" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8304:8606" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8308:8400" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8357:8376" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8357:8377" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8357:8400" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8900:8919" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="8909:8919" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="9155:9439" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="9159:9434" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="9208:9429" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="9732:9751" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="9741:9751" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="9984:10268" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="9988:10263" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="10037:10258" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="10562:10581" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="10571:10581" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="10817:11101" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="10821:11096" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="10870:11091" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="11394:11413" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="11403:11413" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="11646:11930" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="11650:11925" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="11699:11920" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="12225:12244" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="12234:12244" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="12477:12761" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="12481:12756" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="12530:12751" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="13056:13075" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="13065:13075" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="13314:13598" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="13465:13588" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="13465:13593" placeholder="..." />
-                <marker date="1465208783098" expanded="true" signature="13465:13598" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="7586:7926" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="7652:7680" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="7681:7759" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="7832:7843" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="7844:7922" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8049:8068" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8058:8068" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8301:8397" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8301:8603" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8305:8397" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8354:8373" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8354:8374" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8354:8397" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8897:8916" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="8906:8916" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="9152:9436" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="9156:9431" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="9205:9426" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="9729:9748" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="9738:9748" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="9981:10265" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="9985:10260" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="10034:10255" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="10559:10578" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="10568:10578" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="10814:11098" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="10818:11093" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="10867:11088" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="11391:11410" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="11400:11410" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="11643:11927" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="11647:11922" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="11696:11917" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="12222:12241" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="12231:12241" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="12474:12758" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="12478:12753" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="12527:12748" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="13053:13072" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="13062:13072" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="13311:13595" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="13462:13585" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="13462:13590" placeholder="..." />
+                <marker date="1465209628894" expanded="true" signature="13462:13595" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doctor-calendar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="77" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="77" />
-              <folding>
-                <marker date="1465189918766" expanded="true" signature="1311:1323" placeholder="..." />
-                <marker date="1465189918766" expanded="true" signature="1413:1552" placeholder="..." />
-                <marker date="1465189918766" expanded="true" signature="1432:1449" placeholder="..." />
-                <marker date="1465189918766" expanded="true" signature="1450:1548" placeholder="..." />
-                <marker date="1465189918766" expanded="true" signature="1511:1529" placeholder="..." />
-                <marker date="1465189918766" expanded="true" signature="1530:1542" placeholder="..." />
-                <marker date="1465189918766" expanded="true" signature="1772:2932" placeholder="..." />
-                <marker date="1465189918766" expanded="true" signature="1818:2579" placeholder="{...}" />
-                <marker date="1465189918766" expanded="true" signature="1919:2551" placeholder="{&quot;type&quot;: 'GET'...}" />
-                <marker date="1465189918766" expanded="true" signature="2081:2145" placeholder="{...}" />
-                <marker date="1465189918766" expanded="true" signature="2184:2496" placeholder="{...}" />
-                <marker date="1465189918766" expanded="true" signature="2201:2286" placeholder="//..." />
-                <marker date="1465189918766" expanded="true" signature="2626:2757" placeholder="{...}" />
-                <marker date="1465189918766" expanded="true" signature="2762:2920" placeholder="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="99" column="49" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
-              <folding>
-                <element signature="e#343#2229#0#PHP" expanded="false" />
-                <element signature="e#2235#2429#0#PHP" expanded="false" />
-                <element signature="e#5945#7887#0#PHP" expanded="false" />
-                <element signature="e#7893#9052#0#PHP" expanded="false" />
-                <element signature="e#9062#9851#0#PHP" expanded="false" />
-                <element signature="e#9858#10836#0#PHP" expanded="false" />
-                <element signature="e#10842#10907#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header_loggedin.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="172" column="47" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -394,9 +204,9 @@
         <option value="$PROJECT_DIR$/resources/views/patient/find.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
-        <option value="$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/doctor/doctor-home.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DoctorController.php" />
       </list>
     </option>
@@ -546,7 +356,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="DoctorCon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;doctor-calendar&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;TestController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doctor-home.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;heade&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;DoctorController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;doctorCon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;doctor-ca&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;doctor_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor_main.blade.php&#10;doctor-home&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;testcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;sched&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;doc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;appro&#9;null&#9;null&#10;appointment&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;submiss&#9;null&#9;null&#10;EntityController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;scripts.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doctor-resu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;patient_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/patient_main.blade.php&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;search&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;approve&#9;null&#9;null&#10;doctor-result&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;Test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;jquery.paginate.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/jquery.paginate.js&#10;sear&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;find&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/find.blade.php&#10;form_patient&#9;null&#9;null&#10;sche_del&#9;null&#9;null&#10;doctor-schedu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;serve&#9;null&#9;null&#10;CalendarController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doctor-scheduler&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;doctor-sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;patien&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/patient-profile-view.blade.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;entity&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appoin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;create_users&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/database/migrations/2016_04_29_185659_create_users_table.php" />
+    <property name="SearchEverywhereHistoryKey" value="doctor&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;DoctorCon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;doctor-calendar&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;TestController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doctor-home.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;heade&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;DoctorController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;doctorCon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;doctor-ca&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;doctor_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor_main.blade.php&#10;doctor-home&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;testcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;sched&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;doc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;appro&#9;null&#9;null&#10;appointment&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;submiss&#9;null&#9;null&#10;EntityController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;scripts.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doctor-resu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;patient_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/patient_main.blade.php&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;search&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;approve&#9;null&#9;null&#10;doctor-result&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;Test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;jquery.paginate.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/jquery.paginate.js&#10;sear&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;find&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/find.blade.php&#10;form_patient&#9;null&#9;null&#10;sche_del&#9;null&#9;null&#10;doctor-schedu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;serve&#9;null&#9;null&#10;CalendarController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doctor-scheduler&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;doctor-sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-scheduler.blade.php&#10;patien&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/patient-profile-view.blade.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;entity&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sche&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appoin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -608,12 +418,12 @@
       <workItem from="1465101839365" duration="14021000" />
       <workItem from="1465121166650" duration="3986000" />
       <workItem from="1465189375547" duration="9558000" />
-      <workItem from="1465201154433" duration="6212000" />
+      <workItem from="1465201154433" duration="6557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215423000" />
+    <option name="totallyTimeSpent" value="215768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1021,73 +831,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DoctorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2113">
-          <caret line="371" column="25" selection-start-line="371" selection-start-column="25" selection-end-line="371" selection-end-column="25" />
-          <folding>
-            <marker date="1465208783098" expanded="true" signature="7586:7929" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="7655:7683" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="7684:7762" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="7835:7846" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="7847:7925" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8052:8071" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8061:8071" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8304:8400" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8304:8606" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8308:8400" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8357:8376" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8357:8377" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8357:8400" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8900:8919" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="8909:8919" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="9155:9439" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="9159:9434" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="9208:9429" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="9732:9751" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="9741:9751" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="9984:10268" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="9988:10263" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="10037:10258" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="10562:10581" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="10571:10581" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="10817:11101" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="10821:11096" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="10870:11091" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="11394:11413" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="11403:11413" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="11646:11930" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="11650:11925" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="11699:11920" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="12225:12244" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="12234:12244" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="12477:12761" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="12481:12756" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="12530:12751" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="13056:13075" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="13065:13075" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="13314:13598" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="13465:13588" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="13465:13593" placeholder="..." />
-            <marker date="1465208783098" expanded="true" signature="13465:13598" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="38" selection-end-column="38" />
-          <folding>
-            <marker date="1465207397384" expanded="true" signature="5248:6071" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="87" column="98" selection-start-line="87" selection-start-column="98" selection-end-line="87" selection-end-column="98" />
+          <caret line="87" column="73" selection-start-line="87" selection-start-column="73" selection-end-line="87" selection-end-column="73" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
             <marker date="1465368270687" expanded="true" signature="2841:3157" placeholder="..." />
@@ -1134,6 +881,69 @@
             <marker date="1465368270687" expanded="true" signature="7836:7852" placeholder="..." />
             <marker date="1465368270687" expanded="true" signature="7852:7887" placeholder="..." />
             <marker date="1465368270687" expanded="true" signature="8526:8536" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding>
+            <marker date="1465209594310" expanded="true" signature="5248:6071" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DoctorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="216" column="25" selection-start-line="216" selection-start-column="25" selection-end-line="216" selection-end-column="25" />
+          <folding>
+            <marker date="1465209628894" expanded="true" signature="7586:7926" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="7652:7680" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="7681:7759" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="7832:7843" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="7844:7922" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8049:8068" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8058:8068" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8301:8397" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8301:8603" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8305:8397" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8354:8373" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8354:8374" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8354:8397" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8897:8916" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="8906:8916" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="9152:9436" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="9156:9431" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="9205:9426" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="9729:9748" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="9738:9748" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="9981:10265" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="9985:10260" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="10034:10255" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="10559:10578" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="10568:10578" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="10814:11098" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="10818:11093" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="10867:11088" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="11391:11410" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="11400:11410" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="11643:11927" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="11647:11922" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="11696:11917" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="12222:12241" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="12231:12241" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="12474:12758" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="12478:12753" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="12527:12748" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="13053:13072" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="13062:13072" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="13311:13595" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="13462:13585" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="13462:13590" placeholder="..." />
+            <marker date="1465209628894" expanded="true" signature="13462:13595" placeholder="..." />
           </folding>
         </state>
       </provider>
