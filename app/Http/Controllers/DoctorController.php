@@ -129,23 +129,7 @@ class DoctorController extends Controller
 
         
 
-       // foreach($temp as $tmp){
-       //      DB::table('appointment_user')
-       //          ->insert([
-       //              'doctor_user' => $tmp->doctor_user,
-       //              'patient_user' => $tmp->patient_user,
-       //              'patient_name' => $tmp->patient_name,
-       //              'issues' => $request->input('issue'),
-       //              'admin_user' => $tmp->admin_user,
-       //              'name' => $tmp->name,
-       //              'approved' => '2',
-       //              'email' => $tmp->email,
-       //              'phone_number' => $tmp->phone_number,
-       //              'appointed_at' => $tmp->appointed_at,
-       //              'patient_name' => $tmp->patient_name,
-       //              'appointment_time' => $tmp->appointment_time,
-       //      ]);
-       // }
+
 
         DB::table('appointment_user')
             ->where('patient_user', '=', $request->input('p_user'))
@@ -166,5 +150,9 @@ class DoctorController extends Controller
           ->where('p_username', '=', $username)
           ->get();
         return view('doctor.patient-profile-view', compact('patient'));
+    }
+
+    public function week(){
+        return view('doctor.doctor-week-view');
     }
 }

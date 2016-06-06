@@ -181,5 +181,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/prev-month/{month}/{year}', 'CalendarController@prev_month');//Moves to the prev month
 
 	Route::get('/slot/{user}/{day}', 'SearchController@slot_finder');
+
+	Route::get('/doctor-week', 'DoctorController@week');
 });
 

@@ -46,9 +46,9 @@
                                 <div class="col-xs-12 col-sm-6 col-md-6">
 
                                     <ul class="view-type-link">
-                                        <li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><!--<li>-->
-                                                <!-- <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
-                                        {{--<a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>--}}
+                                        <li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><<li>>
+                                                <a href="{{ url('/doctor-week') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li>
+                                        <a href="{{ url('/doctor-calendar') }}" rel="tooltip" title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -64,13 +64,6 @@
                                     <div class="pof-desc">
                                         <ul class="appoin-list">
                                             <table border="0" style="width:100%; background: #F1F1F1">
-                                                {{--<tr>--}}
-                                                    {{--<th colspan="2" style="text-align:center"><h1>Today's appointments</h1></th>--}}
-                                                {{--</tr>--}}
-
-
-
-
                                             @foreach($user_info as $u_i)
                                                 @if($u_i)
                                                 <tr>
