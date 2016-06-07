@@ -41,9 +41,7 @@
                                         <li><a class="current" href="{{ url('/homepage') }}" rel="tooltip"
                                                title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
                                             <a href="{{ url('/doctor-week') }}" rel="tooltip"
-                                               title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li> -->
-                                            <a href="{{ url('/doctor-calendar') }}" rel="tooltip"
-                                               title="Month View"><img src="/images/month-view.png" alt=""><span></span></a></li>
+                                               title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li>
                                     </ul>
                                 </div>
                             </div>

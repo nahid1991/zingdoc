@@ -121,11 +121,11 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	
 	Route::post('/doc-data', 'DoctorController@make_profile');
 	
-	Route::get('/prescription/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
+//	Route::get('/prescription/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
 	
-	Route::post('/prescribe', 'DoctorController@prescribe');
+//	Route::post('/prescribe', 'DoctorController@prescribe');
 	
-	Route::get('/{username}/{name}', 'DoctorController@patient_profile');
+//	Route::get('/{username}/{name}', 'DoctorController@patient_profile');
 	
 	Route::post('/add-doctor', 'EntityController@add_doctor');
 	
