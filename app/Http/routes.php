@@ -18,23 +18,13 @@ Route::post('/doctor/register', 'TestController@test');
 
 
 Route::get('/', function () {
-	// if(Auth::user()){
-	// 	redirect('/homepage');
-	// }
- //    else{
- //    	return view('default');
- //    }
+
 	return view('default');
     
 });
-// Route::get('/', 'HomeController@index');
 
 
 Route::get('/sign_it', 'TestController@sign');
-
-// Route::get('/', 'HomeController@index');
-
-// Route::auth();
 
 Route::post('/auth/login', 'Auth\AuthController@login');
 
@@ -60,30 +50,13 @@ Route::get('/testing', 'TestController@testing');
 
 Route::get('register/verify/{confirmationCode}', 'TestController@email');
 
+Route::get('/search/{time}', 'SearchController@search');
 
 
-// Route::get('/test', function () {
-//     return view('sign_up_test');
-// });
-
-// Route::get('/test2', function(){
-// 	echo('test');
-// });
-
-
-
-// Route::post('auth/register', function () {
-//     return redirect('/test');
-// });
 
 
 
 Route::get('/doc-prof/{username}', 'PatientController@docprof');
-
-// Route::group(['middleware' => 'auth', 'after' => 'no-cache'], function () {
-//     Route::get('/auth/logout', 'Auth\AuthController@logout');
-// 	Route::get('/homepage', 'TestController@home');
-// });
 
 
 
@@ -119,8 +92,6 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/entity-account-settings', 'EntityController@settings');
 	
 	Route::post('/schedule-make', 'ScheduleController@make');
-	
-	Route::get('/search/{time}', 'SearchController@search');
 
 	Route::get('/appointments', 'TestController@run');
 

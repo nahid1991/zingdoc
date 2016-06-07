@@ -6,7 +6,7 @@
 		<div id="banner-holder">
 			<div class="find-doctor">
 				<h1>FIND A DOCTOR</h1>
-					<form name="" id="search-form" action="search-result.php" method="POST">
+
 					<div class="input-holder">
 						 <input name="country" required type="text" class="form-control" id="autocomplete-ajax"  placeholder="Specialist"/>
 					</div>
@@ -14,9 +14,9 @@
 						 <input name="fullname" required type="text" class="form-control zip" placeholder="Zip Code"/>
 					</div>
 					<div class="button-holder">
-						<a href="#" onclick="formSubmit()">Find Now</a>
+						<a href="/search/{{\Carbon\Carbon::today()}}" >Find Now</a>
 					</div>
-				</form>
+
 				<script type="text/javascript">
 					function formSubmit(){
 						document.getElementById("search-form").submit();

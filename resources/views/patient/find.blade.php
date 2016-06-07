@@ -127,7 +127,7 @@
 													type:'GET',
 													dataType: 'html',
 													error: function(){
-														alert("Data not found");
+														alert("You need to sign up and log in to apply for slots.");
 													},
 													success:function(data){
 //                                                    $(".s").empty();

@@ -195,22 +195,23 @@ class ScheduleController extends Controller
 
 
     public function form_patient($username, $date, $time, $serial, $end_date){
-        $user = \Auth::user();
-        $doctor_info = DB::table('users')
-            ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
-            ->where('users.username', '=', $username)
-            ->get();
+       if(\Auth::check()){
+           $user = \Auth::user();
+           $doctor_info = DB::table('users')
+               ->join('doctor_entity', 'users.username', '=', 'doctor_entity.doctor_user')
+               ->where('users.username', '=', $username)
+               ->get();
 
-        $date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
-        $t_f = $date->format('g:i A');
-        $d_f = $date->format('F').' '. $date->day.', '.$date->format('Y');
-        $end_date = Carbon::createFromFormat('Y-m-d H:i:s', $end_date);
-//        echo($d_f);
-        return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time', 'd_f', 't_f', 'serial', 'end_date'));
-//        echo($serial);
-        // echo($doctor_info->speciality);
-//        echo($date);
-        // echo($id);
+           $date = Carbon::createFromFormat('Y-m-d H:i:s', $date);
+           $t_f = $date->format('g:i A');
+           $d_f = $date->format('F').' '. $date->day.', '.$date->format('Y');
+           $end_date = Carbon::createFromFormat('Y-m-d H:i:s', $end_date);
+           return view('patient.appointment', compact('user', 'doctor_info', 'date', 'time', 'd_f', 't_f', 'serial', 'end_date'));
+       }
+       else{
+           return redirect('/sign_it')->withErrors('email', 'You need to log in to apply for slot.');
+       }
+
     }
 
 

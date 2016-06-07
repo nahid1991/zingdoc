@@ -66,7 +66,7 @@
                                                 ('Y-m-d h:i:s', $pt->visit_time)->format('jS F')}}</h5></td>
                                                 <td><h5>{{$pt->issue}}</h5></td>
                                                 @if($pt->hidden_prescription)
-                                                    <td><h5 id="{{$pt->id}}_pr">{{$pt->hidden_prescription}}...
+                                                    <td style="max-width: 100px"><h5 id="{{$pt->id}}_pr">{{$pt->hidden_prescription}}...
                                                             <a id="{{$pt->id}}_pr" href="#{{$pt->id}}"><span style="color: firebrick">
                                                                     more</span></a></h5>
                                                         <h5 id="{{$pt->id}}_pres" style="display:none">
@@ -80,7 +80,7 @@
                                                     <td><h5>{{$pt->prescription}}</h5></td>
                                                 @endif
                                                 @if($pt->hidden_comment)
-                                                    <td><h5 id="{{$pt->id}}_cm">{{$pt->hidden_comment}}...
+                                                    <td style="max-width: 100px"><h5 id="{{$pt->id}}_cm">{{$pt->hidden_comment}}...
                                                             <a id="{{$pt->id}}_cm" href="#{{$pt->id}}"><span style="color: firebrick">
                                                                     more</span></a></h5>
                                                         <h5 id="{{$pt->id}}_comment" style="display:none">
