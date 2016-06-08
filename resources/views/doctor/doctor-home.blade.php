@@ -23,7 +23,6 @@
                             @endif
                                 <ul><li>
                                         <a href="{{ url('/homepage') }}">Home</a></li><li>
-                                        <a href="{{ url('/appointments') }}">Today's appointments</a></li><li>
                                         <a href="{{ url('/set-appointment') }}">Set Office hour</a></li><li>
                                         <a href="{{ url('/doc-profile') }}">Profile</a></li><li>
                                         <a href="{{ url('/doc-profile-edit') }}">Edit Profile</a></li><li>

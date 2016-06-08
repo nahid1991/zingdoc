@@ -54,7 +54,23 @@
                                         <div class="title">{{ $patient_first->patient_name }}'s records</div>
                                     </div>
                                     <div class="pof-desc">
-
+                                        <table border="0" style="width:100%; background: #F1F1F1; text-align:center">
+                                            <tr>
+                                                <th style="text-align:center"><h3>Visited On</h3></th>
+                                                <th style="text-align:center"><h3>Issue</h3></th>
+                                                <th style="text-align:center"><h3>Prescription</h3></th>
+                                                <th style="text-align:center"><h3>Comment</h3></th>
+                                            </tr>
+                                        @foreach($patient as $pt)
+                                            <tr>
+                                                <td><h5>{{\Carbon\Carbon::createFromFormat
+                                                ('Y-m-d h:i:s', $pt->visit_time)->format('jS F')}}</h5></td>
+                                                <td><h5>{{$pt->issue}}</h5></td>
+                                                <td><h5>{{$pt->prescription}}</h5></td>
+                                                <td><h5>{{$pt->comments}}</h5></td>
+                                            </tr>
+                                        @endforeach
+                                        </table>
                                     </div><!-- End .pof-desc -->
                                 </div><!-- End .pof-content -->
 
