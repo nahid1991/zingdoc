@@ -19,51 +19,16 @@ use Redirect;
 
 class EntityController extends Controller
 {
-    // public function dashboard(){
-    // 	return view('entity-admin-dashboard');
-    // }
+
 
     public function appointments(){
     	$user = \Auth::user();
         
         $listed_doc_pat = DB::table('users')
             ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
-            // ->join('appointment_user', 'users.username', '=', 'appointment_user.admin_user')
             ->where('users.username', '=', $user->username)
             ->get();
-            //doctors who are already 
-
-
-
-        
-        
         return view('entity.entity-admin-appointments-view', compact('user', 'listed_doc_pat'));
-
-        
-
-
-
-        // return view('entity.entity-admin-appointments-view', compact('user', 'listed_doc_pat', 'doc_info', 'pat_info', 
-        //     'sche_doc_pat', 'test'));
-        // foreach($sche_doc_pat as $sdp){
-        //     $pat_info = DB::table('users')
-        //         ->where('username', '=', $sdp->patient_user)
-        //         ->get();
-        // }
-        // foreach($doc_info as $doc_inf){
-            
-        //     // ->join('doctor_schedule', 'doctor_schedule.doctor_user', '=', 'users.username')
-        //     //     ->where('users.username', '=', $list_doc->doctor_user)
-        //     //     ->get();
-        //     // echo($list_doc->doctor_user);
-        //         echo($doc_inf->name);
-        // }
-
-        // return view('entity.entity-admin-appointments-view', compact('user', 'listed_doc_pat', 'doc_info', 'pat_info', 
-        //     'sche_doc_pat', 'test'));
-        // return view('entity.entity-admin-appointments-view', compact('user'));
-
-        // echo($user->created_at);
     }
 
     
@@ -123,7 +88,6 @@ class EntityController extends Controller
             ->get();
         $listed_doc_pat = DB::table('users')
             ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
-            // ->join('appointment_user', 'users.username', '=', 'appointment_user.admin_user')
             ->where('users.username', '=', $user->username)
             ->get();
         $patient_list = DB::table('users')
@@ -157,7 +121,8 @@ class EntityController extends Controller
                 'patient_name' => $trick->patient_name,
                 'appointment_time' => $time,
                 'appointment_end' => $trick->appointment_end,
-                'actual_date' => $trick->actual_date
+                'actual_date' => $trick->actual_date,
+                'sl_no' => $trick->sl_no
             ]);
 
         DB::table('appointment_user')
@@ -169,19 +134,6 @@ class EntityController extends Controller
         $doc_info = DB::table('users')
             ->where('username', '=', $username)
             ->first();
-//        $doc_schedule = DB::table('users')
-//            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
-//            ->where('username', '=', $username)
-//            ->get();
-//        $listed_doc_pat = DB::table('users')
-//            ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
-//            // ->join('appointment_user', 'users.username', '=', 'appointment_user.admin_user')
-//            ->where('users.username', '=', $user->username)
-//            ->get();
-//        $patient_list = DB::table('users')
-//            ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
-//            ->where('username', '=', $username)
-//            ->get();
         $appointment_time = Carbon::createFromFormat('Y-m-d h:i:s', $time);
         $hour = $appointment_time->format('h:i A');
         $date = $appointment_time->format('jS \\of F');
@@ -199,7 +151,6 @@ class EntityController extends Controller
 
 
         return Redirect::back();
-//        return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list'));
     }
 
 
@@ -249,14 +200,11 @@ class EntityController extends Controller
 
 
     public function make($username, $year, $month, $day){
-        // echo($username);
         $user = \Auth::user();
         $date = Carbon::create($year, $month, $day, '00', '00');
         $doc_info = DB::table('users')
             ->where('username', '=', $username)
             ->first();
-
-        // echo($doc_info->username);
         $date_human = $date->year.'-'.$date->month.'-'.$date->day;
         $name_o_day = $date->format('l');
 
@@ -364,6 +312,29 @@ class EntityController extends Controller
             ->get();
 
         return view('entity.entity-admin-view-profile', compact('user', 'en_info'));
+    }
+
+
+    public function today($username){
+//        echo($username);
+        $serials = DB::table('appointment_user')
+            ->where('doctor_user', '=', $username)
+            ->where('actual_date', '=', Carbon::today())
+            ->get();
+        $user = \Auth::user();
+        $doc_info = DB::table('users')
+            ->where('username', '=', $username)
+            ->first();
+        $doc_schedule = DB::table('users')
+            ->join('doctor_schedule', 'users.username', '=', 'doctor_schedule.doctor_user')
+            ->where('username', '=', $username)
+            ->get();
+        $listed_doc_pat = DB::table('users')
+            ->join('doctor_entity', 'users.username', '=', 'doctor_entity.entity_user')
+            ->where('users.username', '=', $user->username)
+            ->get();
+
+        return view('entity.today-serial', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'username', 'serials'));
     }
 
 }

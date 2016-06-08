@@ -17,7 +17,10 @@
 										<a href="{{ url('/entity-appointments') }}">Appointment</a></li><li>
 										<a href="{{ url('/entity-profile') }}">Profile</a></li><li>
 										<a href="{{ url('/entity-profile-edit') }}">Edit Profile</a></li><li>
-										<a href="{{ url('/calendar/'.$doc_info->username) }}">Doctor's <span style="color: firebrick">Schedule</span> Calendar</a></li><li>
+										<a href="{{ url('/calendar/'.$doc_info->username) }}">Dr. {{ $doc_info->name }}'s
+											<span style="color: firebrick">Schedule</span> Calendar</a></li><li>
+										<a href="{{ url('/today/'.$doc_info->username) }}">Dr. {{ $doc_info->name }}'s
+											<span style="color: firebrick">Today's</span> appointments</a></li><li>
 										<a href="{{ url('/entity-account-settings') }}">Account Settings</a></li><li>
 										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
 							</div>

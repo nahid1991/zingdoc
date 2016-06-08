@@ -238,6 +238,12 @@ class ScheduleController extends Controller
                 'actual_date' => $actual_date
             ]);
 
+        DB::table('time_slot')
+            ->where('d_user', '=', $request->input('doctor_user'))
+            ->where('slot_date', '=', $request->input('date'))
+            ->update(['booked' => 1]);
+
+
         return redirect('/search/'.Carbon::today());
 //        echo($request->input('serial'));
     }

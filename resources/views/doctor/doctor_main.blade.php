@@ -68,7 +68,7 @@
 												@if($u_i->approved != 2)
 												<li>
 													<div class="s-left">
-														<h2><a href="{{ action('DoctorController@patient_profile', [$u_i->patient_user]) }}">{{ $u_i->patient_name }}</a></h2>
+														<h2><a href="{{ action('DoctorController@patient_profile', [$u_i->patient_user, $u_i->patient_name]) }}">{{ $u_i->patient_name }}</a></h2>
 														<p>{{ $u_i->issues }}</p>
 													</div><div class="s-right">
 														<div class="time">{{ $u_i->appointed_at }}</div>
