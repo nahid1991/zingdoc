@@ -44,7 +44,7 @@
 
 
 			$calendar.=  "<script type=\"text/javascript\">
-				$(\"a#$list_day\").mouseenter(function(){
+				$(\"a#$list_day\").on('mouseenter', function(){
 				var link = $('a#$list_day').attr('href');
 				console.log(link);
                        $.ajax({
@@ -56,32 +56,18 @@
                    alert(\"Data not found\");
                },
                success:function(data){
-               //alert('success');
-//               $(\".$list_day\").css(\"display\", \"block\")});
 				 $(\".$list_day\").empty();
                $(\".$list_day\").append(data);
                $(\".$list_day\").css(\"display\", \"block\");
-//               $(\".$list_day\").stop().fadeIn(100);
-//				$(\".$list_day\").show();
 
                		} // End of success function of ajax form
            		}); // End of ajax call
 				});
-				$(\"a#$list_day\").mouseleave(function(){
+				$(\"a#$list_day\").on('mouseleave', function(){
 					$(\".$list_day\").css(\"display\", \"none\");
-//					$(\".$list_day\").stop().fadeOut(100);
-//					$(\".$list_day\").hide();
 					$(\".$list_day\").empty();
 
 				});
-
-
-//				$(\"#$list_day\").mouseover(function(e){
-//					e.preventDefault();
-//					$.get('/test' function(data){
-//						console.log(data);
-//					});
-//				});
 			</script>";
 
 

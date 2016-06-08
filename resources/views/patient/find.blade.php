@@ -56,7 +56,10 @@
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-10 col-lg-10 ">
 						<div class="doctor-holder">
-							<div class="page-title"><span>Doctors in New York</span></div>
+							<div class="page-title"><span>Doctors in New York</span><a href="#" class="test"><span style="color: blue"> Pick a month</span></a>
+								<div class="month-popup" style="display:none; z-index:99; text-align:center;">
+									<p><a href="/search/{{\Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $time)}}">January</a></p>
+								</div></div>
 
 							<ul class="doctor-details">
 								@foreach($doctors as $doctor)
@@ -158,6 +161,11 @@
 														$("#{{ $doctor->username }}").slideToggle();
 													} // End of success function of ajax form
 												}); // End of ajax call
+												return false;
+											});
+											$(".test").on('click', function(e){
+												e.preventDefault();
+												$(".month-popup").fadeToggle (1000);
 												return false;
 											});
 

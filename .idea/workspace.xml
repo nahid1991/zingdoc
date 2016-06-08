@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a6b4b73d-55fd-41a4-bc73-c92eb990e8d0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php" afterPath="$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php" afterPath="$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php" afterPath="$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/patient/find.blade.php" afterPath="$PROJECT_DIR$/resources/views/patient/find.blade.php" />
     </list>
     <ignored path="zingdoc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +30,82 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="167" column="25" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
+            <state relative-caret-position="167">
+              <caret line="155" column="21" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="21" />
               <folding>
                 <element signature="e#7#392#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="20" column="47" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="47" />
+              <folding>
+                <marker date="1465368270687" expanded="true" signature="2841:3157" placeholder="..." />
+                <marker date="1465368270687" expanded="false" signature="2895:2923" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="2924:3002" placeholder="..." />
+                <marker date="1465368270687" expanded="false" signature="3063:3074" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="3075:3153" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="3207:3408" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="3226:3408" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="3283:3408" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="3323:3408" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="3364:3408" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="4069:4148" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="4103:4148" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="4120:4148" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="4132:4148" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="4811:4890" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="4845:4890" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="4862:4890" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="4874:4890" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="5551:5630" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="5585:5630" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="5602:5630" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="5614:5630" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="6300:6379" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="6334:6379" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="6351:6379" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="6363:6379" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="7037:7116" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="7071:7116" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="7088:7116" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="7100:7116" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="7773:7852" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="7807:7852" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="7824:7852" placeholder="..." />
+                <marker date="1465368270687" expanded="true" signature="7836:7852" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doctor-calendar.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="209" column="46" selection-start-line="196" selection-start-column="40" selection-end-line="209" selection-end-column="46" />
+              <folding>
+                <marker date="1465385331028" expanded="true" signature="1311:1323" placeholder="..." />
+                <marker date="1465385331028" expanded="true" signature="1413:1552" placeholder="..." />
+                <marker date="1465385331028" expanded="true" signature="1432:1449" placeholder="..." />
+                <marker date="1465385331028" expanded="true" signature="1450:1548" placeholder="..." />
+                <marker date="1465385331028" expanded="true" signature="1511:1528" placeholder="..." />
+                <marker date="1465385331028" expanded="true" signature="1511:1529" placeholder="..." />
+                <marker date="1465385331028" expanded="true" signature="1530:1542" placeholder="..." />
+                <marker date="1465385331028" expanded="true" signature="1772:3020" placeholder="..." />
+                <marker date="1465385331028" expanded="true" signature="1824:2629" placeholder="{...}" />
+                <marker date="1465385331028" expanded="true" signature="1925:2601" placeholder="{&quot;type&quot;: 'GET'...}" />
+                <marker date="1465385331028" expanded="true" signature="2087:2151" placeholder="{...}" />
+                <marker date="1465385331028" expanded="true" signature="2190:2546" placeholder="{...}" />
+                <marker date="1465385331028" expanded="true" signature="2207:2292" placeholder="//..." />
+                <marker date="1465385331028" expanded="true" signature="2435:2526" placeholder="//..." />
+                <marker date="1465385331028" expanded="true" signature="2681:2845" placeholder="{...}" />
+                <marker date="1465385331028" expanded="true" signature="2850:3008" placeholder="//..." />
               </folding>
             </state>
           </provider>
@@ -53,79 +121,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entity-doctor-calendar.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php">
+      <file leaf-file-name="find.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/patient/find.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="281">
+              <caret line="167" column="77" selection-start-line="167" selection-start-column="77" selection-end-line="167" selection-end-column="77" />
               <folding>
-                <marker date="1465378186023" expanded="true" signature="1309:1321" placeholder="..." />
-                <marker date="1465378186023" expanded="true" signature="1411:1550" placeholder="..." />
-                <marker date="1465378186023" expanded="false" signature="1430:1447" placeholder="..." />
-                <marker date="1465378186023" expanded="true" signature="1448:1546" placeholder="..." />
-                <marker date="1465378186023" expanded="true" signature="1509:1527" placeholder="..." />
-                <marker date="1465378186023" expanded="true" signature="1528:1540" placeholder="..." />
-                <marker date="1465378186023" expanded="true" signature="1769:3006" placeholder="..." />
-                <marker date="1465378186023" expanded="true" signature="1815:2614" placeholder="{...}" />
-                <marker date="1465378186023" expanded="true" signature="1916:2586" placeholder="{&quot;type&quot;: 'GET'...}" />
-                <marker date="1465378186023" expanded="true" signature="2078:2142" placeholder="{...}" />
-                <marker date="1465378186023" expanded="true" signature="2181:2531" placeholder="{...}" />
-                <marker date="1465378186023" expanded="true" signature="2198:2283" placeholder="//..." />
-                <marker date="1465378186023" expanded="true" signature="2363:2479" placeholder="//..." />
-                <marker date="1465378186023" expanded="true" signature="2661:2831" placeholder="{...}" />
-                <marker date="1465378186023" expanded="true" signature="2714:2792" placeholder="//..." />
-                <marker date="1465378186023" expanded="true" signature="2836:2994" placeholder="//..." />
-                <marker date="1465378186023" expanded="true" signature="5503:5582" placeholder="..." />
-                <marker date="1465378186023" expanded="true" signature="5710:5790" placeholder="..." />
+                <element signature="e#2605#2624#0#HTML" expanded="true" />
+                <element signature="e#2683#2735#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doctor-calendar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="234" column="37" selection-start-line="223" selection-start-column="28" selection-end-line="234" selection-end-column="37" />
-              <folding>
-                <element signature="e#6672#6712#0#HTML" expanded="true" />
-                <marker date="1465371430398" expanded="true" signature="1311:1323" placeholder="..." />
-                <marker date="1465371430398" expanded="true" signature="1413:1570" placeholder="..." />
-                <marker date="1465371430398" expanded="false" signature="1432:1449" placeholder="..." />
-                <marker date="1465371430398" expanded="true" signature="1450:1566" placeholder="..." />
-                <marker date="1465371430398" expanded="true" signature="1511:1529" placeholder="..." />
-                <marker date="1465371430398" expanded="true" signature="1511:1547" placeholder="..." />
-                <marker date="1465371430398" expanded="true" signature="1548:1560" placeholder="..." />
-                <marker date="1465371430398" expanded="true" signature="1790:3027" placeholder="..." />
-                <marker date="1465371430398" expanded="true" signature="1836:2641" placeholder="{...}" />
-                <marker date="1465371430398" expanded="true" signature="1937:2613" placeholder="{&quot;type&quot;: 'GET'...}" />
-                <marker date="1465371430398" expanded="true" signature="2099:2163" placeholder="{...}" />
-                <marker date="1465371430398" expanded="true" signature="2202:2558" placeholder="{...}" />
-                <marker date="1465371430398" expanded="true" signature="2219:2304" placeholder="//..." />
-                <marker date="1465371430398" expanded="true" signature="2447:2538" placeholder="//..." />
-                <marker date="1465371430398" expanded="true" signature="2688:2852" placeholder="{...}" />
-                <marker date="1465371430398" expanded="true" signature="2857:3015" placeholder="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="2096" column="27" selection-start-line="2087" selection-start-column="4" selection-end-line="2096" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CalendarController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="36" column="5" selection-start-line="26" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -158,7 +162,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/views/entity/entity-admin-appointments-view.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_06_05_092302_create_actual_date_column.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" />
         <option value="$PROJECT_DIR$/resources/views/js/jquery-2.2.4.min.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header_loggedin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/entity/today-serial.blade.php" />
@@ -178,17 +181,18 @@
         <option value="$PROJECT_DIR$/resources/views/doctor/patient-profile-view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/default.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" />
-        <option value="$PROJECT_DIR$/resources/views/patient/find.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DoctorController.php" />
         <option value="$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/doctor/doctor_main.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" />
-        <option value="$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/entity/doctor-result.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EntityController.php" />
         <option value="$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" />
+        <option value="$PROJECT_DIR$/resources/views/patient/find.blade.php" />
       </list>
     </option>
   </component>
@@ -303,28 +307,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctor" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zingdoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zingdoc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -337,7 +319,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="style&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;doctor-calendar&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;entit&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;calendarControl&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;calendar&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;fin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/find.blade.php&#10;real_calen&#9;null&#9;null&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;find&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/find.blade.php&#10;styl&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;auth&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/Auth/AuthController.php&#10;doctor&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-week-view.blade.php&#10;schedulecon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;ser&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/laravel/framework/src/Illuminate/Foundation/Console/ServeCommand.php&#10;doc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;doc_checked&#9;null&#9;null&#10;testcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;DoctorCo&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;entity&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;form_&#9;null&#9;null&#10;appoin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;approve&#9;null&#9;null&#10;submission&#9;null&#9;null&#10;DoctorCon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;TestController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doctor-home.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;heade&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;DoctorController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doctorCon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;doctor-ca&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;doctor_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor_main.blade.php&#10;doctor-home&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;sched&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appro&#9;null&#9;null&#10;appointment&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;submiss&#9;null&#9;null&#10;EntityController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;scripts.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doctor-resu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;patient_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/patient_main.blade.php&#10;schedulecontro&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;search&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php" />
+    <property name="SearchEverywhereHistoryKey" value="doctor-calendar&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;searchcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/SearchController.php&#10;schedulecontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;patientcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/PatientController.php&#10;find&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/find.blade.php&#10;style&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;entit&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;calendarControl&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;entitycontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;doctorcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;calendar&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;fin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/find.blade.php&#10;real_calen&#9;null&#9;null&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/routes.php&#10;styl&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;auth&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/Auth/AuthController.php&#10;doctor&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-week-view.blade.php&#10;schedulecon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;ser&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/vendor/laravel/framework/src/Illuminate/Foundation/Console/ServeCommand.php&#10;doc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;doc_checked&#9;null&#9;null&#10;testcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;DoctorCo&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;entity&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;form_&#9;null&#9;null&#10;appoin&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;approve&#9;null&#9;null&#10;submission&#9;null&#9;null&#10;DoctorCon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;TestController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doctor-home.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/css/style.css&#10;heade&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php&#10;DoctorController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;test&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/TestController.php&#10;doctorCon&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/DoctorController.php&#10;doctor-ca&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-calendar.blade.php&#10;doctor_main&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor_main.blade.php&#10;doctor-home&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/doctor/doctor-home.blade.php&#10;sched&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/ScheduleController.php&#10;appro&#9;null&#9;null&#10;appointment&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/patient/appointment.blade.php&#10;submiss&#9;null&#9;null&#10;EntityController&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/EntityController.php&#10;sc&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;scripts.js&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/public/js/scripts.js&#10;calendarcontroller&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/app/Http/Controllers/CalendarController.php&#10;doctor-resu&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/entity/doctor-result.blade.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/zingdoc/resources/views/layouts/header_loggedin.blade.php" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -404,12 +386,12 @@
       <workItem from="1465271060055" duration="4329000" />
       <workItem from="1465278805011" duration="2836000" />
       <workItem from="1465362445473" duration="8344000" />
-      <workItem from="1465373553186" duration="4181000" />
+      <workItem from="1465373553186" duration="10985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247807000" />
+    <option name="totallyTimeSpent" value="254611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -463,13 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PatientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -596,13 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="172" column="47" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="87" column="73" selection-start-line="87" selection-start-column="73" selection-end-line="87" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -740,20 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/patient/find.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="129" column="68" selection-start-line="129" selection-start-column="67" selection-end-line="129" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3417">
-          <caret line="211" column="98" selection-start-line="211" selection-start-column="98" selection-end-line="211" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-week-view.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-323">
@@ -786,12 +740,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="167" column="25" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
+        <state relative-caret-position="337">
+          <caret line="2096" column="27" selection-start-line="2087" selection-start-column="4" selection-end-line="2096" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="65" column="49" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="49" />
           <folding>
-            <element signature="e#7#392#0#PHP" expanded="true" />
+            <marker date="1465382450888" expanded="true" signature="1309:1321" placeholder="..." />
+            <marker date="1465382450888" expanded="true" signature="1411:1550" placeholder="..." />
+            <marker date="1465382450888" expanded="false" signature="1430:1447" placeholder="..." />
+            <marker date="1465382450888" expanded="true" signature="1448:1546" placeholder="..." />
+            <marker date="1465382450888" expanded="true" signature="1509:1527" placeholder="..." />
+            <marker date="1465382450888" expanded="true" signature="1528:1540" placeholder="..." />
+            <marker date="1465382450888" expanded="true" signature="1769:2590" placeholder="..." />
+            <marker date="1465382450888" expanded="true" signature="1821:2432" placeholder="{...}" />
+            <marker date="1465382450888" expanded="true" signature="1922:2404" placeholder="{&quot;type&quot;: 'GET'...}" />
+            <marker date="1465382450888" expanded="true" signature="2084:2148" placeholder="{...}" />
+            <marker date="1465382450888" expanded="true" signature="2187:2349" placeholder="{...}" />
+            <marker date="1465382450888" expanded="true" signature="2268:2329" placeholder="//..." />
+            <marker date="1465382450888" expanded="true" signature="2485:2576" placeholder="{...}" />
+            <marker date="1465382450888" expanded="true" signature="5087:5166" placeholder="..." />
+            <marker date="1465382450888" expanded="true" signature="5294:5374" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -804,63 +780,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PatientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="2096" column="27" selection-start-line="2087" selection-start-column="4" selection-end-line="2096" selection-end-column="27" />
+        <state relative-caret-position="238">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="211" column="98" selection-start-line="211" selection-start-column="98" selection-end-line="211" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="155" column="21" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="21" />
+          <folding>
+            <element signature="e#7#392#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <marker date="1465368270687" expanded="true" signature="2841:3157" placeholder="..." />
+            <marker date="1465368270687" expanded="false" signature="2895:2923" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="2924:3002" placeholder="..." />
+            <marker date="1465368270687" expanded="false" signature="3063:3074" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="3075:3153" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="3207:3408" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="3226:3408" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="3283:3408" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="3323:3408" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="3364:3408" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="4069:4148" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="4103:4148" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="4120:4148" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="4132:4148" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="4811:4890" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="4845:4890" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="4862:4890" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="4874:4890" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="5551:5630" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="5585:5630" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="5602:5630" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="5614:5630" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="6300:6379" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="6334:6379" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="6351:6379" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="6363:6379" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="7037:7116" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="7071:7116" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="7088:7116" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="7100:7116" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="7773:7852" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="7807:7852" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="7824:7852" placeholder="..." />
+            <marker date="1465368270687" expanded="true" signature="7836:7852" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/doctor/doctor-calendar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="234" column="37" selection-start-line="223" selection-start-column="28" selection-end-line="234" selection-end-column="37" />
+        <state relative-caret-position="391">
+          <caret line="209" column="46" selection-start-line="196" selection-start-column="40" selection-end-line="209" selection-end-column="46" />
           <folding>
-            <element signature="e#6672#6712#0#HTML" expanded="true" />
-            <marker date="1465371430398" expanded="true" signature="1311:1323" placeholder="..." />
-            <marker date="1465371430398" expanded="true" signature="1413:1570" placeholder="..." />
-            <marker date="1465371430398" expanded="false" signature="1432:1449" placeholder="..." />
-            <marker date="1465371430398" expanded="true" signature="1450:1566" placeholder="..." />
-            <marker date="1465371430398" expanded="true" signature="1511:1529" placeholder="..." />
-            <marker date="1465371430398" expanded="true" signature="1511:1547" placeholder="..." />
-            <marker date="1465371430398" expanded="true" signature="1548:1560" placeholder="..." />
-            <marker date="1465371430398" expanded="true" signature="1790:3027" placeholder="..." />
-            <marker date="1465371430398" expanded="true" signature="1836:2641" placeholder="{...}" />
-            <marker date="1465371430398" expanded="true" signature="1937:2613" placeholder="{&quot;type&quot;: 'GET'...}" />
-            <marker date="1465371430398" expanded="true" signature="2099:2163" placeholder="{...}" />
-            <marker date="1465371430398" expanded="true" signature="2202:2558" placeholder="{...}" />
-            <marker date="1465371430398" expanded="true" signature="2219:2304" placeholder="//..." />
-            <marker date="1465371430398" expanded="true" signature="2447:2538" placeholder="//..." />
-            <marker date="1465371430398" expanded="true" signature="2688:2852" placeholder="{...}" />
-            <marker date="1465371430398" expanded="true" signature="2857:3015" placeholder="//..." />
+            <marker date="1465385331028" expanded="true" signature="1311:1323" placeholder="..." />
+            <marker date="1465385331028" expanded="true" signature="1413:1552" placeholder="..." />
+            <marker date="1465385331028" expanded="true" signature="1432:1449" placeholder="..." />
+            <marker date="1465385331028" expanded="true" signature="1450:1548" placeholder="..." />
+            <marker date="1465385331028" expanded="true" signature="1511:1528" placeholder="..." />
+            <marker date="1465385331028" expanded="true" signature="1511:1529" placeholder="..." />
+            <marker date="1465385331028" expanded="true" signature="1530:1542" placeholder="..." />
+            <marker date="1465385331028" expanded="true" signature="1772:3020" placeholder="..." />
+            <marker date="1465385331028" expanded="true" signature="1824:2629" placeholder="{...}" />
+            <marker date="1465385331028" expanded="true" signature="1925:2601" placeholder="{&quot;type&quot;: 'GET'...}" />
+            <marker date="1465385331028" expanded="true" signature="2087:2151" placeholder="{...}" />
+            <marker date="1465385331028" expanded="true" signature="2190:2546" placeholder="{...}" />
+            <marker date="1465385331028" expanded="true" signature="2207:2292" placeholder="//..." />
+            <marker date="1465385331028" expanded="true" signature="2435:2526" placeholder="//..." />
+            <marker date="1465385331028" expanded="true" signature="2681:2845" placeholder="{...}" />
+            <marker date="1465385331028" expanded="true" signature="2850:3008" placeholder="//..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/entity/entity-doctor-calendar.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/patient/find.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="281">
+          <caret line="167" column="77" selection-start-line="167" selection-start-column="77" selection-end-line="167" selection-end-column="77" />
           <folding>
-            <marker date="1465378186023" expanded="true" signature="1309:1321" placeholder="..." />
-            <marker date="1465378186023" expanded="true" signature="1411:1550" placeholder="..." />
-            <marker date="1465378186023" expanded="false" signature="1430:1447" placeholder="..." />
-            <marker date="1465378186023" expanded="true" signature="1448:1546" placeholder="..." />
-            <marker date="1465378186023" expanded="true" signature="1509:1527" placeholder="..." />
-            <marker date="1465378186023" expanded="true" signature="1528:1540" placeholder="..." />
-            <marker date="1465378186023" expanded="true" signature="1769:3006" placeholder="..." />
-            <marker date="1465378186023" expanded="true" signature="1815:2614" placeholder="{...}" />
-            <marker date="1465378186023" expanded="true" signature="1916:2586" placeholder="{&quot;type&quot;: 'GET'...}" />
-            <marker date="1465378186023" expanded="true" signature="2078:2142" placeholder="{...}" />
-            <marker date="1465378186023" expanded="true" signature="2181:2531" placeholder="{...}" />
-            <marker date="1465378186023" expanded="true" signature="2198:2283" placeholder="//..." />
-            <marker date="1465378186023" expanded="true" signature="2363:2479" placeholder="//..." />
-            <marker date="1465378186023" expanded="true" signature="2661:2831" placeholder="{...}" />
-            <marker date="1465378186023" expanded="true" signature="2714:2792" placeholder="//..." />
-            <marker date="1465378186023" expanded="true" signature="2836:2994" placeholder="//..." />
-            <marker date="1465378186023" expanded="true" signature="5503:5582" placeholder="..." />
-            <marker date="1465378186023" expanded="true" signature="5710:5790" placeholder="..." />
+            <element signature="e#2605#2624#0#HTML" expanded="true" />
+            <element signature="e#2683#2735#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

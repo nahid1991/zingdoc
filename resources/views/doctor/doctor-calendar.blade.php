@@ -34,7 +34,7 @@
 				$calendar.= '<div class="day-number">
 					</div> <a href="/scheduling/'.$username.'/'.$year.'/'.$month.'/'.$list_day.'"  id='.$list_day.'>
 					<div style="position:inherit;"><h2>'.$list_day.'</h2>
-					<div class='.$list_day.' style="position:relative; overflow: hidden;">
+					<div class='.$list_day.' style="position:relative;">
 					</div></div></a>'
 					;
 				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
@@ -44,7 +44,7 @@
 			$calendar.= '</td>';
 
 			$calendar.=  "<script type=\"text/javascript\">
-				$(\"a#$list_day\").mouseenter(function(){
+				$(\"a#$list_day\").on('mouseenter', function(){
 				var link = $('a#$list_day').attr('href');
 				console.log(link);
                        $.ajax({
@@ -68,7 +68,7 @@
                		} // End of success function of ajax form
            		}); // End of ajax call
 				});
-				$(\"a#$list_day\").mouseleave(function(){
+				$(\"a#$list_day\").on('mouseleave',function(){
 //					$(\".$list_day\").stop();
 					$(\".$list_day\").css(\"display\", \"none\");
 //					$(\".$list_day\").fadeOut(1000);
