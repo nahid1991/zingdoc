@@ -63,7 +63,11 @@ class EntityController extends Controller
             ->join('appointment_user', 'users.username', '=', 'appointment_user.doctor_user')
             ->where('username', '=', $username)
             ->get();
-        return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'patient_list', 'username'));
+        $month = Carbon::today()->month;
+        $year = Carbon::today()->year;
+        return view('entity.doctor-result', compact('user', 'doc_info', 'doc_schedule',
+            'listed_doc_pat', 'patient_list', 'username',
+            'month', 'year'));
         // return redirect('/find-doc/'.$doc_info->username);
     }
 
@@ -184,17 +188,20 @@ class EntityController extends Controller
         return redirect('/homepage');
     }
 
-    public function calendar($username){
+    public function calendar($username, $month, $year){
         $user = \Auth::user();
         $doc_info = DB::table('users')
             ->where('username', '=', $username)
             ->first();
-        $month = Carbon::now();
-        $num_month = $month->month;
-        $num_year = $month->year;
+        $mon = Carbon::create($year,$month,'01','00','00');
+        $num_month = $mon->month;
+        $num_year = $mon->year;
         // echo($month->month);
-        $month = $month->format('F Y');
-        return view('entity.entity-doctor-calendar', compact('user', 'month', 'num_month', 'num_year', 'doc_info'));
+        $yr = $mon->format('Y');
+        $mon = $mon->format('F');
+
+        return view('entity.entity-doctor-calendar', compact('user', 'month', 'num_month',
+            'num_year', 'doc_info', 'mon', 'year', 'yr', 'username'));
         // echo($username);
     }
 
@@ -251,7 +258,7 @@ class EntityController extends Controller
         }
 
        
-        return redirect('/calendar/'.$username);
+        return Redirect::back();
         
         
     }
@@ -335,6 +342,36 @@ class EntityController extends Controller
             ->get();
 
         return view('entity.today-serial', compact('user', 'doc_info', 'doc_schedule', 'listed_doc_pat', 'username', 'serials'));
+    }
+
+
+    public function en_prev_month($user, $month, $year){
+        if($month == 1){
+            $month = 12;
+            $year = $year - 1;
+//            echo($month);
+            return redirect('/calendar/'.$user.'/'.$month.'/'.$year);
+        }
+        else{
+            $month = $month-1;
+//            echo($month);
+            return redirect('/calendar/'.$user.'/'.$month.'/'.$year);
+        }
+    }
+
+
+    public function en_next_month($user, $month, $year){
+        if($month == 12){
+            $month = 1;
+            $year = $year + 1;
+//            echo($month);
+            return redirect('/calendar/'.$user.'/'.$month.'/'.$year);
+        }
+        else{
+            $month = $month+1;
+//            echo($month);
+            return redirect('/calendar/'.$user.'/'.$month.'/'.$year);
+        }
     }
 
 }

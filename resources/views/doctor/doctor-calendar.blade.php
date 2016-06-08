@@ -34,7 +34,7 @@
 				$calendar.= '<div class="day-number">
 					</div> <a href="/scheduling/'.$username.'/'.$year.'/'.$month.'/'.$list_day.'"  id='.$list_day.'>
 					<div style="position:inherit;"><h2>'.$list_day.'</h2>
-					<div class='.$list_day.' style="position:relative;">
+					<div class='.$list_day.' style="position:relative; overflow: hidden;">
 					</div></div></a>'
 					;
 				/** QUERY THE DATABASE FOR AN ENTRY FOR THIS DAY !!  IF MATCHES FOUND, PRINT THEM !! **/
@@ -61,12 +61,15 @@
 				 $(\".$list_day\").empty();
                $(\".$list_day\").append(data);
                $(\".$list_day\").css(\"display\", \"block\");
+
 //               $(\".$list_day\").fadeIn(1000);
+//               $(\".$list_day\").stop();
 
                		} // End of success function of ajax form
            		}); // End of ajax call
 				});
 				$(\"a#$list_day\").mouseleave(function(){
+//					$(\".$list_day\").stop();
 					$(\".$list_day\").css(\"display\", \"none\");
 //					$(\".$list_day\").fadeOut(1000);
 					$(\".$list_day\").empty();
@@ -176,7 +179,7 @@
 									<div class="col-xs-12 col-sm-6 col-md-6">
 										<ul class="view-type-link">
 											<li><a class="current" href="{{ url('/homepage') }}" rel="tooltip" title="Day View"><img src="/images/day-view.png" alt=""><span></span></a></li><li>
-												<a href="{{ url('/doctor-week') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li>
+												<a href="{{ url('/doctor-week') }}" rel="tooltip" title="Week View"><img src="/images/week-view.png" alt=""><span></span></a></li><li></ul>
 									</div>
 								</div>								
 							</div>
@@ -185,9 +188,28 @@
 
 							<div class="pof-content">
 								<div class="pof-header3">
-									<div class="title">Schedule of {{ $month_format }}
+									<div class="title">Schedule of <a id = "month" href=""><span style="color: #1d1d1d">{{ $month_f }}</span></a>
+										<a href="/doctor-calendar/{{$month}}/{{$year-1}}"><img src="/images/back.png" alt="" width="20px" height="20px"></a>{{ $year_f }}
+										<a href="/doctor-calendar/{{$month}}/{{$year+1}}"><img src="/images/forward.png" alt="" width="20px" height="20px"></a>
+
 									<p><a href="{{ action('CalendarController@prev_month', [$month, $year]) }}" style="float:left; padding-left:10px;" rel="tooltip" title="Previous month">Back in time</a>
-										<a href="{{ action('CalendarController@next_month', [$month, $year]) }}" style="float:right; padding-right:10px;" rel="tooltip" title="Next month">To the future</a></p></div>
+										<a href="{{ action('CalendarController@next_month', [$month, $year]) }}" style="float:right; padding-right:10px;" rel="tooltip" title="Next month">To the future</a></p>
+										<div class="month-popup" style="display:none; z-index:99;">
+											<p><a href="/doctor-calendar/1/{{$year}}">January</a></p>
+											<p><a href="/doctor-calendar/2/{{$year}}">February</a></p>
+											<p><a href="/doctor-calendar/3/{{$year}}">March</a></p>
+											<p><a href="/doctor-calendar/4/{{$year}}">April</a></p>
+											<p><a href="/doctor-calendar/5/{{$year}}">May</a></p>
+											<p><a href="/doctor-calendar/6/{{$year}}">June</a></p>
+											<p><a href="/doctor-calendar/7/{{$year}}">July</a></p>
+											<p><a href="/doctor-calendar/8/{{$year}}">August</a></p>
+											<p><a href="/doctor-calendar/9/{{$year}}">September</a></p>
+											<p><a href="/doctor-calendar/10/{{$year}}">October</a></p>
+											<p><a href="/doctor-calendar/11/{{$year}}">November</a></p>
+											<p><a href="/doctor-calendar/12/{{$year}}">December</a></p>
+										</div>
+
+									</div>
 								</div>
 								<div class="pof-desc">
 									<div class="clearfix"></div>
@@ -203,7 +225,15 @@
 								$(function(){
 									$('[rel="tooltip"]').tooltip({placement: 'top'});
 								});
+
+								$("a#month").on('click', function(e){
+									e.preventDefault();
+									$(".month-popup").fadeToggle(100);
+
+
+								});
 							</script>
+
 
 
 

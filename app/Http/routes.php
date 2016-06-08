@@ -131,7 +131,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	
 	Route::post('/propic', 'TestController@propic');
 	
-	Route::get('/calendar/{username}', 'EntityController@calendar');//doctor's calendar for the admin
+	Route::get('/calendar/{username}/{month}/{year}', 'EntityController@calendar');//doctor's calendar for the admin
 
 	Route::get('/today/{username}', 'EntityController@today');
 	
@@ -161,6 +161,10 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 
 	Route::get('/patient-pres/{id}', 'DoctorControlelr@full_prescription');
 
-	Route::get('/patient-comment/{id}', 'DoctorControlelr@full_comment');
+	Route::get('/patient-comment/{id}', 'DoctorController@full_comment');
+
+	Route::get('/next-mon/{user}/{month}/{year}', 'EntityController@en_prev_month');
+
+	Route::get('/prev-mon/{user}/{month}/{year}', 'EntityController@en_next_month');
 });
 

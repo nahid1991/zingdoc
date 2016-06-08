@@ -61,14 +61,16 @@
 				 $(\".$list_day\").empty();
                $(\".$list_day\").append(data);
                $(\".$list_day\").css(\"display\", \"block\");
-//               $(\".$list_day\").fadeIn(1000);
+//               $(\".$list_day\").stop().fadeIn(100);
+//				$(\".$list_day\").show();
 
                		} // End of success function of ajax form
            		}); // End of ajax call
 				});
 				$(\"a#$list_day\").mouseleave(function(){
 					$(\".$list_day\").css(\"display\", \"none\");
-//					$(\".$list_day\").fadeOut(1000);
+//					$(\".$list_day\").stop().fadeOut(100);
+//					$(\".$list_day\").hide();
 					$(\".$list_day\").empty();
 
 				});
@@ -135,7 +137,7 @@
 								<h2>{{ $doc_info->name }}</h2>
 									<ul><li>
 											<a href="{{ url('/doctor/'.$doc_info->username) }}">Back to profile</a></li><li>
-											<a href="{{ url('/calendar/'.$doc_info->username) }}">Schedule calendar</a>
+											<a href="{{ url('/calendar/'.$doc_info->username.'/'.$month.'/'.$year) }}">Schedule calendar</a>
 										</li></ul>
 							</div>
 						</div>
@@ -165,18 +167,55 @@
 
 							<div class="pof-content">
 								<div class="pof-header3">
-									<div class="title">Appointments in {{ $month }}</div>
+									<div class="title">Appointments in <a id = "month" href=""><span style="color: #1d1d1d">{{ $mon }}</span></a>
+										<a href="/calendar/{{ $username }}/{{$month}}/{{$year-1}}"><img src="/images/back.png" alt="" width="20px" height="20px"></a>{{ $yr}}
+										<a href="/calendar/{{ $username }}/{{$month}}/{{$year+1}}"><img src="/images/forward.png" alt="" width="20px" height="20px"></a>
+
+										<p><a href="{{ action('EntityController@en_prev_month',
+									[$doc_info->username, $month, $year]) }}" style="float:left; padding-left:10px;" rel="tooltip" title="Previous month">Back in time</a>
+										<a href="{{ action('EntityController@en_next_month',
+										[$doc_info->username, $month, $year]) }}" style="float:right; padding-right:10px;" rel="tooltip" title="Next month">To the future</a></p>
+
+									<div class="month-popup" style="display:none; z-index:99;">
+										<p><a href="/calendar/{{ $username }}/1/{{$year}}">January</a></p>
+										<p><a href="/calendar/{{ $username }}/2/{{$year}}">February</a></p>
+										<p><a href="/calendar/{{ $username }}/3/{{$year}}">March</a></p>
+										<p><a href="/calendar/{{ $username }}/4/{{$year}}">April</a></p>
+										<p><a href="/calendar/{{ $username }}/5/{{$year}}">May</a></p>
+										<p><a href="/calendar/{{ $username }}/6/{{$year}}">June</a></p>
+										<p><a href="/calendar/{{ $username }}/7/{{$year}}">July</a></p>
+										<p><a href="/calendar/{{ $username }}/8/{{$year}}">August</a></p>
+										<p><a href="/calendar/{{ $username }}/9/{{$year}}">September</a></p>
+										<p><a href="/calendar/{{ $username }}/10/{{$year}}">October</a></p>
+										<p><a href="/calendar/{{ $username }}/11/{{$year}}">November</a></p>
+										<p><a href="/calendar/{{ $username }}/12/{{$year}}">December</a></p>
+									</div>
+
+									</div>
 								</div>
 								<div class="pof-desc">
 									<div class="clearfix"></div>
 
 									<div class="monthview-cal-container">
 										<?php 
-											echo draw_calendar( $doc_info->username, $num_month ,  $num_year );
+											echo draw_calendar( $doc_info->username, $month ,  $year );
 										?>										
 									</div>
 								</div><!-- End .pof-desc -->
 							</div><!-- End .pof-content -->
+
+							<script type="text/javascript">
+								$(function(){
+									$('[rel="tooltip"]').tooltip({placement: 'top'});
+								});
+
+								$("a#month").on('click', function(e){
+									e.preventDefault();
+									$(".month-popup").fadeToggle(100);
+
+
+								});
+							</script>
 
 							</div><!-- End .pof-content -->
 						</div><!-- End .col -->

@@ -50,8 +50,9 @@ class CalendarController extends Controller
 
     public function real_calendar_stuff($month, $year){
         $user = \Auth::user();
-        $month_format = Carbon::create($year, $month, '1', '00', '00')->format('F Y');
-        return view('doctor.doctor-calendar', compact('user', 'month', 'year', 'month_format'));
+        $month_f = Carbon::create($year, $month, '1', '00', '00')->format('F');
+        $year_f = Carbon::create($year, $month, '1', '00', '00')->format('Y');
+        return view('doctor.doctor-calendar', compact('user', 'month', 'year', 'month_f', 'year_f'));
     }
 
 
