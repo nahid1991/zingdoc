@@ -2086,15 +2086,22 @@ ul.vprof-image li {
 .appoin-list tr:hover {background-color: #f2dede}
 .month-popup {
 	min-height: 50px;
-	min-width: 100px;
+	min-width: 70px;
 	background: #eee;
 	position: absolute;
-
+	padding: 10px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
 	width: 200px;
 	border: 1px solid #ccc;
+}
+
+.patient-cart {
+	padding: 10px;
+	background: #f0f0f0;
+	margin: 5px;
+	border-bottom: 1px solid #ddd !important;
 }
 
 

@@ -54,7 +54,7 @@
 							
 
 							<div class="row">
-								<div class="col-xs-12 col-sm-9 col-md-7">
+								<div class="col-xs-12 col-sm-6 col-md-6">
 									<div class="pof-content">
 										<div class="pof-header3">
 											<div class="title">Today's Appointment</div>
@@ -81,6 +81,20 @@
 												@endif
 												@endforeach
 											</ul>
+										</div><!-- End .pof-desc -->
+									</div><!-- End .pof-content -->
+
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-6">
+									<div class="pof-content">
+										<div class="pof-header3">
+												<div>
+													<img src="/images/search.png" height="30px" width="30px">
+													<input style="border-radius: 5px" id="search-patient" placeholder="Name" type="text"></div>
+
+										</div>
+										<div class="pof-desc"><div class="patient-cart">
+												<h3>Test <p class="pull-right"> top text</p></h3><p>paragraph 1</p><p>paragraph 1</p></div>
 										</div><!-- End .pof-desc -->
 									</div><!-- End .pof-content -->
 

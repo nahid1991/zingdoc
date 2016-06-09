@@ -25,6 +25,23 @@ class SearchController extends Controller
     public function slot_finder($user, $day){
             $next = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDays(7);
             $prev = Carbon::createFromFormat('Y-m-d h:i:s', $day)->subDays(7);
+            $year = Carbon::createFromFormat('Y-m-d h:i:s', $day)->year;
+            $next_year = Carbon::createFromFormat('Y-m-d h:i:s', $day)->lastOfYear()->addDay();
+            $prev_year = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->subDay()->firstOfYear();
+
+
+            $jan = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear();
+            $feb = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonth();
+            $mar = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(2);
+            $apr = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(3);
+            $may = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(4);
+            $jun = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(5);
+            $jul = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(6);
+            $aug = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(7);
+            $sep = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(8);
+            $oct = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(9);
+            $nov = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(10);
+            $dec = Carbon::createFromFormat('Y-m-d h:i:s', $day)->firstOfYear()->addMonths(11);
 
             $first_day = Carbon::createFromFormat('Y-m-d h:i:s', $day);
             $second_day = Carbon::createFromFormat('Y-m-d h:i:s', $day)->addDay();
@@ -81,11 +98,47 @@ class SearchController extends Controller
 
 ///slot/'.$user.'/'.$next.'
 
-            $work = '<h4>Book an Appointment</h4>
+            $work = '<h4>Book an Appointment</h4><p>
+                    <a class="test" href="#" style="width: 60%; border: 3px solid rgb(115, 173, 33); 
+					    padding: 10px; margin: 250px;">Choose a month</a>
+					    <a id="next_year" href="/slot/'.$user.'/'.$prev_year.'">
+					    <img src="/images/back.png" alt="" width="20px" height="20px"></a>
+					    '.$year.'
+						<a id="prev_year" href="/slot/'.$user.'/'.$next_year.'">
+						<img src="/images/forward.png" alt="" width="20px" height="20px"></a></p>
+					<div class="month-popup" style="display:none">
+					    <p style="text-align: center; color: #1a1a1a"><a id="jan" href="/slot/'.$user.'/'.$jan.'">
+					    <strong>January</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="feb" href="/slot/'.$user.'/'.$feb.'">
+					    <strong>February</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="mar" href="/slot/'.$user.'/'.$mar.'">
+					    <strong>March</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="apr" href="/slot/'.$user.'/'.$apr.'">
+					    <strong>April</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="may" href="/slot/'.$user.'/'.$may.'">
+					    <strong>May</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="jun" href="/slot/'.$user.'/'.$jun.'">
+					    <strong>June</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="jul" href="/slot/'.$user.'/'.$jul.'">
+					    <strong>July</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="aug" href="/slot/'.$user.'/'.$aug.'">
+					    <strong>August</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="sep" href="/slot/'.$user.'/'.$sep.'">
+					    <strong>September</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="oct" href="/slot/'.$user.'/'.$oct.'">
+					    <strong>October</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="nov" href="/slot/'.$user.'/'.$nov.'">
+					    <strong>November</strong></a></p>
+					    <p style="text-align: center; color: #1a1a1a"><a id="dec" href="/slot/'.$user.'/'.$dec.'">
+					    <strong>December</strong></a></p>
+                    </div><br>
 					<p class="ds"><a id="prev" href="/slot/'.$user.'/'.$prev.'" style="float:left;position:absolute">
 					<img src="/images/back.png" width="20px" height="20px">Previous week</a>
+					
 						<a id="next" href="/slot/'.$user.'/'.$next.'" style="float:right">Next week
-						<img src="/images/forward.png" width="20px" height="20px"></a></p><br><br>
+						<img src="/images/forward.png" width="20px" height="20px"></a></p><br>
+					<br>
+						
 
              <div id="'.$user.'-slides"><div class="slide">
                             <div class="appoinment-day">
