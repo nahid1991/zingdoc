@@ -93,8 +93,7 @@
 													<input style="border-radius: 5px" id="search-patient" placeholder="Name" type="text"></div>
 
 										</div>
-										<div class="pof-desc"><div class="patient-cart">
-												<h3>Test <p class="pull-right"> top text</p></h3><p>paragraph 1</p><p>paragraph 1</p></div>
+										<div class="pof-desc2">
 										</div><!-- End .pof-desc -->
 									</div><!-- End .pof-content -->
 
@@ -113,5 +112,24 @@
 							    $(function(){
 							       $('[rel="tooltip"]').tooltip({placement: 'top', html: true});
 							    });
+
+								$("#search-patient").on('keyup', function(){
+									var link = $("#search-patient").val();
+									console.log(link);
+									$.ajax({
+										url: '/search-patient/'+link,
+										data: {},
+										type:'GET',
+										dataType: 'html',
+										error: function(){
+											$('.pof-desc2').empty();
+										},
+										success:function(data){
+//                                                    $(".s").empty();
+
+											$('.pof-desc2').html(data);
+
+										}});
+								});
 							</script>
 	@stop

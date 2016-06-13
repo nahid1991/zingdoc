@@ -166,5 +166,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/next-mon/{user}/{month}/{year}', 'EntityController@en_prev_month');
 
 	Route::get('/prev-mon/{user}/{month}/{year}', 'EntityController@en_next_month');
+
+	Route::get('/search-patient/{word}', 'SearchController@patient_search');
 });
 

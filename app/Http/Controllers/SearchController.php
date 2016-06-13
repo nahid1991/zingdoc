@@ -9,6 +9,7 @@ use App\Http\Requests;
 use DB;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Input;
 
 class SearchController extends Controller
 {
@@ -259,6 +260,27 @@ class SearchController extends Controller
             echo($work);
         }
 
+    public function patient_search($word){
+        $user = \Auth::user();
+        $result = DB::table('visit_record')
+            ->where('patient_name', 'like', '%'.$word.'%')
+            ->where('d_username', '=', $user->username)
+            ->get();
+        if($result){
+            foreach($result as $results){
+                echo('<div class="patient-card"><h3>'.$results->patient_name.'</h3><p>
+                Appointment made by:'.$results->p_username.'</p></div>');
+            }
+        }
+//        $work = '<div class="patient-card">';
+//		foreach($result as $results){
+//            $work .= '<h3>Test <p class="pull-right">'.Carbon::createFromFormat('Y-m-d h:i:s', $results->visit_time)->format("h:i A").'
+//            </p></h3><p>'.$results->patient_name.'</p><p>paragraph 1</p></div>';
+//        };
+//        $work .= '</div>';
+
+//        echo($work);
+    }
 
 
     
