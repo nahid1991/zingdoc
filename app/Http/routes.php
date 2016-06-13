@@ -120,13 +120,7 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::post('/set-timing', 'CalendarController@sche');		//posts slots
 	
 	Route::post('/doc-data', 'DoctorController@make_profile');
-	
-//	Route::get('/prescription/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
-	
-//	Route::post('/prescribe', 'DoctorController@prescribe');
-	
-//	Route::get('/{username}/{name}', 'DoctorController@patient_profile');
-	
+
 	Route::post('/add-doctor', 'EntityController@add_doctor');
 	
 	Route::post('/propic', 'TestController@propic');
@@ -168,5 +162,16 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/prev-mon/{user}/{month}/{year}', 'EntityController@en_next_month');
 
 	Route::get('/search-patient/{word}', 'SearchController@patient_search');
+
+
+
+	/*
+	 * Do not touch these
+	 */
+	Route::get('/prescription/{p_user}/{name}/{time}', 'DoctorController@doc_checked');
+
+	Route::post('/prescribe', 'DoctorController@prescribe');
+
+	Route::get('/{username}/{name}', 'DoctorController@patient_profile');
 });
 

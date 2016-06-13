@@ -183,21 +183,21 @@ class DoctorController extends Controller
     }
 
 
-//    public function patient_profile($username, $name){
-//        $user = \Auth::user();
-//        // echo($username);
-//        $patient = DB::table('visit_record')
-//          ->where('d_username', '=', $user->username)
-//          ->where('p_username', '=', $username)
-//          ->where('patient_name', '=', $name)
-//          ->get();
-//        $patient_first = DB::table('visit_record')
-//            ->where('d_username', '=', $user->username)
-//            ->where('p_username', '=', $username)
-//            ->where('patient_name', '=', $name)
-//            ->first();
-//        return view('doctor.patient-profile-view', compact('patient','user','patient_first'));
-//    }
+    public function patient_profile($username, $name){
+        $user = \Auth::user();
+        // echo($username);
+        $patient = DB::table('visit_record')
+          ->where('d_username', '=', $user->username)
+          ->where('p_username', '=', $username)
+          ->where('patient_name', '=', $name)
+          ->get();
+        $patient_first = DB::table('visit_record')
+            ->where('d_username', '=', $user->username)
+            ->where('p_username', '=', $username)
+            ->where('patient_name', '=', $name)
+            ->first();
+        return view('doctor.patient-profile-view', compact('patient','user','patient_first'));
+    }
 
     public function week_view(){
         $user = \Auth::user();

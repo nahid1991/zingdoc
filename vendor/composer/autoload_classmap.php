@@ -34,6 +34,7 @@ return array(
     'CreateIntervalColumn' => $baseDir . '/database/migrations/2016_05_16_112833_create_interval_column.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePatientAppointmentTable' => $baseDir . '/database/migrations/2016_05_09_084715_create_patient_appointment_table.php',
+    'CreatePatientDoctorTable' => $baseDir . '/database/migrations/2016_06_13_053350_create_patient_doctor_table.php',
     'CreatePatientNameColumn' => $baseDir . '/database/migrations/2016_05_12_072946_create_patient_name_column.php',
     'CreatePatientRecordTable' => $baseDir . '/database/migrations/2016_05_18_123953_create_patient_record_table.php',
     'CreatePropicColumn' => $baseDir . '/database/migrations/2016_05_09_084235_create_propic_column.php',
