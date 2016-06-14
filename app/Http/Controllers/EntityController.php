@@ -374,4 +374,10 @@ class EntityController extends Controller
         }
     }
 
+    public function en_sign_doctor(){
+        $user = \Auth::user();
+        return view('entity.admin-doctor-signup', compact('user'));
+//        return \View::make('entity/admin-doctor-signup');
+    }
+
 }

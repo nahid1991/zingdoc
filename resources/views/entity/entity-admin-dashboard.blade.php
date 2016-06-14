@@ -22,6 +22,7 @@
 										<a href="{{ url('/entity-profile') }}">Profile</a></li><li>
 										<a href="{{ url('/entity-profile-edit') }}">Edit Profile</a></li><li>
 										<a href="{{ url('/entity-account-settings') }}">Account Settings</a></li><li>
+										<a href="{{ url('/entity-sign-doctor') }}">Sign up Doctor</a></li><li>
 										<a href="{{ url('/auth/logout') }}">Logout</a></li></ul>
 							</div>
 						</div><!-- End .col -->
@@ -78,6 +79,8 @@
 														</div>
 													</div><!-- END .add_form -->
 													{!! Form::close() !!}
+
+
 												<div class="clearfix"></div>	
 												</div><!-- END .add_form_container  -->										
 												<script type="text/javascript">
@@ -92,6 +95,11 @@
 												</script>	
 												<div class="clearfix"></div>	
 									</div>
+									<br/><br/>
+									<div class="doctorsignup-holder add-doctor">
+										<a href="#" id="toggle-btn2" href="#">REGISTER DOCTOR</a>
+									</div>
+
 								</div>
 							</div><!-- End .pof-content -->
 						</div><!-- End .col -->

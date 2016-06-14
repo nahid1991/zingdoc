@@ -61,7 +61,9 @@ Route::get('/doc-prof/{username}', 'PatientController@docprof');
 
 
 Route::group(['middleware' => ['web','auth','revalidate']], function () {
-    Route::get('/homepage', 'TestController@home');
+	Route::get('/entity-sign-doctor', 'EntityController@en_sign_doctor');
+
+	Route::get('/homepage', 'TestController@home');
 	
 	Route::get('/auth/logout', 'Auth\AuthController@logout');
 	
@@ -162,6 +164,8 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 	Route::get('/prev-mon/{user}/{month}/{year}', 'EntityController@en_next_month');
 
 	Route::get('/search-patient/{word}', 'SearchController@patient_search');
+
+
 
 
 
