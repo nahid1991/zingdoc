@@ -63,25 +63,22 @@
 															<div class="clearfix"></div>
 															
 															<label>Select Doctor</label>
-															 <select name="username">											
+															 <select name="username">
 																<option value="">Select</option>
 																@foreach($doctors as $doctor)
 																	@if(!$doctor->ad_user)
 																		<option name="" value="{{ $doctor->username }}">{{ $doctor->name }}</option>
-																	@endif	
-																@endforeach							
-															</select>														
+																	@endif
+																@endforeach
+															</select>
 														</div>
 
 														<div class="ft">										
 															<input type="submit" value="Add"/>
-															<div class="clearfix"></div>
 														</div>
 													</div><!-- END .add_form -->
 													{!! Form::close() !!}
 
-
-												<div class="clearfix"></div>	
 												</div><!-- END .add_form_container  -->										
 												<script type="text/javascript">
 												    $('#toggle-btn').click(function() {
@@ -92,13 +89,54 @@
 												    	
 												    	$('#toggle-content').slideToggle(500);
 												    });
-												</script>	
-												<div class="clearfix"></div>	
+												</script>
 									</div>
 									<br/><br/>
 									<div class="doctorsignup-holder add-doctor">
 										<a href="#" id="toggle-btn2" href="#">REGISTER DOCTOR</a>
+										<div id="toggle-content2" class="add_form_container">
+											<div class="arrow"></div>
+											{!! Form::open(['url' => '/doctor-register']) !!}
+											<div class="add_form">
+												<div class="form-cont">
+													<div class="clearfix"></div>
+
+													{{--<label>Register a Doctor</label>--}}
+													<br/>
+													{{--<select name="username">--}}
+														{{--<option value="">Select</option>--}}
+														{{--@foreach($doctors as $doctor)--}}
+															{{--@if(!$doctor->ad_user)--}}
+																{{--<option name="" value="{{ $doctor->username }}">{{ $doctor->name }}</option>--}}
+															{{--@endif--}}
+														{{--@endforeach--}}
+													{{--</select>--}}
+													<input type="text" placeholder="Full Name" style="min-width:100%;border-radius:5px;padding:10px;"/><br/>
+													<input type="text" placeholder="Email" style="min-width:100%;border-radius:5px;padding:10px;"/>
+
+												</div>
+
+												<div class="ft">
+													<input type="submit" value="Add"/>
+
+												</div>
+											</div><!-- END .add_form -->
+											{!! Form::close() !!}
+
+
+											<div class="clearfix"></div>
+										</div>
 									</div>
+									<script type="text/javascript">
+										$('#toggle-btn2').click(function() {
+											if ($(this).hasClass("current")) {
+												$(this).removeClass("current");
+											}
+											else {$(this).addClass("current");}
+
+											$('#toggle-content2').slideToggle(500);
+										});
+									</script>
 
 								</div>
 							</div><!-- End .pof-content -->
