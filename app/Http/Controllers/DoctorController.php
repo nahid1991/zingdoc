@@ -10,6 +10,9 @@ use DB;
 
 use Carbon\Carbon;
 
+use Redirect;
+
+use Hash;
 class DoctorController extends Controller
 {
     public function setAppoint(){
@@ -419,5 +422,45 @@ class DoctorController extends Controller
         $work .='</div>';
 
         echo($work);
+    }
+
+
+    public function delete($user, $day){
+        DB::table('doctor_schedule')
+            ->where('doctor_user', '=', $user)
+            ->where('days', '=', $day)
+            ->delete();
+        DB::table('time_slot')
+            ->where('d_user', '=', $user)
+            ->where('day_of_week', '=', $day)
+            ->delete();
+        DB::table('doctor_timing')
+            ->where('doc_user', '=', $user)
+            ->where('day', '=', $day)
+            ->delete();
+
+        return Redirect::back();
+    }
+
+    public function reset_pass(Request $request){
+        $user = \Auth::user();
+
+        if(Hash::check($request->input('password'), $user->password)){
+            if($request->input('new-password') == $request->input('retyped-password')){
+                DB::table('users')
+                    ->where('username', '=', $user->username)
+                    ->update(['password' => bcrypt($request->input('new-password'))]);
+
+                return Redirect::back();
+            }
+
+            else{
+                return Redirect::back();
+            }
+        }
+
+        else{
+            return Redirect::back();
+        }
     }
 }

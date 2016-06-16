@@ -49,7 +49,8 @@
 												@foreach($doctor_schedule as $doc_info)
 												<tr>
 													<td>{{ $doc_info->days }}</td>
-													<td> <p>{{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}</p>  <a class="close" href="#">X</a></td>
+													<td> <p>{{ $doc_info->starting_time }} - {{ $doc_info->ending_time }}</p>
+														<a class="close" href="/{{$user->username}}/{{$doc_info->days}}">X</a></td>
 												</tr>
 												@endforeach
 												<!-- <tr>

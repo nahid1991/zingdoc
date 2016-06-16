@@ -16,11 +16,15 @@ use Services_Twilio;
 
 use Redirect;
 
+use Mail;
+
+use App\Http\Requests\Auth\RegisterRequest;
+
+use Illuminate\Support\Facades\Input;
+
 
 class EntityController extends Controller
 {
-
-
     public function appointments(){
     	$user = \Auth::user();
         
@@ -31,10 +35,6 @@ class EntityController extends Controller
         return view('entity.entity-admin-appointments-view', compact('user', 'listed_doc_pat'));
     }
 
-    
-
-
-
     public function settings(){
     	return view('entity.entity-admin-account-setting');
     }
@@ -42,7 +42,6 @@ class EntityController extends Controller
     public function test(Request $request){
         return redirect('/doctor/'.$request->input('doctor_user'));
     }
-    
 
     public function trial($username){
         // echo($username);
@@ -70,12 +69,6 @@ class EntityController extends Controller
             'month', 'year'));
         // return redirect('/find-doc/'.$doc_info->username);
     }
-
-
-
-
-
-
 
     public function cancel($username, $p_name){
         DB::table('appointment_user')
@@ -378,6 +371,52 @@ class EntityController extends Controller
         $user = \Auth::user();
         return view('entity.admin-doctor-signup', compact('user'));
 //        return \View::make('entity/admin-doctor-signup');
+    }
+
+    public function reg_doctor(Request $request){
+        $user = \Auth::user();
+        $test = $request->input('password').$request->input('username');
+        DB::table('users')->insert([
+            'email' => $request->input('email'),
+            'username' => $request->input('username'),
+            'password' => bcrypt($test),
+            'name' => $request->input('name'),
+            'speciality' => $request->input('speciality'),
+            'practice_name' => $request->input('practice_name'),
+            'phone_number' => $request->input('phone_number'),
+            'location' => $request->input('location'),
+            'agreed' => $request->input('agreed'),
+            'user_type' => $request->input('user_type'),
+            'confirmed' => '1',
+        ]);
+
+        DB::table('doctor_entity')->insert([
+            'entity_user' => $user->username,
+            'doctor_user' => $request->input('username'),
+            'entity_name' => $user->name,
+            'doctor_name' => $request->input('name'),
+            'doc_speciality' => $request->input('speciality'),
+        ]);
+
+        Mail::send('email.doctor-admin-email',  ['name' => $request->input('admin_name'),
+        'email' => $request->input('email'), 'password' => $test], function($message) {
+            $message->from('nahidshaiket10300@gmail.com', 'Laravel');
+            $message->to(Input::get('email'), Input::get('username'))
+                ->subject('Verify your email address');
+        });
+
+        $account_sid = "AC0ea2b450fbf9bcaa2aaa8464536c6f85"; // Your Twilio account sid
+        $auth_token = "3501d13a64fbe6c80a5f30d6d36459ca"; // Your Twilio auth token
+
+        $client = new Services_Twilio($account_sid, $auth_token);
+        $client->account->messages->sendMessage(
+            '+12565302615', // From a Twilio number in your account
+            '+880'.$request->phone_number, // Text any number
+            'You have been registered as Doctor in Zingdoc by '.$request->admin_name.'. Please check your '.
+            $request->email. ' for more details.'
+        );
+
+        return Redirect::back();
     }
 
 }

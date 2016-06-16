@@ -165,7 +165,11 @@ Route::group(['middleware' => ['web','auth','revalidate']], function () {
 
 	Route::get('/search-patient/{word}', 'SearchController@patient_search');
 
+	Route::post('/doctor-register', 'EntityController@reg_doctor');
 
+	Route::get('/{user}/{day}', 'DoctorController@delete');
+
+	Route::post('/reset-pass', 'DoctorController@reset_pass');
 
 
 

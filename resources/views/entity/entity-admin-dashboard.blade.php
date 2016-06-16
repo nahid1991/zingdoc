@@ -37,21 +37,7 @@
 								</div>
 								<div class="pof-desc">
 								   <div class="edashboard">
-									<!-- <div class="entity-dashborad-caresoul">
-										<div class="doctor-caresoul-box">
-											<a href="doctor-admin-appointments-day-view.php">
-											<div class="slide doctor_profile_img">
-													<div class="doctor_profile_img">
-													<img src=""/>
-													<div class="doctor-profile-title">
-														<h2></h2>
-													</div>
-													</div>
-												</div>
-											</div>												
-											</a>
-											
-										</div> -->
+
 									</div><!-- End edashboard -->
 									<div class="doctorsignup-holder add-doctor">
 											<a href="#" id="toggle-btn" href="#">ADD DOCTOR</a>
@@ -60,7 +46,6 @@
 													{!! Form::open(['url' => '/add-doctor']) !!}
 													<div class="add_form">
 														<div class="form-cont">
-															<div class="clearfix"></div>
 															
 															<label>Select Doctor</label>
 															 <select name="username">
@@ -100,20 +85,33 @@
 											<div class="add_form">
 												<div class="form-cont">
 													<div class="clearfix"></div>
-
-													{{--<label>Register a Doctor</label>--}}
 													<br/>
-													{{--<select name="username">--}}
-														{{--<option value="">Select</option>--}}
-														{{--@foreach($doctors as $doctor)--}}
-															{{--@if(!$doctor->ad_user)--}}
-																{{--<option name="" value="{{ $doctor->username }}">{{ $doctor->name }}</option>--}}
-															{{--@endif--}}
-														{{--@endforeach--}}
-													{{--</select>--}}
-													<input type="text" placeholder="Full Name" style="min-width:100%;border-radius:5px;padding:10px;"/><br/>
-													<input type="text" placeholder="Email" style="min-width:100%;border-radius:5px;padding:10px;"/>
+													<input type="hidden" name="admin_name" value="{{$user->name}}">
+													<input type="hidden" name="user_type" value="1"/>
+													<input type="hidden" name="agreed" value="1"/>
+													<input type="hidden" name="password" value="zingdoc"/>
+													<input type="hidden" name="admin_user" value="{{$user->username}}"/>
+													<input type="text" name="name" placeholder="Full Name" required
+														   style="min-width:100%;border-radius:5px;padding:10px;"/><br/><br/>
+													<input type="text" name="email" placeholder="Email" required
+														   style="min-width:100%;border-radius:5px;padding:10px;"/><br/><br/>
+													<input type="text" name="username" placeholder="Username" required
+														   style="min-width:100%;border-radius:5px;padding:10px;"/><br/><br/>
+													<input type="text" name="phone_number" placeholder="Phone Number" required
+														   style="min-width:100%;border-radius:5px;padding:10px;"/><br/><br/>
 
+													<select name="speciality" required>
+														<option value="">DOCTOR'S SPECIALITY</option>
+														<option value="cardiologist">Cardiologist</option>
+														<option value="opthalmist">Opthalmist</option>
+														<option value="pediatrist">Pediatrist</option>
+														<option value="dentist">Dentist</option>
+													</select>
+													<br/><br/>
+													<input type="text" required name="location" placeholder="Location"
+														   style="min-width:100%;border-radius:5px;padding:10px;"/><br/><br/>
+													<input type="text" name="practice_name "placeholder="Entry or Practice Name" required
+														   style="min-width:100%;border-radius:5px;padding:10px;"/>
 												</div>
 
 												<div class="ft">

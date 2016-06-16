@@ -43,18 +43,35 @@
 										<div class="pof-edittitle">
 											<h5>Change Password</h5>
 										</div>
+										{!! Form::open(['url' => '/reset-pass']) !!}
 										<div class="doctorsignup-holder edit-holder">
 											<label>Current Password</label>
-											<input name="" required="" type="password" class="form-control"  value="">
+											<input name="password" required="" type="password" class="form-control"
+												   placeholder="PASSWORD">
 											<label>New Password</label>
-											<input name="" required="" type="password" class="form-control"  value="">
+											<input id="password" name="new-password" required="" type="password" class="form-control"
+												   placeholder="NEW PASSWORD">
 											<label>Retype New Password</label>
-											<input name="" required="" type="password" class="form-control"  value="">
-											<button type="button" class="btn btn-default" data-toggle="button">SUBMIT</button>
+											<p id="identify" style="display:none; color:red">Password did not match</p>
+											<input id="retype" name="retyped-password" required="" type="password" class="form-control"
+												   placeholder="RETYPE NEW PASSWORD">
+											<input type="submit" class="btn btn-default" value="SUBMIT">
 										</div>
-
+										{!! Form::close() !!}
 									</div><!-- End .pofedit -->
 								</div>
+								<script type="text/javascript">
+									$("#retype").on('keyup', function(){
+										var pass = $("#password").val();
+										var retype = $("#retype").val();
+										if(pass != retype){
+											$("#identify").css("display", "block");
+										}
+										else{
+											$("#identify").css("display", "none");
+										}
+									})
+								</script>
 							</div><!-- End .pof-content -->
 						</div><!-- End .col -->
 					</div><!-- End .row -->
